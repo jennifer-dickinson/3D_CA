@@ -18,7 +18,7 @@ def move(plane, communicator):
     # Todo: Make an option for centralized/decentralized collision avoidance & movement
 
     # Move the plan in a straight line to the direction of the target waypoint
-    while plane.cLoc != plane.tLoc:
+    while True:
 
         # Simulate time by delaying planes update. Will need this for GUI.
         if defaultValues.SIMULATE_TIME:
@@ -92,23 +92,20 @@ def move(plane, communicator):
                 plane.killedBy = elem["killedBy"]
                 break
 
+        communicator.update(plane)
+
         try:
             if plane.tdistance < defaultValues.DISTANCE_FOR_SUCCESS:
                 waypoint_counter += 1
                 plane.nextwp()
-                print 'UAV #', plane.id, 'Reached waypoint #', waypoint_counter
+                #print 'UAV #', plane.id, 'Reached waypoint #', waypoint_counter
         except Queue.Empty:
-            print 'UAV #', plane.id, 'Reached last waypoint (#', waypoint_counter, ')'
-            print plane.cLoc
-            break
-
-        communicator.update(plane)
-
-        if plane.dead:
+            print '\nUAV #', plane.id, 'Reached last waypoint (#', waypoint_counter, ')'
+            # print plane.cLoc
             break
 
     # Todo: make this pretty
-    print "\nUAV", plane.id, "has crashed with UAV", plane.killedBy, "!!!!!!!!!!!!!!!!!"
+    if plane.dead: print "\nUAV", plane.id, "has crashed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     print 'Total distance traved by UAV #', plane.id, ":", total_distance_traveled, "m"
     print 'Total waypoints achieved:', waypoint_counter
     print "Total target waypoints:", plane.numWayPoints

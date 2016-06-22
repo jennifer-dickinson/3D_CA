@@ -6,8 +6,8 @@
 
 import random
 import Queue
-import defaultValues
 import standardFuncs
+from defaultValues import *
 
 
 # Plane object will eventually have more parameters
@@ -18,9 +18,9 @@ class Plane:
         Plane.counter += 1
         self.id = Plane.counter             # Plane ID =)
 
-        self.speed = 12                     # UAV airspeed in meters per second, 12 meters per second by default
-        self.maxElevationAngle = 22         # Maximum climbing angle in degrees
-        self.minTurningRadius = 12          # Minimum turning radius in meters, should be variable depending on speed
+        self.speed = DEFAULT_UAV_SPEED              # UAV airspeed in meters per second, 12 meters per second by default
+        self.maxElevationAngle = MAX_ELEV_ANGLE     # Maximum climbing angle in degrees
+        self.minTurningRadius = MIN_TURN_RAD        # Minimum turning radius in meters, should be variable depending on speed
         self.maxBankAngle = None
 
         self.numWayPoints = 0               # Total number of waypoints assigned to plane
@@ -58,7 +58,7 @@ class Plane:
 # Todo: make an option to load planeObjects and wayPoints
 # Todo: make option to manually set wayPoints for each plane
 
-def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION,):
+def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OUR_LOCATION,):
 
     grid = standardFuncs.generateGrid(gridSize, location)     # Creates a square grid centered about location
 
@@ -69,7 +69,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane.append(Plane())
         plane[i].numWayPoints = numWayPoints
 
-        for j in range(0, plane[i].numWayPoints + 1):        # +1 to generate initial location
+        for j in range(0, plane[i].numWayPoints + 2):        # +2 to git inital and previous location
 
             # Calculates random waypoints based on provided grid and adds them to a list and queue
             lat = random.uniform(grid[0][0], grid[0][1])
@@ -78,7 +78,9 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
             plane[i].wayPoints.append(standardFuncs.loc(lat,lon,alt))
             plane[i].queue.put(plane[i].wayPoints[j])
 
+
         plane[i].set_cLoc(plane[i].queue.get_nowait())  # Set current location to first generated waypoint
+        plane[i].set_cLoc(plane[i].queue.get_nowait())
         plane[i].nextwp()                               # and removes it from the queue
 
 
@@ -99,7 +101,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane[i].tElevation = standardFuncs.elevation_angle(clat, clon, calt, tlat, tlon, talt)
         plane[i].cElevation = plane[i].tElevation
 
-        if defaultValues.IS_TEST:
+        if IS_TEST:
             print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
             print plane[i].wayPoints
 

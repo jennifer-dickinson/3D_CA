@@ -33,6 +33,9 @@ class uavComm(threading.Thread):
                 status = "crashed"
             print "UAV ID:", elem["ID"], "at position", elem["cLoc"], status
 
+        for elem in self.positions:
+            print elem
+
     def startUp (self, plane):
         dict = {"ID" : plane.id, "cLoc" : plane.cLoc, "bear": plane.cBearing, "elev": plane.cElevation, "dead" : plane.dead, "killedBy" : None }
         self.positions.append(dict)
@@ -44,6 +47,7 @@ class uavComm(threading.Thread):
         dict["cLoc"] = plane.cLoc
         dict["bear"] = plane.cBearing
         dict["elev"] = plane.cElevation
+        dict["tdis"] = plane.tdistance
         if plane.dead:
             dict["dead"] = plane.dead
             dict["killedBy"] = plane.killedBy
@@ -51,6 +55,7 @@ class uavComm(threading.Thread):
             dict2["dead"] = plane.dead
             dict2["killedBy"] = plane.id
         self.timer = 0
+        return True
 
     def read(self):
         return self.positions
