@@ -1,21 +1,18 @@
 from planeGenerator import generate_planes
 from movementSimulator import move
 from threading import Thread
-
-numPlanes = 4
-numWayPoints = 10
-gridSize = 1000
+from defaultValues import *
 
 
-plane = generate_planes(numPlanes, numWayPoints, gridSize)
+plane = generate_planes(NUM_PLANES, NUM_WAY_POINTS, GRID_SIZE)
 
 planeMover = list()
 
-for i in range(0, numPlanes):
+for i in range(0, NUM_PLANES):
     planeMover.append(Thread(target=move, args=(plane[i],)))
 
-for i in range(0, numPlanes):
+for i in range(0, NUM_PLANES):
     planeMover[i].start()
 
-for i in range(0, numPlanes):
+for i in range(0, NUM_PLANES):
     planeMover[i].join()

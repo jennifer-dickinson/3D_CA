@@ -12,3 +12,14 @@ main.py is *supposed* to be the initializer file. So far it just contains a few 
         Location is list with latitude and longitude in degrees
 
         Returns a list for
+
+defaultValues.py contains... you guessed it... default values.
+
+
+
+standardFunctions.py has some pretty standard functions. You will use them throughout movement and collision avoidance
+simulations
+
+    to_cartesian(angle) converts an angle in degrees to the cartesian system
+
+    to_cardinal(angle) converts an angle in degrees to the cardinal system (N, W, S, E, etc)

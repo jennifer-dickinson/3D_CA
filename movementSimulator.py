@@ -5,11 +5,10 @@
 from standardFuncs import *
 from defaultValues import *
 
-import main
 import vMath
 import standardFuncs
-import collections
 import Queue
+import time
 
 def move(plane):
     counter = 0  # This is just to keep track of things
@@ -62,15 +61,12 @@ def move(plane):
             plane.set_cLoc(newloc)
             plane.tbearing = find_bearing(new_lat, new_lon, tlat, tlon)
             plane.televation = elevation_angle(new_lat, new_lon, new_alt, tlat, tlon, talt)
+
+            # haversine's horizontal distance
             plane.distance = horizontal_distance(new_lat, new_lon, tlat, tlon)
+
+            # haversine's horizontal distance w/ vertical distance taken into account
             plane.tdistance = total_distance(new_lat, new_lon, new_alt, tlat, tlon, talt)
-            counter += 1
-
-            if counter % (FREQUENCY * RATE_OF_UPDATES) == 0:
-                #print 'currently located at', plane.cLoc
-                counter = 0
-                seconds += 1
-
 
             try:
                 if plane.tdistance < 2:
@@ -81,6 +77,14 @@ def move(plane):
                 print 'UAV #', plane.id, 'Reached last waypoint (#', waypoint_counter, ')'
                 break
 
+            if SIMULATE_TIME:
+                time.sleep(DELAY)
+            seconds += DELAY
+
+            if seconds % RATE_OF_UPDATES == 0:
+                print 'UAV #', plane.id, 'currently located at', plane.cLoc
+
 
     print 'Total distance traved by UAV #', plane.id, "is", total_distance_traveled, "meters"
-    print 'Total time spent:', seconds
+    print 'Total waypoints achieved:', waypoint_counter
+    print 'Total time spent:', seconds, 'seconds.'
