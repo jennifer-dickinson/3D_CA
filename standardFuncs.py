@@ -74,6 +74,15 @@ def total_distance(lat1, lon1, alt1, lat2, lon2, alt2):
     return distance
 
 
+# Calculate total distance
+def nt_total_distance(coor1, coor2):
+    d_hor = horizontal_distance(coor1.latitude, coor1.longitude, coor2.latitude, coor2.longitude)
+    d_alt = coor2.altitude - coor1.altitude
+    distance = math.sqrt(math.pow(d_hor, 2) + math.pow(d_alt, 2))
+    return distance
+
+
+
 # Return bearing using Haversine's formula, in degrees
 def find_bearing(lat1, lon1, lat2, lon2):
     angle = math.atan2(math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(lon2 - lon1),

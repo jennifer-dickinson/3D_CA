@@ -1,18 +1,24 @@
-from planeGenerator import generate_planes
-from movementSimulator import move
+import planeGenerator
+import movementSimulator
 from threading import Thread
-from defaultValues import *
+import commList
+import defaultValues
+import communicator
+import time
 
-
-plane = generate_planes(NUM_PLANES, NUM_WAY_POINTS, GRID_SIZE)
+qu = commList.uavComm()
+plane = planeGenerator.generate_planes(defaultValues.NUM_PLANES, defaultValues.NUM_WAY_POINTS, defaultValues.GRID_SIZE, qu)
 
 planeMover = list()
+qu.start()
+for i in range(0, defaultValues.NUM_PLANES):
+   planeMover.append(Thread(target=movementSimulator.move, args=(plane[i], qu)))
+   print 'plane generated'
 
-for i in range(0, NUM_PLANES):
-    planeMover.append(Thread(target=move, args=(plane[i],)))
-
-for i in range(0, NUM_PLANES):
+for i in range(0, defaultValues.NUM_PLANES):
     planeMover[i].start()
 
-for i in range(0, NUM_PLANES):
+for i in range(0, defaultValues.NUM_PLANES):
     planeMover[i].join()
+
+qu.stop()

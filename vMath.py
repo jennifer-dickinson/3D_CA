@@ -1,7 +1,6 @@
 # Will modify vMath.cpp under ROS to be included here... eventually
 
 import math
-from standardFuncs import *
 
 class vector:
     def __init__(self, magnitude, direction, elevation):

@@ -20,8 +20,8 @@ class Plane:
         self.id = Plane.counter             # Plane ID =)
 
         self.speed = 12                     # UAV airspeed in meters per second, 12 meters per second by default
-        self.maxElevationAngle = 22       # Maximum climbing angle in degrees
-        self.minTurningRadius = 12        # Minimum turning radius in meters, should be variable depending on speed, but default meters
+        self.maxElevationAngle = 22         # Maximum climbing angle in degrees
+        self.minTurningRadius = 12          # Minimum turning radius in meters, should be variable depending on speed
         self.maxBankAngle = None
 
         self.numWayPoints = 0               # Total number of waypoints assigned to plane
@@ -36,35 +36,27 @@ class Plane:
         self.cLoc = None                    # Current location
         self.tLoc = None                    # Target location. Will be swapped in queue
 
-        self.cbearing = None                # Current bearing (Cartesian)
-        self.tbearing = None                # Target bearing  (Cartesian)
-        self.celevation = None              # Current elevation (Cartesian)
-        self.televation = None              # Target elevation  (Cartesian)
+        self.cBearing = None                # Current bearing (Cartesian)
+        self.tBearing = None                # Target bearing  (Cartesian)
+        self.cElevation = None              # Current elevation (Cartesian)
+        self.tElevation = None              # Target elevation  (Cartesian)
 
         self.avoid = False                  # Is the plane performing an avoidance maneuver?
         self.avoidanceWaypoint = None       # Avoidance waypoint (should only be one)
 
-    def set_cLoc(self, current_location):    # Set the current location
-        self.pLoc = self.cLoc                   # Move current location to previous location
-        self.cLoc = current_location             # Set new current location
+    def set_cLoc(self, current_location):   # Set the current location
+        self.pLoc = self.cLoc               # Move current location to previous location
+        self.cLoc = current_location        # Set new current location
 
     def nextwp(self):
         self.tLoc = self.queue.get_nowait()
 
-    def set_cbearing (self, current_bearing):
-        self.cbearing = current_bearing
-
-    def set_tbearing (self, target_bearing):
-        self.tbearing = target_bearing
-
-    def set_eangle (self, elevation_angle):
-        self.celevation = elevation_angle
 
 # Automatically generate planeObjects and wayPoints
 # Todo: make an option to load planeObjects and wayPoints
 # Todo: make option to manually set wayPoints for each plane
 
-def generate_planes(numPlanes, numWayPoints, gridSize, location=OUR_LOCATION):
+def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OUR_LOCATION,):
 
     grid = generateGrid(gridSize, location)     # Creates a square grid centered about location
 
@@ -98,15 +90,17 @@ def generate_planes(numPlanes, numWayPoints, gridSize, location=OUR_LOCATION):
         talt = plane[i].tLoc.altitude
 
         # Calculate current and target bearing (both set to equal initially)
-        plane[i].tbearing = find_bearing(clat, clon, tlat, tlon)
-        plane[i].cbearing = plane[i].tbearing
+        plane[i].tBearing = find_bearing(clat, clon, tlat, tlon)
+        plane[i].cBearing = plane[i].tBearing
 
         # Calculate current and target elevation angles (also equa)
-        plane[i].televation = elevation_angle(clat, clon, calt, tlat, tlon, talt)
-        plane[i].celevation = plane[i].televation
+        plane[i].tElevation = elevation_angle(clat, clon, calt, tlat, tlon, talt)
+        plane[i].cElevation = plane[i].tElevation
 
         if IS_TEST:
             print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
             print plane[i].wayPoints
+
+        communicator.startUp(plane[i])
 
     return plane
