@@ -5,6 +5,7 @@
 # Added constants
 
 import math
+import collections
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location
@@ -55,14 +56,14 @@ def manipulate_angle(angle):
 # Calculate relative horizontal distance using Haversine's formula
 def horizontal_distance(lat1, lon1, lat2, lon2):
     # type: (starting altitude, starting longitude, final altitude, final longitude) -> distance
-    R = 6378.137  # Radius of the earth
+    R = 6378.137  # Radius of the earth in kilometers
     d_lat = math.radians(lat2 - lat1)
     d_lon = math.radians(lon2 - lon1)
     a = math.sin(d_lat / 2) * math.sin(d_lat / 2) + math.cos(math.radians(lat1)) * math.cos(
         math.radians(lat2)) * math.sin(d_lon / 2) * math.sin(d_lon / 2)
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     distance = R * c * 1000
-    return distance  # meters
+    return distance  # total distance in meters
 
 
 # Calculate total distance
@@ -96,3 +97,5 @@ def find_sign(number):
     if number < 0:
         return 0
     return 0
+
+loc = collections.namedtuple('coordinate', 'latitude longitude altitude')

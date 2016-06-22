@@ -3,18 +3,19 @@
 # http://people.clarkson.edu/~pmarzocc/AE429/AE-429-12.pdf
 
 from standardFuncs import *
+from defaultValues import *
+
 import main
 import vMath
 import standardFuncs
 import collections
 import Queue
 
-loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
-
 def move(plane):
     counter = 0  # This is just to keep track of things
     total_distance_traveled =0  # Also just to keep track of things
     waypoint_counter = 0
+    seconds = 0
 
     # Move the plan in a straight line to the direction of the target waypoint
     while plane.cLoc != plane.tLoc:
@@ -37,8 +38,8 @@ def move(plane):
 
             plane.cbearing = plane.tbearing
             plane.celevation = plane.televation
-            if counter % (main.frequency * main.rate_of_updates) == 0:
-                print 'Adjusting bearing or elevation!'
+            #if counter % (main.frequency * main.rate_of_updates) == 0:
+            #    print 'Adjusting bearing or elevation!'
 
         # Move the plane in a straight line if bearing is correct
         else:
@@ -47,8 +48,7 @@ def move(plane):
             # Take vector components and add to current longitude and latitude
 
             speed = plane.speed  # Get speed from plane
-            frequency = main.frequency  # Get frequency of updates from main
-            distance_traveled = plane.speed / main.frequency
+            distance_traveled = plane.speed / FREQUENCY
             total_distance_traveled += distance_traveled
 
             # Calculate new position
@@ -66,19 +66,21 @@ def move(plane):
             plane.tdistance = total_distance(new_lat, new_lon, new_alt, tlat, tlon, talt)
             counter += 1
 
-            if counter % (main.frequency * main.rate_of_updates) == 0:
-                print 'currently located at', plane.cLoc
+            if counter % (FREQUENCY * RATE_OF_UPDATES) == 0:
+                #print 'currently located at', plane.cLoc
                 counter = 0
+                seconds += 1
 
 
             try:
-                if plane.tdistance < 5:
+                if plane.tdistance < 2:
                     waypoint_counter += 1
                     plane.nextwp()
-                    print 'Reached waypoint #', waypoint_counter
+                    print 'UAV #',plane.id, 'Reached waypoint #', waypoint_counter
             except Queue.Empty:
-                print 'Reached last waypoint (#', waypoint_counter, ')'
+                print 'UAV #', plane.id, 'Reached last waypoint (#', waypoint_counter, ')'
                 break
 
 
     print 'Total distance traved by UAV #', plane.id, "is", total_distance_traveled, "meters"
+    print 'Total time spent:', seconds

@@ -5,10 +5,6 @@ from standardFuncs import *
 
 
 is_test = False
-frequency = 6  # times per second. Frequency of movementSimulator to calculate stufffffff
-rate_of_updates = 5  # seconds per update. Frequency of updates
-ourLatLon = [32.606184, -85.488228, 0]  # Approximate cardinal location of the Shelby Center in degrees.
-
 
 # Generate a latitude, longitude grid according to the size of the airspace.
 # Maximum range for xbee telemetry module is 2 miles (Approx. 3218 meters)

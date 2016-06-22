@@ -5,10 +5,10 @@
 
 
 import random
-import collections
 import Queue
-
-from main import *
+from defaultValues import *
+from standardFuncs import *
+from main import generateGrid
 
 
 # Plane object will eventually have more parameters
@@ -19,7 +19,7 @@ class Plane:
         Plane.counter += 1
         self.id = Plane.counter             # Plane ID =)
 
-        self.speed = 20                     # UAV airspeed in meters per second, 12 meters per second by default
+        self.speed = 12                     # UAV airspeed in meters per second, 12 meters per second by default
         self.maxElevationAngle = 22       # Maximum climbing angle in degrees
         self.minTurningRadius = 12        # Minimum turning radius in meters, should be variable depending on speed, but default meters
         self.maxBankAngle = None
@@ -64,13 +64,11 @@ class Plane:
 # Todo: make an option to load planeObjects and wayPoints
 # Todo: make option to manually set wayPoints for each plane
 
-def generate_planes(numPlanes, numWayPoints, gridSize, location=ourLatLon):
+def generate_planes(numPlanes, numWayPoints, gridSize, location=OUR_LOCATION):
 
     grid = generateGrid(gridSize, location)     # Creates a square grid centered about location
 
     plane = []  # Create list of planes
-    loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
-
 
     # Creates a set number of planes
     for i in range(0, numPlanes):
@@ -107,7 +105,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, location=ourLatLon):
         plane[i].televation = elevation_angle(clat, clon, calt, tlat, tlon, talt)
         plane[i].celevation = plane[i].televation
 
-        if is_test:
+        if IS_TEST:
             print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
             print plane[i].wayPoints
 
