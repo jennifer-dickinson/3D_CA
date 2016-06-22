@@ -6,9 +6,8 @@
 
 import random
 import Queue
-from defaultValues import *
-from standardFuncs import *
-from main import generateGrid
+import defaultValues
+import standardFuncs
 
 
 # Plane object will eventually have more parameters
@@ -44,6 +43,9 @@ class Plane:
         self.avoid = False                  # Is the plane performing an avoidance maneuver?
         self.avoidanceWaypoint = None       # Avoidance waypoint (should only be one)
 
+        self.dead = False                   # Plane generates alive and well
+        self.killedBy = None                # Records which plane it crashed with
+
     def set_cLoc(self, current_location):   # Set the current location
         self.pLoc = self.cLoc               # Move current location to previous location
         self.cLoc = current_location        # Set new current location
@@ -56,9 +58,9 @@ class Plane:
 # Todo: make an option to load planeObjects and wayPoints
 # Todo: make option to manually set wayPoints for each plane
 
-def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OUR_LOCATION,):
+def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION,):
 
-    grid = generateGrid(gridSize, location)     # Creates a square grid centered about location
+    grid = standardFuncs.generateGrid(gridSize, location)     # Creates a square grid centered about location
 
     plane = []  # Create list of planes
 
@@ -73,7 +75,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OU
             lat = random.uniform(grid[0][0], grid[0][1])
             lon = random.uniform(grid[1][0], grid[1][1])
             alt = random.uniform(375,400)
-            plane[i].wayPoints.append(loc(lat,lon,alt))
+            plane[i].wayPoints.append(standardFuncs.loc(lat,lon,alt))
             plane[i].queue.put(plane[i].wayPoints[j])
 
         plane[i].set_cLoc(plane[i].queue.get_nowait())  # Set current location to first generated waypoint
@@ -90,14 +92,14 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OU
         talt = plane[i].tLoc.altitude
 
         # Calculate current and target bearing (both set to equal initially)
-        plane[i].tBearing = find_bearing(clat, clon, tlat, tlon)
+        plane[i].tBearing = standardFuncs.find_bearing(clat, clon, tlat, tlon)
         plane[i].cBearing = plane[i].tBearing
 
         # Calculate current and target elevation angles (also equa)
-        plane[i].tElevation = elevation_angle(clat, clon, calt, tlat, tlon, talt)
+        plane[i].tElevation = standardFuncs.elevation_angle(clat, clon, calt, tlat, tlon, talt)
         plane[i].cElevation = plane[i].tElevation
 
-        if IS_TEST:
+        if defaultValues.IS_TEST:
             print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
             print plane[i].wayPoints
 

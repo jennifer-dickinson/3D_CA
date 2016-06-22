@@ -17,15 +17,24 @@ class uavComm(threading.Thread):
     def run(self):
         while self.go:
             time.sleep(defaultValues.DELAY)
-            print "Communication is up and running."
+            #print "Communication is up and running."
 
-        print "Communication has ended."
+            # Increment timer with each loop. If no updates after threshold, break.
+            self.timer += defaultValues.DELAY
+            if self.timer > defaultValues.COMM_KILL_TIME:
+                print "Communication timed out"
+                break
+
+        print "Communication has ended.\n"
         print "Last positions for UAVs:"
         for elem in self.positions:
-            print "UAV ID:", elem["ID"], "at position", elem["cLoc"]
+            status = 'survived'
+            if elem['dead'] == True:
+                status = "crashed"
+            print "UAV ID:", elem["ID"], "at position", elem["cLoc"], status
 
     def startUp (self, plane):
-        dict = {"ID" : plane.id, "cLoc" : plane.cLoc, "pLoc": plane.pLoc, "dead" : False}
+        dict = {"ID" : plane.id, "cLoc" : plane.cLoc, "bear": plane.cBearing, "elev": plane.cElevation, "dead" : plane.dead, "killedBy" : None }
         self.positions.append(dict)
         self.timer = 0
         print "Initial position for UAV", plane.id, "updated!"
@@ -33,7 +42,14 @@ class uavComm(threading.Thread):
     def update(self, plane):
         dict = (item for item in self.positions if item["ID"] == plane.id).next()
         dict["cLoc"] = plane.cLoc
-        dict["pLoc"] = plane.pLoc
+        dict["bear"] = plane.cBearing
+        dict["elev"] = plane.cElevation
+        if plane.dead:
+            dict["dead"] = plane.dead
+            dict["killedBy"] = plane.killedBy
+            dict2 = (item for item in self.positions if item["ID"] == plane.killedBy).next()
+            dict2["dead"] = plane.dead
+            dict2["killedBy"] = plane.id
         self.timer = 0
 
     def read(self):

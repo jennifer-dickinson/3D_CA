@@ -108,3 +108,15 @@ def find_sign(number):
     return 0
 
 loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
+
+# Generate a latitude, longitude grid according to the size of the airspace.
+# Maximum range for xbee telemetry module is 2 miles (Approx. 3218 meters)
+def generateGrid(grid_size, location):
+    lat_ll = location[0] - (grid_size / (2 * LATITUDE_TO_METERS))  # Set lower latitude limit
+    lat_ul = location[0] + (grid_size / (2 * LATITUDE_TO_METERS))  # Set upper latitude limit
+    lon_ll = location[1] - (grid_size / (2 * LONGITUDE_TO_METERS))  # Set lower longitude limit
+    lon_ul = location[1] + (grid_size / (2 * LONGITUDE_TO_METERS))  # Set upper longitude limit
+
+    # Return as a list
+    grid = [[lat_ll, lat_ul], [lon_ll, lon_ul]]
+    return grid
