@@ -18,7 +18,7 @@ def move(plane, communicator):
     # Todo: Make an option for centralized/decentralized collision avoidance & movement
 
     # Move the plan in a straight line to the direction of the target waypoint
-    while True:
+    while plane.dead == False:
 
         # Simulate time by delaying planes update. Will need this for GUI.
         if defaultValues.SIMULATE_TIME:
@@ -52,11 +52,11 @@ def move(plane, communicator):
             # Take vector components and add to current longitude and latitude
 
             speed = plane.speed  # Get speed from plane
-            distance_traveled = plane.speed * defaultValues.DELAY
-            total_distance_traveled += distance_traveled
+            distanceTraveled = plane.speed * defaultValues.DELAY
+            plane.distanceTraveled += distanceTraveled
 
             # Calculate new position
-            position = vMath.vector(distance_traveled, plane.cBearing, plane.cElevation)
+            position = vMath.vector(distanceTraveled, plane.cBearing, plane.cElevation)
             new_lat = plane.cLoc.latitude + (position.x / standardFuncs.LATITUDE_TO_METERS)
             new_lon = plane.cLoc.longitude + (position.y / standardFuncs.LONGITUDE_TO_METERS)
             new_alt = plane.cLoc.altitude + position.z
@@ -92,20 +92,17 @@ def move(plane, communicator):
                 plane.killedBy = elem["killedBy"]
                 break
 
+
+        if plane.tdistance < defaultValues.DISTANCE_FOR_SUCCESS:
+            plane.wpAchieved += 1
+            try: plane.nextwp()
+            except Queue.Empty:
+                communicator.update(plane)
+                #print 'UAV #%.0f reached last waypoint.' % plane.id
+                break
+
         communicator.update(plane)
 
-        try:
-            if plane.tdistance < defaultValues.DISTANCE_FOR_SUCCESS:
-                waypoint_counter += 1
-                plane.nextwp()
-                #print 'UAV #', plane.id, 'Reached waypoint #', waypoint_counter
-        except Queue.Empty:
-            print '\nUAV #', plane.id, 'Reached last waypoint (#', waypoint_counter, ')'
-            # print plane.cLoc
-            break
-
     # Todo: make this pretty
-    if plane.dead: print "\nUAV", plane.id, "has crashed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    print 'Total distance traved by UAV #', plane.id, ":", total_distance_traveled, "m"
-    print 'Total waypoints achieved:', waypoint_counter
-    print "Total target waypoints:", plane.numWayPoints
+    time.sleep(random.uniform(0, 0.1))
+    if plane.dead: print ("UAV #%.0f has crashed!!!!!!!!!!!!!!!!!!!!!" % plane.id)

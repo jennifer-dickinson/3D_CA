@@ -26,9 +26,12 @@ class Plane:
         self.numWayPoints = 0               # Total number of waypoints assigned to plane
         self.wayPoints = []                 # Waypoint list
         self.queue = Queue.Queue()          # Waypoint queue
+        self.wpAchieved = 0                 # Of waypoints achieved
 
         self.distance  = None               # Horizontal distance to waypoint in meters
         self.tdistance = None               # Total distance to waypoint in meters
+
+        self.distanceTraveled = 0           # Total distance traveled in meters
 
         self.sLoc = None                    # Starting location in
         self.pLoc = None                    # Previous location
