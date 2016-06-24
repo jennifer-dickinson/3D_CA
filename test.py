@@ -7,6 +7,7 @@ import defaultValues
 communicator = commList.uavComm()
 
 communicator.start()
+if communicator.isAlive: print "Communicator initialized."
 
 plane = planeGenerator.generate_planes(
     defaultValues.NUM_PLANES,
@@ -18,12 +19,12 @@ plane = planeGenerator.generate_planes(
 planeMover = list()
 
 for i in range(0, defaultValues.NUM_PLANES):
-   planeMover.append(Thread(target=movementSimulator.move, args=(plane[i], communicator)))
+   planeMover.append(Thread(target=movementSimulator.move, args=(plane[i], communicator, 0)))
 
 for i in range(0, defaultValues.NUM_PLANES):
     planeMover[i].start()
 
-for i in range(0, defaultValues.NUM_PLANES):
-    planeMover[i].join()
+while communicator.isAlive():
+    pass
 
-communicator.stop()
+print "Communicator terminated."

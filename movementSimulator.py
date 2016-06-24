@@ -9,7 +9,7 @@ import Queue
 import time
 import random
 
-def move(plane, communicator):
+def move(plane, communicator, method):
     counter = 0  # This is just to keep track of things
     total_distance_traveled =0  # Also just to keep track of things
     waypoint_counter = 0
@@ -40,13 +40,16 @@ def move(plane, communicator):
 
         # This is a temporary fix for adjusting bearing and elevation
         # Todo: with each adjustment, calculate a distance travled
-        if plane.cBearing != plane.tBearing or plane.cElevation != plane.tElevation:
+        #if plane.cBearing != plane.tBearing or plane.cElevation != plane.tElevation:
+
+        #    plane.cBearing = plane.tBearing
+        #    plane.cElevation = plane.tElevation
+
+        # Move the plane in a straight line if bearing is correct
+        if True: # Was supposed to be elif, until plane bearing adjustment is made leaf as if True.
 
             plane.cBearing = plane.tBearing
             plane.cElevation = plane.tElevation
-
-        # Move the plane in a straight line if bearing is correct
-        else:
 
             # Position is in total distance traveled over one second multiplied by time (DELAY)
             # Take vector components and add to current longitude and latitude
@@ -104,5 +107,5 @@ def move(plane, communicator):
         communicator.update(plane)
 
     # Todo: make this pretty
-    time.sleep(random.uniform(0, 0.1))
     if plane.dead: print ("UAV #%.0f has crashed!!!!!!!!!!!!!!!!!!!!!" % plane.id)
+    communicator.join()
