@@ -10,15 +10,12 @@ import time
 import random
 
 def move(plane, communicator, method):
-    counter = 0  # This is just to keep track of things
-    total_distance_traveled =0  # Also just to keep track of things
-    waypoint_counter = 0
     timer = 0
+    stop = False
 
     # Todo: Make an option for centralized/decentralized collision avoidance & movement
-
     # Move the plan in a straight line to the direction of the target waypoint
-    while plane.dead == False:
+    while not stop:
 
         # Simulate time by delaying planes update. Will need this for GUI.
         if defaultValues.SIMULATE_TIME:
@@ -81,7 +78,7 @@ def move(plane, communicator, method):
         if timer % defaultValues.RATE_OF_UPDATES == 0 and defaultValues.IS_TEST:
             print 'UAV #', plane.id, 'currently located at', plane.cLoc
 
-        uav_positions = communicator.read()
+        uav_positions = communicator.read(plane)
 
         for elem in uav_positions:
             distance = standardFuncs.nt_total_distance(plane.cLoc, elem["cLoc"])
@@ -89,20 +86,18 @@ def move(plane, communicator, method):
                 # time.sleep(random.uniform(0, .001))  # Just so that the console doesn't get screwed up
                 plane.dead = True
                 plane.killedBy = elem["ID"]
-                break
+                stop = True
             elif elem["ID"] == plane.id and elem["dead"] == True:
                 plane.dead = True
                 plane.killedBy = elem["killedBy"]
-                break
+                stop = True
 
-
-        if plane.tdistance < defaultValues.DISTANCE_FOR_SUCCESS:
+        if plane.tdistance < defaultValues.WAYPOINT_DISTANCE:
             plane.wpAchieved += 1
-            try: plane.nextwp()
-            except Queue.Empty:
-                communicator.update(plane)
-                #print 'UAV #%.0f reached last waypoint.' % plane.id
-                break
+            if plane.wpAchieved < plane.numWayPoints:
+                plane.nextwp()
+            elif plane.wpAchieved == plane.numWayPoints:
+                stop = True
 
         communicator.update(plane)
 

@@ -12,6 +12,8 @@ import collections
 LATITUDE_TO_METERS = 110574.61   # Meters per latitude degree
 LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
 
+DEGREE = u'\N{DEGREE SIGN}'
+
 
 # Convert cardinal direction to an angle in the cartesian plane
 def to_cartesian(uav_bearing):

@@ -22,6 +22,7 @@ for i in range(0, defaultValues.NUM_PLANES):
    planeMover.append(Thread(target=movementSimulator.move, args=(plane[i], communicator, 0)))
 
 for i in range(0, defaultValues.NUM_PLANES):
+    planeMover[i].setDaemon(True)
     planeMover[i].start()
 
 while communicator.isAlive():
