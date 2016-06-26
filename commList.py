@@ -3,6 +3,7 @@ import time
 from defaultValues import *
 from standardFuncs import *
 import logging
+import sys
 
 logger()
 
@@ -12,6 +13,8 @@ class uavComm(Thread):
 
         self.positions = list()
         self.stopped = False
+
+        self.startTime = time.time()
 
         self.timer = 0
         self.counter = 0
@@ -36,8 +39,15 @@ class uavComm(Thread):
 
     def run(self):
         print "Simulating UAV flights. This may take a while..."
+        dots = ""
         while not self.stopped:
-            time.sleep(1)
+
+            dots += "."
+            print "\r%-80s" % dots,
+            sys.stdout.flush()
+            if len(dots) == 80: dots = ""
+
+            time.sleep(DELAY)
 
             # Increment timer with each loop. If no updates after threshold, break.
             self.timer += 1
@@ -47,16 +57,16 @@ class uavComm(Thread):
                 logging.info('NO UAVS IN AIR')
                 break
 
-            # If timer reaches 4 seconds without an update, end communicator thread.
-            elif self.timer > 2:
+            # If timer reaches 2 seconds without an update, end communicator thread.
+            elif (self.timer * DELAY) > 2:
                 print ("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
                 logging.error ('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
         logging.info('Communication has ended.')
-
-        self. uav_status()
+        time.sleep(1)
+        self.uav_status()
 
 
 
@@ -77,7 +87,6 @@ class uavComm(Thread):
 
 
     def update(self, plane):
-        #logging.info('UAV #%3i running update.' % plane.id)
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
@@ -132,11 +141,11 @@ class uavComm(Thread):
 
         self.writeCounter+= 1
 
-        logging.info('Total UAVs accessed: %i/%i' % (self.writeCounter, self.total_uavs))
+        logging.info('Write access counter: %i/%i' % (self.writeCounter, self.total_uavs))
 
         # If the counter is equal to or greater than total UAVs, switch to readState & reset counter
         if self.writeCounter >= self.total_uavs:
-            logging.info("%i deaths this turn." % self.turn_kill_counter)
+            logging.info("%i UAV removed this turn." % self.turn_kill_counter)
             self.total_uavs -= self.turn_kill_counter
             logging.info("Updated total UAVs in air to %i." % self.total_uavs)
             self.turn_kill_counter = 0
@@ -167,7 +176,7 @@ class uavComm(Thread):
         # Increment counter.
         self.readCounter += 1
 
-        logging.info('Read access counter: %i' % self.readCounter)
+        logging.info('Read access counter: %i/%i' % (self.readCounter, self.total_uavs))
         logging.info('total UAVs in air: %i' % self.total_uavs)
         # Switch to writeState if counter is equal to or greater than UAVs in the air.
         if self.readCounter >= self.total_uavs:
@@ -187,13 +196,14 @@ class uavComm(Thread):
         self.stopped = True
 
     def uav_status (self):
+
         # Print status for each UAV.
-        title = '\n%-4s %-40s %-10s %-10s %-10s %-10s ' % (
+        title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
             'ID#',
             'Final Location',
-            'Distance',
-            'Waypoints',
-            'Crashed?',
+            'Dist.',
+            'WPTS',
+            'Dead?',
             'Killed By?'
         )
         print title
@@ -211,7 +221,7 @@ class uavComm(Thread):
                 elem["cLoc"].longitude, DEGREE,
                 elem["cLoc"].altitude,
             )
-            print '%3i  %-39s  %9s  %9s  %-9s  %-9s' % (
+            print '%3i  %-40s  %6s  %4s  %-5s  %-10s' % (
                 elem["ID"],
                 location,
                 elem["tdis"],
@@ -219,10 +229,3 @@ class uavComm(Thread):
                 elem["dead"],
                 killed
             )
-
-        print
-        print "Total UAVs in air: %i" % self.total_uavs
-        seconds = self.steps_counter * DELAY
-        m, s = divmod(seconds, 60)
-        h, m = divmod(m, 60)
-        print "Time taken: %i:%02i:%02i." % (h, m, s)

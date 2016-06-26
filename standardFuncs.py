@@ -7,6 +7,7 @@
 import math
 import collections
 import logging
+import locale
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location
@@ -57,8 +58,11 @@ def manipulate_angle(angle):
 
 
 # Calculate relative horizontal distance using Haversine's formula
-def horizontal_distance(lat1, lon1, lat2, lon2):
-    # type: (starting altitude, starting longitude, final altitude, final longitude) -> distance
+def findDistance (coor1, coor2):
+    lat1 = coor1.latitude
+    lat2 = coor2.latitude
+    lon1 = coor1.longitude
+    lon2 = coor2.longitude
     R = 6378.137  # Radius of the earth in kilometers
     d_lat = math.radians(lat2 - lat1)
     d_lon = math.radians(lon2 - lon1)
@@ -70,16 +74,8 @@ def horizontal_distance(lat1, lon1, lat2, lon2):
 
 
 # Calculate total distance
-def total_distance(lat1, lon1, alt1, lat2, lon2, alt2):
-    d_hor = horizontal_distance(lat1, lon1, lat2, lon2)
-    d_alt = alt2 - alt1
-    distance = math.sqrt(math.pow(d_hor, 2) + math.pow(d_alt, 2))
-    return distance
-
-
-# Calculate total distance
-def nt_total_distance(coor1, coor2):
-    d_hor = horizontal_distance(coor1.latitude, coor1.longitude, coor2.latitude, coor2.longitude)
+def totalDistance(coor1, coor2):
+    d_hor = findDistance(coor1, coor2)
     d_alt = coor2.altitude - coor1.altitude
     distance = math.sqrt(math.pow(d_hor, 2) + math.pow(d_alt, 2))
     return distance
@@ -87,7 +83,11 @@ def nt_total_distance(coor1, coor2):
 
 
 # Return bearing using Haversine's formula, in degrees
-def find_bearing(lat1, lon1, lat2, lon2):
+def find_bearing(coor1, coor2):
+    lat1 = coor1.latitude
+    lat2 = coor2.latitude
+    lon1 = coor1.longitude
+    lon2 = coor2.longitude
     angle = math.atan2(math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(lon2 - lon1),
                        math.sin(lon2 - lon1) * math.cos(lat2))
     angle = to_cartesian(math.degrees(angle))
@@ -95,9 +95,9 @@ def find_bearing(lat1, lon1, lat2, lon2):
 
 
 # Return angle of elevation in spherical coordinates
-def elevation_angle(lat1, lon1, alt1, lat2, lon2, alt2):
-    h_dis = horizontal_distance(lat1, lon1, lat2, lon2)
-    a_dis = alt2 - alt1
+def elevation_angle(coor1, coor2):
+    h_dis = findDistance(coor1, coor2)
+    a_dis = coor2.altitude - coor1.altitude
     angle = math.degrees(math.atan2(a_dis, h_dis))
     return angle
 
@@ -125,5 +125,5 @@ def generateGrid(grid_size, location):
     return grid
 
 def logger():
-    logging.basicConfig(filename='debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',
+    logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',
                         level=logging.DEBUG)

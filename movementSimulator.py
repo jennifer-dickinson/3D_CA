@@ -32,8 +32,8 @@ def move(plane, communicator, method):
         tlon = plane.tLoc.longitude
         talt = plane.tLoc.altitude
 
-        plane.distance = standardFuncs.horizontal_distance(clat, clon, tlat, tlon)
-        plane.tdistance = standardFuncs.total_distance(clat, clon, calt, tlat, tlon, talt)
+        plane.distance = standardFuncs.findDistance(plane.cLoc, plane.tLoc)
+        plane.tdistance = standardFuncs.totalDistance(plane.cLoc, plane.tLoc)
 
         # This is a temporary fix for adjusting bearing and elevation
         # Todo: with each adjustment, calculate a distance travled
@@ -61,19 +61,21 @@ def move(plane, communicator, method):
             new_lon = plane.cLoc.longitude + (position.y / standardFuncs.LONGITUDE_TO_METERS)
             new_alt = plane.cLoc.altitude + position.z
 
+            newLoc = standardFuncs.loc(new_lat,new_lon,new_alt)
+
             # Update current location, distance, total distance, target bearing,
             newloc = standardFuncs.loc(new_lat,new_lon,new_alt)
             plane.set_cLoc(newloc)
 
             # This is acceptable for now. Should change to us current and prvious location from set_cLoc
-            plane.tBearing = standardFuncs.find_bearing(new_lat, new_lon, tlat, tlon)
-            plane.tElevation = standardFuncs.elevation_angle(new_lat, new_lon, new_alt, tlat, tlon, talt)
+            plane.tBearing = standardFuncs.find_bearing(newLoc, plane.tLoc)
+            plane.tElevation = standardFuncs.elevation_angle(newLoc,plane.tLoc)
 
             # haversine's horizontal distance
-            plane.distance = standardFuncs.horizontal_distance(new_lat, new_lon, tlat, tlon)
+            plane.distance = standardFuncs.findDistance(newLoc, plane.tLoc)
 
             # haversine's horizontal distance w/ vertical distance taken into account
-            plane.tdistance = standardFuncs.total_distance(new_lat, new_lon, new_alt, tlat, tlon, talt)
+            plane.tdistance = standardFuncs.totalDistance(newLoc, plane.tLoc)
 
         if timer % defaultValues.RATE_OF_UPDATES == 0 and defaultValues.IS_TEST:
             print 'UAV #', plane.id, 'currently located at', plane.cLoc
@@ -81,7 +83,7 @@ def move(plane, communicator, method):
         uav_positions = communicator.read(plane)
 
         for elem in uav_positions:
-            distance = standardFuncs.nt_total_distance(plane.cLoc, elem["cLoc"])
+            distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
             if (distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False):
                 # time.sleep(random.uniform(0, .001))  # Just so that the console doesn't get screwed up
                 plane.dead = True
@@ -92,6 +94,7 @@ def move(plane, communicator, method):
                 plane.killedBy = elem["killedBy"]
                 stop = True
 
+        # Move through queue to next waypoint, or if done stop thread.
         if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
@@ -101,5 +104,5 @@ def move(plane, communicator, method):
         communicator.update(plane)
 
     # Todo: make this pretty
-    if plane.dead: print ("UAV #%3i has crashed!!!!!!!!!!!!!!!!!!!!!" % plane.id)
-    if plane.wpAchieved == plane.numWayPoints: print "UAV #%3i reached all waypoints." % plane.id
+    if plane.dead: print "\r%-80s" % "UAV #%3i has crashed!!" % plane.id
+    if plane.wpAchieved == plane.numWayPoints: print "\r%-80s" % "UAV #%3i reached all waypoints." % plane.id

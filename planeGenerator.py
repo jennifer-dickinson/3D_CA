@@ -97,11 +97,11 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OU
         talt = plane[i].tLoc.altitude
 
         # Calculate current and target bearing (both set to equal initially)
-        plane[i].tBearing = standardFuncs.find_bearing(clat, clon, tlat, tlon)
+        plane[i].tBearing = standardFuncs.find_bearing(plane[i].cLoc, plane[i].tLoc)
         plane[i].cBearing = plane[i].tBearing
 
         # Calculate current and target elevation angles (also equa)
-        plane[i].tElevation = standardFuncs.elevation_angle(clat, clon, calt, tlat, tlon, talt)
+        plane[i].tElevation = standardFuncs.elevation_angle(plane[i].cLoc, plane[i].tLoc)
         plane[i].cElevation = plane[i].tElevation
 
         if IS_TEST:
