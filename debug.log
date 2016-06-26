@@ -1,0 +1,2608 @@
+2016-06-26 01:15:47,317 [INFO]: Started
+2016-06-26 01:15:47,317 [INFO]: Read state set.
+2016-06-26 01:15:47,318 [INFO]: Communicator initialized.
+2016-06-26 01:15:47,318 [INFO]: Initial position for UAV #  1 updated!
+2016-06-26 01:15:47,318 [INFO]: Initial position for UAV #  2 updated!
+2016-06-26 01:15:47,318 [INFO]: Initial position for UAV #  3 updated!
+2016-06-26 01:15:47,319 [INFO]: Initial position for UAV #  4 updated!
+2016-06-26 01:15:47,319 [INFO]: Initial position for UAV #  5 updated!
+2016-06-26 01:15:47,319 [INFO]: Initial position for UAV #  6 updated!
+2016-06-26 01:15:47,320 [INFO]: Initial position for UAV #  7 updated!
+2016-06-26 01:15:47,320 [INFO]: Initial position for UAV #  8 updated!
+2016-06-26 01:15:47,320 [INFO]: Initial position for UAV #  9 updated!
+2016-06-26 01:15:47,320 [INFO]: Initial position for UAV # 10 updated!
+2016-06-26 01:15:47,321 [INFO]: UAV #  1 acquired read lock.
+2016-06-26 01:15:47,321 [INFO]: UAV #  1 accessed memory
+2016-06-26 01:15:47,321 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,321 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,322 [INFO]: UAV #  1 released read lock.
+2016-06-26 01:15:47,322 [INFO]: UAV #  2 acquired read lock.
+2016-06-26 01:15:47,322 [INFO]: UAV #  1 waiting for write state.
+2016-06-26 01:15:47,322 [INFO]: UAV #  2 accessed memory
+2016-06-26 01:15:47,323 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,323 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,323 [INFO]: UAV #  2 released read lock.
+2016-06-26 01:15:47,324 [INFO]: UAV #  3 acquired read lock.
+2016-06-26 01:15:47,324 [INFO]: UAV #  2 waiting for write state.
+2016-06-26 01:15:47,324 [INFO]: UAV #  3 accessed memory
+2016-06-26 01:15:47,325 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,327 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,327 [INFO]: UAV #  3 released read lock.
+2016-06-26 01:15:47,327 [INFO]: UAV #  3 waiting for write state.
+2016-06-26 01:15:47,328 [INFO]: UAV #  4 acquired read lock.
+2016-06-26 01:15:47,328 [INFO]: UAV #  4 accessed memory
+2016-06-26 01:15:47,329 [INFO]: Read access counter: 4
+2016-06-26 01:15:47,329 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,330 [INFO]: UAV #  4 released read lock.
+2016-06-26 01:15:47,330 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,330 [INFO]: UAV #  4 waiting for write state.
+2016-06-26 01:15:47,335 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,338 [INFO]: Read access counter: 5
+2016-06-26 01:15:47,338 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,339 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,339 [INFO]: UAV #  6 acquired read lock.
+2016-06-26 01:15:47,339 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,342 [INFO]: UAV #  6 accessed memory
+2016-06-26 01:15:47,346 [INFO]: Read access counter: 6
+2016-06-26 01:15:47,347 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,348 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,350 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,348 [INFO]: UAV #  6 released read lock.
+2016-06-26 01:15:47,351 [INFO]: Read access counter: 7
+2016-06-26 01:15:47,353 [INFO]: UAV #  6 waiting for write state.
+2016-06-26 01:15:47,354 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,363 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,363 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,364 [INFO]: UAV #  8 acquired read lock.
+2016-06-26 01:15:47,366 [INFO]: UAV #  8 accessed memory
+2016-06-26 01:15:47,367 [INFO]: Read access counter: 8
+2016-06-26 01:15:47,367 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,367 [INFO]: UAV #  8 released read lock.
+2016-06-26 01:15:47,367 [INFO]: UAV #  9 acquired read lock.
+2016-06-26 01:15:47,371 [INFO]: UAV #  8 waiting for write state.
+2016-06-26 01:15:47,376 [INFO]: UAV #  9 accessed memory
+2016-06-26 01:15:47,381 [INFO]: Read access counter: 9
+2016-06-26 01:15:47,384 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,384 [INFO]: UAV #  9 released read lock.
+2016-06-26 01:15:47,384 [INFO]: UAV #  9 waiting for write state.
+2016-06-26 01:15:47,385 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,386 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,386 [INFO]: Read access counter: 10
+2016-06-26 01:15:47,386 [INFO]: total UAVs in air: 10
+2016-06-26 01:15:47,386 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,387 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,390 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,391 [INFO]: UAV #  4 acquired write lock.
+2016-06-26 01:15:47,392 [INFO]: UAV #  4 added to deaths by 1 (1 total).
+2016-06-26 01:15:47,393 [INFO]: UAV #  4 crashed with #  8.
+2016-06-26 01:15:47,393 [INFO]: Total UAVs accessed: 1/10
+2016-06-26 01:15:47,393 [INFO]: UAV #  4 released write lock
+2016-06-26 01:15:47,393 [INFO]: UAV #  4 waiting for read state.
+2016-06-26 01:15:47,393 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,394 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,394 [INFO]: Total UAVs accessed: 2/10
+2016-06-26 01:15:47,394 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,395 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,394 [INFO]: UAV #  6 acquired write lock.
+2016-06-26 01:15:47,397 [INFO]: UAV #  6 updated position
+2016-06-26 01:15:47,397 [INFO]: Total UAVs accessed: 3/10
+2016-06-26 01:15:47,397 [INFO]: UAV #  6 released write lock
+2016-06-26 01:15:47,397 [INFO]: UAV #  6 waiting for read state.
+2016-06-26 01:15:47,397 [INFO]: UAV #  1 acquired write lock.
+2016-06-26 01:15:47,398 [INFO]: UAV #  1 updated position
+2016-06-26 01:15:47,398 [INFO]: Total UAVs accessed: 4/10
+2016-06-26 01:15:47,398 [INFO]: UAV #  1 released write lock
+2016-06-26 01:15:47,399 [INFO]: UAV #  3 acquired write lock.
+2016-06-26 01:15:47,399 [INFO]: UAV #  1 waiting for read state.
+2016-06-26 01:15:47,399 [INFO]: UAV #  3 added to deaths by 1 (2 total).
+2016-06-26 01:15:47,401 [INFO]: UAV #  3 crashed with #  4.
+2016-06-26 01:15:47,401 [INFO]: Total UAVs accessed: 5/10
+2016-06-26 01:15:47,401 [INFO]: UAV #  3 released write lock
+2016-06-26 01:15:47,401 [INFO]: UAV #  3 waiting for read state.
+2016-06-26 01:15:47,401 [INFO]: UAV #  9 acquired write lock.
+2016-06-26 01:15:47,402 [INFO]: UAV #  9 updated position
+2016-06-26 01:15:47,402 [INFO]: Total UAVs accessed: 6/10
+2016-06-26 01:15:47,402 [INFO]: UAV #  9 released write lock
+2016-06-26 01:15:47,403 [INFO]: UAV #  9 waiting for read state.
+2016-06-26 01:15:47,404 [INFO]: UAV #  8 acquired write lock.
+2016-06-26 01:15:47,404 [INFO]: UAV #  8 added to deaths by 1 (3 total).
+2016-06-26 01:15:47,404 [INFO]: UAV #  8 found out it was crashed.
+2016-06-26 01:15:47,404 [INFO]: Total UAVs accessed: 7/10
+2016-06-26 01:15:47,404 [INFO]: UAV #  8 released write lock
+2016-06-26 01:15:47,404 [INFO]: UAV #  8 waiting for read state.
+2016-06-26 01:15:47,404 [INFO]: UAV #  2 acquired write lock.
+2016-06-26 01:15:47,406 [INFO]: UAV #  2 updated position
+2016-06-26 01:15:47,406 [INFO]: Total UAVs accessed: 8/10
+2016-06-26 01:15:47,406 [INFO]: UAV #  2 released write lock
+2016-06-26 01:15:47,406 [INFO]: UAV #  2 waiting for read state.
+2016-06-26 01:15:47,406 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,407 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,407 [INFO]: Total UAVs accessed: 9/10
+2016-06-26 01:15:47,407 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,408 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,409 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,409 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,409 [INFO]: Total UAVs accessed: 10/10
+2016-06-26 01:15:47,409 [INFO]: 3 deaths this turn.
+2016-06-26 01:15:47,409 [INFO]: Updated total UAVs in air to 7.
+2016-06-26 01:15:47,409 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,409 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,410 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,410 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,410 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,411 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,411 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,411 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,413 [INFO]: UAV #  1 acquired read lock.
+2016-06-26 01:15:47,413 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,415 [INFO]: UAV #  1 accessed memory
+2016-06-26 01:15:47,416 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,416 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,416 [INFO]: UAV #  1 released read lock.
+2016-06-26 01:15:47,416 [INFO]: UAV #  6 acquired read lock.
+2016-06-26 01:15:47,416 [INFO]: UAV #  1 waiting for write state.
+2016-06-26 01:15:47,417 [INFO]: UAV #  6 accessed memory
+2016-06-26 01:15:47,417 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,420 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,420 [INFO]: UAV #  6 released read lock.
+2016-06-26 01:15:47,420 [INFO]: UAV #  6 waiting for write state.
+2016-06-26 01:15:47,420 [INFO]: UAV #  2 acquired read lock.
+2016-06-26 01:15:47,421 [INFO]: UAV #  2 accessed memory
+2016-06-26 01:15:47,421 [INFO]: Read access counter: 4
+2016-06-26 01:15:47,421 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,422 [INFO]: UAV #  2 released read lock.
+2016-06-26 01:15:47,422 [INFO]: UAV #  2 waiting for write state.
+2016-06-26 01:15:47,423 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,423 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,423 [INFO]: Read access counter: 5
+2016-06-26 01:15:47,424 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,424 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,424 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,425 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,425 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,425 [INFO]: Read access counter: 6
+2016-06-26 01:15:47,425 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,425 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,426 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,426 [INFO]: UAV #  9 acquired read lock.
+2016-06-26 01:15:47,426 [INFO]: UAV #  9 accessed memory
+2016-06-26 01:15:47,427 [INFO]: Read access counter: 7
+2016-06-26 01:15:47,427 [INFO]: total UAVs in air: 7
+2016-06-26 01:15:47,429 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,429 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,430 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,431 [INFO]: UAV #  9 released read lock.
+2016-06-26 01:15:47,431 [INFO]: Total UAVs accessed: 1/7
+2016-06-26 01:15:47,432 [INFO]: UAV #  9 waiting for write state.
+2016-06-26 01:15:47,432 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,432 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,432 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,432 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,433 [INFO]: Total UAVs accessed: 2/7
+2016-06-26 01:15:47,434 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,434 [INFO]: UAV #  2 acquired write lock.
+2016-06-26 01:15:47,434 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,434 [INFO]: UAV #  2 updated position
+2016-06-26 01:15:47,437 [INFO]: UAV #  2 reached waypoint #  1.
+2016-06-26 01:15:47,437 [INFO]: Total UAVs accessed: 3/7
+2016-06-26 01:15:47,437 [INFO]: UAV #  2 released write lock
+2016-06-26 01:15:47,437 [INFO]: UAV #  2 waiting for read state.
+2016-06-26 01:15:47,437 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,438 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,438 [INFO]: Total UAVs accessed: 4/7
+2016-06-26 01:15:47,438 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,439 [INFO]: UAV #  6 acquired write lock.
+2016-06-26 01:15:47,439 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,440 [INFO]: UAV #  6 updated position
+2016-06-26 01:15:47,441 [INFO]: UAV #  6 reached waypoint #  1.
+2016-06-26 01:15:47,441 [INFO]: Total UAVs accessed: 5/7
+2016-06-26 01:15:47,441 [INFO]: UAV #  6 released write lock
+2016-06-26 01:15:47,441 [INFO]: UAV #  1 acquired write lock.
+2016-06-26 01:15:47,441 [INFO]: UAV #  6 waiting for read state.
+2016-06-26 01:15:47,442 [INFO]: UAV #  1 added to deaths by 1 (1 total).
+2016-06-26 01:15:47,444 [INFO]: UAV #  1 crashed with #  2.
+2016-06-26 01:15:47,444 [INFO]: Total UAVs accessed: 6/7
+2016-06-26 01:15:47,444 [INFO]: UAV #  1 released write lock
+2016-06-26 01:15:47,444 [INFO]: UAV #  9 acquired write lock.
+2016-06-26 01:15:47,445 [INFO]: UAV #  1 waiting for read state.
+2016-06-26 01:15:47,448 [INFO]: UAV #  9 updated position
+2016-06-26 01:15:47,449 [INFO]: Total UAVs accessed: 7/7
+2016-06-26 01:15:47,449 [INFO]: 1 deaths this turn.
+2016-06-26 01:15:47,449 [INFO]: Updated total UAVs in air to 6.
+2016-06-26 01:15:47,449 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,449 [INFO]: UAV #  6 acquired read lock.
+2016-06-26 01:15:47,450 [INFO]: UAV #  6 accessed memory
+2016-06-26 01:15:47,450 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,451 [INFO]: UAV #  9 released write lock
+2016-06-26 01:15:47,451 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,452 [INFO]: UAV #  9 waiting for read state.
+2016-06-26 01:15:47,454 [INFO]: UAV #  6 released read lock.
+2016-06-26 01:15:47,454 [INFO]: UAV #  2 acquired read lock.
+2016-06-26 01:15:47,455 [INFO]: UAV #  6 waiting for write state.
+2016-06-26 01:15:47,455 [INFO]: UAV #  2 accessed memory
+2016-06-26 01:15:47,456 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,459 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,459 [INFO]: UAV #  2 released read lock.
+2016-06-26 01:15:47,462 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,463 [INFO]: UAV #  2 waiting for write state.
+2016-06-26 01:15:47,464 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,469 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,469 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,471 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,471 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,471 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,472 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,477 [INFO]: Read access counter: 4
+2016-06-26 01:15:47,477 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,477 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,478 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,478 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,479 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,482 [INFO]: Read access counter: 5
+2016-06-26 01:15:47,482 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,485 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,485 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,486 [INFO]: UAV #  9 acquired read lock.
+2016-06-26 01:15:47,488 [INFO]: UAV #  9 accessed memory
+2016-06-26 01:15:47,488 [INFO]: Read access counter: 6
+2016-06-26 01:15:47,488 [INFO]: total UAVs in air: 6
+2016-06-26 01:15:47,488 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,489 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,489 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,489 [INFO]: UAV #  9 released read lock.
+2016-06-26 01:15:47,490 [INFO]: Total UAVs accessed: 1/6
+2016-06-26 01:15:47,490 [INFO]: UAV #  9 waiting for write state.
+2016-06-26 01:15:47,491 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,491 [INFO]: UAV #  6 acquired write lock.
+2016-06-26 01:15:47,492 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,492 [INFO]: UAV #  6 updated position
+2016-06-26 01:15:47,493 [INFO]: Total UAVs accessed: 2/6
+2016-06-26 01:15:47,493 [INFO]: UAV #  6 released write lock
+2016-06-26 01:15:47,493 [INFO]: UAV #  6 waiting for read state.
+2016-06-26 01:15:47,493 [INFO]: UAV #  2 acquired write lock.
+2016-06-26 01:15:47,496 [INFO]: UAV #  2 added to deaths by 1 (1 total).
+2016-06-26 01:15:47,496 [INFO]: Total UAVs accessed: 3/6
+2016-06-26 01:15:47,497 [INFO]: UAV #  2 released write lock
+2016-06-26 01:15:47,497 [INFO]: UAV #  2 waiting for read state.
+2016-06-26 01:15:47,501 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,501 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,502 [INFO]: Total UAVs accessed: 4/6
+2016-06-26 01:15:47,502 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,503 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,503 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,508 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,508 [INFO]: Total UAVs accessed: 5/6
+2016-06-26 01:15:47,508 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,510 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,511 [INFO]: UAV #  9 acquired write lock.
+2016-06-26 01:15:47,511 [INFO]: UAV #  9 updated position
+2016-06-26 01:15:47,512 [INFO]: Total UAVs accessed: 6/6
+2016-06-26 01:15:47,512 [INFO]: 1 deaths this turn.
+2016-06-26 01:15:47,512 [INFO]: Updated total UAVs in air to 5.
+2016-06-26 01:15:47,512 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,512 [INFO]: UAV #  9 released write lock
+2016-06-26 01:15:47,512 [INFO]: UAV #  9 waiting for read state.
+2016-06-26 01:15:47,513 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,513 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,514 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,514 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,514 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,514 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,515 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,516 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,516 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,518 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,518 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,518 [INFO]: UAV #  6 acquired read lock.
+2016-06-26 01:15:47,520 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,520 [INFO]: UAV #  6 accessed memory
+2016-06-26 01:15:47,523 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,524 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,525 [INFO]: UAV #  6 released read lock.
+2016-06-26 01:15:47,526 [INFO]: UAV #  6 waiting for write state.
+2016-06-26 01:15:47,526 [INFO]: UAV #  9 acquired read lock.
+2016-06-26 01:15:47,526 [INFO]: UAV #  9 accessed memory
+2016-06-26 01:15:47,528 [INFO]: Read access counter: 4
+2016-06-26 01:15:47,528 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,528 [INFO]: UAV #  9 released read lock.
+2016-06-26 01:15:47,528 [INFO]: UAV #  9 waiting for write state.
+2016-06-26 01:15:47,529 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,529 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,533 [INFO]: Read access counter: 5
+2016-06-26 01:15:47,533 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,533 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,534 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,536 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,540 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,542 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,547 [INFO]: Total UAVs accessed: 1/5
+2016-06-26 01:15:47,548 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,548 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,548 [INFO]: UAV #  9 acquired write lock.
+2016-06-26 01:15:47,549 [INFO]: UAV #  9 updated position
+2016-06-26 01:15:47,549 [INFO]: Total UAVs accessed: 2/5
+2016-06-26 01:15:47,549 [INFO]: UAV #  9 released write lock
+2016-06-26 01:15:47,549 [INFO]: UAV #  9 waiting for read state.
+2016-06-26 01:15:47,549 [INFO]: UAV #  6 acquired write lock.
+2016-06-26 01:15:47,550 [INFO]: UAV #  6 updated position
+2016-06-26 01:15:47,550 [INFO]: Total UAVs accessed: 3/5
+2016-06-26 01:15:47,550 [INFO]: UAV #  6 released write lock
+2016-06-26 01:15:47,550 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,551 [INFO]: UAV #  6 waiting for read state.
+2016-06-26 01:15:47,566 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,572 [INFO]: UAV # 10 reached waypoint #  1.
+2016-06-26 01:15:47,572 [INFO]: Total UAVs accessed: 4/5
+2016-06-26 01:15:47,573 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,574 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,575 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,578 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,581 [INFO]: Total UAVs accessed: 5/5
+2016-06-26 01:15:47,582 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,582 [INFO]: Updated total UAVs in air to 5.
+2016-06-26 01:15:47,584 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,585 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,586 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,594 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,594 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,594 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,595 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,596 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,596 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,597 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,597 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,601 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,602 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,602 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,602 [INFO]: UAV #  9 acquired read lock.
+2016-06-26 01:15:47,602 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,602 [INFO]: UAV #  9 accessed memory
+2016-06-26 01:15:47,603 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,608 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,612 [INFO]: UAV #  9 released read lock.
+2016-06-26 01:15:47,612 [INFO]: UAV #  6 acquired read lock.
+2016-06-26 01:15:47,613 [INFO]: UAV #  9 waiting for write state.
+2016-06-26 01:15:47,613 [INFO]: UAV #  6 accessed memory
+2016-06-26 01:15:47,613 [INFO]: Read access counter: 4
+2016-06-26 01:15:47,614 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,615 [INFO]: UAV #  6 released read lock.
+2016-06-26 01:15:47,616 [INFO]: UAV #  6 waiting for write state.
+2016-06-26 01:15:47,616 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,616 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,616 [INFO]: Read access counter: 5
+2016-06-26 01:15:47,616 [INFO]: total UAVs in air: 5
+2016-06-26 01:15:47,616 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,617 [INFO]: UAV #  9 acquired write lock.
+2016-06-26 01:15:47,617 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,617 [INFO]: UAV #  9 added to deaths by 1 (1 total).
+2016-06-26 01:15:47,617 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,618 [INFO]: UAV #  9 crashed with #  6.
+2016-06-26 01:15:47,619 [INFO]: Total UAVs accessed: 1/5
+2016-06-26 01:15:47,620 [INFO]: UAV #  9 released write lock
+2016-06-26 01:15:47,620 [INFO]: UAV #  9 waiting for read state.
+2016-06-26 01:15:47,621 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,622 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,623 [INFO]: Total UAVs accessed: 2/5
+2016-06-26 01:15:47,626 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,626 [INFO]: UAV #  6 acquired write lock.
+2016-06-26 01:15:47,626 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,628 [INFO]: UAV #  6 added to deaths by 1 (2 total).
+2016-06-26 01:15:47,629 [INFO]: UAV #  6 found out it was crashed.
+2016-06-26 01:15:47,629 [INFO]: Total UAVs accessed: 3/5
+2016-06-26 01:15:47,629 [INFO]: UAV #  6 released write lock
+2016-06-26 01:15:47,630 [INFO]: UAV #  6 waiting for read state.
+2016-06-26 01:15:47,629 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,631 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,631 [INFO]: UAV #  7 reached waypoint #  1.
+2016-06-26 01:15:47,631 [INFO]: Total UAVs accessed: 4/5
+2016-06-26 01:15:47,631 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,631 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,631 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,632 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,633 [INFO]: Total UAVs accessed: 5/5
+2016-06-26 01:15:47,633 [INFO]: 2 deaths this turn.
+2016-06-26 01:15:47,633 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,634 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,635 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,635 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,635 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,636 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,636 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,636 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,637 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,637 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,640 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,645 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,646 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,647 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,648 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,648 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,650 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,650 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,651 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,651 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,652 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,652 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,652 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,652 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,652 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,653 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,660 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,660 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,660 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,661 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,662 [INFO]: UAV #  7 reached waypoint #  2.
+2016-06-26 01:15:47,662 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,662 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,663 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,663 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,663 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,663 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,669 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,674 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,675 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,676 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,676 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,680 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,681 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,683 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,688 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,689 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,690 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,690 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,695 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,696 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,698 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,699 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,699 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,699 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,701 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,702 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,703 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,703 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,703 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,704 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,705 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,705 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,708 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,709 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,710 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,710 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,716 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,719 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,719 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,719 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,720 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,721 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,725 [INFO]: UAV #  5 reached waypoint #  1.
+2016-06-26 01:15:47,727 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,730 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,731 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,731 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,731 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,731 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,732 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,731 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,737 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,738 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,739 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,739 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,740 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,741 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,742 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,743 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,744 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,744 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,744 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,745 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,745 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,745 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,745 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,746 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,751 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,752 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,752 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,752 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,753 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,754 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,757 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,761 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,762 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,762 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,763 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,763 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,763 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,763 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,763 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,764 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,764 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,765 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,764 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,765 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,765 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,768 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,768 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,769 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,769 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,770 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,770 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,770 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,772 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,772 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,772 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,773 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,774 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,774 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,775 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,775 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,775 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,775 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,776 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,776 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,777 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,777 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,777 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,777 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,780 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,784 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,785 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,785 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,786 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,786 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,791 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,791 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,791 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,792 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,792 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,793 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,793 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,793 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,794 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,794 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,794 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,795 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,795 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,795 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,795 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,795 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,796 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,796 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,797 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,798 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,799 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,800 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,800 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,800 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,800 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,801 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,801 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,801 [INFO]: UAV # 10 reached waypoint #  2.
+2016-06-26 01:15:47,801 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,801 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,802 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,802 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,803 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,803 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,804 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,804 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,804 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,804 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,805 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,805 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,805 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,806 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,806 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,805 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,806 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,807 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,807 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,807 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,808 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,808 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,808 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,809 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,810 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,810 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,810 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,810 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,810 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,812 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,812 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,812 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,812 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,813 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,813 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,813 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,813 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,816 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,817 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,817 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,818 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,818 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,818 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,819 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,819 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,819 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,820 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,820 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,820 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,820 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,820 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,821 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,821 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,821 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,822 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,822 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,822 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,822 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,822 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,823 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,823 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,823 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,824 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,824 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,824 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,824 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,824 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,824 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,825 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,826 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,826 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,826 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,827 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,833 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,834 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,836 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,836 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,837 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,837 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,840 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,841 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,842 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,845 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,846 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,846 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,846 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,847 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,847 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,847 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,847 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,847 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,848 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,850 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,850 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,850 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,850 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,850 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,852 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,862 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,863 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,863 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,863 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,864 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,869 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,870 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,870 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,871 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,872 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,872 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,872 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,872 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,872 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,873 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,873 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,874 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,876 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,877 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,878 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,878 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,879 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,879 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,879 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,880 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,880 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,880 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,881 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,881 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,881 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,882 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,882 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,883 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,883 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,883 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,884 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,884 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,885 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,885 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,885 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,885 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,885 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,886 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,888 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,889 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,889 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,889 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,889 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,890 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,890 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,890 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,890 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,890 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,890 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,891 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,891 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,891 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,891 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,891 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,892 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,892 [INFO]: UAV #  7 reached waypoint #  3.
+2016-06-26 01:15:47,892 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,892 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,892 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,893 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,893 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,895 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,896 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,896 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,896 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,897 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,897 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,900 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,900 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,900 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,900 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,901 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,901 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,901 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,903 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,903 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,903 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,903 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,904 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,903 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,904 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,905 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,907 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,908 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,909 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,909 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,910 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,910 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,910 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,911 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,911 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,911 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,911 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,912 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,912 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,912 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,913 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,912 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,913 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,915 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,915 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,916 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,916 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,922 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,922 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,923 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,924 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,927 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,927 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,927 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,927 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,928 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,929 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,930 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,934 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,934 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,934 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,934 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,934 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,935 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,935 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,935 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,935 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,936 [INFO]: UAV # 10 reached waypoint #  3.
+2016-06-26 01:15:47,936 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,935 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,936 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,936 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,937 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,937 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,938 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,938 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,940 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,941 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,941 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,941 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,942 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,943 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,944 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,945 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,946 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,947 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,947 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,947 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,947 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,947 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,947 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,947 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,948 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,948 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,948 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,949 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,949 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,949 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,949 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,949 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,949 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,950 [INFO]: UAV #  5 reached waypoint #  2.
+2016-06-26 01:15:47,950 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,951 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,951 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,951 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,952 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,952 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,952 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,953 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,953 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,953 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,954 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,954 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,954 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,955 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,956 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,956 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,956 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,957 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,957 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,957 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,957 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,957 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,957 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,957 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,958 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,960 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,960 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,960 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,961 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,961 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,962 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,963 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,963 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,963 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,963 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,963 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,964 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,964 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,965 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,966 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,966 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,966 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,967 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,968 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,969 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,969 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,969 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,970 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,970 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,971 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,971 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,971 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,971 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,971 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,973 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,973 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,973 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,974 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,974 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,974 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,975 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,975 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,975 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,975 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,975 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,975 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,976 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,976 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,978 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,978 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,978 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:47,978 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:47,978 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:47,979 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:47,979 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:47,980 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:47,981 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:47,981 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:47,981 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:47,983 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:47,985 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:47,985 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:47,985 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:47,985 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:47,988 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:47,988 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:47,988 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:47,988 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:47,988 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:47,988 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:47,989 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:47,989 [INFO]: Read access counter: 1
+2016-06-26 01:15:47,989 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:47,989 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,991 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:47,991 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:47,991 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:47,991 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:47,992 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:47,994 [INFO]: Read access counter: 2
+2016-06-26 01:15:47,994 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:47,994 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:47,994 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:47,994 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:47,994 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:47,996 [INFO]: Read access counter: 3
+2016-06-26 01:15:47,998 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,001 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,002 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,005 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,005 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,006 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,010 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,010 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,010 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,011 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,011 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,011 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,012 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,012 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,012 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,013 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,014 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,014 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,015 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,016 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,016 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,016 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,016 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,017 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,017 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,017 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,017 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,018 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,023 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,024 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,023 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,025 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,029 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,029 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,030 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,032 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,033 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,033 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,034 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,034 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,035 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,035 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,035 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,038 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,040 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,041 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,041 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,042 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,042 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,042 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,042 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,043 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,043 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,043 [INFO]: UAV # 10 reached waypoint #  4.
+2016-06-26 01:15:48,043 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,043 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,044 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,044 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,044 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,044 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,044 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,045 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,045 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,047 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,048 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,049 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,049 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,050 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,050 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,051 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,051 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,051 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,051 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,054 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,055 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,056 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,057 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,057 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,057 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,058 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,058 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,059 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,060 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,060 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,060 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,061 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,062 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,065 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,065 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,065 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,067 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,067 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,068 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,068 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,068 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,069 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,070 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,072 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,072 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,073 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,073 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,074 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,074 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,074 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,074 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,074 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,074 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,074 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,075 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,075 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,077 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,081 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,082 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,083 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,083 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,082 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,085 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,085 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,088 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,088 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,091 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,091 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,094 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,097 [INFO]: UAV #  7 reached waypoint #  4.
+2016-06-26 01:15:48,098 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,098 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,098 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,099 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,099 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,100 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,100 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,100 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,100 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,102 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,102 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,101 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,101 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,104 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,107 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,107 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,107 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,107 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,107 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,109 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,109 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,109 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,110 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,112 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,112 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,113 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,113 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,113 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,114 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,114 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,114 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,114 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,115 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,115 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,115 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,115 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,116 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,116 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,116 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,116 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,117 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,117 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,118 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,118 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,118 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,118 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,119 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,119 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,119 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,121 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,122 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,122 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,123 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,123 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,123 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,124 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,124 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,124 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,125 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,125 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,125 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,126 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,134 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,135 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,138 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,139 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,139 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,139 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,141 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,141 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,144 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,144 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,145 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,145 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,145 [INFO]: UAV # 10 reached waypoint #  5.
+2016-06-26 01:15:48,145 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,146 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,146 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,146 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,146 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,148 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,148 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,148 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,149 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,149 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,149 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,150 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,150 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,157 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,157 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,157 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,158 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,157 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,158 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,160 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,160 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,160 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,160 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,161 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,161 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,162 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,162 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,162 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,162 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,162 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,162 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,163 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,164 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,164 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,165 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,165 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,166 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,166 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,166 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,167 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,167 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,169 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,171 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,171 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,174 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,176 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,177 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,178 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,178 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,178 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,178 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,180 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,180 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,180 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,181 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,183 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,184 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,184 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,189 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,191 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,191 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,191 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,193 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,193 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,193 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,194 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,194 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,196 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,197 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,197 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,199 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,200 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,200 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,200 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,200 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,200 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,200 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,201 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,201 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,201 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,201 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,202 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,202 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,202 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,202 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,203 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,207 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,209 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,211 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,211 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,212 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,213 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,213 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,213 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,215 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,216 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,216 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,216 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,217 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,222 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,222 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,223 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,224 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,224 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,225 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,227 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,229 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,230 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,230 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,231 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,232 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,232 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,232 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,233 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,233 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,233 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,234 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,234 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,234 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,234 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,234 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,235 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,235 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,237 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,242 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,243 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,243 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,243 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,243 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,244 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,244 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,244 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,245 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,245 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,247 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,248 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,249 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,250 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,252 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,254 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,254 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,257 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,260 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,262 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,264 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,265 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,265 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,265 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,265 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,266 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,266 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,266 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,270 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,272 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,272 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,273 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,274 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,275 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,276 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,275 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,277 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,278 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,278 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,279 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,279 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,279 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,280 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,280 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,280 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,280 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,280 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,281 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,280 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,281 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,281 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,285 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,287 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,287 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,290 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,291 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,291 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,292 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,292 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,293 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,293 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,294 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,294 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,294 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,294 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,294 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,297 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,299 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,299 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,299 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,299 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,300 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,301 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,301 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,301 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,303 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,303 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,303 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,303 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,303 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,304 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,305 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,305 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,305 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,305 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,305 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,306 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,306 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,307 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,307 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,308 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,308 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,308 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,311 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,311 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,311 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,311 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,312 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,312 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,312 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,312 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,312 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,313 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,313 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,313 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,314 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,314 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,314 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,315 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,316 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,316 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,317 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,319 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,319 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,319 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,319 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,320 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,320 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,320 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,320 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,320 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,321 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,321 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,321 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,321 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,322 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,322 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,322 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,322 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,323 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,324 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,324 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,324 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,324 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,326 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,327 [INFO]: UAV #  5 reached waypoint #  3.
+2016-06-26 01:15:48,327 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,327 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,328 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,328 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,328 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,328 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,328 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,329 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,329 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,330 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,329 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,330 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,331 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,331 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,332 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,332 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,332 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,333 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,333 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,333 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,334 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,334 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,334 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,335 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,335 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,335 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,336 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,336 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,336 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,337 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,337 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,336 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,337 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,337 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,338 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,339 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,339 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,340 [INFO]: UAV # 10 reached waypoint #  6.
+2016-06-26 01:15:48,340 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,340 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,340 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,340 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,342 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,343 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,343 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,343 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,343 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,344 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,344 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,344 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,346 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,347 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,347 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,347 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,348 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,348 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,349 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,349 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,349 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,349 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,349 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,349 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,350 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,350 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,350 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,350 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,351 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,351 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,351 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,352 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,352 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,367 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,367 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,368 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,368 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,369 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,369 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,370 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,369 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,370 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,370 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,370 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,370 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,370 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,370 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,371 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,371 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,371 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,372 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,372 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,372 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,375 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,375 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,376 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,376 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,377 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,377 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,377 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,377 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,378 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,381 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,381 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,381 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,381 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,382 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,382 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,382 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,384 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,384 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,384 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,385 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,388 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,389 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,389 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,389 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,389 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,389 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,390 [INFO]: UAV #  5 reached waypoint #  4.
+2016-06-26 01:15:48,390 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,390 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,390 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,391 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,391 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,391 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,391 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,391 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,392 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,392 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,392 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,392 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,393 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,396 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,397 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,397 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,397 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,397 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,397 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,397 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,398 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,398 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,398 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,399 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,402 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,399 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,402 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,402 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,403 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,403 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,404 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,404 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,406 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,406 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,407 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,407 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,407 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,408 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,408 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,408 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,408 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,408 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,409 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,409 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,409 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,409 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,412 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,412 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,413 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,414 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,414 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,416 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,416 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,416 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,416 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,417 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,417 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,418 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,418 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,418 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,418 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,418 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,419 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,419 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,420 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,420 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,420 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,420 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,420 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,421 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,421 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,422 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,421 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,422 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,422 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,422 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,423 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,423 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,423 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,423 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,423 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,424 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,424 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,425 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,425 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,425 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,426 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,426 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,426 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,427 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,427 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,427 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,427 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,427 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,427 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,427 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,428 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,428 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,428 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,428 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,429 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,429 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,429 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,429 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,430 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,430 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,431 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,431 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,431 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,431 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,431 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,431 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,431 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,431 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,432 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,432 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,432 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,432 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,432 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,433 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,433 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,433 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,434 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,436 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,436 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,437 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,437 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,437 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,437 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,438 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,438 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,442 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,442 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,442 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,442 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,443 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,443 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,443 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,443 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,449 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,450 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,450 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,452 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,453 [INFO]: UAV #  7 reached waypoint #  5.
+2016-06-26 01:15:48,453 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,453 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,453 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,453 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,455 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,456 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,456 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,456 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,457 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,457 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,457 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,457 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,457 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,457 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,458 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,458 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,458 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,458 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,458 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,459 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,459 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,459 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,459 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,459 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,459 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,460 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,460 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,460 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,461 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,461 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,465 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,461 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,466 [INFO]: UAV # 10 reached waypoint #  7.
+2016-06-26 01:15:48,468 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,468 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,468 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,469 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,469 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,469 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,469 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,469 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,470 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,470 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,471 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,471 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,471 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,472 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,472 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,473 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,473 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,473 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,474 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,474 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,474 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,474 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,474 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,475 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,476 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,476 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,476 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,477 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,478 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,478 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,479 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,479 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,479 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,480 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,480 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,480 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,481 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,481 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,482 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,482 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,482 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,483 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,483 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,483 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,484 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,484 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,484 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,484 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,485 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,485 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,485 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,485 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,486 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,487 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,487 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,487 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,487 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,489 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,489 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,490 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,490 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,492 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,492 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,492 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,493 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,493 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,493 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,493 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,493 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,494 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,494 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,494 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,494 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,495 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,495 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,496 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,496 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,496 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,497 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,499 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,500 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,500 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,500 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,502 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,502 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,502 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,502 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,502 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,503 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,503 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,510 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,510 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,511 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,513 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,513 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,513 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,514 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,514 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,515 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,516 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,516 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,516 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,516 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,516 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,516 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,518 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,518 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,519 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,519 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,520 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,520 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,524 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,525 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,525 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,526 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,526 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,526 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,527 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,527 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,527 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,528 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,528 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,528 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,528 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,528 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,528 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,529 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,529 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,529 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,529 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,530 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,530 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,530 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,530 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,531 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,532 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,532 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,533 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,533 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,533 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,533 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,537 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,537 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,537 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,537 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,538 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,538 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,538 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,539 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,539 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,539 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,539 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,540 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,540 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,541 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,541 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,541 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,542 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,542 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,543 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,543 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,543 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,544 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,544 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,546 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,546 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,547 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,548 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,548 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,548 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,549 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,549 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,549 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,549 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,549 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,549 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,553 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,556 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,557 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,557 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,563 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,563 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,563 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,564 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,565 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,565 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,566 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,566 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,566 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,567 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,567 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,567 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,567 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,568 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,572 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,574 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,574 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,574 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,574 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,575 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,575 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,575 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,576 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,576 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,576 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,576 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,576 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,576 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,576 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,577 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,577 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,577 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,578 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,578 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,578 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,578 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,578 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,578 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,578 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,579 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,580 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,580 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,583 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,583 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,584 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,584 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,585 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,585 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,585 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,585 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,585 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,586 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,586 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,586 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,586 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,586 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,586 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,587 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,587 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,587 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,587 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,588 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,588 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,588 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,588 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,588 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,588 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,589 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,589 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,589 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,589 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,589 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,589 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,598 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,598 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,599 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,599 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,611 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,611 [INFO]: UAV # 10 updated position
+2016-06-26 01:15:48,611 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,635 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,635 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,635 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,639 [INFO]: UAV #  7 updated position
+2016-06-26 01:15:48,639 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,639 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,640 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,640 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,659 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,666 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,676 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,679 [INFO]: Updated total UAVs in air to 3.
+2016-06-26 01:15:48,681 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,681 [INFO]: UAV # 10 acquired read lock.
+2016-06-26 01:15:48,682 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,683 [INFO]: UAV # 10 accessed memory
+2016-06-26 01:15:48,683 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,683 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,686 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,686 [INFO]: UAV # 10 released read lock.
+2016-06-26 01:15:48,686 [INFO]: UAV #  7 acquired read lock.
+2016-06-26 01:15:48,686 [INFO]: UAV # 10 waiting for write state.
+2016-06-26 01:15:48,690 [INFO]: UAV #  7 accessed memory
+2016-06-26 01:15:48,691 [INFO]: Read access counter: 2
+2016-06-26 01:15:48,691 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,691 [INFO]: UAV #  7 released read lock.
+2016-06-26 01:15:48,692 [INFO]: UAV #  7 waiting for write state.
+2016-06-26 01:15:48,692 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,692 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,692 [INFO]: Read access counter: 3
+2016-06-26 01:15:48,692 [INFO]: total UAVs in air: 3
+2016-06-26 01:15:48,692 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,693 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,693 [INFO]: UAV #  7 acquired write lock.
+2016-06-26 01:15:48,693 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,694 [INFO]: UAV #  7 added to deaths by 1 (1 total).
+2016-06-26 01:15:48,694 [INFO]: UAV #  7 crashed with # 10.
+2016-06-26 01:15:48,695 [INFO]: Total UAVs accessed: 1/3
+2016-06-26 01:15:48,695 [INFO]: UAV #  7 released write lock
+2016-06-26 01:15:48,695 [INFO]: UAV #  7 waiting for read state.
+2016-06-26 01:15:48,696 [INFO]: UAV # 10 acquired write lock.
+2016-06-26 01:15:48,698 [INFO]: UAV # 10 added to deaths by 1 (2 total).
+2016-06-26 01:15:48,698 [INFO]: Total UAVs accessed: 2/3
+2016-06-26 01:15:48,698 [INFO]: UAV # 10 released write lock
+2016-06-26 01:15:48,698 [INFO]: UAV # 10 waiting for read state.
+2016-06-26 01:15:48,698 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,699 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,699 [INFO]: Total UAVs accessed: 3/3
+2016-06-26 01:15:48,699 [INFO]: 2 deaths this turn.
+2016-06-26 01:15:48,700 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,700 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,700 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,700 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,701 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,701 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,701 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,701 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,701 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,702 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,702 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,703 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,703 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,703 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,703 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,703 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,703 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,703 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,704 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,704 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,704 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,704 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,706 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,706 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,706 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,706 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,707 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,707 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,708 [INFO]: UAV #  5 reached waypoint #  5.
+2016-06-26 01:15:48,708 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,709 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,709 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,710 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,710 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,710 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,710 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,710 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,711 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,711 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,711 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,711 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,711 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,711 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,711 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,711 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,711 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,712 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,712 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,713 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,713 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,714 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,714 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,714 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,715 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,715 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,715 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,716 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,716 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,716 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,716 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,716 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,717 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,717 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,717 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,717 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,718 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,718 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,719 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,719 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,719 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,719 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,719 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,719 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,720 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,720 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,720 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,721 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,721 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,721 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,721 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,721 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,721 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,721 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,722 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,722 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,722 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,722 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,723 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,723 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,723 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,723 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,723 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,724 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,724 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,724 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,724 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,733 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,734 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,734 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,734 [INFO]: UAV #  5 reached waypoint #  6.
+2016-06-26 01:15:48,734 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,735 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,735 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,735 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,735 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,735 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,735 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,735 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,735 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,735 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,735 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,736 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,736 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,736 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,736 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,736 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,736 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,736 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,745 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,751 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,752 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,752 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,752 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,762 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,762 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,762 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,762 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,762 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,762 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,763 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,767 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,767 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,767 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,768 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,768 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,768 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,768 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,768 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,768 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,768 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,768 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,769 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,769 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,769 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,769 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,769 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,771 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,773 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,773 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,775 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,775 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,775 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,775 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,776 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,776 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,776 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,776 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,776 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,781 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,782 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,782 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,782 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,782 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,783 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,785 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,785 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,785 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,786 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,786 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,786 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,786 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,786 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,786 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,787 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,787 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,787 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,787 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,787 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,787 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,787 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,788 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,788 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,788 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,789 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,789 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,789 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,789 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,789 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,789 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,790 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,790 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,791 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,791 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,791 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,791 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,791 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,791 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,791 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,791 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,792 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,792 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,792 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,792 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,792 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,795 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,795 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,795 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,797 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,797 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,797 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,797 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,797 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,797 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,797 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,798 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,798 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,798 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,798 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,798 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,798 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,798 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,798 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,798 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,798 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,799 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,799 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,806 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,806 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,806 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,806 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,806 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,806 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,806 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 reached waypoint #  7.
+2016-06-26 01:15:48,807 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,807 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,807 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,807 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,807 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,808 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,808 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,808 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,808 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,808 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,808 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,808 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,808 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,808 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,808 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,809 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,809 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,809 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,810 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,811 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,811 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,811 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,811 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,811 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,811 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,811 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,812 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,812 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,813 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,813 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,813 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,813 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,813 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,813 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,813 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,813 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,813 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,813 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,814 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,814 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,814 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,814 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,814 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,814 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,814 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,814 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,815 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,815 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,815 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,815 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,815 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,815 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,816 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,816 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,816 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,817 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,817 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,817 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,817 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,817 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,817 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,817 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,817 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,817 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,818 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,818 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,818 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,818 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,819 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,819 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,819 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,819 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,819 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,819 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,819 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,820 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,821 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,821 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,821 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,821 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,821 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,821 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,821 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,822 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,822 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,822 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,822 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,822 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,822 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,822 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,822 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,822 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,823 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,823 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,823 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,823 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,824 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,825 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,825 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,825 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,825 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,825 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,827 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,827 [INFO]: UAV #  5 reached waypoint #  8.
+2016-06-26 01:15:48,827 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,827 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,828 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,830 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,831 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,831 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,832 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,832 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,832 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,832 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,832 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,833 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,833 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,833 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,834 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,834 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,834 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,834 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,834 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,834 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,834 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,834 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,834 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,835 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,835 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,835 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,835 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,835 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,835 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,836 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,836 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,836 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,838 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,838 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,840 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,842 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,843 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,843 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,843 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,843 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,843 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,843 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,843 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,844 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,844 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,844 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,844 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,844 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,845 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,845 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,845 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,845 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,845 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,846 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,846 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,846 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,846 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,847 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,847 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,847 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,847 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,847 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,847 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,847 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,847 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,848 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,848 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,848 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,849 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,849 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,849 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,850 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,850 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,850 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,852 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,852 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,852 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,852 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,852 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,852 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,855 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,855 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,855 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,855 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,855 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,855 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,856 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,856 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,856 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,856 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,856 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,856 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,856 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,857 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,857 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,857 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,857 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,857 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,858 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,858 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,858 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,858 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,858 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,858 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,858 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,858 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,859 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,859 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,859 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,859 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,860 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,860 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,860 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,860 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,861 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,861 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,861 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,861 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,863 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,863 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,863 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,863 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,863 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,863 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,863 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,863 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,863 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,864 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,864 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,864 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,864 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,864 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,865 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,865 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,865 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,866 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,866 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,866 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,866 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,866 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,866 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,867 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,867 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,867 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,867 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,868 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,868 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,868 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,868 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,868 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,868 [INFO]: UAV #  5 reached waypoint #  9.
+2016-06-26 01:15:48,868 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,868 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,868 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,868 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,869 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,869 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,869 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,869 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,869 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,869 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,869 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,869 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,870 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,870 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,870 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,870 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,870 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,873 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,873 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,873 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,873 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,873 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,873 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,874 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,874 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,874 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,874 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,874 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,874 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,874 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,875 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,875 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,875 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,875 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,875 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,875 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,876 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,876 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,876 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,876 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,877 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,877 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,877 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,877 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,877 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,877 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,879 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,879 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,879 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,879 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,879 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,879 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,881 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,881 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,881 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,881 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,882 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,882 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,882 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,882 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,882 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,882 [INFO]: 0 deaths this turn.
+2016-06-26 01:15:48,882 [INFO]: Updated total UAVs in air to 1.
+2016-06-26 01:15:48,883 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,883 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,883 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 acquired read lock.
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 accessed memory
+2016-06-26 01:15:48,884 [INFO]: Read access counter: 1
+2016-06-26 01:15:48,884 [INFO]: total UAVs in air: 1
+2016-06-26 01:15:48,884 [INFO]: ------------SWITCHED TO WRITE------------
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 released read lock.
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 waiting for write state.
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 acquired write lock.
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 updated position
+2016-06-26 01:15:48,884 [INFO]: UAV #  5 reached waypoint # 10.
+2016-06-26 01:15:48,885 [INFO]: UAV #  5 completed its course.
+2016-06-26 01:15:48,885 [INFO]: Total UAVs accessed: 1/1
+2016-06-26 01:15:48,885 [INFO]: 1 deaths this turn.
+2016-06-26 01:15:48,885 [INFO]: Updated total UAVs in air to 0.
+2016-06-26 01:15:48,885 [INFO]: -------------SWITCHED TO READ------------
+2016-06-26 01:15:48,885 [INFO]: UAV #  5 released write lock
+2016-06-26 01:15:48,885 [INFO]: UAV #  5 waiting for read state.
+2016-06-26 01:15:49,325 [INFO]: NO UAVS IN AIR
+2016-06-26 01:15:49,326 [INFO]: Communication has ended.
+2016-06-26 01:15:49,327 [INFO]: Communicator terminated.
+2016-06-26 01:15:49,327 [INFO]: Finished

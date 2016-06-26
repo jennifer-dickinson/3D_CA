@@ -46,8 +46,8 @@ class Plane:
         self.avoid = False                  # Is the plane performing an avoidance maneuver?
         self.avoidanceWaypoint = None       # Avoidance waypoint (should only be one)
 
-        self.dead = False                   # Plane generates alive and well
-        self.killedBy = None                # Records which plane it crashed with
+        self.dead = False                   # Plane generates UAV and well
+        self.killedBy = None                # Records which UAV it crashed with
 
     def set_cLoc(self, current_location):   # Set the current location
         self.pLoc = self.cLoc               # Move current location to previous location

@@ -6,6 +6,7 @@
 
 import math
 import collections
+import logging
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location
@@ -122,3 +123,7 @@ def generateGrid(grid_size, location):
     # Return as a list
     grid = [[lat_ll, lat_ul], [lon_ll, lon_ul]]
     return grid
+
+def logger():
+    logging.basicConfig(filename='debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',
+                        level=logging.DEBUG)
