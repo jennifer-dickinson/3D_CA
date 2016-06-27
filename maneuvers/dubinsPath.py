@@ -1,9 +1,14 @@
-# This is a straight adaptation from Jones' RIPNA Algorithm in C++ to Python
+# This is a straight adaptation from David Jones' RIPNA Algorithm in C++ to Python
 from standardFuncs import *
 from defaultValues import *
 from math import fabs, radians, degrees, cos, sin
 import logging
 logger()
+
+
+
+TIME_STEP = 1.0 # Is this the same as their delay?
+MPS_WAYPOINT_MULTIPLIER =	2
 
 def takeDubinsPath (plane):
     waypoint = plane.tLoc
@@ -27,9 +32,12 @@ def takeDubinsPath (plane):
     circleCenter.altitude = plane.cLoc.altitude
 
     if findDistance(circleCenter, plane.tLoc) < minTurnRadius:
-        logging.info("UAV #%3ierforming a dubins path adjustment." % plane.id)
-        return calculateWaypoint(plane, minTurnRadius, not destOnRight)
-    else: pass
+        logging.info("UAV #%3i performing a dubins path adjustment." % plane.id)
+        plane.avoid = True
+
+        plane.avoidanceWaypoint = calculateWaypoint(plane, minTurnRadius, not destOnRight)
+        return plane.avoidanceWaypoint
+    else:pass
 
 def calculateLoopingCircleCenter(plane,  turnRadius, turnRight):
     circleCenter = loc("","","")
@@ -52,4 +60,27 @@ def calculateLoopingCircleCenter(plane,  turnRadius, turnRight):
 
     return circleCenter
 
-def calculateWaypoint(plane, minTurnRad, destOnRight):
+def calculateWaypoint(plane, turningRadius, turnRight):
+    V = DEFAULT_UAV_SPEED * MPS_WAYPOINT_MULTIPLIER
+    delta_T = TIME_STEP
+    cartBearing = radians(plane.cBearing) # Must return in radians
+    delta_psi = V / turningRadius * delta_T
+
+    if turnRight delta_psi *= -1.0 #Reverse direction
+    logging.warning ("Delta psi: %f", delta_psi)
+    psi = (cartBearing + delta_psi)
+
+    V *= MPS_WAYPOINT_MULTIPLIER
+
+    delta_lon = V * cos(psi)/DELTA_LON_TO_METERS
+    delta_lat = V * sin(psi)/DELTA_LAT_TO_METERS
+    delta_alt = 0 # Just a place holder
+
+    lon = plane.cLoc.longitude + delta_lon
+    lat = plane.cLoc.latitude + delta_lat
+    alt = plane.cLoc.altitude + delta_alt
+
+    waypoint = loc(lon,lat,alt)
+    distance = totalDistance(plane.cLoc, waypoint)
+    logging.info("UAV #%3i avoidance waypoint at %s." % waypoint)
+    logging.info("UAV #%3i %3.1f meters away from avoidance waypoint." % distance)

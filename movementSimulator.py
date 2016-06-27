@@ -43,7 +43,7 @@ def move(plane, communicator, method):
         #    plane.cElevation = plane.tElevation
 
         # Move the plane in a straight line if bearing is correct
-        if True: # Was supposed to be elif, until plane bearing adjustment is made leaf as if True.
+        if True: # Was supposed to be elif, until plane bearing adjustment is made leave as if True.
 
             plane.cBearing = plane.tBearing
             plane.cElevation = plane.tElevation
@@ -57,6 +57,7 @@ def move(plane, communicator, method):
 
             # Calculate new position
             position = vMath.vector(distanceTraveled, plane.cBearing, plane.cElevation)
+
             new_lat = plane.cLoc.latitude + (position.x / standardFuncs.LATITUDE_TO_METERS)
             new_lon = plane.cLoc.longitude + (position.y / standardFuncs.LONGITUDE_TO_METERS)
             new_alt = plane.cLoc.altitude + position.z
