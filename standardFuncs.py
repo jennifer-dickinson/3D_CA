@@ -11,7 +11,7 @@ import locale
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location
-LATITUDE_TO_METERS = 110574.61   # Meters per latitude degree
+LATITUDE_TO_METERS = 110574.61  # Meters per latitude degree
 LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
 
 DEGREE = u'\N{DEGREE SIGN}'
@@ -21,11 +21,11 @@ DEGREE = u'\N{DEGREE SIGN}'
 def to_cartesian(uav_bearing):
     uav_bearing = manipulate_angle(uav_bearing)
 
-    if 180.0 > uav_bearing >= 0: #1st or 4th quadrant
+    if 180.0 > uav_bearing >= 0:  # 1st or 4th quadrant
         return 90.0 - uav_bearing
-    elif 0 > uav_bearing >= -90.0: #2nd quadrant
+    elif 0 > uav_bearing >= -90.0:  # 2nd quadrant
         return -1 * uav_bearing + 90
-    elif -90.0 > uav_bearing > -180.0: #third quadrant
+    elif -90.0 > uav_bearing > -180.0:  # third quadrant
         return -1 * (uav_bearing + 180.0) - 90.0
     elif uav_bearing == 180.0 or uav_bearing == -180.0:
         return -90.0
@@ -58,7 +58,7 @@ def manipulate_angle(angle):
 
 
 # Calculate relative horizontal distance using Haversine's formula
-def findDistance (coor1, coor2):
+def findDistance(coor1, coor2):
     lat1 = coor1.latitude
     lat2 = coor2.latitude
     lon1 = coor1.longitude
@@ -79,7 +79,6 @@ def totalDistance(coor1, coor2):
     d_alt = coor2.altitude - coor1.altitude
     distance = math.sqrt(math.pow(d_hor, 2) + math.pow(d_alt, 2))
     return distance
-
 
 
 # Return bearing using Haversine's formula, in degrees
@@ -110,7 +109,9 @@ def find_sign(number):
         return 0
     return 0
 
+
 loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
+
 
 # Generate a latitude, longitude grid according to the size of the airspace.
 # Maximum range for xbee telemetry module is 2 miles (Approx. 3218 meters)
@@ -123,6 +124,7 @@ def generateGrid(grid_size, location):
     # Return as a list
     grid = [[lat_ll, lat_ul], [lon_ll, lon_ul]]
     return grid
+
 
 def logger():
     logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',

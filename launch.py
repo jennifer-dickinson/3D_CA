@@ -1,7 +1,7 @@
 import planeGenerator
 import movementSimulator
 from threading import Thread
-import commList
+import centralizedComm
 import defaultValues
 import logging
 from standardFuncs import logger
@@ -10,9 +10,9 @@ from standardFuncs import logger
 def main():
     logger()
 
-    logging.info ('Started')
+    logging.info('Started')
 
-    communicator = commList.uavComm()
+    communicator = centralizedComm.uavComm()
 
     communicator.start()
     logging.info('Communicator initialized.')
@@ -37,7 +37,8 @@ def main():
         pass
 
     logging.info('Communicator terminated.')
-    logging.info ('Finished')
+    logging.info('Finished')
+
 
 if __name__ == '__main__':
     main()

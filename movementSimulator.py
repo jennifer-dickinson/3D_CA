@@ -3,11 +3,11 @@
 # http://people.clarkson.edu/~pmarzocc/AE429/AE-429-12.pdf
 
 import defaultValues
-import vMath
 import standardFuncs
-import Queue
 import time
-import random
+
+from maneuvers import straightLine, dubinsPath
+
 
 def move(plane, communicator, method):
     timer = 0
@@ -32,54 +32,15 @@ def move(plane, communicator, method):
         tlon = plane.tLoc.longitude
         talt = plane.tLoc.altitude
 
-        plane.distance = standardFuncs.findDistance(plane.cLoc, plane.tLoc)
-        plane.tdistance = standardFuncs.totalDistance(plane.cLoc, plane.tLoc)
-
-        # This is a temporary fix for adjusting bearing and elevation
         # Todo: with each adjustment, calculate a distance travled
-        #if plane.cBearing != plane.tBearing or plane.cElevation != plane.tElevation:
 
-        #    plane.cBearing = plane.tBearing
-        #    plane.cElevation = plane.tElevation
+        plane.cBearing = plane.tBearing
+        plane.cElevation = plane.tElevation
 
-        # Move the plane in a straight line if bearing is correct
-        if True: # Was supposed to be elif, until plane bearing adjustment is made leave as if True.
+        if plane.tdistance <= 20:
+            pass
 
-            plane.cBearing = plane.tBearing
-            plane.cElevation = plane.tElevation
-
-            # Position is in total distance traveled over one second multiplied by time (DELAY)
-            # Take vector components and add to current longitude and latitude
-
-            speed = plane.speed  # Get speed from plane
-            distanceTraveled = plane.speed * defaultValues.DELAY
-            plane.distanceTraveled += distanceTraveled
-
-            # Calculate new position
-            position = vMath.vector(distanceTraveled, plane.cBearing, plane.cElevation)
-
-            new_lat = plane.cLoc.latitude + (position.x / standardFuncs.LATITUDE_TO_METERS)
-            new_lon = plane.cLoc.longitude + (position.y / standardFuncs.LONGITUDE_TO_METERS)
-            new_alt = plane.cLoc.altitude + position.z
-
-            newLoc = standardFuncs.loc(new_lat,new_lon,new_alt)
-
-            # Update current location, distance, total distance, target bearing,
-            newloc = standardFuncs.loc(new_lat,new_lon,new_alt)
-            plane.set_cLoc(newloc)
-
-            # This is acceptable for now. Should change to us current and prvious location from set_cLoc
-            plane.tBearing = standardFuncs.find_bearing(newLoc, plane.tLoc)
-            plane.tElevation = standardFuncs.elevation_angle(newLoc,plane.tLoc)
-
-            # haversine's horizontal distance
-            plane.distance = standardFuncs.findDistance(newLoc, plane.tLoc)
-
-            # haversine's horizontal distance w/ vertical distance taken into account
-            plane.tdistance = standardFuncs.totalDistance(newLoc, plane.tLoc)
-
-        if timer % defaultValues.RATE_OF_UPDATES == 0 and defaultValues.IS_TEST:
-            print 'UAV #', plane.id, 'currently located at', plane.cLoc
+        straightLine.straightline(plane)
 
         uav_positions = communicator.read(plane)
 

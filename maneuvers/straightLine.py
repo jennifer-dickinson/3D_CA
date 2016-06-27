@@ -2,14 +2,21 @@ import standardFuncs
 import defaultValues
 import vMath
 import logging
-logger()
 
-def straightline (plane)
-    plane.cBearing = plane.tBearing
-    plane.cElevation = plane.tElevation
+standardFuncs.logger()
 
-    # Position is in total distance traveled over one second multiplied by time (DELAY)
-    # Take vector components and add to current longitude and latitude
+
+# TODO: Adapt this to waypoints
+def straightline (plane):
+
+
+    if plane.avoid:
+
+        target = plane.avoidanceWaypoint
+        logging.info ("UAV #3i is moving toward an avoidance waypoint" % plane.id)
+
+    else: target = plane.tLoc
+
 
     speed = plane.speed  # Get speed from plane
     distanceTraveled = plane.speed * defaultValues.DELAY #Get frequency of updates.

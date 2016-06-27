@@ -7,6 +7,7 @@ import sys
 
 logger()
 
+
 class uavComm(Thread):
     def __init__(self):
         Thread.__init__(self)
@@ -18,7 +19,7 @@ class uavComm(Thread):
 
         self.timer = 0
         self.counter = 0
-        self.total_uavs = 0     # Total number of UAVs in the air
+        self.total_uavs = 0  # Total number of UAVs in the air
         self.steps_counter = 0
 
         self.turn_kill_counter = 0
@@ -32,10 +33,9 @@ class uavComm(Thread):
         self.lock2 = RLock()
         try:
             self.readState.set()
-            logging.info ('Read state set.')
+            logging.info('Read state set.')
         except:
             logging.error('Read state not set.')
-
 
     def run(self):
         print "Simulating UAV flights. This may take a while..."
@@ -61,30 +61,27 @@ class uavComm(Thread):
             elif (self.timer * DELAY) > 2:
                 print ("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
-                logging.error ('UAVs still in air: %.f' % self.total_uavs)
+                logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
         logging.info('Communication has ended.')
         time.sleep(1)
         self.uav_status()
 
-
-
-    def startUp (self, plane):
-        dict = {"ID" : plane.id,
-                "cLoc" : plane.cLoc,
+    def startUp(self, plane):
+        dict = {"ID": plane.id,
+                "cLoc": plane.cLoc,
                 "bear": plane.cBearing,
                 "elev": plane.cElevation,
-                "dead" : plane.dead,
-                "killedBy" : None,
-                "wpts" : 0,
-                "tdis" : 0
+                "dead": plane.dead,
+                "killedBy": None,
+                "wpts": 0,
+                "tdis": 0
                 }
         self.positions.append(dict)
         self.timer = 0
         self.total_uavs += 1
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
-
 
     def update(self, plane):
         self.lock.acquire()
@@ -95,7 +92,6 @@ class uavComm(Thread):
 
         # Access positions list
         dict = (item for item in self.positions if item["ID"] == plane.id).next()
-
 
         # Only update telemetry if UAV is still alive
         if not plane.dead and not dict["dead"]:
@@ -131,15 +127,14 @@ class uavComm(Thread):
             elif not plane.dead and dict["dead"]:
                 plane.dead = dict["dead"]
                 plane.killedBy = dict["killedBy"]
-                logging.info ('UAV #%3i found out it was crashed.' % plane.id)
-
+                logging.info('UAV #%3i found out it was crashed.' % plane.id)
 
         # If this UAV reached all waypoints, change status to done & reduce UAVs in air.
         if plane.wpAchieved >= plane.numWayPoints:
             logging.info('UAV #%3i completed its course.' % plane.id)
             self.turn_kill_counter += 1
 
-        self.writeCounter+= 1
+        self.writeCounter += 1
 
         logging.info('Write access counter: %i/%i' % (self.writeCounter, self.total_uavs))
 
@@ -164,7 +159,7 @@ class uavComm(Thread):
         return True
 
     def read(self, plane):
-        #logging.info('UAV #%3i running read' % plane.id)
+        # logging.info('UAV #%3i running read' % plane.id)
         self.lock2.acquire()
         logging.info('UAV #%3i acquired read lock.' % plane.id)
 
@@ -190,12 +185,11 @@ class uavComm(Thread):
         self.writeState.wait()
         return list
 
-
     # Ends the thread
     def stop(self):
         self.stopped = True
 
-    def uav_status (self):
+    def uav_status(self):
 
         # Print status for each UAV.
         title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
