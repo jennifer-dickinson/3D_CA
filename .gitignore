@@ -1,7 +1,11 @@
-
 *.xml
+
+*/*.xml
 
 *.pyc
 
-test2.py
-.idea/workspace.xml
+*/*.pyc
+
+*.log
+
+*/*.log
