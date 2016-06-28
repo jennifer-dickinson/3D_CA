@@ -25,3 +25,5 @@ DEFAULT_UAV_SPEED = 12      # Default UAV speed in meters per second
 MAX_ELEV_ANGLE = 22.5       # Maximum angle of elevation in degrees
 MAX_TURN_ANGLE = 22.5       # Maximum turning angle in degrees (Will result in hex shape)
 MIN_TURN_RAD = 28.64058013  # Minimum turning radius in meters
+
+CENTRALIZED = True          # True or false

@@ -7,7 +7,8 @@
 import math
 import collections
 import logging
-import locale
+import time
+import os
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location
@@ -127,5 +128,11 @@ def generateGrid(grid_size, location):
 
 
 def logger():
+    # datetime = time.time()
+    # if not os.path.exists("%s" % datetime):
+    #     os.makedirs("%s" % datetime)
+    # logging.basicConfig(filename='logs/%s/debug.log' % datetime, filemode='w',
+    #                     format='%(asctime)s [%(levelname)s]: %(message)s',
+    #                     level=logging.DEBUG)
     logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',
                         level=logging.DEBUG)

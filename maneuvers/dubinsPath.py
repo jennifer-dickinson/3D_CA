@@ -31,20 +31,19 @@ def takeDubinsPath(plane):
             destOnRight = True
 
     circleCenter = calculateLoopingCircleCenter(plane, minTurnRadius, destOnRight)
-    circleCenter.altitude = plane.cLoc.altitude
 
     if findDistance(circleCenter, plane.tLoc) < minTurnRadius:
         logging.info("UAV #%3i performing a dubins path adjustment." % plane.id)
-        print ("UAV #%3i taking dubins path to waypoint #%i." % (plane.id, plane.wpAchieved + 1))
+        print ("UAV #%3i calculating dubins path to waypoint #%i." % (plane.id, plane.wpAchieved + 1))
+        logging.info("Circle center for UAV #%3i set to %s" % (plane.id, circleCenter))
         plane.avoid = True
         plane.avoidanceWaypoint = calculateWaypoint(plane, minTurnRadius, not destOnRight)
         return plane.avoidanceWaypoint
     else:
-        pass
+        plane.avoid = False
 
 
 def calculateLoopingCircleCenter(plane, turnRadius, turnRight):
-    circleCenter = loc("", "", "")
     # Todo: adapt dubins path to 3 dimensions
 
     if turnRight:
@@ -55,12 +54,15 @@ def calculateLoopingCircleCenter(plane, turnRadius, turnRight):
     # Todo: Adapt this to haversine's formula
     xdiff = turnRadius * cos(angle)
     ydiff = turnRadius * sin(angle)
+    zdiff = 0  # just a place holder
 
     # TODO: Double check if this method will work with existing straightline formula
 
-    circleCenter.longitude = plane.cLoc.longitude + xdiff / LONGITUDE_TO_METERS
-    circleCenter.latitude = plane.cLoc.latitude + ydiff / LATITUDE_TO_METERS
+    lon = plane.cLoc.longitude + xdiff / LONGITUDE_TO_METERS
+    lat = plane.cLoc.latitude + ydiff / LATITUDE_TO_METERS
+    alt = plane.cLoc.altitude + zdiff
 
+    circleCenter = loc(lon, lat, alt)
     return circleCenter
 
 

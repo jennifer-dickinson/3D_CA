@@ -34,7 +34,6 @@ class Plane:
 
         self.distanceTraveled = 0  # Total distance traveled in meters
 
-        self.sLoc = None  # Starting location in
         self.pLoc = None  # Previous location
         self.cLoc = None  # Current location
         self.tLoc = None  # Target location. Will be swapped in queue
@@ -50,6 +49,9 @@ class Plane:
         self.dead = False  # Plane generates UAV and well
         self.killedBy = None  # Records which UAV it crashed with
 
+        self.msg = []   # Any telemetry message received
+        self.map = []   # A map of all UAVs
+
     def set_cLoc(self, current_location):  # Set the current location
         self.pLoc = self.cLoc  # Move current location to previous location
         self.cLoc = current_location  # Set new current location
@@ -64,6 +66,7 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OUR_LOCATION, ):
     plane = []  # Create list of planes
+    starting_wp = []  # List of starting waypoints
 
     # Creates a set number of planes
     for i in range(0, numPlanes):
@@ -71,17 +74,48 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=OU
         plane[i].numWayPoints = numWayPoints
 
         logging.info("UAV #%3i generated." % plane[i].id)
+
         for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital and previous location
 
+
+
+            # if not starting_wp:
+            #     print ("making very first waypoint")
+            #     waypoint = randomLocation(gridSize, location)
+            #     iswaypoint = True
+            #
+            # elif starting_wp and j != 0:
+            #     check = plane[i].wayPoints
+            #     iswaypoint = False
+            # else:
+            #     check = starting_wp
+            #     iswaypoint = False
+            # while not iswaypoint:
+            #     for k in check:
+            #         waypoint = randomLocation(gridSize, location)
+            #         distance = standardFuncs.totalDistance(waypoint, check[k])
+            #         if distance < 12:
+            #             iswaypoint = False
+            #             print ("Waypoint rejected")
+            #         else:
+            #             iswaypoint = True
+            #             print ("Generated a waypoint")
+
+            #starting_wp.append(waypoint)
             waypoint = randomLocation(gridSize, location)
+
+
 
             plane[i].wayPoints.append(waypoint)
             plane[i].queue.put(plane[i].wayPoints[j])
 
             logging.info("UAV #%3i generated waypoint #%i at: %s" % (plane[i].id, (j + 1), waypoint))
 
-        plane[i].set_cLoc(plane[i].queue.get_nowait())  # Set current location to first generated waypoint
+        # get a previous location
         plane[i].set_cLoc(plane[i].queue.get_nowait())
+
+        #get a current location
+        plane[i].sLoc = plane[i].set_cLoc(plane[i].queue.get_nowait())
         plane[i].nextwp()  # and removes it from the queue
 
         # Calculate current and target bearing (both set to equal initially)

@@ -83,7 +83,7 @@ class uavComm(Thread):
         self.total_uavs += 1
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
-    def update(self, plane):
+    def send(self, plane):
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
@@ -158,7 +158,7 @@ class uavComm(Thread):
 
         return True
 
-    def read(self, plane):
+    def receive(self, plane):
         # logging.info('UAV #%3i running read' % plane.id)
         self.lock2.acquire()
         logging.info('UAV #%3i acquired read lock.' % plane.id)
