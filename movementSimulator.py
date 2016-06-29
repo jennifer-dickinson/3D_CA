@@ -10,7 +10,7 @@ import logging
 from maneuvers import straightLine, dubinsPath
 
 
-def move(plane, communicator):
+def move(plane, globalCommunicator, planeComm):
     timer = 0
     stop = False
 
@@ -38,22 +38,21 @@ def move(plane, communicator):
 
         # If plane distance is less than turning radius, check dubins path. This should be set on or off in settings.
         if plane.tdistance <= defaultValues.MIN_TURN_RAD:
-            logging.info("UAV #%3i checking for dubins path." % plane.id)
+            #logging.info("UAV #%3i checking for dubins path." % plane.id)
             dubinsPath.takeDubinsPath(plane)
             pass
 
-        #plane.cBearing = plane.tBearing
+        # plane.cBearing = plane.tBearing
         plane.cElevation = plane.tElevation
 
         straightLine.straightline(plane)
 
         # If centralized, use communication for GCS
         if defaultValues.CENTRALIZED:
-            uav_positions = communicator.receive(plane)
+            uav_positions = globalCommunicator.receive(plane)
         # If decentralized, use map from plane
         elif not defaultValues.CENTRALIZED:
             uav_positions = plane.map
-
 
         for elem in uav_positions:
             distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
@@ -67,7 +66,6 @@ def move(plane, communicator):
                 plane.killedBy = elem["killedBy"]
                 stop = True
 
-
         if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
@@ -76,16 +74,16 @@ def move(plane, communicator):
 
         # Broadcast telemetry through decentralized communication
         if not defaultValues.CENTRALIZED:
-            try:
-                plane.comm.update()
-            except:
-                logging.fatal("UAV #%3i failed to update telemetry." % plane.id)
-                print "FATAL : UAV #%3i failed to update telemetry." % plane.id
-                plane.dead = True
-                break
+            # try:
+            planeComm.update()
+            # except:
+            #     logging.fatal ("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
+            #     plane.dead = True
+
 
         # Update telemetry to centralized communication
-        else: communicator.update(plane)
+        else:
+            globalCommunicator.update(plane)
 
     # Todo: make this pretty
     if plane.dead: print "\r%-80s" % "UAV #%3i has crashed!!" % plane.id

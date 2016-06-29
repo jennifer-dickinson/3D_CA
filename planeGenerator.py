@@ -54,6 +54,7 @@ class Plane:
 
         self.msg = []  # Any telemetry message received
         self.map = []  # A map of all UAVs
+        self.comm = None
 
     def set_cLoc(self, current_location):  # Set the current location
         self.pLoc = self.cLoc  # Move current location to previous location
@@ -73,12 +74,13 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
 
     if defaultValues.CENTRALIZED == True:
         communicator.total_uavs = numPlanes
+    elif not defaultValues.CENTRALIZED:
+        communicator.uavsInAir = numPlanes
+
     # Creates a set number of planes
     for i in range(0, numPlanes):
         plane.append(Plane())
         plane[i].numWayPoints = numWayPoints
-
-        logging.info("UAV #%3i generated." % plane[i].id)
 
         for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital and previous location
 
@@ -120,9 +122,9 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane[i].nextwp()  # and removes it from the queue
         d = standardFuncs.DEGREE
         current_location = "(%.7f%s, %.7f%s, %.2f)" % (
-        plane[i].cLoc.latitude, d, plane[i].cLoc.longitude, d, plane[i].cLoc.altitude)
+            plane[i].cLoc.latitude, d, plane[i].cLoc.longitude, d, plane[i].cLoc.altitude)
         logging.info("UAV #%3i set to %i waypoints, starting position %s." % (
-        plane[i].id, len(plane[i].wayPoints) - 2, current_location))
+            plane[i].id, len(plane[i].wayPoints) - 2, current_location))
 
         # Calculate current and target bearing (both set to equal initially)
         plane[i].tBearing = standardFuncs.find_bearing(plane[i].cLoc, plane[i].tLoc)
@@ -143,28 +145,28 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         # If decentralized, run a thread for communication from decentralizedComm
         if not defaultValues.CENTRALIZED:
             try:
-                plane[i].comm = threading.Thread(target=decentralizedComm.communicate, args=(plane[i], communicator))
-                plane[i].comm.start()
+                planeComm = decentralizedComm.communicate(plane[i],communicator)
+
             except:
-                logging.FATAL("Communicator failed to start for UAV #%3i" % plane[i].id)
+                logging.fatal("Communicator failed to start for UAV #%3i" % plane[i].id)
 
         # If centralized, pass plane parameters to centralizedComm
         else:
             communicator.startUp(plane[i])
-
-        plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator))
-        plane[i].move.setDaemon(True)
-        plane[i].move.start()
-
-    if not defaultValues.CENTRALIZED:
-        communicator.uavsInAir = numPlanes
-
+            planeComm = None
+        try:
+            plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator, planeComm), name = "UAV #%i" % plane[i].id)
+            plane[i].move.setDaemon(True)
+            plane[i].move.start()
+            logging.info("UAV #%3i plane thread generated: %s" % (plane[i].id, plane[i].move))
+        except:
+            logging.fatal("Could not generate UAV #%3i" % plane[i].id)
 
     return plane
 
 
 # Calculates random waypoints based on provided grid and adds them to a list and queue
-def randomLocation(gridSize, location = defaultValues.OUR_LOCATION):
+def randomLocation(gridSize, location=defaultValues.OUR_LOCATION):
     grid = standardFuncs.generateGrid(gridSize, location)  # Creates a square grid centered about location
     lat = random.uniform(grid[0][0], grid[0][1])
     lon = random.uniform(grid[1][0], grid[1][1])

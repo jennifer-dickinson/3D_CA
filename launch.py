@@ -8,7 +8,6 @@ import logging
 import standardFuncs
 
 
-#
 def main():
     standardFuncs.logger()
 
@@ -17,10 +16,13 @@ def main():
     # Check to see if the simulation is ran in a centralized or decentralized manner.
     if not defaultValues.CENTRALIZED:
         communicator = decentralizedComm.synchronizer()
+
     else:
         communicator = centralizedComm.uavComm()
 
-    communicator.start()
+
+    while not communicator.is_alive():
+        pass
 
     # Generate a number of plane threads with n waypoints in a specified grid size.
     plane = planeGenerator.generate_planes(
@@ -29,7 +31,6 @@ def main():
         defaultValues.GRID_SIZE,
         communicator
     )
-    logging.info('Finished')
 
 
 if __name__ == '__main__':

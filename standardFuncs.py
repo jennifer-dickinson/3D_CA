@@ -134,5 +134,5 @@ def logger():
     # logging.basicConfig(filename='logs/%s/debug.log' % datetime, filemode='w',
     #                     format='%(asctime)s [%(levelname)s]: %(message)s',
     #                     level=logging.DEBUG)
-    logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s [%(levelname)s]: %(message)s',
+    logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)
