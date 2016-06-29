@@ -7,6 +7,10 @@ import defaultValues
 import logging
 from standardFuncs import logger
 
+defaultValues.CENTRALIZED = True
+defaultValues.NUM_PLANES = 20
+defaultValues.GRID_SIZE = 20
+defaultValues.NUM_WAY_POINTS = 10
 
 def main():
     logger()
@@ -19,30 +23,17 @@ def main():
         communicator = centralizedComm.uavComm()
 
     communicator.start()
-    logging.info('Communicator initialized.')
 
-    plane = planeGenerator.generate_planes(
+    planeGenerator.generate_planes(
         defaultValues.NUM_PLANES,
         defaultValues.NUM_WAY_POINTS,
         defaultValues.GRID_SIZE,
         communicator
     )
 
-    planeMover = list()
-
-    for i in range(0, defaultValues.NUM_PLANES):
-        planeMover.append(
-            Thread(target=movementSimulator.move, args=(plane[i], communicator)))
-
-    for i in range(0, defaultValues.NUM_PLANES):
-        planeMover[i].setDaemon(True)
-        planeMover[i].start()
-
     while communicator.isAlive():
         pass
-
-    logging.info('Communicator terminated.')
-    logging.info('Finished')
+    logging.info('Finished running simulation.')
 
 
 if __name__ == '__main__':

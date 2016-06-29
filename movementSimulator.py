@@ -47,33 +47,45 @@ def move(plane, communicator):
 
         straightLine.straightline(plane)
 
-        # This method of reading positions only works with centralized communication
+        # If centralized, use communication for GCS
         if defaultValues.CENTRALIZED:
             uav_positions = communicator.receive(plane)
-            for elem in uav_positions:
-                distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
-                if (distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False):
-                    # time.sleep(random.uniform(0, .001))  # Just so that the console doesn't get screwed up
-                    plane.dead = True
-                    plane.killedBy = elem["ID"]
-                    stop = True
-                elif elem["ID"] == plane.id and elem["dead"] == True:
-                    plane.dead = True
-                    plane.killedBy = elem["killedBy"]
-                    stop = True
-
-        # No need to call receive function for decentralized. Incoming communication automatically stores information
+        # If decentralized, use map from plane
         elif not defaultValues.CENTRALIZED:
-            pass
+            uav_positions = plane.map
 
-        # Move through queue to next waypoint, or if done stop thread.
+
+        for elem in uav_positions:
+            distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
+            if (distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False):
+                # time.sleep(random.uniform(0, .001))  # Just so that the console doesn't get screwed up
+                plane.dead = True
+                plane.killedBy = elem["ID"]
+                stop = True
+            elif elem["ID"] == plane.id and elem["dead"] == True:
+                plane.dead = True
+                plane.killedBy = elem["killedBy"]
+                stop = True
+
+
         if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
                 plane.nextwp()
         if plane.wpAchieved >= plane.numWayPoints: stop = True
 
-        communicator.send(plane)
+        # Broadcast telemetry through decentralized communication
+        if not defaultValues.CENTRALIZED:
+            try:
+                plane.comm.update()
+            except:
+                logging.fatal("UAV #%3i failed to update telemetry." % plane.id)
+                print "FATAL : UAV #%3i failed to update telemetry." % plane.id
+                plane.dead = True
+                break
+
+        # Update telemetry to centralized communication
+        else: communicator.update(plane)
 
     # Todo: make this pretty
     if plane.dead: print "\r%-80s" % "UAV #%3i has crashed!!" % plane.id

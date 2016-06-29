@@ -38,6 +38,7 @@ class uavComm(Thread):
             logging.error('Read state not set.')
 
     def run(self):
+        logging.info('Communicator initialized.')
         print "Simulating UAV flights. This may take a while..."
         dots = ""
         while not self.stopped:
@@ -68,6 +69,8 @@ class uavComm(Thread):
         time.sleep(1)
         self.uav_status()
 
+        logging.info('Communicator terminated.')
+
     def startUp(self, plane):
         dict = {"ID": plane.id,
                 "cLoc": plane.cLoc,
@@ -80,10 +83,10 @@ class uavComm(Thread):
                 }
         self.positions.append(dict)
         self.timer = 0
-        self.total_uavs += 1
+        #self.total_uavs += 1
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
-    def send(self, plane):
+    def update(self, plane):
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 

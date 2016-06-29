@@ -5,43 +5,30 @@ import centralizedComm
 import decentralizedComm
 import defaultValues
 import logging
-from standardFuncs import logger
+import standardFuncs
 
 
+#
 def main():
-    logger()
+    standardFuncs.logger()
 
     logging.info('Started')
 
+    # Check to see if the simulation is ran in a centralized or decentralized manner.
     if not defaultValues.CENTRALIZED:
         communicator = decentralizedComm.synchronizer()
     else:
         communicator = centralizedComm.uavComm()
 
     communicator.start()
-    logging.info('Communicator initialized.')
 
+    # Generate a number of plane threads with n waypoints in a specified grid size.
     plane = planeGenerator.generate_planes(
         defaultValues.NUM_PLANES,
         defaultValues.NUM_WAY_POINTS,
         defaultValues.GRID_SIZE,
         communicator
     )
-
-    planeMover = list()
-
-    for i in range(0, defaultValues.NUM_PLANES):
-        planeMover.append(
-            Thread(target=movementSimulator.move, args=(plane[i], communicator)))
-
-    for i in range(0, defaultValues.NUM_PLANES):
-        planeMover[i].setDaemon(True)
-        planeMover[i].start()
-
-    while communicator.isAlive():
-        pass
-
-    logging.info('Communicator terminated.')
     logging.info('Finished')
 
 
