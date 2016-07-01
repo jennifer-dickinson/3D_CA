@@ -19,7 +19,7 @@ CONFLICT_DISTANCE = 24
 WAYPOINT_DISTANCE = 2       # Maximum distance to consider a waypoint reached (meters)
 
 COLLISION_AVOIDANCE = False # Set collision avoidance to true or false, will use the following parameter
-ALGORITHM = 'APF'
+ALGORITHM = 'APF'           # This value holds a string that specifies which collision avoidance algorithm is used. APF is the default
 
 DEFAULT_UAV_SPEED = 12      # Default UAV speed in meters per second
 MAX_ELEV_ANGLE = 22.5       # Maximum angle of elevation in degrees
