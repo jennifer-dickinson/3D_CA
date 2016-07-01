@@ -13,12 +13,16 @@ def main():
 
     logging.info('Started')
 
+    print "Simulating UAV Flights... this may take a while..."
+
     # Check to see if the simulation is ran in a centralized or decentralized manner.
     if not defaultValues.CENTRALIZED:
         communicator = decentralizedComm.synchronizer()
 
     else:
         communicator = centralizedComm.uavComm()
+
+
 
 
     while not communicator.is_alive():

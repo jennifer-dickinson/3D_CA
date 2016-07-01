@@ -23,22 +23,12 @@ def move(plane, globalCommunicator, planeComm):
             time.sleep(defaultValues.DELAY)
         timer += defaultValues.DELAY
 
-        # find distance to target location
-
-        clat = plane.cLoc.latitude
-        clon = plane.cLoc.longitude
-        calt = plane.cLoc.altitude
-
-        tlat = plane.tLoc.latitude
-        tlon = plane.tLoc.longitude
-        talt = plane.tLoc.altitude
-
         # Todo: with each adjustment, calculate a distance travled
 
 
         # If plane distance is less than turning radius, check dubins path. This should be set on or off in settings.
         if plane.tdistance <= defaultValues.MIN_TURN_RAD:
-            #logging.info("UAV #%3i checking for dubins path." % plane.id)
+            # logging.info("UAV #%3i checking for dubins path." % plane.id)
             dubinsPath.takeDubinsPath(plane)
             pass
 
@@ -70,15 +60,18 @@ def move(plane, globalCommunicator, planeComm):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
                 plane.nextwp()
-        if plane.wpAchieved >= plane.numWayPoints: stop = True
+            logging.info("UAV #%3i reached waypoint #%i." % (plane.id, plane.wpAchieved))
+        if plane.wpAchieved >= plane.numWayPoints:
+            stop = True
+            logging.info("UAV #%3i reached allwaypoints." % plane.id)
 
         # Broadcast telemetry through decentralized communication
         if not defaultValues.CENTRALIZED:
-            # try:
-            planeComm.update()
-            # except:
-            #     logging.fatal ("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
-            #     plane.dead = True
+            try:
+                planeComm.update()
+            except:
+                logging.fatal ("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
+                plane.dead = True
 
 
         # Update telemetry to centralized communication

@@ -8,7 +8,7 @@ import logging
 from standardFuncs import logger
 
 defaultValues.CENTRALIZED = False
-defaultValues.NUM_PLANES = 4
+defaultValues.NUM_PLANES = 2
 defaultValues.GRID_SIZE = 20
 defaultValues.NUM_WAY_POINTS = 10
 
@@ -21,9 +21,10 @@ def main():
     if not defaultValues.CENTRALIZED:
         communicator = decentralizedComm.synchronizer(defaultValues.NUM_PLANES)
 
-        print ("Running simulation... this may take a while.")
     else:
         communicator = centralizedComm.uavComm()
+
+    print ("Simulating UAV flights.... this may take a while.")
 
     # Wait for communicator to start before next step.
     while not communicator.is_alive():
@@ -39,6 +40,7 @@ def main():
     while communicator.isAlive():
         pass
     logging.info("Global communicator terminated: %s" % communicator)
+    print ("Simulation complete.")
 
 
 if __name__ == '__main__':

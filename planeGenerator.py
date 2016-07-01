@@ -157,10 +157,12 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         try:
             plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator, planeComm), name = "UAV #%i" % plane[i].id)
             plane[i].move.setDaemon(True)
-            plane[i].move.start()
             logging.info("UAV #%3i plane thread generated: %s" % (plane[i].id, plane[i].move))
         except:
             logging.fatal("Could not generate UAV #%3i" % plane[i].id)
+
+    for i in range(len(plane)):
+        plane[i].move.start()
 
     return plane
 

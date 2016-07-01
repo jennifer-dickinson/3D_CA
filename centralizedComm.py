@@ -40,8 +40,7 @@ class uavComm(Thread):
 
     def run(self):
         logging.info('Communicator initialized: %s' % self)
-        print "Simulating UAV flights. This may take a while..."
-        dots = ""
+        dots = "\r"
         while not self.stopped:
 
             dots += "."

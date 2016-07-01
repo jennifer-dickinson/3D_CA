@@ -9,3 +9,7 @@
 *.log
 
 */*.log
+
+.idea/workspace.xml
+
+logs/debug.log
