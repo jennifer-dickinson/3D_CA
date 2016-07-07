@@ -1,8 +1,8 @@
+import logging
+
 import standardFuncs
 import defaultValues
 import vMath
-import logging
-import math
 
 standardFuncs.logger()
 

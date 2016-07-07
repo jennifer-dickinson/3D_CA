@@ -1,17 +1,15 @@
-#
 # This file contains all the information for planes. As of now, it only generates random planes.
-# I will add
-#
 
 
-import random
 import Queue
-import standardFuncs
-import defaultValues
 import logging
-import decentralizedComm
+import random
 import threading
+
+import decentralizedComm
+import defaultValues
 import movementSimulator
+import standardFuncs
 
 
 # Plane object will eventually have more parameters
@@ -84,29 +82,6 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
 
         for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital and previous location
 
-            # if not starting_wp:
-            #     print ("making very first waypoint")
-            #     waypoint = randomLocation(gridSize, location)
-            #     iswaypoint = True
-            #
-            # elif starting_wp and j != 0:
-            #     check = plane[i].wayPoints
-            #     iswaypoint = False
-            # else:
-            #     check = starting_wp
-            #     iswaypoint = False
-            # while not iswaypoint:
-            #     for k in check:
-            #         waypoint = randomLocation(gridSize, location)
-            #         distance = standardFuncs.totalDistance(waypoint, check[k])
-            #         if distance < 12:
-            #             iswaypoint = False
-            #             print ("Waypoint rejected")
-            #         else:
-            #             iswaypoint = True
-            #             print ("Generated a waypoint")
-
-            # starting_wp.append(waypoint)
             waypoint = randomLocation(gridSize, location)
 
             plane[i].wayPoints.append(waypoint)
@@ -145,7 +120,8 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         # If decentralized, run a thread for communication from decentralizedComm
         if not defaultValues.CENTRALIZED:
             try:
-                planeComm = decentralizedComm.communicate(plane[i],communicator)
+                logging.info("Com #%3i generated." % plane[i].id)
+                planeComm = decentralizedComm.communicate(plane[i], communicator)
 
             except:
                 logging.fatal("Communicator failed to start for UAV #%3i" % plane[i].id)
@@ -155,7 +131,8 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
             communicator.startUp(plane[i])
             planeComm = None
         try:
-            plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator, planeComm), name = "UAV #%i" % plane[i].id)
+            plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator, planeComm),
+                                             name="UAV #%i" % plane[i].id)
             plane[i].move.setDaemon(True)
             logging.info("UAV #%3i plane thread generated: %s" % (plane[i].id, plane[i].move))
         except:

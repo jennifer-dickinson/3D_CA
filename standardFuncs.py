@@ -7,8 +7,6 @@
 import math
 import collections
 import logging
-import time
-import os
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary thise variables depending on location

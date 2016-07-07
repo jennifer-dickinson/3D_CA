@@ -36,18 +36,17 @@ def move(plane, globalCommunicator, planeComm):
         plane.cElevation = plane.tElevation
 
         straightLine.straightline(plane)
-
-        # If centralized, use communication for GCS
-        if defaultValues.CENTRALIZED:
-            uav_positions = globalCommunicator.receive(plane)
         # If decentralized, use map from plane
-        elif not defaultValues.CENTRALIZED:
+        if not defaultValues.CENTRALIZED:
             uav_positions = plane.map
+        # Default to centralized communication.
+        else:
+            uav_positions = globalCommunicator.receive(plane)
+
 
         for elem in uav_positions:
             distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
             if (distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False):
-                # time.sleep(random.uniform(0, .001))  # Just so that the console doesn't get screwed up
                 plane.dead = True
                 plane.killedBy = elem["ID"]
                 stop = True
@@ -63,7 +62,11 @@ def move(plane, globalCommunicator, planeComm):
             logging.info("UAV #%3i reached waypoint #%i." % (plane.id, plane.wpAchieved))
         if plane.wpAchieved >= plane.numWayPoints:
             stop = True
-            logging.info("UAV #%3i reached allwaypoints." % plane.id)
+            logging.info("UAV #%3i reached all waypoints." % plane.id)
+
+        # Todo: make this pretty
+        if plane.dead: print "\r%-80s" % "UAV #%3i has crashed!!" % plane.id
+        if plane.wpAchieved == plane.numWayPoints: print "\r%-80s" % "UAV #%3i reached all waypoints." % plane.id
 
         # Broadcast telemetry through decentralized communication
         if not defaultValues.CENTRALIZED:
@@ -73,11 +76,8 @@ def move(plane, globalCommunicator, planeComm):
                 logging.fatal ("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
                 plane.dead = True
 
-
         # Update telemetry to centralized communication
         else:
             globalCommunicator.update(plane)
 
-    # Todo: make this pretty
-    if plane.dead: print "\r%-80s" % "UAV #%3i has crashed!!" % plane.id
-    if plane.wpAchieved == plane.numWayPoints: print "\r%-80s" % "UAV #%3i reached all waypoints." % plane.id
+

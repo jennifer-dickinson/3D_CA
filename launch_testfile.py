@@ -1,14 +1,13 @@
 import planeGenerator
-import movementSimulator
-from threading import Thread
 import centralizedComm
 import decentralizedComm
 import defaultValues
 import logging
 from standardFuncs import logger
+import time
 
 defaultValues.CENTRALIZED = False
-defaultValues.NUM_PLANES = 2
+defaultValues.NUM_PLANES = 20
 defaultValues.GRID_SIZE = 20
 defaultValues.NUM_WAY_POINTS = 10
 
@@ -40,6 +39,7 @@ def main():
     while communicator.isAlive():
         pass
     logging.info("Global communicator terminated: %s" % communicator)
+    time.sleep(.01)
     print ("Simulation complete.")
 
 

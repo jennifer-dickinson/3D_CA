@@ -1,40 +1,42 @@
 import planeGenerator
-import movementSimulator
-from threading import Thread
 import centralizedComm
 import decentralizedComm
 import defaultValues
 import logging
-import standardFuncs
+from standardFuncs import logger
+import time
 
 
 def main():
-    standardFuncs.logger()
+    logger()
 
     logging.info('Started')
 
-    print "Simulating UAV Flights... this may take a while..."
+    print ("Simulating UAV flights.... this may take a while.")
 
-    # Check to see if the simulation is ran in a centralized or decentralized manner.
     if not defaultValues.CENTRALIZED:
-        communicator = decentralizedComm.synchronizer()
+        communicator = decentralizedComm.synchronizer(defaultValues.NUM_PLANES)
 
     else:
         communicator = centralizedComm.uavComm()
 
 
-
-
+    # Wait for communicator to start before next step.
     while not communicator.is_alive():
         pass
 
-    # Generate a number of plane threads with n waypoints in a specified grid size.
-    plane = planeGenerator.generate_planes(
+    planeGenerator.generate_planes(
         defaultValues.NUM_PLANES,
         defaultValues.NUM_WAY_POINTS,
         defaultValues.GRID_SIZE,
         communicator
     )
+
+    while communicator.isAlive():
+        pass
+    logging.info("Global communicator terminated: %s" % communicator)
+    time.sleep(.01)
+    print ("Simulation complete.")
 
 
 if __name__ == '__main__':
