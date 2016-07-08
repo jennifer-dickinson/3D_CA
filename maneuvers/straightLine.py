@@ -22,45 +22,6 @@ def straightline(plane):
     plane.cBearing = plane.tBearing
     plane.cElevation = plane.tElevation
 
-    # Find the difference in target and current angles of elevation and bearing.
-    #  delta_theta = plane.cBearing - to_cardi(standardFuncs.find_bearing(plane.cLoc, target))
-    # if abs(delta_theta) > defaultValues.MAX_TURN_ANGLE:
-    #     delta_theta = standardFuncs.find_sign(delta_theta) * defaultValues.MAX_turn_ANGLE
-    #
-    # if 0 < delta_theta < 180:
-    #     # The target is on the right side
-    #     newbearing = plane.cBearing + abs(delta_theta)
-    # if -180 < delta_theta < 0:
-    #     newbearing = plane.cBearing - delta_theta
-    # if delta_theta == 0: pass
-
-
-    # cBearingCardinal = standardFuncs.to_cardinal(plane.cBearing)
-    # cBearingCartesian = standardFuncs.to_cartesian(plane.cBearing)
-    #
-    # if math.fabs(cBearingCardinal) < 90:
-    #     if (wpBearing < cBearingCartesian) and (wpBearing > standardFuncs.manpulate_angle(cBearingCartesian - 180)):
-    #         destOnRight = True
-    #     else:
-    #         destOnRight = False
-    # else:
-    #     if (wpBearing > cBearingCartesian) and (wpBearing < standardFuncs.manipulate_angle(cBearingCartesian - 180)):
-    #         destOnRight = False
-    #     else:
-    #         destOnRight = True
-
-
-
-    # delta_theta = plane.cBearing - wpBearing
-    # if destOnRight:
-
-
-    # If difference is greater than maximum turning radius and maximum inclination angle,
-    # add maximum inclination angle to current inclination
-    # add maximum bearing to current bearing.
-
-
-    speed = plane.speed  # Get speed from plane
     distanceTraveled = plane.speed * defaultValues.DELAY  # Get frequency of updates.
     plane.distanceTraveled += distanceTraveled  # The total distance travelled.
 
@@ -76,6 +37,7 @@ def straightline(plane):
     # Update current location, distance, total distance, target bearing,
     newloc = standardFuncs.loc(new_lat, new_lon, new_alt)
     plane.set_cLoc(newloc)
+
 
     # Calculate new bearing
     plane.cBearing = standardFuncs.find_bearing(plane.pLoc, plane.cLoc)

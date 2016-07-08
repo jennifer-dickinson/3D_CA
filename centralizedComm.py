@@ -1,36 +1,36 @@
-from threading import Thread, Event, RLock
+import threading
 import time
-from defaultValues import *
-from standardFuncs import *
+
+import standardFuncs
+import defaultValues
 import logging
-import sys
 
-logger()
+standardFuncs.logger()
 
 
-class uavComm(Thread):
+class uavComm(threading.Thread):
     def __init__(self):
-        Thread.__init__(self)
+        threading.Thread.__init__(self)
 
         self.positions = list()
         self.stopped = False
 
         self.startTime = time.time()
-
-        self.timer = 0
         self.counter = 0
         self.total_uavs = 0  # Total number of UAVs in the air
-        self.steps_counter = 0
 
         self.turn_kill_counter = 0
 
-        self.writeState = Event()
+        self.writeState = threading.Event()
         self.writeCounter = 0
-        self.readState = Event()
+        self.readState = threading.Event()
         self.readCounter = 0
 
-        self.lock = RLock()
-        self.lock2 = RLock()
+        self.lock = threading.RLock()
+        self.lock2 = threading.RLock()
+
+        self.startTime = time.time()
+        self.updateTime = time.time()
         self.start()
         try:
             self.readState.set()
@@ -43,15 +43,13 @@ class uavComm(Thread):
         dots = "\r"
         while not self.stopped:
 
-            dots += "."
-            print "\r%-80s" % dots,
-            sys.stdout.flush()
-            if len(dots) == 80: dots = ""
+            #dots += "."
+            #print "\r%-80s" % dots,
+            #sys.stdout.flush()
+            #if len(dots) == 80: dots = ""
 
-            time.sleep(DELAY)
+            time.sleep(defaultValues.DELAY)
 
-            # Increment timer with each loop. If no updates after threshold, break.
-            self.timer += 1
 
             # If no UAVs in air, end communicator thread.
             if self.total_uavs == 0:
@@ -59,15 +57,12 @@ class uavComm(Thread):
                 break
 
             # If timer reaches 2 seconds without an update, end communicator thread.
-            elif (self.timer * DELAY) > 2:
+            elif (time.time() - self.updateTime) > defaultValues.COMM_KILL_TIME:
                 print ("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
                 logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
-        logging.info('Communication has ended.')
-        time.sleep(1)
-        self.uav_status()
 
         logging.info('Communicator terminated.')
 
@@ -82,7 +77,6 @@ class uavComm(Thread):
                 "tdis": 0
                 }
         self.positions.append(dict)
-        self.timer = 0
         # self.total_uavs += 1
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
@@ -90,8 +84,8 @@ class uavComm(Thread):
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
-        # Reset timeout timer.
-        self.timer = 0  # Reset timeout timer
+        # Reset timeout.
+        self.updateTime = time.time()
 
         # Access positions list
         dict = (item for item in self.positions if item["ID"] == plane.id).next()
@@ -148,7 +142,6 @@ class uavComm(Thread):
             logging.info("Updated total UAVs in air to %i." % self.total_uavs)
             self.turn_kill_counter = 0
             self.writeCounter = 0
-            self.steps_counter += 1
             self.writeState.clear()
             self.readState.set()
             logging.info('-------------SWITCHED TO READ------------')
@@ -191,38 +184,3 @@ class uavComm(Thread):
     # Ends the thread
     def stop(self):
         self.stopped = True
-
-    def uav_status(self):
-
-        # Print status for each UAV.
-        title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
-            'ID#',
-            'Final Location',
-            'Dist.',
-            'WPTS',
-            'Dead?',
-            'Killed By?'
-        )
-        print title
-        line = ""
-        for i in title:
-            line += "_"
-        print line
-        for elem in self.positions:
-            if elem["dead"]:
-                killed = "UAV #%s" % elem["killedBy"]
-            else:
-                killed = ""
-            location = "(%.7f%s, %.7f%s, %.1f m)" % (
-                elem["cLoc"].latitude, DEGREE,
-                elem["cLoc"].longitude, DEGREE,
-                elem["cLoc"].altitude,
-            )
-            print '%3i  %-40s  %6s  %4s  %-5s  %-10s' % (
-                elem["ID"],
-                location,
-                elem["tdis"],
-                elem["wpts"],
-                elem["dead"],
-                killed
-            )

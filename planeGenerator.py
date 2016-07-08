@@ -61,6 +61,10 @@ class Plane:
     def nextwp(self):
         self.tLoc = self.queue.get_nowait()
 
+    # Generates a map of threats based on telemetry updates. To be used with decentralized communication.
+    def threatMap(self, coordinates):
+        return self.map
+
 
 # Automatically generate planeObjects and wayPoints
 # Todo: make an option to load planeObjects and wayPoints
@@ -68,7 +72,6 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
-    starting_wp = []  # List of starting waypoints
 
     if defaultValues.CENTRALIZED == True:
         communicator.total_uavs = numPlanes
@@ -112,10 +115,6 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         # Calculate the three dimensional and two dimensional distance to target
         plane[i].distance = standardFuncs.findDistance(plane[i].cLoc, plane[i].tLoc)
         plane[i].tdistance = standardFuncs.totalDistance(plane[i].cLoc, plane[i].tLoc)
-
-        if defaultValues.IS_TEST:
-            print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
-            print plane[i].wayPoints
 
         # If decentralized, run a thread for communication from decentralizedComm
         if not defaultValues.CENTRALIZED:

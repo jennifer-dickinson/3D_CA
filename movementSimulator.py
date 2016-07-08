@@ -11,20 +11,9 @@ from maneuvers import straightLine, dubinsPath
 
 
 def move(plane, globalCommunicator, planeComm):
-    timer = 0
     stop = False
 
-    # Todo: Make an option for centralized/decentralized collision avoidance & movement
-    # Move the plan in a straight line to the direction of the target waypoint
     while not stop and not plane.dead:
-
-        # Simulate time by delaying planes update. Will need this for GUI.
-        if defaultValues.SIMULATE_TIME:
-            time.sleep(defaultValues.DELAY)
-        timer += defaultValues.DELAY
-
-        # Todo: with each adjustment, calculate a distance travled
-
 
         # If plane distance is less than turning radius, check dubins path. This should be set on or off in settings.
         if plane.tdistance <= defaultValues.MIN_TURN_RAD:
@@ -36,13 +25,13 @@ def move(plane, globalCommunicator, planeComm):
         plane.cElevation = plane.tElevation
 
         straightLine.straightline(plane)
+
         # If decentralized, use map from plane
         if not defaultValues.CENTRALIZED:
             uav_positions = plane.map
         # Default to centralized communication.
         else:
             uav_positions = globalCommunicator.receive(plane)
-
 
         for elem in uav_positions:
             distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
@@ -73,11 +62,9 @@ def move(plane, globalCommunicator, planeComm):
             try:
                 planeComm.update()
             except:
-                logging.fatal ("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
+                logging.fatal("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
                 plane.dead = True
 
         # Update telemetry to centralized communication
         else:
             globalCommunicator.update(plane)
-
-
