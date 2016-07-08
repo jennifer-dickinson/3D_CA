@@ -3,11 +3,12 @@ import threading
 import time
 
 import standardFuncs
+import defaultValues
 
 standardFuncs.logger()
 
 
-# Make a single thread object to listen for telemetry updates. When joined by communicate, run send then restart.
+# Make a single thread object to listen for telemetry updates.
 class synchronizer(threading.Thread):
     def __init__(self, numPlanes):
         threading.Thread.__init__(self, name="Global Communicator")
@@ -59,7 +60,7 @@ class synchronizer(threading.Thread):
                     #self.broadcast.clear()
                     self.readTurn.set()
 
-                if (time.time() - self.lastUpdate > 2):
+                if (time.time() - self.lastUpdate > defaultValues.COMM_KILL_TIME):
                     logging.info("Communication timed out.")
                     print "Communication timed out."
                     break

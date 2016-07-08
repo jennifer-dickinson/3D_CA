@@ -1,36 +1,36 @@
-from threading import Thread, Event, RLock
-import time
-from defaultValues import *
-from standardFuncs import *
 import logging
-import sys
+import threading
+import time
 
-logger()
+import defaultValues
+import standardFuncs
+
+standardFuncs.logger()
 
 
-class uavComm(Thread):
+class uavComm(threading.Thread):
     def __init__(self):
-        Thread.__init__(self)
+        threading.Thread.__init__(self)
 
         self.positions = list()
         self.stopped = False
 
         self.startTime = time.time()
+        self.updateTime = time.time()
 
-        self.timer = 0
         self.counter = 0
-        self.total_uavs = 0  # Total number of UAVs in the air
+        self.total_uavs = defaultValues.NUM_PLANES  # Total number of UAVs in the air
         self.steps_counter = 0
 
         self.turn_kill_counter = 0
 
-        self.writeState = Event()
+        self.writeState = threading.Event()
         self.writeCounter = 0
-        self.readState = Event()
+        self.readState = threading.Event()
         self.readCounter = 0
 
-        self.lock = RLock()
-        self.lock2 = RLock()
+        self.lock = threading.RLock()
+        self.lock2 = threading.RLock()
         self.start()
         try:
             self.readState.set()
@@ -40,18 +40,9 @@ class uavComm(Thread):
 
     def run(self):
         logging.info('Communicator initialized: %s' % self)
-        dots = "\r"
         while not self.stopped:
 
-            dots += "."
-            print "\r%-80s" % dots,
-            sys.stdout.flush()
-            if len(dots) == 80: dots = ""
-
-            time.sleep(DELAY)
-
-            # Increment timer with each loop. If no updates after threshold, break.
-            self.timer += 1
+            time.sleep(defaultValues.DELAY)
 
             # If no UAVs in air, end communicator thread.
             if self.total_uavs == 0:
@@ -59,16 +50,12 @@ class uavComm(Thread):
                 break
 
             # If timer reaches 2 seconds without an update, end communicator thread.
-            elif (self.timer * DELAY) > 2:
+            elif (time.time() - self.updateTime) > 2:
                 print ("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
                 logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
-        logging.info('Communication has ended.')
-        time.sleep(1)
-        self.uav_status()
-
         logging.info('Communicator terminated.')
 
     def startUp(self, plane):
@@ -82,7 +69,6 @@ class uavComm(Thread):
                 "tdis": 0
                 }
         self.positions.append(dict)
-        self.timer = 0
         # self.total_uavs += 1
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
@@ -91,7 +77,7 @@ class uavComm(Thread):
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
         # Reset timeout timer.
-        self.timer = 0  # Reset timeout timer
+        self.updateTime = time.time()
 
         # Access positions list
         dict = (item for item in self.positions if item["ID"] == plane.id).next()
@@ -191,38 +177,3 @@ class uavComm(Thread):
     # Ends the thread
     def stop(self):
         self.stopped = True
-
-    def uav_status(self):
-
-        # Print status for each UAV.
-        title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
-            'ID#',
-            'Final Location',
-            'Dist.',
-            'WPTS',
-            'Dead?',
-            'Killed By?'
-        )
-        print title
-        line = ""
-        for i in title:
-            line += "_"
-        print line
-        for elem in self.positions:
-            if elem["dead"]:
-                killed = "UAV #%s" % elem["killedBy"]
-            else:
-                killed = ""
-            location = "(%.7f%s, %.7f%s, %.1f m)" % (
-                elem["cLoc"].latitude, DEGREE,
-                elem["cLoc"].longitude, DEGREE,
-                elem["cLoc"].altitude,
-            )
-            print '%3i  %-40s  %6s  %4s  %-5s  %-10s' % (
-                elem["ID"],
-                location,
-                elem["tdis"],
-                elem["wpts"],
-                elem["dead"],
-                killed
-            )

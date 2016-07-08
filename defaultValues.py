@@ -6,9 +6,9 @@ OUR_LOCATION = [32.606184, -85.488228]
 DELAY = .2  # Number of seconds between calculations
 SIMULATE_TIME = False  # Make it realtime?
 
-NUM_PLANES = 12  # Number of planes to generate
-NUM_WAY_POINTS = 64  # Number of waypoints to generate
-GRID_SIZE = 100  # Size of grid
+NUM_PLANES = 8  # Number of planes to generate
+NUM_WAY_POINTS = 20  # Number of waypoints to generate
+GRID_SIZE = 20  # Size of grid
 
 MAX_QUEUE_SIZE = 1000  # Maximum queue size
 COMM_KILL_TIME = 2  # Number of seconds to wait between updates to kill communication
@@ -25,4 +25,4 @@ MAX_ELEV_ANGLE = 22.5  # Maximum angle of elevation in degrees
 MAX_TURN_ANGLE = 22.5  # Maximum turning angle in degrees (Will result in hex shape)
 MIN_TURN_RAD = 28.64058013  # Minimum turning radius in meters
 
-CENTRALIZED = True  # True or false
+CENTRALIZED = False  # True or false
