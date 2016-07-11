@@ -62,22 +62,18 @@ class Plane:
         self.tLoc = self.queue.get_nowait()
 
     def threatMap(self, msg):
-        """This function is to be used by the UAV's decentralized communication thread. The purpose is to populate a map
-        of threats which will be returned as a list."""
+        """
+        This function is to be used by the UAV's decentralized communication thread. The purpose is to populate a map
+        of threats which will be returned as a list.
+        """
 
-        distance_to_threat = standardFuncs.findDistance(self.cLoc, msg["Location"])
-        if not self.map:
-            self.map.append(msg)
-            # logging.info("UAV #%3i map: %s" % (self.id, self.map))
-            return True
-        else:
-            for i in self.map:
-                if i["ID"] == msg["ID"]:
-                    i["Location"] = msg["Location"]
-                    i["#"] = msg["#"]
-                    i["Dead"] = msg["Dead"]
-                    # logging.info("UAV #%3i map: %s" % (self.id, self.map))
-                    return True
+        for i in self.map:
+            if i["ID"] == msg["ID"]:
+                i["Location"] = msg["Location"]
+                i["#"] = msg["#"]
+                i["Dead"] = msg["Dead"]
+                # logging.info("UAV #%3i map: %s" % (self.id, self.map))
+                return True
         self.map.append(msg)
 
 
@@ -87,7 +83,6 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
-    starting_wp = []  # List of starting waypoints
 
     if defaultValues.CENTRALIZED == True:
         communicator.total_uavs = numPlanes
@@ -99,7 +94,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane.append(Plane())
         plane[i].numWayPoints = numWayPoints
 
-        for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital and previous location
+        for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital location and bearing.
 
             waypoint = randomLocation(gridSize, location)
 
@@ -131,10 +126,6 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         # Calculate the three dimensional and two dimensional distance to target
         plane[i].distance = standardFuncs.findDistance(plane[i].cLoc, plane[i].tLoc)
         plane[i].tdistance = standardFuncs.totalDistance(plane[i].cLoc, plane[i].tLoc)
-
-        if defaultValues.IS_TEST:
-            print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
-            print plane[i].wayPoints
 
         # If decentralized, run a thread for communication from decentralizedComm
         if not defaultValues.CENTRALIZED:

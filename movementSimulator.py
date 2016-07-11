@@ -13,14 +13,6 @@ def move(plane, globalCommunicator, planeComm):
     while not stop and not plane.dead:
 
         # If plane distance is less than turning radius, check dubins path. This should be set on or off in settings.
-        if plane.tdistance <= defaultValues.MIN_TURN_RAD:
-            # logging.info("UAV #%3i checking for dubins path." % plane.id)
-            dubinsPath.takeDubinsPath(plane)
-            pass
-
-        straightLine.straightline(plane)
-
-
 
         # Use decentralized communication and collision detectance.
         if not defaultValues.CENTRALIZED:
@@ -31,9 +23,9 @@ def move(plane, globalCommunicator, planeComm):
                     plane.dead = True
                     plane.killedBy = elem["ID"]
                     stop = True
-                elif elem["ID"] == plane.id and elem["Dead"] == True:
+                if elem["KilledBy"] == plane.id:
                     plane.dead = True
-                    plane.killedBy = elem["killedBy"]
+                    plane.killedBy = elem["ID"]
                     stop = True
 
         # Default to centralized communication and collision detectance.
@@ -45,7 +37,7 @@ def move(plane, globalCommunicator, planeComm):
                     plane.dead = True
                     plane.killedBy = elem["ID"]
                     stop = True
-                elif elem["ID"] == plane.id and elem["dead"] == True:
+                if elem["ID"] == plane.id and elem["dead"] == True:
                     plane.dead = True
                     plane.killedBy = elem["killedBy"]
                     stop = True
@@ -60,8 +52,16 @@ def move(plane, globalCommunicator, planeComm):
             stop = True
             logging.info("UAV #%3i reached all waypoints." % plane.id)
 
-        if plane.dead: print "%-80s" % "UAV #%3i has crashed!!" % plane.id
-        if plane.wpAchieved == plane.numWayPoints: print "%-80s" % "UAV #%3i reached all waypoints." % plane.id
+        if plane.dead:
+            print "UAV #%3i has crashed with UAV #%3i" % (plane.id, plane.killedBy)
+        if plane.wpAchieved == plane.numWayPoints: print "UAV #%3i reached all waypoints." % plane.id
+
+        if plane.tdistance <= defaultValues.MIN_TURN_RAD:
+            # logging.info("UAV #%3i checking for dubins path." % plane.id)
+            dubinsPath.takeDubinsPath(plane)
+            pass
+
+        straightLine.straightline(plane)
 
         # Broadcast telemetry through decentralized communication
         if not defaultValues.CENTRALIZED:
