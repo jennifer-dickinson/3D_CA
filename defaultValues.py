@@ -1,4 +1,3 @@
-
 CENTRALIZED = False  # True or false
 COLLISION_AVOIDANCE = False  # Set collision avoidance to true or false, will use the following parameter
 ALGORITHM = 'APF'
@@ -21,3 +20,6 @@ COMM_KILL_TIME = 2  # Number of seconds to wait between updates to kill communic
 CRASH_DISTANCE = 2  # Distance to be considered a crash (meters)
 CONFLICT_DISTANCE = DEFAULT_UAV_SPEED * 2
 WAYPOINT_DISTANCE = 2  # Maximum distance to consider a waypoint reached (meters)
+
+LATITUDE_TO_METERS = 110574.61  # Meters per latitude degree
+LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
