@@ -1,27 +1,12 @@
-<<<<<<< HEAD
 import logging
 import threading
 import time
 
 import defaultValues
 import standardFuncs
-=======
-import threading
-import time
-
-import standardFuncs
-import defaultValues
-import logging
-
-standardFuncs.logger()
->>>>>>> origin/master
 
 standardFuncs.logger()
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 class uavComm(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -30,16 +15,11 @@ class uavComm(threading.Thread):
         self.stopped = False
 
         self.startTime = time.time()
-<<<<<<< HEAD
         self.updateTime = time.time()
 
         self.counter = 0
         self.total_uavs = defaultValues.NUM_PLANES  # Total number of UAVs in the air
         self.steps_counter = 0
-=======
-        self.counter = 0
-        self.total_uavs = 0  # Total number of UAVs in the air
->>>>>>> origin/master
 
         self.turn_kill_counter = 0
 
@@ -50,12 +30,7 @@ class uavComm(threading.Thread):
 
         self.lock = threading.RLock()
         self.lock2 = threading.RLock()
-<<<<<<< HEAD
-=======
 
-        self.startTime = time.time()
-        self.updateTime = time.time()
->>>>>>> origin/master
         self.start()
         try:
             self.readState.set()
@@ -67,17 +42,7 @@ class uavComm(threading.Thread):
         logging.info('Communicator initialized: %s' % self)
         while not self.stopped:
 
-<<<<<<< HEAD
             time.sleep(defaultValues.DELAY)
-=======
-            #dots += "."
-            #print "\r%-80s" % dots,
-            #sys.stdout.flush()
-            #if len(dots) == 80: dots = ""
-
-            time.sleep(defaultValues.DELAY)
-
->>>>>>> origin/master
 
             # If no UAVs in air, end communicator thread.
             if self.total_uavs == 0:
@@ -85,20 +50,13 @@ class uavComm(threading.Thread):
                 break
 
             # If timer reaches 2 seconds without an update, end communicator thread.
-<<<<<<< HEAD
-            elif (time.time() - self.updateTime) > 2:
-=======
             elif (time.time() - self.updateTime) > defaultValues.COMM_KILL_TIME:
->>>>>>> origin/master
                 print ("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
                 logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
         logging.info('Communicator terminated.')
 
     def startUp(self, plane):
@@ -119,11 +77,7 @@ class uavComm(threading.Thread):
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
-<<<<<<< HEAD
         # Reset timeout timer.
-=======
-        # Reset timeout.
->>>>>>> origin/master
         self.updateTime = time.time()
 
         # Access positions list

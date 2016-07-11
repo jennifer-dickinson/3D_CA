@@ -1,4 +1,5 @@
 import logging
+import time
 
 import defaultValues
 import standardFuncs
@@ -19,13 +20,9 @@ def move(plane, globalCommunicator, planeComm):
 
         straightLine.straightline(plane)
 
-<<<<<<< HEAD
 
 
         # Use decentralized communication and collision detectance.
-=======
-        # If decentralized, use map from plane
->>>>>>> origin/master
         if not defaultValues.CENTRALIZED:
             uav_positions = plane.map
             for elem in uav_positions:
@@ -42,7 +39,6 @@ def move(plane, globalCommunicator, planeComm):
         # Default to centralized communication and collision detectance.
         else:
             uav_positions = globalCommunicator.receive(plane)
-<<<<<<< HEAD
             for elem in uav_positions:
                 distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
                 if distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False:
@@ -55,20 +51,6 @@ def move(plane, globalCommunicator, planeComm):
                     stop = True
 
         # Check to see if UAV has reached the waypoint or completed mission.
-=======
-
-        for elem in uav_positions:
-            distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
-            if (distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False):
-                plane.dead = True
-                plane.killedBy = elem["ID"]
-                stop = True
-            elif elem["ID"] == plane.id and elem["dead"] == True:
-                plane.dead = True
-                plane.killedBy = elem["killedBy"]
-                stop = True
-
->>>>>>> origin/master
         if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
