@@ -125,7 +125,8 @@ class communicate(threading.Thread):
         else:
             self.synch.broadcastCounter += 1
             self.msgCounter += 1
-            self.synch.msg = {"ID": self.plane.id, "Location": self.plane.cLoc, "#": self.msgCounter, "Dead" : self.plane.dead, "KilledBy" : self.plane.killedBy}
+
+        self.synch.msg = {"ID": self.plane.id, "Location": self.plane.cLoc, "#": self.msgCounter, "Dead" : self.plane.dead, "KilledBy" : self.plane.killedBy}
 
         logging.info("UAV #%3i broadcasting message." % self.plane.id)
 
