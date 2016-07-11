@@ -557,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468274435286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Accuracy improved for collision detectance in decentralized communication.">
+      <created>1468274518596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1468274518596</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
