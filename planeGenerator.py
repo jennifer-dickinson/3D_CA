@@ -61,6 +61,25 @@ class Plane:
     def nextwp(self):
         self.tLoc = self.queue.get_nowait()
 
+    def threatMap(self, msg):
+        """This function is to be used by the UAV's decentralized communication thread. The purpose is to populate a map
+        of threats which will be returned as a list."""
+
+        distance_to_threat = standardFuncs.findDistance(self.cLoc, msg["Location"])
+        if not self.map:
+            self.map.append(msg)
+            # logging.info("UAV #%3i map: %s" % (self.id, self.map))
+            return True
+        else:
+            for i in self.map:
+                if i["ID"] == msg["ID"]:
+                    i["Location"] = msg["Location"]
+                    i["#"] = msg["#"]
+                    i["Dead"] = msg["Dead"]
+                    # logging.info("UAV #%3i map: %s" % (self.id, self.map))
+                    return True
+        self.map.append(msg)
+
 
 # Automatically generate planeObjects and wayPoints
 # Todo: make an option to load planeObjects and wayPoints

@@ -13,3 +13,5 @@
 .idea/workspace.xml
 
 logs/debug.log
+
+*.xml

@@ -6,6 +6,7 @@ import decentralizedComm
 import defaultValues
 import planeGenerator
 import standardFuncs
+
 def main():
     standardFuncs.logger()
 
@@ -59,7 +60,7 @@ def uav_status(plane):
         if plane[i].dead:
             killed = "UAV #%s" % plane[i].killedBy
         else:
-            killed = ""
+            killed = "N/A"
         location = "(%.7f%s, %.7f%s, %.1f m)" % (
             plane[i].cLoc.latitude, standardFuncs.DEGREE,
             plane[i].cLoc.longitude, standardFuncs.DEGREE,

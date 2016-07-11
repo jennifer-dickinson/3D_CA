@@ -6,8 +6,8 @@ OUR_LOCATION = [32.606184, -85.488228]
 DELAY = .2  # Number of seconds between calculations
 SIMULATE_TIME = False  # Make it realtime?
 
-NUM_PLANES = 8  # Number of planes to generate
-NUM_WAY_POINTS = 20  # Number of waypoints to generate
+NUM_PLANES = 20  # Number of planes to generate
+NUM_WAY_POINTS = 10  # Number of waypoints to generate
 GRID_SIZE = 20  # Size of grid
 
 MAX_QUEUE_SIZE = 1000  # Maximum queue size
