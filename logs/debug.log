@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016-07-11 15:31:59,715     INFO: Started
 2016-07-11 15:31:59,716     INFO: Global communicator initiated: <synchronizer(Global Communicator, started 123145302839296)>
 2016-07-11 15:31:59,716     INFO: UAV #  1 set to 10 waypoints, starting position (32.6061572°, -85.4882036°, 395.98).
@@ -13368,3 +13369,2234 @@
 2016-07-11 15:32:13,783     INFO: ##########All UAVs wrote a message
 2016-07-11 15:32:13,854     INFO: Time elapsed: 14.03s
 2016-07-11 15:32:13,856     INFO: Global communicator terminated: <synchronizer(Global Communicator, stopped 123145302839296)>
+=======
+2016-07-07 20:40:30,461     INFO: Started
+2016-07-07 20:40:30,461     INFO: Global communicator initiated: <synchronizer(Global Communicator, started 4392243200)>
+2016-07-07 20:40:30,467     INFO: UAV #  1 set to 10 waypoints, starting position (32.6062542°, -85.4882529°, 396.38).
+2016-07-07 20:40:30,469     INFO: Com #  1 generated.
+2016-07-07 20:40:30,469     INFO: UAV #  1 plane thread generated: <Thread(UAV #1, initial daemon)>
+2016-07-07 20:40:30,471     INFO: UAV #  2 set to 10 waypoints, starting position (32.6062711°, -85.4882819°, 390.41).
+2016-07-07 20:40:30,472     INFO: Com #  2 generated.
+2016-07-07 20:40:30,472     INFO: UAV #  2 plane thread generated: <Thread(UAV #2, initial daemon)>
+2016-07-07 20:40:30,473     INFO: UAV #  3 set to 10 waypoints, starting position (32.6061778°, -85.4882924°, 380.12).
+2016-07-07 20:40:30,474     INFO: Com #  3 generated.
+2016-07-07 20:40:30,478     INFO: UAV #  3 plane thread generated: <Thread(UAV #3, initial daemon)>
+2016-07-07 20:40:30,481     INFO: UAV #  4 set to 10 waypoints, starting position (32.6061401°, -85.4882674°, 398.95).
+2016-07-07 20:40:30,482     INFO: Com #  4 generated.
+2016-07-07 20:40:30,483     INFO: UAV #  4 plane thread generated: <Thread(UAV #4, initial daemon)>
+2016-07-07 20:40:30,486     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,488     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,489     INFO: Com #  2 received message #1 from UAV # 2
+2016-07-07 20:40:30,493     INFO: Com #  3 received message #1 from UAV # 2
+2016-07-07 20:40:30,498     INFO: Com #  4 received message #1 from UAV # 2
+2016-07-07 20:40:30,504     INFO: Com #  1 received message #1 from UAV # 2
+2016-07-07 20:40:30,505     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,506     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,507     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,508     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,509     INFO: Com #  4 received message #1 from UAV # 1
+2016-07-07 20:40:30,511     INFO: Com #  3 received message #1 from UAV # 1
+2016-07-07 20:40:30,512     INFO: Com #  1 received message #1 from UAV # 1
+2016-07-07 20:40:30,512     INFO: Com #  2 received message #1 from UAV # 1
+2016-07-07 20:40:30,513     INFO: Com #  4 received message #1 from UAV # 1
+2016-07-07 20:40:30,514     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,514     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,515     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,515     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,518     INFO: Com #  3 received message #1 from UAV # 3
+2016-07-07 20:40:30,518     INFO: Com #  1 received message #1 from UAV # 3
+2016-07-07 20:40:30,519     INFO: Com #  2 received message #1 from UAV # 3
+2016-07-07 20:40:30,519     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,520     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,521     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,521     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,522     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,522     INFO: Com #  3 received message #1 from UAV # 4
+2016-07-07 20:40:30,527     INFO: Com #  3 received message #1 from UAV # 4
+2016-07-07 20:40:30,527     INFO: Com #  3 received message #1 from UAV # 4
+2016-07-07 20:40:30,528     INFO: Com #  3 received message #1 from UAV # 4
+2016-07-07 20:40:30,529     INFO: Com #  4 received message #1 from UAV # 4
+2016-07-07 20:40:30,529     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,530     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,531     INFO: Com #  2 received message #1 from UAV # 4
+2016-07-07 20:40:30,531     INFO: Com #  1 received message #1 from UAV # 4
+2016-07-07 20:40:30,531     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,532     INFO: Com #  3 received message #2 from UAV # 2
+2016-07-07 20:40:30,536     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,537     INFO: Com #  4 received message #2 from UAV # 2
+2016-07-07 20:40:30,537     INFO: Com #  2 received message #2 from UAV # 2
+2016-07-07 20:40:30,538     INFO: Com #  1 received message #2 from UAV # 2
+2016-07-07 20:40:30,538     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,538     INFO: Com #  3 received message #2 from UAV # 2
+2016-07-07 20:40:30,539     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,539     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,540     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,540     INFO: Com #  3 received message #2 from UAV # 3
+2016-07-07 20:40:30,541     INFO: Com #  1 received message #2 from UAV # 3
+2016-07-07 20:40:30,541     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,542     INFO: Com #  4 received message #2 from UAV # 3
+2016-07-07 20:40:30,543     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,544     INFO: Com #  2 received message #2 from UAV # 3
+2016-07-07 20:40:30,546     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,548     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,548     INFO: Com #  4 received message #2 from UAV # 1
+2016-07-07 20:40:30,549     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,550     INFO: Com #  2 received message #2 from UAV # 1
+2016-07-07 20:40:30,551     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,552     INFO: Com #  3 received message #2 from UAV # 1
+2016-07-07 20:40:30,553     INFO: Com #  1 received message #2 from UAV # 1
+2016-07-07 20:40:30,553     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,554     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,554     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,554     INFO: Com #  2 received message #2 from UAV # 4
+2016-07-07 20:40:30,558     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,559     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,560     INFO: Com #  1 received message #2 from UAV # 4
+2016-07-07 20:40:30,561     INFO: Com #  3 received message #2 from UAV # 4
+2016-07-07 20:40:30,561     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,565     INFO: Com #  4 received message #3 from UAV # 2
+2016-07-07 20:40:30,566     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,566     INFO: Com #  4 received message #3 from UAV # 2
+2016-07-07 20:40:30,566     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,567     INFO: Com #  3 received message #3 from UAV # 2
+2016-07-07 20:40:30,567     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,567     INFO: Com #  2 received message #3 from UAV # 2
+2016-07-07 20:40:30,568     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,569     INFO: Com #  1 received message #3 from UAV # 3
+2016-07-07 20:40:30,569     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,569     INFO: Com #  4 received message #3 from UAV # 3
+2016-07-07 20:40:30,570     INFO: Com #  1 received message #3 from UAV # 3
+2016-07-07 20:40:30,570     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,571     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,571     INFO: Com #  3 received message #3 from UAV # 3
+2016-07-07 20:40:30,572     INFO: Com #  2 received message #3 from UAV # 3
+2016-07-07 20:40:30,572     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,573     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,573     INFO: Com #  4 received message #3 from UAV # 1
+2016-07-07 20:40:30,573     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,574     INFO: Com #  2 received message #3 from UAV # 1
+2016-07-07 20:40:30,575     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,575     INFO: Com #  1 received message #3 from UAV # 1
+2016-07-07 20:40:30,576     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,576     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,602     INFO: Com #  3 received message #3 from UAV # 4
+2016-07-07 20:40:30,604     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,608     INFO: Com #  4 received message #3 from UAV # 4
+2016-07-07 20:40:30,608     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,610     INFO: Com #  1 received message #3 from UAV # 4
+2016-07-07 20:40:30,610     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,610     INFO: Com #  2 received message #3 from UAV # 4
+2016-07-07 20:40:30,611     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,612     INFO: Com #  3 received message #4 from UAV # 1
+2016-07-07 20:40:30,613     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,614     INFO: Com #  3 received message #4 from UAV # 1
+2016-07-07 20:40:30,615     INFO: Com #  2 received message #4 from UAV # 1
+2016-07-07 20:40:30,615     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,615     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,615     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,616     INFO: Com #  1 received message #4 from UAV # 2
+2016-07-07 20:40:30,616     INFO: Com #  4 received message #4 from UAV # 2
+2016-07-07 20:40:30,617     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,617     INFO: Com #  1 received message #4 from UAV # 2
+2016-07-07 20:40:30,619     INFO: Com #  3 received message #4 from UAV # 2
+2016-07-07 20:40:30,620     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,620     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,621     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,620     INFO: Com #  4 received message #4 from UAV # 2
+2016-07-07 20:40:30,622     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,622     INFO: Com #  2 received message #4 from UAV # 3
+2016-07-07 20:40:30,626     INFO: Com #  4 received message #4 from UAV # 3
+2016-07-07 20:40:30,628     INFO: Com #  1 received message #4 from UAV # 3
+2016-07-07 20:40:30,628     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,628     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,629     INFO: Com #  3 received message #4 from UAV # 3
+2016-07-07 20:40:30,629     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,629     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,630     INFO: Com #  2 received message #4 from UAV # 4
+2016-07-07 20:40:30,635     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,635     INFO: Com #  3 received message #4 from UAV # 4
+2016-07-07 20:40:30,635     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,636     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,635     INFO: Com #  1 received message #4 from UAV # 4
+2016-07-07 20:40:30,637     INFO: Com #  2 received message #4 from UAV # 4
+2016-07-07 20:40:30,637     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,640     INFO: Com #  4 received message #5 from UAV # 3
+2016-07-07 20:40:30,642     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,642     INFO: Com #  4 received message #5 from UAV # 3
+2016-07-07 20:40:30,643     INFO: Com #  3 received message #5 from UAV # 3
+2016-07-07 20:40:30,644     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,644     INFO: Com #  1 received message #5 from UAV # 3
+2016-07-07 20:40:30,645     INFO: Com #  2 received message #5 from UAV # 3
+2016-07-07 20:40:30,644     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,646     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,647     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,649     INFO: Com #  1 received message #5 from UAV # 1
+2016-07-07 20:40:30,649     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,651     INFO: Com #  2 received message #5 from UAV # 1
+2016-07-07 20:40:30,653     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,654     INFO: Com #  3 received message #5 from UAV # 1
+2016-07-07 20:40:30,655     INFO: Com #  4 received message #5 from UAV # 1
+2016-07-07 20:40:30,657     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,657     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,657     INFO: Com #  4 received message #5 from UAV # 2
+2016-07-07 20:40:30,659     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,660     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,660     INFO: Com #  2 received message #5 from UAV # 2
+2016-07-07 20:40:30,660     INFO: Com #  1 received message #5 from UAV # 2
+2016-07-07 20:40:30,661     INFO: Com #  3 received message #5 from UAV # 2
+2016-07-07 20:40:30,661     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,661     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,662     INFO: Com #  1 received message #5 from UAV # 4
+2016-07-07 20:40:30,662     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,664     INFO: Com #  4 received message #5 from UAV # 4
+2016-07-07 20:40:30,665     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,665     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,664     INFO: Com #  2 received message #5 from UAV # 4
+2016-07-07 20:40:30,666     INFO: Com #  3 received message #5 from UAV # 4
+2016-07-07 20:40:30,668     INFO: Com #  1 received message #5 from UAV # 4
+2016-07-07 20:40:30,668     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,669     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,670     INFO: Com #  3 received message #6 from UAV # 1
+2016-07-07 20:40:30,670     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,672     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,672     INFO: Com #  4 received message #6 from UAV # 1
+2016-07-07 20:40:30,673     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,674     INFO: Com #  1 received message #6 from UAV # 3
+2016-07-07 20:40:30,675     INFO: Com #  2 received message #6 from UAV # 3
+2016-07-07 20:40:30,676     INFO: Com #  4 received message #6 from UAV # 3
+2016-07-07 20:40:30,676     INFO: Com #  3 received message #6 from UAV # 3
+2016-07-07 20:40:30,676     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,677     INFO: Com #  1 received message #6 from UAV # 3
+2016-07-07 20:40:30,677     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,678     INFO: Com #  2 received message #6 from UAV # 3
+2016-07-07 20:40:30,679     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,680     INFO: Com #  4 received message #6 from UAV # 3
+2016-07-07 20:40:30,681     INFO: Com #  3 received message #6 from UAV # 3
+2016-07-07 20:40:30,682     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,685     INFO: Com #  2 received message #6 from UAV # 2
+2016-07-07 20:40:30,685     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,685     INFO: Com #  4 received message #6 from UAV # 2
+2016-07-07 20:40:30,686     INFO: Com #  1 received message #6 from UAV # 2
+2016-07-07 20:40:30,687     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,687     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,687     INFO: Com #  2 received message #6 from UAV # 2
+2016-07-07 20:40:30,688     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,688     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,689     INFO: UAV #  1 reached waypoint #1.
+2016-07-07 20:40:30,689     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,690     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,690     INFO: Com #  3 received message #6 from UAV # 4
+2016-07-07 20:40:30,691     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,692     INFO: Com #  2 received message #6 from UAV # 4
+2016-07-07 20:40:30,693     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,694     INFO: Com #  4 received message #7 from UAV # 1
+2016-07-07 20:40:30,694     INFO: Com #  1 received message #7 from UAV # 1
+2016-07-07 20:40:30,695     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,695     INFO: Com #  4 received message #7 from UAV # 1
+2016-07-07 20:40:30,697     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,697     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,698     INFO: Com #  1 received message #7 from UAV # 1
+2016-07-07 20:40:30,698     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,700     INFO: Com #  3 received message #7 from UAV # 2
+2016-07-07 20:40:30,700     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,701     INFO: Com #  2 received message #7 from UAV # 2
+2016-07-07 20:40:30,702     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,702     INFO: Com #  4 received message #7 from UAV # 2
+2016-07-07 20:40:30,703     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,703     INFO: Com #  1 received message #7 from UAV # 2
+2016-07-07 20:40:30,704     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,704     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,705     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,706     INFO: Com #  2 received message #7 from UAV # 3
+2016-07-07 20:40:30,707     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,707     INFO: Com #  1 received message #7 from UAV # 3
+2016-07-07 20:40:30,708     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,708     INFO: Com #  4 received message #7 from UAV # 4
+2016-07-07 20:40:30,709     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,709     INFO: Com #  3 received message #7 from UAV # 4
+2016-07-07 20:40:30,710     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,711     INFO: UAV #  2 reached waypoint #1.
+2016-07-07 20:40:30,712     INFO: UAV #  3 reached waypoint #1.
+2016-07-07 20:40:30,712     INFO: Com #  4 received message #7 from UAV # 4
+2016-07-07 20:40:30,712     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,717     INFO: Com #  1 received message #7 from UAV # 4
+2016-07-07 20:40:30,717     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,719     INFO: Com #  2 received message #7 from UAV # 4
+2016-07-07 20:40:30,720     INFO: UAV #  4 reached waypoint #1.
+2016-07-07 20:40:30,721     INFO: Com #  3 received message #7 from UAV # 4
+2016-07-07 20:40:30,721     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,721     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,722     INFO: Com #  3 received message #8 from UAV # 1
+2016-07-07 20:40:30,722     INFO: Com #  1 received message #8 from UAV # 1
+2016-07-07 20:40:30,722     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,723     INFO: Com #  2 received message #8 from UAV # 1
+2016-07-07 20:40:30,723     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,723     INFO: Com #  3 received message #8 from UAV # 1
+2016-07-07 20:40:30,724     INFO: Com #  4 received message #8 from UAV # 1
+2016-07-07 20:40:30,725     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,725     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,725     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,726     INFO: Com #  1 received message #8 from UAV # 2
+2016-07-07 20:40:30,726     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,727     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,727     INFO: Com #  3 received message #8 from UAV # 3
+2016-07-07 20:40:30,727     INFO: Com #  4 received message #8 from UAV # 3
+2016-07-07 20:40:30,728     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,728     INFO: Com #  2 received message #8 from UAV # 3
+2016-07-07 20:40:30,729     INFO: Com #  1 received message #8 from UAV # 3
+2016-07-07 20:40:30,729     INFO: Com #  3 received message #8 from UAV # 3
+2016-07-07 20:40:30,730     INFO: Com #  4 received message #8 from UAV # 3
+2016-07-07 20:40:30,730     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,730     INFO: Com #  2 received message #8 from UAV # 3
+2016-07-07 20:40:30,730     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,731     INFO: Com #  1 received message #8 from UAV # 3
+2016-07-07 20:40:30,735     INFO: Com #  3 received message #8 from UAV # 3
+2016-07-07 20:40:30,736     INFO: Com #  4 received message #8 from UAV # 4
+2016-07-07 20:40:30,736     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,736     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,738     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,738     INFO: Com #  3 received message #8 from UAV # 4
+2016-07-07 20:40:30,739     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,740     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,741     INFO: Com #  2 received message #8 from UAV # 4
+2016-07-07 20:40:30,741     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,745     INFO: Com #  4 received message #9 from UAV # 1
+2016-07-07 20:40:30,746     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,746     INFO: Com #  1 received message #9 from UAV # 1
+2016-07-07 20:40:30,747     INFO: Com #  3 received message #9 from UAV # 1
+2016-07-07 20:40:30,748     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,748     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,748     INFO: Com #  2 received message #9 from UAV # 1
+2016-07-07 20:40:30,749     INFO: Com #  4 received message #9 from UAV # 1
+2016-07-07 20:40:30,749     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,749     INFO: Com #  1 received message #9 from UAV # 3
+2016-07-07 20:40:30,755     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,755     INFO: Com #  1 received message #9 from UAV # 3
+2016-07-07 20:40:30,756     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,757     INFO: Com #  4 received message #9 from UAV # 3
+2016-07-07 20:40:30,757     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,757     INFO: Com #  3 received message #9 from UAV # 3
+2016-07-07 20:40:30,758     INFO: Com #  2 received message #9 from UAV # 3
+2016-07-07 20:40:30,759     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,759     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,760     INFO: Com #  4 received message #9 from UAV # 2
+2016-07-07 20:40:30,760     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,761     INFO: Com #  3 received message #9 from UAV # 2
+2016-07-07 20:40:30,761     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,761     INFO: Com #  2 received message #9 from UAV # 2
+2016-07-07 20:40:30,762     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,763     INFO: Com #  1 received message #9 from UAV # 4
+2016-07-07 20:40:30,763     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,766     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,766     INFO: Com #  4 received message #9 from UAV # 4
+2016-07-07 20:40:30,778     INFO: Com #  2 received message #9 from UAV # 4
+2016-07-07 20:40:30,778     INFO: Com #  3 received message #9 from UAV # 4
+2016-07-07 20:40:30,779     INFO: Com #  1 received message #9 from UAV # 4
+2016-07-07 20:40:30,779     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,780     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,781     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,781     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,782     INFO: Com #  1 received message #10 from UAV # 3
+2016-07-07 20:40:30,782     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,783     INFO: Com #  4 received message #10 from UAV # 3
+2016-07-07 20:40:30,784     INFO: Com #  2 received message #10 from UAV # 3
+2016-07-07 20:40:30,783     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,784     INFO: Com #  3 received message #10 from UAV # 3
+2016-07-07 20:40:30,784     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,787     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,788     INFO: Com #  2 received message #10 from UAV # 1
+2016-07-07 20:40:30,789     INFO: Com #  3 received message #10 from UAV # 1
+2016-07-07 20:40:30,789     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,790     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,790     INFO: Com #  4 received message #10 from UAV # 1
+2016-07-07 20:40:30,791     INFO: Com #  1 received message #10 from UAV # 1
+2016-07-07 20:40:30,792     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,798     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,798     INFO: Com #  4 received message #10 from UAV # 2
+2016-07-07 20:40:30,799     INFO: Com #  4 received message #10 from UAV # 2
+2016-07-07 20:40:30,799     INFO: Com #  3 received message #10 from UAV # 2
+2016-07-07 20:40:30,800     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,800     INFO: Com #  4 received message #10 from UAV # 2
+2016-07-07 20:40:30,800     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,801     INFO: Com #  1 received message #10 from UAV # 2
+2016-07-07 20:40:30,803     INFO: Com #  2 received message #10 from UAV # 2
+2016-07-07 20:40:30,808     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,808     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,808     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,808     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,809     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,810     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,814     INFO: Com #  4 received message #11 from UAV # 3
+2016-07-07 20:40:30,814     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,814     INFO: Com #  2 received message #11 from UAV # 3
+2016-07-07 20:40:30,815     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,815     INFO: Com #  3 received message #11 from UAV # 3
+2016-07-07 20:40:30,816     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,816     INFO: Com #  1 received message #11 from UAV # 3
+2016-07-07 20:40:30,820     INFO: Com #  4 received message #11 from UAV # 3
+2016-07-07 20:40:30,820     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,821     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,821     INFO: Com #  1 received message #11 from UAV # 2
+2016-07-07 20:40:30,822     INFO: Com #  3 received message #11 from UAV # 2
+2016-07-07 20:40:30,822     INFO: Com #  1 received message #11 from UAV # 2
+2016-07-07 20:40:30,823     INFO: Com #  2 received message #11 from UAV # 2
+2016-07-07 20:40:30,823     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,824     INFO: Com #  4 received message #11 from UAV # 2
+2016-07-07 20:40:30,824     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,829     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,829     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,830     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,831     INFO: Com #  4 received message #11 from UAV # 4
+2016-07-07 20:40:30,831     INFO: Com #  1 received message #11 from UAV # 4
+2016-07-07 20:40:30,831     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,832     INFO: Com #  2 received message #11 from UAV # 4
+2016-07-07 20:40:30,832     INFO: Com #  3 received message #11 from UAV # 4
+2016-07-07 20:40:30,833     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,833     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,835     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,835     INFO: Com #  3 received message #11 from UAV # 1
+2016-07-07 20:40:30,836     INFO: Com #  1 received message #11 from UAV # 1
+2016-07-07 20:40:30,837     INFO: Com #  2 received message #11 from UAV # 1
+2016-07-07 20:40:30,837     INFO: Com #  4 received message #11 from UAV # 1
+2016-07-07 20:40:30,837     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,838     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,839     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,839     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,839     INFO: Com #  4 received message #12 from UAV # 4
+2016-07-07 20:40:30,840     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,840     INFO: Com #  1 received message #12 from UAV # 4
+2016-07-07 20:40:30,840     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,841     INFO: Com #  3 received message #12 from UAV # 4
+2016-07-07 20:40:30,841     INFO: Com #  2 received message #12 from UAV # 4
+2016-07-07 20:40:30,842     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,843     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,843     INFO: Com #  1 received message #12 from UAV # 2
+2016-07-07 20:40:30,843     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,844     INFO: Com #  2 received message #12 from UAV # 2
+2016-07-07 20:40:30,844     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,847     INFO: Com #  4 received message #12 from UAV # 2
+2016-07-07 20:40:30,848     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,848     INFO: Com #  3 received message #12 from UAV # 3
+2016-07-07 20:40:30,848     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,849     INFO: Com #  3 received message #12 from UAV # 3
+2016-07-07 20:40:30,850     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,852     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,852     INFO: Com #  4 received message #12 from UAV # 3
+2016-07-07 20:40:30,856     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,856     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,856     INFO: Com #  2 received message #12 from UAV # 1
+2016-07-07 20:40:30,859     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,859     INFO: Com #  1 received message #12 from UAV # 1
+2016-07-07 20:40:30,859     INFO: Com #  2 received message #12 from UAV # 1
+2016-07-07 20:40:30,860     INFO: Com #  4 received message #12 from UAV # 1
+2016-07-07 20:40:30,861     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,861     INFO: Com #  3 received message #12 from UAV # 1
+2016-07-07 20:40:30,866     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,866     INFO: Com #  1 received message #12 from UAV # 1
+2016-07-07 20:40:30,867     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,867     INFO: Com #  2 received message #13 from UAV # 3
+2016-07-07 20:40:30,868     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,870     INFO: Com #  3 received message #13 from UAV # 3
+2016-07-07 20:40:30,871     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,871     INFO: Com #  1 received message #13 from UAV # 3
+2016-07-07 20:40:30,876     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,877     INFO: Com #  4 received message #13 from UAV # 3
+2016-07-07 20:40:30,878     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,878     INFO: Com #  2 received message #13 from UAV # 2
+2016-07-07 20:40:30,880     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,880     INFO: Com #  1 received message #13 from UAV # 2
+2016-07-07 20:40:30,882     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,882     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,883     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,883     INFO: Com #  4 received message #13 from UAV # 4
+2016-07-07 20:40:30,884     INFO: Com #  2 received message #13 from UAV # 4
+2016-07-07 20:40:30,884     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,884     INFO: Com #  3 received message #13 from UAV # 4
+2016-07-07 20:40:30,885     INFO: Com #  4 received message #13 from UAV # 4
+2016-07-07 20:40:30,885     INFO: Com #  1 received message #13 from UAV # 4
+2016-07-07 20:40:30,886     INFO: Com #  2 received message #13 from UAV # 4
+2016-07-07 20:40:30,887     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,887     INFO: Com #  3 received message #13 from UAV # 4
+2016-07-07 20:40:30,887     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,888     INFO: Com #  4 received message #13 from UAV # 4
+2016-07-07 20:40:30,889     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,890     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,890     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,890     INFO: Com #  3 received message #13 from UAV # 1
+2016-07-07 20:40:30,891     INFO: UAV #  4 reached waypoint #2.
+2016-07-07 20:40:30,891     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,892     INFO: Com #  4 received message #13 from UAV # 1
+2016-07-07 20:40:30,892     INFO: UAV #  2 reached waypoint #2.
+2016-07-07 20:40:30,893     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,894     INFO: Com #  1 received message #13 from UAV # 1
+2016-07-07 20:40:30,895     INFO: UAV #  1 reached waypoint #2.
+2016-07-07 20:40:30,896     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,896     INFO: Com #  2 received message #14 from UAV # 3
+2016-07-07 20:40:30,898     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,899     INFO: Com #  2 received message #14 from UAV # 3
+2016-07-07 20:40:30,900     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,900     INFO: Com #  1 received message #14 from UAV # 3
+2016-07-07 20:40:30,901     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,901     INFO: Com #  4 received message #14 from UAV # 3
+2016-07-07 20:40:30,901     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,902     INFO: Com #  3 received message #14 from UAV # 4
+2016-07-07 20:40:30,902     INFO: Com #  2 received message #14 from UAV # 4
+2016-07-07 20:40:30,904     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,905     INFO: Com #  3 received message #14 from UAV # 4
+2016-07-07 20:40:30,906     INFO: Com #  2 received message #14 from UAV # 4
+2016-07-07 20:40:30,908     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,908     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,909     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,910     INFO: Com #  4 received message #14 from UAV # 2
+2016-07-07 20:40:30,910     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,911     INFO: Com #  3 received message #14 from UAV # 2
+2016-07-07 20:40:30,913     INFO: Com #  1 received message #14 from UAV # 2
+2016-07-07 20:40:30,913     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,915     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,915     INFO: Com #  2 received message #14 from UAV # 2
+2016-07-07 20:40:30,916     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,916     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,931     INFO: Com #  4 received message #14 from UAV # 1
+2016-07-07 20:40:30,932     INFO: Com #  3 received message #14 from UAV # 1
+2016-07-07 20:40:30,932     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,932     INFO: Com #  2 received message #14 from UAV # 1
+2016-07-07 20:40:30,934     INFO: Com #  4 received message #14 from UAV # 1
+2016-07-07 20:40:30,934     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,935     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,935     INFO: Com #  1 received message #14 from UAV # 1
+2016-07-07 20:40:30,936     INFO: Com #  3 received message #14 from UAV # 1
+2016-07-07 20:40:30,936     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,940     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,940     INFO: Com #  4 received message #15 from UAV # 3
+2016-07-07 20:40:30,941     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,943     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,942     INFO: Com #  3 received message #15 from UAV # 3
+2016-07-07 20:40:30,943     INFO: Com #  2 received message #15 from UAV # 3
+2016-07-07 20:40:30,944     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,945     INFO: Com #  2 received message #15 from UAV # 4
+2016-07-07 20:40:30,950     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,951     INFO: Com #  2 received message #15 from UAV # 4
+2016-07-07 20:40:30,952     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,952     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,952     INFO: Com #  1 received message #15 from UAV # 4
+2016-07-07 20:40:30,953     INFO: Com #  4 received message #15 from UAV # 4
+2016-07-07 20:40:30,953     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,954     INFO: Com #  3 received message #15 from UAV # 2
+2016-07-07 20:40:30,955     INFO: Com #  2 received message #15 from UAV # 2
+2016-07-07 20:40:30,955     INFO: Com #  1 received message #15 from UAV # 2
+2016-07-07 20:40:30,955     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,955     INFO: Com #  3 received message #15 from UAV # 2
+2016-07-07 20:40:30,957     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,958     INFO: Com #  2 received message #15 from UAV # 2
+2016-07-07 20:40:30,959     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,959     INFO: Com #  4 received message #15 from UAV # 2
+2016-07-07 20:40:30,960     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,960     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,960     INFO: Com #  1 received message #15 from UAV # 1
+2016-07-07 20:40:30,962     INFO: UAV #  2 reached waypoint #3.
+2016-07-07 20:40:30,962     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,963     INFO: Com #  1 received message #15 from UAV # 1
+2016-07-07 20:40:30,963     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,964     INFO: Com #  4 received message #15 from UAV # 1
+2016-07-07 20:40:30,964     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,965     INFO: Com #  2 received message #15 from UAV # 1
+2016-07-07 20:40:30,968     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:30,969     INFO: Com #  3 received message #16 from UAV # 3
+2016-07-07 20:40:30,969     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,971     INFO: Com #  2 received message #16 from UAV # 3
+2016-07-07 20:40:30,971     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:30,972     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:30,972     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:30,972     INFO: Com #  4 received message #16 from UAV # 3
+2016-07-07 20:40:30,973     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,974     INFO: Com #  1 received message #16 from UAV # 2
+2016-07-07 20:40:30,974     INFO: Com #  3 received message #16 from UAV # 2
+2016-07-07 20:40:30,974     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:30,977     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:30,977     INFO: Com #  2 received message #16 from UAV # 2
+2016-07-07 20:40:30,979     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:30,979     INFO: Com #  4 received message #16 from UAV # 4
+2016-07-07 20:40:30,981     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,982     INFO: Com #  1 received message #16 from UAV # 4
+2016-07-07 20:40:30,982     INFO: Com #  3 received message #16 from UAV # 4
+2016-07-07 20:40:30,982     INFO: Com #  2 received message #16 from UAV # 4
+2016-07-07 20:40:30,983     INFO: Com #  4 received message #16 from UAV # 4
+2016-07-07 20:40:30,983     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:30,984     INFO: Com #  1 received message #16 from UAV # 4
+2016-07-07 20:40:30,984     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:30,989     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:30,989     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:30,989     INFO: Com #  2 received message #16 from UAV # 1
+2016-07-07 20:40:30,989     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:30,992     INFO: UAV #  3 reached waypoint #2.
+2016-07-07 20:40:30,992     INFO: Com #  3 received message #16 from UAV # 1
+2016-07-07 20:40:30,993     INFO: Com #  4 received message #16 from UAV # 1
+2016-07-07 20:40:30,994     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:30,994     INFO: Com #  1 received message #16 from UAV # 1
+2016-07-07 20:40:30,994     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:30,995     INFO: Com #  2 received message #16 from UAV # 1
+2016-07-07 20:40:30,996     INFO: Com #  3 received message #16 from UAV # 1
+2016-07-07 20:40:30,997     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,000     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,000     INFO: Com #  1 received message #17 from UAV # 2
+2016-07-07 20:40:31,004     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,006     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,006     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,007     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,007     INFO: Com #  3 received message #17 from UAV # 4
+2016-07-07 20:40:31,010     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,011     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,011     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,013     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,013     INFO: Com #  2 received message #17 from UAV # 3
+2016-07-07 20:40:31,021     INFO: Com #  4 received message #17 from UAV # 3
+2016-07-07 20:40:31,022     INFO: Com #  1 received message #17 from UAV # 3
+2016-07-07 20:40:31,027     INFO: Com #  3 received message #17 from UAV # 3
+2016-07-07 20:40:31,027     INFO: Com #  2 received message #17 from UAV # 3
+2016-07-07 20:40:31,028     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,028     INFO: Com #  4 received message #17 from UAV # 3
+2016-07-07 20:40:31,029     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,030     INFO: Com #  1 received message #17 from UAV # 3
+2016-07-07 20:40:31,031     INFO: Com #  3 received message #17 from UAV # 3
+2016-07-07 20:40:31,033     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,033     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,035     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,035     INFO: Com #  2 received message #17 from UAV # 1
+2016-07-07 20:40:31,036     INFO: UAV #  4 reached waypoint #3.
+2016-07-07 20:40:31,038     INFO: Com #  4 received message #17 from UAV # 1
+2016-07-07 20:40:31,041     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,042     INFO: Com #  1 received message #17 from UAV # 1
+2016-07-07 20:40:31,042     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,043     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,043     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,044     INFO: Com #  3 received message #18 from UAV # 3
+2016-07-07 20:40:31,045     INFO: Com #  2 received message #18 from UAV # 3
+2016-07-07 20:40:31,045     INFO: Com #  1 received message #18 from UAV # 3
+2016-07-07 20:40:31,046     INFO: Com #  4 received message #18 from UAV # 3
+2016-07-07 20:40:31,046     INFO: Com #  3 received message #18 from UAV # 3
+2016-07-07 20:40:31,046     INFO: Com #  2 received message #18 from UAV # 3
+2016-07-07 20:40:31,048     INFO: Com #  1 received message #18 from UAV # 3
+2016-07-07 20:40:31,048     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,048     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,049     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,050     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,051     INFO: Com #  3 received message #18 from UAV # 2
+2016-07-07 20:40:31,052     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,053     INFO: Com #  2 received message #18 from UAV # 2
+2016-07-07 20:40:31,053     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,054     INFO: Com #  1 received message #18 from UAV # 2
+2016-07-07 20:40:31,054     INFO: Com #  4 received message #18 from UAV # 2
+2016-07-07 20:40:31,056     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,057     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,057     INFO: Com #  1 received message #18 from UAV # 4
+2016-07-07 20:40:31,058     INFO: Com #  3 received message #18 from UAV # 4
+2016-07-07 20:40:31,058     INFO: Com #  4 received message #18 from UAV # 4
+2016-07-07 20:40:31,058     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,058     INFO: Com #  2 received message #18 from UAV # 4
+2016-07-07 20:40:31,059     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,060     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,060     INFO: Com #  4 received message #18 from UAV # 1
+2016-07-07 20:40:31,060     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,061     INFO: Com #  2 received message #18 from UAV # 1
+2016-07-07 20:40:31,061     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,062     INFO: Com #  1 received message #18 from UAV # 1
+2016-07-07 20:40:31,063     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,063     INFO: Com #  4 received message #18 from UAV # 1
+2016-07-07 20:40:31,063     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,064     INFO: Com #  2 received message #18 from UAV # 1
+2016-07-07 20:40:31,064     INFO: Com #  3 received message #18 from UAV # 1
+2016-07-07 20:40:31,065     INFO: Com #  1 received message #18 from UAV # 1
+2016-07-07 20:40:31,067     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,070     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,072     INFO: Com #  1 received message #19 from UAV # 4
+2016-07-07 20:40:31,074     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,075     INFO: Com #  3 received message #19 from UAV # 4
+2016-07-07 20:40:31,075     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,077     INFO: Com #  4 received message #19 from UAV # 4
+2016-07-07 20:40:31,080     INFO: Com #  2 received message #19 from UAV # 4
+2016-07-07 20:40:31,082     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,083     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,083     INFO: Com #  1 received message #19 from UAV # 3
+2016-07-07 20:40:31,083     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,084     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,084     INFO: Com #  4 received message #19 from UAV # 3
+2016-07-07 20:40:31,085     INFO: Com #  2 received message #19 from UAV # 3
+2016-07-07 20:40:31,085     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,086     INFO: Com #  3 received message #19 from UAV # 2
+2016-07-07 20:40:31,091     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,092     INFO: Com #  1 received message #19 from UAV # 2
+2016-07-07 20:40:31,099     INFO: Com #  2 received message #19 from UAV # 2
+2016-07-07 20:40:31,099     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,100     INFO: Com #  4 received message #19 from UAV # 2
+2016-07-07 20:40:31,107     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,108     INFO: Com #  3 received message #19 from UAV # 2
+2016-07-07 20:40:31,109     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,109     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,109     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,109     INFO: Com #  1 received message #19 from UAV # 1
+2016-07-07 20:40:31,111     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,113     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,113     INFO: Com #  2 received message #19 from UAV # 1
+2016-07-07 20:40:31,115     INFO: Com #  4 received message #19 from UAV # 1
+2016-07-07 20:40:31,115     INFO: Com #  3 received message #19 from UAV # 1
+2016-07-07 20:40:31,116     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,117     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,117     INFO: Com #  2 received message #20 from UAV # 2
+2016-07-07 20:40:31,117     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,118     INFO: Com #  1 received message #20 from UAV # 2
+2016-07-07 20:40:31,118     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,120     INFO: Com #  3 received message #20 from UAV # 2
+2016-07-07 20:40:31,126     INFO: Com #  4 received message #20 from UAV # 2
+2016-07-07 20:40:31,126     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,127     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,127     INFO: Com #  3 received message #20 from UAV # 4
+2016-07-07 20:40:31,128     INFO: Com #  2 received message #20 from UAV # 4
+2016-07-07 20:40:31,128     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,128     INFO: Com #  4 received message #20 from UAV # 4
+2016-07-07 20:40:31,128     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,131     INFO: Com #  1 received message #20 from UAV # 4
+2016-07-07 20:40:31,133     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,133     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,134     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,134     INFO: Com #  2 received message #20 from UAV # 3
+2016-07-07 20:40:31,134     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,135     INFO: Com #  4 received message #20 from UAV # 3
+2016-07-07 20:40:31,136     INFO: Com #  1 received message #20 from UAV # 3
+2016-07-07 20:40:31,137     INFO: Com #  3 received message #20 from UAV # 3
+2016-07-07 20:40:31,139     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,140     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,141     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,142     INFO: Com #  2 received message #20 from UAV # 1
+2016-07-07 20:40:31,146     INFO: UAV #  4 reached waypoint #4.
+2016-07-07 20:40:31,147     INFO: UAV #  2 reached waypoint #4.
+2016-07-07 20:40:31,147     INFO: Com #  1 received message #20 from UAV # 1
+2016-07-07 20:40:31,147     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,154     INFO: Com #  3 received message #20 from UAV # 1
+2016-07-07 20:40:31,154     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,157     INFO: Com #  4 received message #20 from UAV # 1
+2016-07-07 20:40:31,160     INFO: UAV #  1 reached waypoint #3.
+2016-07-07 20:40:31,160     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,161     INFO: Com #  2 received message #21 from UAV # 3
+2016-07-07 20:40:31,165     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,165     INFO: Com #  2 received message #21 from UAV # 3
+2016-07-07 20:40:31,166     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,169     INFO: Com #  1 received message #21 from UAV # 3
+2016-07-07 20:40:31,169     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,173     INFO: Com #  3 received message #21 from UAV # 3
+2016-07-07 20:40:31,176     INFO: Com #  4 received message #21 from UAV # 3
+2016-07-07 20:40:31,176     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,177     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,177     INFO: Com #  4 received message #21 from UAV # 4
+2016-07-07 20:40:31,182     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,183     INFO: Com #  1 received message #21 from UAV # 4
+2016-07-07 20:40:31,184     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,188     INFO: Com #  2 received message #21 from UAV # 4
+2016-07-07 20:40:31,188     INFO: Com #  3 received message #21 from UAV # 4
+2016-07-07 20:40:31,190     INFO: Com #  4 received message #21 from UAV # 4
+2016-07-07 20:40:31,190     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,192     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,192     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,192     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,193     INFO: Com #  3 received message #21 from UAV # 2
+2016-07-07 20:40:31,193     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,193     INFO: Com #  2 received message #21 from UAV # 1
+2016-07-07 20:40:31,194     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,196     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,197     INFO: Com #  1 received message #21 from UAV # 1
+2016-07-07 20:40:31,201     INFO: Com #  1 received message #21 from UAV # 1
+2016-07-07 20:40:31,202     INFO: Com #  3 received message #21 from UAV # 1
+2016-07-07 20:40:31,203     INFO: Com #  2 received message #21 from UAV # 1
+2016-07-07 20:40:31,203     INFO: Com #  4 received message #21 from UAV # 1
+2016-07-07 20:40:31,204     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,205     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,205     INFO: Com #  1 received message #21 from UAV # 1
+2016-07-07 20:40:31,206     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,208     INFO: Com #  3 received message #22 from UAV # 2
+2016-07-07 20:40:31,209     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,209     INFO: Com #  3 received message #22 from UAV # 2
+2016-07-07 20:40:31,209     INFO: Com #  3 received message #22 from UAV # 2
+2016-07-07 20:40:31,210     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,210     INFO: Com #  4 received message #22 from UAV # 2
+2016-07-07 20:40:31,210     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,211     INFO: Com #  1 received message #22 from UAV # 2
+2016-07-07 20:40:31,213     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,213     INFO: Com #  3 received message #22 from UAV # 4
+2016-07-07 20:40:31,215     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,215     INFO: Com #  2 received message #22 from UAV # 4
+2016-07-07 20:40:31,217     INFO: Com #  4 received message #22 from UAV # 4
+2016-07-07 20:40:31,218     INFO: Com #  1 received message #22 from UAV # 4
+2016-07-07 20:40:31,218     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,218     INFO: Com #  3 received message #22 from UAV # 4
+2016-07-07 20:40:31,218     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,220     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,222     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,222     INFO: Com #  4 received message #22 from UAV # 3
+2016-07-07 20:40:31,223     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,224     INFO: Com #  1 received message #22 from UAV # 3
+2016-07-07 20:40:31,224     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,225     INFO: Com #  3 received message #22 from UAV # 3
+2016-07-07 20:40:31,225     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,226     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,226     INFO: Com #  2 received message #22 from UAV # 1
+2016-07-07 20:40:31,228     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,229     INFO: Com #  2 received message #22 from UAV # 1
+2016-07-07 20:40:31,230     INFO: Com #  4 received message #22 from UAV # 1
+2016-07-07 20:40:31,231     INFO: UAV #  3 reached waypoint #3.
+2016-07-07 20:40:31,232     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,231     INFO: Com #  3 received message #22 from UAV # 1
+2016-07-07 20:40:31,234     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,237     INFO: Com #  1 received message #22 from UAV # 1
+2016-07-07 20:40:31,239     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,240     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,242     INFO: Com #  3 received message #23 from UAV # 2
+2016-07-07 20:40:31,242     INFO: Com #  1 received message #23 from UAV # 2
+2016-07-07 20:40:31,242     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,243     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,243     INFO: Com #  4 received message #23 from UAV # 2
+2016-07-07 20:40:31,244     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,247     INFO: Com #  2 received message #23 from UAV # 4
+2016-07-07 20:40:31,248     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,249     INFO: Com #  4 received message #23 from UAV # 4
+2016-07-07 20:40:31,250     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,250     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,251     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,251     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,252     INFO: Com #  3 received message #23 from UAV # 3
+2016-07-07 20:40:31,252     INFO: Com #  1 received message #23 from UAV # 3
+2016-07-07 20:40:31,252     INFO: Com #  2 received message #23 from UAV # 3
+2016-07-07 20:40:31,253     INFO: Com #  4 received message #23 from UAV # 3
+2016-07-07 20:40:31,253     INFO: Com #  3 received message #23 from UAV # 3
+2016-07-07 20:40:31,254     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,255     INFO: Com #  1 received message #23 from UAV # 3
+2016-07-07 20:40:31,258     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,260     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,259     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,262     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,262     INFO: Com #  4 received message #23 from UAV # 1
+2016-07-07 20:40:31,264     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,264     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,265     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,264     INFO: Com #  2 received message #23 from UAV # 1
+2016-07-07 20:40:31,265     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,266     INFO: Com #  3 received message #24 from UAV # 3
+2016-07-07 20:40:31,268     INFO: Com #  1 received message #24 from UAV # 3
+2016-07-07 20:40:31,268     INFO: Com #  4 received message #24 from UAV # 3
+2016-07-07 20:40:31,269     INFO: Com #  4 received message #24 from UAV # 3
+2016-07-07 20:40:31,269     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,269     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,270     INFO: Com #  3 received message #24 from UAV # 3
+2016-07-07 20:40:31,271     INFO: Com #  1 received message #24 from UAV # 3
+2016-07-07 20:40:31,272     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,272     INFO: Com #  2 received message #24 from UAV # 4
+2016-07-07 20:40:31,273     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,273     INFO: Com #  3 received message #24 from UAV # 4
+2016-07-07 20:40:31,274     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,275     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,275     INFO: Com #  4 received message #24 from UAV # 4
+2016-07-07 20:40:31,276     INFO: Com #  1 received message #24 from UAV # 4
+2016-07-07 20:40:31,279     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,279     INFO: Com #  2 received message #24 from UAV # 2
+2016-07-07 20:40:31,280     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,280     INFO: Com #  1 received message #24 from UAV # 2
+2016-07-07 20:40:31,281     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,282     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,282     INFO: Com #  4 received message #24 from UAV # 2
+2016-07-07 20:40:31,283     INFO: Com #  2 received message #24 from UAV # 2
+2016-07-07 20:40:31,283     INFO: Com #  3 received message #24 from UAV # 2
+2016-07-07 20:40:31,283     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,284     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,285     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,286     INFO: Com #  1 received message #24 from UAV # 1
+2016-07-07 20:40:31,290     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,290     INFO: Com #  2 received message #24 from UAV # 1
+2016-07-07 20:40:31,290     INFO: UAV #  4 reached waypoint #5.
+2016-07-07 20:40:31,291     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,292     INFO: Com #  3 received message #24 from UAV # 1
+2016-07-07 20:40:31,293     INFO: UAV #  1 reached waypoint #4.
+2016-07-07 20:40:31,294     INFO: Com #  4 received message #24 from UAV # 1
+2016-07-07 20:40:31,297     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,298     INFO: Com #  3 received message #25 from UAV # 3
+2016-07-07 20:40:31,298     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,299     INFO: Com #  1 received message #25 from UAV # 3
+2016-07-07 20:40:31,300     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,300     INFO: Com #  2 received message #25 from UAV # 3
+2016-07-07 20:40:31,301     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,302     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,302     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,303     INFO: Com #  3 received message #25 from UAV # 2
+2016-07-07 20:40:31,303     INFO: Com #  1 received message #25 from UAV # 2
+2016-07-07 20:40:31,305     INFO: Com #  2 received message #25 from UAV # 2
+2016-07-07 20:40:31,305     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,307     INFO: Com #  4 received message #25 from UAV # 2
+2016-07-07 20:40:31,308     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,310     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,310     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,312     INFO: Com #  3 received message #25 from UAV # 4
+2016-07-07 20:40:31,313     INFO: Com #  4 received message #25 from UAV # 4
+2016-07-07 20:40:31,313     INFO: Com #  1 received message #25 from UAV # 4
+2016-07-07 20:40:31,314     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,314     INFO: Com #  2 received message #25 from UAV # 4
+2016-07-07 20:40:31,314     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,316     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,316     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,319     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,319     INFO: Com #  1 received message #25 from UAV # 1
+2016-07-07 20:40:31,321     INFO: Com #  3 received message #25 from UAV # 1
+2016-07-07 20:40:31,321     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,322     INFO: Com #  2 received message #25 from UAV # 1
+2016-07-07 20:40:31,324     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,327     INFO: Com #  4 received message #25 from UAV # 1
+2016-07-07 20:40:31,333     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,335     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,336     INFO: Com #  2 received message #26 from UAV # 2
+2016-07-07 20:40:31,339     INFO: Com #  4 received message #26 from UAV # 2
+2016-07-07 20:40:31,341     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,342     INFO: Com #  3 received message #26 from UAV # 2
+2016-07-07 20:40:31,342     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,344     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,345     INFO: Com #  1 received message #26 from UAV # 4
+2016-07-07 20:40:31,346     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,347     INFO: Com #  3 received message #26 from UAV # 4
+2016-07-07 20:40:31,347     INFO: Com #  1 received message #26 from UAV # 4
+2016-07-07 20:40:31,348     INFO: Com #  2 received message #26 from UAV # 4
+2016-07-07 20:40:31,348     INFO: Com #  4 received message #26 from UAV # 4
+2016-07-07 20:40:31,350     INFO: Com #  3 received message #26 from UAV # 4
+2016-07-07 20:40:31,350     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,351     INFO: Com #  1 received message #26 from UAV # 4
+2016-07-07 20:40:31,352     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,356     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,357     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,357     INFO: Com #  3 received message #26 from UAV # 3
+2016-07-07 20:40:31,359     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,361     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,361     INFO: Com #  1 received message #26 from UAV # 3
+2016-07-07 20:40:31,364     INFO: Com #  2 received message #26 from UAV # 3
+2016-07-07 20:40:31,364     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,366     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,367     INFO: Com #  4 received message #26 from UAV # 1
+2016-07-07 20:40:31,367     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,368     INFO: Com #  3 received message #26 from UAV # 1
+2016-07-07 20:40:31,369     INFO: Com #  2 received message #26 from UAV # 1
+2016-07-07 20:40:31,369     INFO: Com #  4 received message #26 from UAV # 1
+2016-07-07 20:40:31,370     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,371     INFO: Com #  1 received message #26 from UAV # 1
+2016-07-07 20:40:31,371     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,372     INFO: Com #  3 received message #26 from UAV # 1
+2016-07-07 20:40:31,374     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,375     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,375     INFO: Com #  4 received message #27 from UAV # 2
+2016-07-07 20:40:31,376     INFO: Com #  1 received message #27 from UAV # 2
+2016-07-07 20:40:31,377     INFO: Com #  3 received message #27 from UAV # 2
+2016-07-07 20:40:31,377     INFO: Com #  4 received message #27 from UAV # 2
+2016-07-07 20:40:31,379     INFO: Com #  2 received message #27 from UAV # 2
+2016-07-07 20:40:31,380     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,382     INFO: Com #  1 received message #27 from UAV # 2
+2016-07-07 20:40:31,383     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,383     INFO: Com #  3 received message #27 from UAV # 2
+2016-07-07 20:40:31,384     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,387     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,387     INFO: Com #  1 received message #27 from UAV # 3
+2016-07-07 20:40:31,390     INFO: Com #  2 received message #27 from UAV # 3
+2016-07-07 20:40:31,391     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,391     INFO: Com #  3 received message #27 from UAV # 3
+2016-07-07 20:40:31,391     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,392     INFO: Com #  4 received message #27 from UAV # 3
+2016-07-07 20:40:31,395     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,399     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,400     INFO: Com #  2 received message #27 from UAV # 4
+2016-07-07 20:40:31,401     INFO: Com #  1 received message #27 from UAV # 4
+2016-07-07 20:40:31,404     INFO: Com #  3 received message #27 from UAV # 4
+2016-07-07 20:40:31,405     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,406     INFO: Com #  4 received message #27 from UAV # 4
+2016-07-07 20:40:31,407     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,415     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,416     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,418     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,418     INFO: Com #  3 received message #27 from UAV # 1
+2016-07-07 20:40:31,419     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,420     INFO: UAV #  3 reached waypoint #4.
+2016-07-07 20:40:31,422     INFO: Com #  1 received message #27 from UAV # 1
+2016-07-07 20:40:31,423     INFO: UAV #  2 reached waypoint #5.
+2016-07-07 20:40:31,423     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,429     INFO: Com #  4 received message #27 from UAV # 1
+2016-07-07 20:40:31,438     INFO: Com #  2 received message #27 from UAV # 1
+2016-07-07 20:40:31,438     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,441     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,442     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,443     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,444     INFO: Com #  1 received message #28 from UAV # 4
+2016-07-07 20:40:31,445     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,446     INFO: Com #  4 received message #28 from UAV # 3
+2016-07-07 20:40:31,449     INFO: Com #  2 received message #28 from UAV # 3
+2016-07-07 20:40:31,449     INFO: Com #  3 received message #28 from UAV # 3
+2016-07-07 20:40:31,450     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,452     INFO: Com #  4 received message #28 from UAV # 3
+2016-07-07 20:40:31,454     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,454     INFO: Com #  2 received message #28 from UAV # 3
+2016-07-07 20:40:31,455     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,455     INFO: Com #  1 received message #28 from UAV # 3
+2016-07-07 20:40:31,456     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,457     INFO: Com #  3 received message #28 from UAV # 2
+2016-07-07 20:40:31,459     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,460     INFO: Com #  3 received message #28 from UAV # 2
+2016-07-07 20:40:31,462     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,464     INFO: Com #  1 received message #28 from UAV # 2
+2016-07-07 20:40:31,467     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,468     INFO: Com #  2 received message #28 from UAV # 2
+2016-07-07 20:40:31,469     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,469     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,469     INFO: Com #  4 received message #28 from UAV # 1
+2016-07-07 20:40:31,470     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,471     INFO: Com #  3 received message #28 from UAV # 1
+2016-07-07 20:40:31,472     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,472     INFO: Com #  1 received message #28 from UAV # 1
+2016-07-07 20:40:31,479     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,484     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,485     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,486     INFO: Com #  3 received message #29 from UAV # 3
+2016-07-07 20:40:31,487     INFO: Com #  2 received message #29 from UAV # 3
+2016-07-07 20:40:31,490     INFO: Com #  1 received message #29 from UAV # 3
+2016-07-07 20:40:31,491     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,492     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,493     INFO: Com #  4 received message #29 from UAV # 3
+2016-07-07 20:40:31,493     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,493     INFO: Com #  3 received message #29 from UAV # 4
+2016-07-07 20:40:31,497     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,499     INFO: Com #  3 received message #29 from UAV # 4
+2016-07-07 20:40:31,504     INFO: Com #  3 received message #29 from UAV # 4
+2016-07-07 20:40:31,504     INFO: Com #  1 received message #29 from UAV # 4
+2016-07-07 20:40:31,505     INFO: Com #  2 received message #29 from UAV # 4
+2016-07-07 20:40:31,505     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,505     INFO: Com #  4 received message #29 from UAV # 4
+2016-07-07 20:40:31,507     INFO: Com #  3 received message #29 from UAV # 4
+2016-07-07 20:40:31,506     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,512     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,512     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,513     INFO: Com #  1 received message #29 from UAV # 2
+2016-07-07 20:40:31,513     INFO: Com #  2 received message #29 from UAV # 2
+2016-07-07 20:40:31,513     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,517     INFO: Com #  4 received message #29 from UAV # 2
+2016-07-07 20:40:31,517     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,518     INFO: Com #  3 received message #29 from UAV # 2
+2016-07-07 20:40:31,522     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,522     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,523     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,523     INFO: Com #  1 received message #29 from UAV # 1
+2016-07-07 20:40:31,523     INFO: Com #  3 received message #29 from UAV # 1
+2016-07-07 20:40:31,525     INFO: Com #  4 received message #29 from UAV # 1
+2016-07-07 20:40:31,525     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,525     INFO: Com #  2 received message #29 from UAV # 1
+2016-07-07 20:40:31,525     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,526     INFO: Com #  1 received message #29 from UAV # 1
+2016-07-07 20:40:31,530     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,531     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,531     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,531     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,532     INFO: Com #  3 received message #30 from UAV # 3
+2016-07-07 20:40:31,532     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,533     INFO: Com #  4 received message #30 from UAV # 2
+2016-07-07 20:40:31,533     INFO: Com #  1 received message #30 from UAV # 2
+2016-07-07 20:40:31,534     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,534     INFO: Com #  2 received message #30 from UAV # 2
+2016-07-07 20:40:31,534     INFO: Com #  4 received message #30 from UAV # 2
+2016-07-07 20:40:31,535     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,535     INFO: Com #  3 received message #30 from UAV # 2
+2016-07-07 20:40:31,538     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,540     INFO: Com #  1 received message #30 from UAV # 2
+2016-07-07 20:40:31,540     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,544     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,545     INFO: Com #  3 received message #30 from UAV # 4
+2016-07-07 20:40:31,545     INFO: Com #  3 received message #30 from UAV # 4
+2016-07-07 20:40:31,546     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,546     INFO: Com #  2 received message #30 from UAV # 4
+2016-07-07 20:40:31,548     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,549     INFO: Com #  1 received message #30 from UAV # 4
+2016-07-07 20:40:31,550     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,551     INFO: Com #  4 received message #30 from UAV # 1
+2016-07-07 20:40:31,551     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,551     INFO: Com #  4 received message #30 from UAV # 1
+2016-07-07 20:40:31,552     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,552     INFO: Com #  1 received message #30 from UAV # 1
+2016-07-07 20:40:31,553     INFO: UAV #  4 reached waypoint #6.
+2016-07-07 20:40:31,554     INFO: Com #  3 received message #30 from UAV # 1
+2016-07-07 20:40:31,554     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,555     INFO: Com #  2 received message #30 from UAV # 1
+2016-07-07 20:40:31,555     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,556     INFO: Com #  4 received message #30 from UAV # 1
+2016-07-07 20:40:31,557     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,558     INFO: Com #  1 received message #31 from UAV # 3
+2016-07-07 20:40:31,558     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,559     INFO: Com #  3 received message #31 from UAV # 3
+2016-07-07 20:40:31,560     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,561     INFO: Com #  1 received message #31 from UAV # 3
+2016-07-07 20:40:31,563     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,567     INFO: Com #  2 received message #31 from UAV # 3
+2016-07-07 20:40:31,567     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,570     INFO: Com #  4 received message #31 from UAV # 2
+2016-07-07 20:40:31,571     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,573     INFO: Com #  3 received message #31 from UAV # 2
+2016-07-07 20:40:31,573     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,574     INFO: Com #  1 received message #31 from UAV # 2
+2016-07-07 20:40:31,575     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,576     INFO: Com #  2 received message #31 from UAV # 2
+2016-07-07 20:40:31,579     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,580     INFO: Com #  4 received message #31 from UAV # 4
+2016-07-07 20:40:31,582     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,582     INFO: Com #  3 received message #31 from UAV # 4
+2016-07-07 20:40:31,586     INFO: Com #  2 received message #31 from UAV # 4
+2016-07-07 20:40:31,587     INFO: Com #  1 received message #31 from UAV # 4
+2016-07-07 20:40:31,588     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,589     INFO: Com #  4 received message #31 from UAV # 4
+2016-07-07 20:40:31,590     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,591     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,594     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,594     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,595     INFO: Com #  1 received message #31 from UAV # 1
+2016-07-07 20:40:31,595     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,596     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,597     INFO: Com #  4 received message #31 from UAV # 1
+2016-07-07 20:40:31,598     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,598     INFO: Com #  3 received message #32 from UAV # 4
+2016-07-07 20:40:31,598     INFO: UAV #  2 reached waypoint #6.
+2016-07-07 20:40:31,599     INFO: Com #  2 received message #32 from UAV # 4
+2016-07-07 20:40:31,600     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,600     INFO: Com #  3 received message #32 from UAV # 4
+2016-07-07 20:40:31,600     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,601     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,601     INFO: Com #  2 received message #32 from UAV # 4
+2016-07-07 20:40:31,603     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,605     INFO: Com #  1 received message #32 from UAV # 1
+2016-07-07 20:40:31,605     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,606     INFO: Com #  4 received message #32 from UAV # 1
+2016-07-07 20:40:31,607     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,607     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,608     INFO: Com #  3 received message #32 from UAV # 1
+2016-07-07 20:40:31,609     INFO: Com #  2 received message #32 from UAV # 1
+2016-07-07 20:40:31,609     INFO: Com #  1 received message #32 from UAV # 1
+2016-07-07 20:40:31,609     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,611     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,611     INFO: Com #  4 received message #32 from UAV # 3
+2016-07-07 20:40:31,612     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,613     INFO: Com #  1 received message #32 from UAV # 3
+2016-07-07 20:40:31,613     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,613     INFO: Com #  3 received message #32 from UAV # 3
+2016-07-07 20:40:31,615     INFO: Com #  2 received message #32 from UAV # 3
+2016-07-07 20:40:31,615     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,615     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,616     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,616     INFO: UAV #  3 reached waypoint #5.
+2016-07-07 20:40:31,616     INFO: Com #  4 received message #32 from UAV # 2
+2016-07-07 20:40:31,618     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,620     INFO: Com #  2 received message #32 from UAV # 2
+2016-07-07 20:40:31,621     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,622     INFO: Com #  3 received message #32 from UAV # 2
+2016-07-07 20:40:31,624     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,627     INFO: Com #  1 received message #33 from UAV # 1
+2016-07-07 20:40:31,630     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,631     INFO: Com #  1 received message #33 from UAV # 1
+2016-07-07 20:40:31,631     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,632     INFO: Com #  3 received message #33 from UAV # 1
+2016-07-07 20:40:31,633     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,633     INFO: Com #  4 received message #33 from UAV # 1
+2016-07-07 20:40:31,635     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,635     INFO: Com #  2 received message #33 from UAV # 4
+2016-07-07 20:40:31,635     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,635     INFO: Com #  2 received message #33 from UAV # 4
+2016-07-07 20:40:31,641     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,642     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,642     INFO: Com #  4 received message #33 from UAV # 4
+2016-07-07 20:40:31,643     INFO: Com #  1 received message #33 from UAV # 4
+2016-07-07 20:40:31,643     INFO: Com #  3 received message #33 from UAV # 4
+2016-07-07 20:40:31,643     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,644     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,645     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,645     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,644     INFO: Com #  3 received message #33 from UAV # 3
+2016-07-07 20:40:31,646     INFO: Com #  2 received message #33 from UAV # 3
+2016-07-07 20:40:31,646     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,646     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,647     INFO: Com #  4 received message #33 from UAV # 2
+2016-07-07 20:40:31,647     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,649     INFO: UAV #  1 reached waypoint #5.
+2016-07-07 20:40:31,651     INFO: Com #  4 received message #33 from UAV # 2
+2016-07-07 20:40:31,655     INFO: Com #  3 received message #33 from UAV # 2
+2016-07-07 20:40:31,656     INFO: Com #  2 received message #33 from UAV # 2
+2016-07-07 20:40:31,657     INFO: Com #  1 received message #33 from UAV # 2
+2016-07-07 20:40:31,658     INFO: Com #  4 received message #33 from UAV # 2
+2016-07-07 20:40:31,659     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,659     INFO: Com #  3 received message #33 from UAV # 2
+2016-07-07 20:40:31,659     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,660     INFO: Com #  2 received message #33 from UAV # 2
+2016-07-07 20:40:31,662     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,662     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,662     INFO: Com #  1 received message #34 from UAV # 4
+2016-07-07 20:40:31,665     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,677     INFO: Com #  4 received message #34 from UAV # 4
+2016-07-07 20:40:31,690     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,699     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,699     INFO: Com #  3 received message #34 from UAV # 3
+2016-07-07 20:40:31,704     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,716     INFO: Com #  2 received message #34 from UAV # 3
+2016-07-07 20:40:31,720     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,721     INFO: Com #  1 received message #34 from UAV # 3
+2016-07-07 20:40:31,722     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,725     INFO: Com #  4 received message #34 from UAV # 3
+2016-07-07 20:40:31,725     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,726     INFO: Com #  3 received message #34 from UAV # 1
+2016-07-07 20:40:31,730     INFO: Com #  3 received message #34 from UAV # 1
+2016-07-07 20:40:31,731     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,731     INFO: Com #  4 received message #34 from UAV # 1
+2016-07-07 20:40:31,732     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,732     INFO: Com #  3 received message #34 from UAV # 1
+2016-07-07 20:40:31,733     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,733     INFO: Com #  2 received message #34 from UAV # 1
+2016-07-07 20:40:31,734     INFO: Com #  1 received message #34 from UAV # 1
+2016-07-07 20:40:31,734     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,734     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,735     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,736     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,735     INFO: Com #  3 received message #34 from UAV # 2
+2016-07-07 20:40:31,736     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,737     INFO: Com #  2 received message #34 from UAV # 2
+2016-07-07 20:40:31,738     INFO: Com #  4 received message #34 from UAV # 2
+2016-07-07 20:40:31,738     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,741     INFO: Com #  1 received message #35 from UAV # 1
+2016-07-07 20:40:31,741     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,741     INFO: Com #  1 received message #35 from UAV # 1
+2016-07-07 20:40:31,742     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,742     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,743     INFO: Com #  3 received message #35 from UAV # 1
+2016-07-07 20:40:31,743     INFO: Com #  4 received message #35 from UAV # 1
+2016-07-07 20:40:31,744     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,744     INFO: Com #  2 received message #35 from UAV # 4
+2016-07-07 20:40:31,745     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,746     INFO: Com #  1 received message #35 from UAV # 4
+2016-07-07 20:40:31,746     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,746     INFO: Com #  4 received message #35 from UAV # 4
+2016-07-07 20:40:31,746     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,749     INFO: Com #  2 received message #35 from UAV # 4
+2016-07-07 20:40:31,751     INFO: Com #  3 received message #35 from UAV # 4
+2016-07-07 20:40:31,751     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,754     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,754     INFO: Com #  2 received message #35 from UAV # 3
+2016-07-07 20:40:31,755     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,756     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,756     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,756     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,757     INFO: Com #  1 received message #35 from UAV # 2
+2016-07-07 20:40:31,757     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,758     INFO: Com #  3 received message #35 from UAV # 2
+2016-07-07 20:40:31,760     INFO: Com #  3 received message #35 from UAV # 2
+2016-07-07 20:40:31,761     INFO: Com #  2 received message #35 from UAV # 2
+2016-07-07 20:40:31,762     INFO: Com #  1 received message #35 from UAV # 2
+2016-07-07 20:40:31,762     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,763     INFO: Com #  4 received message #35 from UAV # 2
+2016-07-07 20:40:31,763     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,763     INFO: Com #  3 received message #35 from UAV # 2
+2016-07-07 20:40:31,765     INFO: Com #  2 received message #35 from UAV # 2
+2016-07-07 20:40:31,770     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,771     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,772     INFO: Com #  2 received message #36 from UAV # 4
+2016-07-07 20:40:31,773     INFO: Com #  3 received message #36 from UAV # 4
+2016-07-07 20:40:31,774     INFO: Com #  4 received message #36 from UAV # 4
+2016-07-07 20:40:31,774     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,774     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,775     INFO: Com #  1 received message #36 from UAV # 4
+2016-07-07 20:40:31,779     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,779     INFO: Com #  4 received message #36 from UAV # 1
+2016-07-07 20:40:31,779     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,780     INFO: Com #  3 received message #36 from UAV # 1
+2016-07-07 20:40:31,780     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,781     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,781     INFO: Com #  1 received message #36 from UAV # 1
+2016-07-07 20:40:31,782     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,782     INFO: Com #  2 received message #36 from UAV # 3
+2016-07-07 20:40:31,783     INFO: Com #  4 received message #36 from UAV # 3
+2016-07-07 20:40:31,783     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,785     INFO: Com #  1 received message #36 from UAV # 3
+2016-07-07 20:40:31,785     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,793     INFO: Com #  2 received message #36 from UAV # 3
+2016-07-07 20:40:31,793     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,799     INFO: Com #  3 received message #36 from UAV # 3
+2016-07-07 20:40:31,800     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,800     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,800     INFO: Com #  4 received message #36 from UAV # 2
+2016-07-07 20:40:31,801     INFO: Com #  4 received message #36 from UAV # 2
+2016-07-07 20:40:31,801     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,801     INFO: Com #  4 received message #36 from UAV # 2
+2016-07-07 20:40:31,802     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,802     INFO: Com #  3 received message #36 from UAV # 2
+2016-07-07 20:40:31,802     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,805     INFO: UAV #  2 reached waypoint #7.
+2016-07-07 20:40:31,805     INFO: Com #  1 received message #36 from UAV # 2
+2016-07-07 20:40:31,805     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,805     INFO: Com #  2 received message #37 from UAV # 4
+2016-07-07 20:40:31,806     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,807     INFO: Com #  1 received message #37 from UAV # 4
+2016-07-07 20:40:31,807     INFO: Com #  3 received message #37 from UAV # 4
+2016-07-07 20:40:31,807     INFO: Com #  4 received message #37 from UAV # 4
+2016-07-07 20:40:31,808     INFO: Com #  2 received message #37 from UAV # 4
+2016-07-07 20:40:31,808     INFO: Com #  1 received message #37 from UAV # 4
+2016-07-07 20:40:31,809     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,809     INFO: Com #  3 received message #37 from UAV # 4
+2016-07-07 20:40:31,809     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,810     INFO: Com #  2 received message #37 from UAV # 4
+2016-07-07 20:40:31,810     INFO: Com #  1 received message #37 from UAV # 4
+2016-07-07 20:40:31,811     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,811     INFO: Com #  4 received message #37 from UAV # 1
+2016-07-07 20:40:31,813     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,813     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,813     INFO: Com #  4 received message #37 from UAV # 1
+2016-07-07 20:40:31,813     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,815     INFO: Com #  2 received message #37 from UAV # 1
+2016-07-07 20:40:31,815     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,815     INFO: Com #  1 received message #37 from UAV # 3
+2016-07-07 20:40:31,817     INFO: Com #  3 received message #37 from UAV # 3
+2016-07-07 20:40:31,817     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,818     INFO: Com #  1 received message #37 from UAV # 3
+2016-07-07 20:40:31,818     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,818     INFO: Com #  3 received message #37 from UAV # 3
+2016-07-07 20:40:31,819     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,820     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,820     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,819     INFO: Com #  4 received message #37 from UAV # 3
+2016-07-07 20:40:31,829     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,832     INFO: Com #  2 received message #37 from UAV # 2
+2016-07-07 20:40:31,833     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,834     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,835     INFO: Com #  3 received message #37 from UAV # 2
+2016-07-07 20:40:31,836     INFO: Com #  1 received message #38 from UAV # 3
+2016-07-07 20:40:31,836     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,836     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,836     INFO: Com #  4 received message #38 from UAV # 3
+2016-07-07 20:40:31,837     INFO: Com #  4 received message #38 from UAV # 3
+2016-07-07 20:40:31,837     INFO: Com #  1 received message #38 from UAV # 3
+2016-07-07 20:40:31,837     INFO: Com #  2 received message #38 from UAV # 3
+2016-07-07 20:40:31,838     INFO: Com #  3 received message #38 from UAV # 3
+2016-07-07 20:40:31,838     INFO: Com #  4 received message #38 from UAV # 3
+2016-07-07 20:40:31,839     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,839     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,839     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,840     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,841     INFO: Com #  3 received message #38 from UAV # 1
+2016-07-07 20:40:31,848     INFO: Com #  4 received message #38 from UAV # 1
+2016-07-07 20:40:31,849     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,849     INFO: Com #  1 received message #38 from UAV # 1
+2016-07-07 20:40:31,849     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,850     INFO: Com #  2 received message #38 from UAV # 1
+2016-07-07 20:40:31,851     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,855     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,855     INFO: Com #  1 received message #38 from UAV # 4
+2016-07-07 20:40:31,856     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,857     INFO: Com #  2 received message #38 from UAV # 4
+2016-07-07 20:40:31,857     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,858     INFO: Com #  3 received message #38 from UAV # 4
+2016-07-07 20:40:31,858     INFO: Com #  4 received message #38 from UAV # 4
+2016-07-07 20:40:31,859     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,859     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,861     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,861     INFO: Com #  3 received message #38 from UAV # 2
+2016-07-07 20:40:31,861     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,862     INFO: Com #  4 received message #38 from UAV # 2
+2016-07-07 20:40:31,862     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,864     INFO: Com #  1 received message #38 from UAV # 2
+2016-07-07 20:40:31,865     INFO: Com #  2 received message #38 from UAV # 2
+2016-07-07 20:40:31,865     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,872     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,873     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,874     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,875     INFO: Com #  1 received message #39 from UAV # 4
+2016-07-07 20:40:31,875     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,876     INFO: Com #  4 received message #39 from UAV # 3
+2016-07-07 20:40:31,878     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,880     INFO: Com #  3 received message #39 from UAV # 3
+2016-07-07 20:40:31,881     INFO: Com #  2 received message #39 from UAV # 3
+2016-07-07 20:40:31,881     INFO: Com #  1 received message #39 from UAV # 3
+2016-07-07 20:40:31,881     INFO: Com #  4 received message #39 from UAV # 3
+2016-07-07 20:40:31,882     INFO: Com #  3 received message #39 from UAV # 3
+2016-07-07 20:40:31,882     INFO: Com #  2 received message #39 from UAV # 3
+2016-07-07 20:40:31,882     INFO: Com #  1 received message #39 from UAV # 3
+2016-07-07 20:40:31,883     INFO: Com #  4 received message #39 from UAV # 3
+2016-07-07 20:40:31,884     INFO: Com #  3 received message #39 from UAV # 3
+2016-07-07 20:40:31,883     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,884     INFO: Com #  2 received message #39 from UAV # 3
+2016-07-07 20:40:31,884     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,885     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,885     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,885     INFO: Com #  2 received message #39 from UAV # 1
+2016-07-07 20:40:31,886     INFO: Com #  1 received message #39 from UAV # 1
+2016-07-07 20:40:31,886     INFO: Com #  3 received message #39 from UAV # 1
+2016-07-07 20:40:31,887     INFO: Com #  2 received message #39 from UAV # 1
+2016-07-07 20:40:31,887     INFO: Com #  4 received message #39 from UAV # 1
+2016-07-07 20:40:31,887     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,888     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,890     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,890     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,890     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,894     INFO: Com #  1 received message #39 from UAV # 2
+2016-07-07 20:40:31,895     INFO: Com #  2 received message #39 from UAV # 2
+2016-07-07 20:40:31,895     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,896     INFO: UAV #  4 reached waypoint #7.
+2016-07-07 20:40:31,896     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,897     INFO: Com #  3 received message #39 from UAV # 2
+2016-07-07 20:40:31,898     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,899     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,899     INFO: Com #  4 received message #40 from UAV # 3
+2016-07-07 20:40:31,900     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,900     INFO: Com #  2 received message #40 from UAV # 3
+2016-07-07 20:40:31,900     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,903     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,904     INFO: Com #  3 received message #40 from UAV # 1
+2016-07-07 20:40:31,911     INFO: Com #  1 received message #40 from UAV # 1
+2016-07-07 20:40:31,912     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,918     INFO: Com #  3 received message #40 from UAV # 1
+2016-07-07 20:40:31,918     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,918     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,919     INFO: Com #  1 received message #40 from UAV # 1
+2016-07-07 20:40:31,919     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,920     INFO: Com #  4 received message #40 from UAV # 4
+2016-07-07 20:40:31,920     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,924     INFO: Com #  2 received message #40 from UAV # 4
+2016-07-07 20:40:31,924     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,928     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,929     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,930     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,930     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,930     INFO: Com #  1 received message #40 from UAV # 2
+2016-07-07 20:40:31,931     INFO: Com #  3 received message #40 from UAV # 2
+2016-07-07 20:40:31,931     INFO: UAV #  1 reached waypoint #6.
+2016-07-07 20:40:31,932     INFO: Com #  4 received message #40 from UAV # 2
+2016-07-07 20:40:31,932     INFO: Com #  2 received message #40 from UAV # 2
+2016-07-07 20:40:31,933     INFO: Com #  1 received message #40 from UAV # 2
+2016-07-07 20:40:31,933     INFO: Com #  3 received message #40 from UAV # 2
+2016-07-07 20:40:31,934     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,934     INFO: Com #  4 received message #40 from UAV # 2
+2016-07-07 20:40:31,934     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,935     INFO: Com #  2 received message #40 from UAV # 2
+2016-07-07 20:40:31,935     INFO: Com #  1 received message #40 from UAV # 2
+2016-07-07 20:40:31,935     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,936     INFO: Com #  3 received message #41 from UAV # 4
+2016-07-07 20:40:31,938     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,939     INFO: Com #  3 received message #41 from UAV # 4
+2016-07-07 20:40:31,939     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,940     INFO: Com #  1 received message #41 from UAV # 4
+2016-07-07 20:40:31,944     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,945     INFO: Com #  2 received message #41 from UAV # 4
+2016-07-07 20:40:31,945     INFO: Com #  4 received message #41 from UAV # 4
+2016-07-07 20:40:31,946     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,947     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,947     INFO: Com #  2 received message #41 from UAV # 3
+2016-07-07 20:40:31,948     INFO: Com #  4 received message #41 from UAV # 3
+2016-07-07 20:40:31,948     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,949     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,949     INFO: Com #  3 received message #41 from UAV # 3
+2016-07-07 20:40:31,949     INFO: Com #  1 received message #41 from UAV # 3
+2016-07-07 20:40:31,950     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,950     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,951     INFO: Com #  1 received message #41 from UAV # 1
+2016-07-07 20:40:31,951     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,951     INFO: Com #  2 received message #41 from UAV # 1
+2016-07-07 20:40:31,952     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,953     INFO: Com #  4 received message #41 from UAV # 1
+2016-07-07 20:40:31,954     INFO: Com #  3 received message #41 from UAV # 1
+2016-07-07 20:40:31,954     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,955     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,955     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,955     INFO: Com #  1 received message #41 from UAV # 2
+2016-07-07 20:40:31,956     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,957     INFO: Com #  3 received message #41 from UAV # 2
+2016-07-07 20:40:31,957     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:31,960     INFO: Com #  2 received message #41 from UAV # 2
+2016-07-07 20:40:31,963     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:31,963     INFO: Com #  4 received message #42 from UAV # 3
+2016-07-07 20:40:31,964     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,964     INFO: Com #  1 received message #42 from UAV # 3
+2016-07-07 20:40:31,965     INFO: Com #  3 received message #42 from UAV # 3
+2016-07-07 20:40:31,968     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:31,968     INFO: Com #  4 received message #42 from UAV # 3
+2016-07-07 20:40:31,968     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:31,969     INFO: Com #  2 received message #42 from UAV # 3
+2016-07-07 20:40:31,972     INFO: Com #  1 received message #42 from UAV # 3
+2016-07-07 20:40:31,972     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:31,973     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,973     INFO: Com #  4 received message #42 from UAV # 1
+2016-07-07 20:40:31,974     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:31,974     INFO: Com #  3 received message #42 from UAV # 1
+2016-07-07 20:40:31,974     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:31,981     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:31,981     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,981     INFO: Com #  1 received message #42 from UAV # 4
+2016-07-07 20:40:31,982     INFO: Com #  4 received message #42 from UAV # 4
+2016-07-07 20:40:31,983     INFO: Com #  4 received message #42 from UAV # 4
+2016-07-07 20:40:31,983     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:31,984     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:31,983     INFO: Com #  2 received message #42 from UAV # 4
+2016-07-07 20:40:31,985     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:31,985     INFO: Com #  1 received message #42 from UAV # 2
+2016-07-07 20:40:31,985     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:31,988     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:31,988     INFO: Com #  3 received message #42 from UAV # 2
+2016-07-07 20:40:31,989     INFO: UAV #  3 reached waypoint #6.
+2016-07-07 20:40:31,991     INFO: Com #  4 received message #42 from UAV # 2
+2016-07-07 20:40:31,992     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:31,994     INFO: Com #  2 received message #42 from UAV # 2
+2016-07-07 20:40:32,000     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,001     INFO: Com #  1 received message #42 from UAV # 2
+2016-07-07 20:40:32,006     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,008     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,007     INFO: Com #  3 received message #43 from UAV # 4
+2016-07-07 20:40:32,011     INFO: Com #  4 received message #43 from UAV # 4
+2016-07-07 20:40:32,012     INFO: Com #  2 received message #43 from UAV # 4
+2016-07-07 20:40:32,013     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,015     INFO: Com #  1 received message #43 from UAV # 4
+2016-07-07 20:40:32,016     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,019     INFO: Com #  3 received message #43 from UAV # 4
+2016-07-07 20:40:32,022     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,024     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,024     INFO: Com #  3 received message #43 from UAV # 1
+2016-07-07 20:40:32,026     INFO: Com #  4 received message #43 from UAV # 1
+2016-07-07 20:40:32,027     INFO: Com #  1 received message #43 from UAV # 1
+2016-07-07 20:40:32,027     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,027     INFO: Com #  2 received message #43 from UAV # 1
+2016-07-07 20:40:32,029     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,030     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,031     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,032     INFO: Com #  4 received message #43 from UAV # 3
+2016-07-07 20:40:32,033     INFO: Com #  2 received message #43 from UAV # 3
+2016-07-07 20:40:32,033     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,033     INFO: Com #  1 received message #43 from UAV # 3
+2016-07-07 20:40:32,034     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,035     INFO: Com #  3 received message #43 from UAV # 3
+2016-07-07 20:40:32,036     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,036     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,037     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,038     INFO: Com #  1 received message #43 from UAV # 2
+2016-07-07 20:40:32,038     INFO: Com #  2 received message #43 from UAV # 2
+2016-07-07 20:40:32,038     INFO: Com #  3 received message #43 from UAV # 2
+2016-07-07 20:40:32,039     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,039     INFO: Com #  4 received message #43 from UAV # 2
+2016-07-07 20:40:32,041     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,042     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,042     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,042     INFO: Com #  4 received message #44 from UAV # 3
+2016-07-07 20:40:32,044     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,047     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,043     INFO: Com #  1 received message #44 from UAV # 3
+2016-07-07 20:40:32,049     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,049     INFO: Com #  3 received message #44 from UAV # 4
+2016-07-07 20:40:32,049     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,050     INFO: Com #  2 received message #44 from UAV # 4
+2016-07-07 20:40:32,054     INFO: Com #  1 received message #44 from UAV # 4
+2016-07-07 20:40:32,054     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,054     INFO: Com #  4 received message #44 from UAV # 4
+2016-07-07 20:40:32,054     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,056     INFO: Com #  3 received message #44 from UAV # 4
+2016-07-07 20:40:32,058     INFO: Com #  2 received message #44 from UAV # 4
+2016-07-07 20:40:32,058     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,059     INFO: Com #  1 received message #44 from UAV # 1
+2016-07-07 20:40:32,059     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,060     INFO: Com #  3 received message #44 from UAV # 1
+2016-07-07 20:40:32,061     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,061     INFO: Com #  1 received message #44 from UAV # 1
+2016-07-07 20:40:32,062     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,063     INFO: Com #  4 received message #44 from UAV # 1
+2016-07-07 20:40:32,063     INFO: Com #  2 received message #44 from UAV # 1
+2016-07-07 20:40:32,063     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,063     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,071     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,071     INFO: Com #  4 received message #44 from UAV # 2
+2016-07-07 20:40:32,073     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,073     INFO: Com #  2 received message #44 from UAV # 2
+2016-07-07 20:40:32,074     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,075     INFO: Com #  3 received message #44 from UAV # 2
+2016-07-07 20:40:32,076     INFO: Com #  1 received message #44 from UAV # 2
+2016-07-07 20:40:32,077     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,078     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,079     INFO: Com #  1 received message #45 from UAV # 4
+2016-07-07 20:40:32,080     INFO: Com #  3 received message #45 from UAV # 4
+2016-07-07 20:40:32,080     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,081     INFO: Com #  4 received message #45 from UAV # 4
+2016-07-07 20:40:32,081     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,081     INFO: Com #  2 received message #45 from UAV # 4
+2016-07-07 20:40:32,082     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,082     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,083     INFO: Com #  2 received message #45 from UAV # 3
+2016-07-07 20:40:32,083     INFO: Com #  4 received message #45 from UAV # 3
+2016-07-07 20:40:32,084     INFO: Com #  3 received message #45 from UAV # 3
+2016-07-07 20:40:32,084     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,084     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,084     INFO: Com #  1 received message #45 from UAV # 3
+2016-07-07 20:40:32,085     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,088     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,089     INFO: Com #  3 received message #45 from UAV # 1
+2016-07-07 20:40:32,090     INFO: Com #  1 received message #45 from UAV # 1
+2016-07-07 20:40:32,090     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,091     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,092     INFO: Com #  2 received message #45 from UAV # 1
+2016-07-07 20:40:32,093     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,093     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,093     INFO: Com #  4 received message #45 from UAV # 2
+2016-07-07 20:40:32,093     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,094     INFO: UAV #  1 reached waypoint #7.
+2016-07-07 20:40:32,096     INFO: Com #  2 received message #45 from UAV # 2
+2016-07-07 20:40:32,101     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,102     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,102     INFO: Com #  1 received message #45 from UAV # 2
+2016-07-07 20:40:32,102     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,103     INFO: Com #  3 received message #46 from UAV # 3
+2016-07-07 20:40:32,106     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,106     INFO: Com #  4 received message #46 from UAV # 3
+2016-07-07 20:40:32,107     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,111     INFO: Com #  3 received message #46 from UAV # 3
+2016-07-07 20:40:32,112     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,112     INFO: Com #  1 received message #46 from UAV # 3
+2016-07-07 20:40:32,113     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,114     INFO: Com #  2 received message #46 from UAV # 4
+2016-07-07 20:40:32,114     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,115     INFO: Com #  2 received message #46 from UAV # 4
+2016-07-07 20:40:32,115     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,116     INFO: Com #  4 received message #46 from UAV # 4
+2016-07-07 20:40:32,117     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,117     INFO: Com #  3 received message #46 from UAV # 4
+2016-07-07 20:40:32,118     INFO: Com #  1 received message #46 from UAV # 4
+2016-07-07 20:40:32,118     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,119     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,119     INFO: Com #  3 received message #46 from UAV # 1
+2016-07-07 20:40:32,121     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,122     INFO: Com #  1 received message #46 from UAV # 1
+2016-07-07 20:40:32,122     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,123     INFO: Com #  2 received message #46 from UAV # 1
+2016-07-07 20:40:32,124     INFO: Com #  4 received message #46 from UAV # 1
+2016-07-07 20:40:32,124     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,124     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,124     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,124     INFO: Com #  3 received message #46 from UAV # 2
+2016-07-07 20:40:32,125     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,126     INFO: Com #  4 received message #46 from UAV # 2
+2016-07-07 20:40:32,127     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,127     INFO: Com #  1 received message #46 from UAV # 2
+2016-07-07 20:40:32,129     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,129     INFO: Com #  2 received message #47 from UAV # 4
+2016-07-07 20:40:32,130     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,135     INFO: Com #  1 received message #47 from UAV # 4
+2016-07-07 20:40:32,136     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,136     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,137     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,137     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,138     INFO: Com #  4 received message #47 from UAV # 3
+2016-07-07 20:40:32,139     INFO: Com #  2 received message #47 from UAV # 3
+2016-07-07 20:40:32,140     INFO: Com #  2 received message #47 from UAV # 3
+2016-07-07 20:40:32,140     INFO: Com #  1 received message #47 from UAV # 3
+2016-07-07 20:40:32,141     INFO: Com #  4 received message #47 from UAV # 3
+2016-07-07 20:40:32,141     INFO: Com #  3 received message #47 from UAV # 3
+2016-07-07 20:40:32,141     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,142     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,142     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,143     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,143     INFO: Com #  2 received message #47 from UAV # 1
+2016-07-07 20:40:32,149     INFO: Com #  4 received message #47 from UAV # 1
+2016-07-07 20:40:32,150     INFO: Com #  1 received message #47 from UAV # 1
+2016-07-07 20:40:32,151     INFO: Com #  3 received message #47 from UAV # 1
+2016-07-07 20:40:32,152     INFO: Com #  2 received message #47 from UAV # 1
+2016-07-07 20:40:32,152     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,153     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,153     INFO: Com #  4 received message #47 from UAV # 1
+2016-07-07 20:40:32,153     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,154     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,154     INFO: Com #  1 received message #47 from UAV # 2
+2016-07-07 20:40:32,155     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,156     INFO: Com #  3 received message #47 from UAV # 2
+2016-07-07 20:40:32,156     INFO: Com #  2 received message #47 from UAV # 2
+2016-07-07 20:40:32,156     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,157     INFO: Com #  4 received message #47 from UAV # 2
+2016-07-07 20:40:32,157     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,158     INFO: Com #  1 received message #47 from UAV # 2
+2016-07-07 20:40:32,159     INFO: UAV #  2 reached waypoint #8.
+2016-07-07 20:40:32,165     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,166     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,166     INFO: Com #  1 received message #48 from UAV # 3
+2016-07-07 20:40:32,167     INFO: Com #  2 received message #48 from UAV # 3
+2016-07-07 20:40:32,167     INFO: Com #  4 received message #48 from UAV # 3
+2016-07-07 20:40:32,167     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,168     INFO: Com #  3 received message #48 from UAV # 3
+2016-07-07 20:40:32,169     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,172     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,173     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,173     INFO: Com #  2 received message #48 from UAV # 4
+2016-07-07 20:40:32,173     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,174     INFO: Com #  1 received message #48 from UAV # 4
+2016-07-07 20:40:32,174     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,175     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,176     INFO: Com #  4 received message #48 from UAV # 1
+2016-07-07 20:40:32,176     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,178     INFO: Com #  3 received message #48 from UAV # 1
+2016-07-07 20:40:32,178     INFO: Com #  2 received message #48 from UAV # 1
+2016-07-07 20:40:32,179     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,179     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,180     INFO: Com #  1 received message #48 from UAV # 1
+2016-07-07 20:40:32,180     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,180     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,182     INFO: Com #  4 received message #48 from UAV # 2
+2016-07-07 20:40:32,182     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,183     INFO: Com #  3 received message #48 from UAV # 2
+2016-07-07 20:40:32,183     INFO: Com #  2 received message #48 from UAV # 2
+2016-07-07 20:40:32,185     INFO: Com #  1 received message #48 from UAV # 2
+2016-07-07 20:40:32,186     INFO: Com #  4 received message #48 from UAV # 2
+2016-07-07 20:40:32,186     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,186     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,186     INFO: Com #  3 received message #48 from UAV # 2
+2016-07-07 20:40:32,187     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,189     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,190     INFO: Com #  4 received message #49 from UAV # 4
+2016-07-07 20:40:32,190     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,191     INFO: Com #  3 received message #49 from UAV # 4
+2016-07-07 20:40:32,191     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,192     INFO: Com #  2 received message #49 from UAV # 4
+2016-07-07 20:40:32,192     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,193     INFO: Com #  1 received message #49 from UAV # 3
+2016-07-07 20:40:32,198     INFO: Com #  1 received message #49 from UAV # 3
+2016-07-07 20:40:32,198     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,198     INFO: Com #  3 received message #49 from UAV # 3
+2016-07-07 20:40:32,199     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,199     INFO: Com #  2 received message #49 from UAV # 3
+2016-07-07 20:40:32,200     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,201     INFO: Com #  4 received message #49 from UAV # 3
+2016-07-07 20:40:32,202     INFO: Com #  1 received message #49 from UAV # 3
+2016-07-07 20:40:32,202     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,204     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,204     INFO: Com #  1 received message #49 from UAV # 1
+2016-07-07 20:40:32,205     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,205     INFO: Com #  3 received message #49 from UAV # 1
+2016-07-07 20:40:32,209     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,209     INFO: Com #  4 received message #49 from UAV # 1
+2016-07-07 20:40:32,210     INFO: Com #  2 received message #49 from UAV # 1
+2016-07-07 20:40:32,210     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,211     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,212     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,212     INFO: UAV #  4 reached waypoint #8.
+2016-07-07 20:40:32,212     INFO: Com #  4 received message #49 from UAV # 2
+2016-07-07 20:40:32,213     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,215     INFO: Com #  2 received message #49 from UAV # 2
+2016-07-07 20:40:32,216     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,217     INFO: Com #  3 received message #49 from UAV # 2
+2016-07-07 20:40:32,217     INFO: Com #  1 received message #49 from UAV # 2
+2016-07-07 20:40:32,219     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,222     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,222     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,223     INFO: Com #  3 received message #50 from UAV # 1
+2016-07-07 20:40:32,223     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,224     INFO: Com #  2 received message #50 from UAV # 1
+2016-07-07 20:40:32,224     INFO: Com #  1 received message #50 from UAV # 1
+2016-07-07 20:40:32,226     INFO: Com #  4 received message #50 from UAV # 1
+2016-07-07 20:40:32,233     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,233     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,233     INFO: Com #  1 received message #50 from UAV # 3
+2016-07-07 20:40:32,234     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,234     INFO: Com #  2 received message #50 from UAV # 3
+2016-07-07 20:40:32,235     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,236     INFO: Com #  4 received message #50 from UAV # 3
+2016-07-07 20:40:32,237     INFO: Com #  3 received message #50 from UAV # 3
+2016-07-07 20:40:32,238     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,240     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,240     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,240     INFO: Com #  3 received message #50 from UAV # 4
+2016-07-07 20:40:32,240     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,241     INFO: Com #  2 received message #50 from UAV # 4
+2016-07-07 20:40:32,242     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,242     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,242     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,243     INFO: Com #  4 received message #50 from UAV # 2
+2016-07-07 20:40:32,244     INFO: UAV #  1 reached waypoint #8.
+2016-07-07 20:40:32,245     INFO: Com #  1 received message #50 from UAV # 2
+2016-07-07 20:40:32,246     INFO: Com #  2 received message #50 from UAV # 2
+2016-07-07 20:40:32,246     INFO: Com #  3 received message #50 from UAV # 2
+2016-07-07 20:40:32,247     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,248     INFO: Com #  4 received message #50 from UAV # 2
+2016-07-07 20:40:32,249     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,249     INFO: Com #  1 received message #50 from UAV # 2
+2016-07-07 20:40:32,250     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,251     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,252     INFO: Com #  4 received message #51 from UAV # 4
+2016-07-07 20:40:32,252     INFO: Com #  1 received message #51 from UAV # 4
+2016-07-07 20:40:32,253     INFO: Com #  3 received message #51 from UAV # 4
+2016-07-07 20:40:32,254     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,254     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,255     INFO: Com #  2 received message #51 from UAV # 4
+2016-07-07 20:40:32,256     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,258     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,259     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,259     INFO: Com #  4 received message #51 from UAV # 3
+2016-07-07 20:40:32,261     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,262     INFO: Com #  2 received message #51 from UAV # 3
+2016-07-07 20:40:32,266     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,266     INFO: Com #  3 received message #51 from UAV # 1
+2016-07-07 20:40:32,271     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,272     INFO: Com #  1 received message #51 from UAV # 1
+2016-07-07 20:40:32,278     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,278     INFO: Com #  3 received message #51 from UAV # 1
+2016-07-07 20:40:32,278     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,279     INFO: Com #  2 received message #51 from UAV # 1
+2016-07-07 20:40:32,280     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,280     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,284     INFO: Com #  4 received message #51 from UAV # 2
+2016-07-07 20:40:32,286     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,286     INFO: Com #  1 received message #51 from UAV # 2
+2016-07-07 20:40:32,287     INFO: Com #  2 received message #51 from UAV # 2
+2016-07-07 20:40:32,287     INFO: Com #  3 received message #51 from UAV # 2
+2016-07-07 20:40:32,288     INFO: Com #  4 received message #51 from UAV # 2
+2016-07-07 20:40:32,288     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,288     INFO: Com #  1 received message #51 from UAV # 2
+2016-07-07 20:40:32,289     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,291     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,291     INFO: UAV #  2 reached waypoint #9.
+2016-07-07 20:40:32,299     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,299     INFO: Com #  3 received message #52 from UAV # 3
+2016-07-07 20:40:32,309     INFO: Com #  2 received message #52 from UAV # 3
+2016-07-07 20:40:32,311     INFO: Com #  4 received message #52 from UAV # 3
+2016-07-07 20:40:32,316     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,319     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,319     INFO: Com #  1 received message #52 from UAV # 3
+2016-07-07 20:40:32,320     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,320     INFO: Com #  3 received message #52 from UAV # 4
+2016-07-07 20:40:32,321     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,323     INFO: Com #  2 received message #52 from UAV # 4
+2016-07-07 20:40:32,325     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,326     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,326     INFO: Com #  1 received message #52 from UAV # 4
+2016-07-07 20:40:32,328     INFO: Com #  4 received message #52 from UAV # 4
+2016-07-07 20:40:32,329     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,329     INFO: Com #  3 received message #52 from UAV # 1
+2016-07-07 20:40:32,330     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,330     INFO: Com #  3 received message #52 from UAV # 1
+2016-07-07 20:40:32,331     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,333     INFO: Com #  2 received message #52 from UAV # 1
+2016-07-07 20:40:32,335     INFO: Com #  4 received message #52 from UAV # 1
+2016-07-07 20:40:32,334     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,335     INFO: Com #  1 received message #52 from UAV # 1
+2016-07-07 20:40:32,337     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,337     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,338     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,338     INFO: Com #  4 received message #52 from UAV # 2
+2016-07-07 20:40:32,339     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,340     INFO: Com #  2 received message #52 from UAV # 2
+2016-07-07 20:40:32,340     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,341     INFO: Com #  3 received message #52 from UAV # 2
+2016-07-07 20:40:32,341     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,341     INFO: Com #  1 received message #53 from UAV # 3
+2016-07-07 20:40:32,342     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,343     INFO: Com #  3 received message #53 from UAV # 3
+2016-07-07 20:40:32,344     INFO: Com #  2 received message #53 from UAV # 3
+2016-07-07 20:40:32,343     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,345     INFO: Com #  1 received message #53 from UAV # 3
+2016-07-07 20:40:32,346     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,346     INFO: Com #  4 received message #53 from UAV # 3
+2016-07-07 20:40:32,347     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,347     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,348     INFO: Com #  3 received message #53 from UAV # 1
+2016-07-07 20:40:32,348     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,349     INFO: Com #  2 received message #53 from UAV # 1
+2016-07-07 20:40:32,349     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,352     INFO: Com #  4 received message #53 from UAV # 1
+2016-07-07 20:40:32,352     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,353     INFO: Com #  1 received message #53 from UAV # 4
+2016-07-07 20:40:32,358     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,358     INFO: Com #  1 received message #53 from UAV # 4
+2016-07-07 20:40:32,358     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,359     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,359     INFO: Com #  3 received message #53 from UAV # 4
+2016-07-07 20:40:32,360     INFO: Com #  2 received message #53 from UAV # 4
+2016-07-07 20:40:32,360     INFO: Com #  4 received message #53 from UAV # 4
+2016-07-07 20:40:32,362     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,363     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,363     INFO: Com #  2 received message #53 from UAV # 2
+2016-07-07 20:40:32,364     INFO: Com #  4 received message #53 from UAV # 2
+2016-07-07 20:40:32,364     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,364     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,365     INFO: Com #  3 received message #53 from UAV # 2
+2016-07-07 20:40:32,365     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,366     INFO: Com #  1 received message #53 from UAV # 2
+2016-07-07 20:40:32,368     INFO: Com #  2 received message #53 from UAV # 2
+2016-07-07 20:40:32,367     INFO: UAV #  4 reached waypoint #9.
+2016-07-07 20:40:32,369     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,370     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,371     INFO: Com #  3 received message #54 from UAV # 2
+2016-07-07 20:40:32,371     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,371     INFO: Com #  2 received message #54 from UAV # 2
+2016-07-07 20:40:32,372     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,372     INFO: Com #  4 received message #54 from UAV # 2
+2016-07-07 20:40:32,373     INFO: Com #  1 received message #54 from UAV # 2
+2016-07-07 20:40:32,374     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,374     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,378     INFO: Com #  2 received message #54 from UAV # 3
+2016-07-07 20:40:32,378     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,378     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,379     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,379     INFO: Com #  1 received message #54 from UAV # 3
+2016-07-07 20:40:32,380     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,381     INFO: Com #  4 received message #54 from UAV # 1
+2016-07-07 20:40:32,382     INFO: Com #  3 received message #54 from UAV # 1
+2016-07-07 20:40:32,382     INFO: Com #  2 received message #54 from UAV # 1
+2016-07-07 20:40:32,383     INFO: Com #  1 received message #54 from UAV # 1
+2016-07-07 20:40:32,383     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,384     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,385     INFO: Com #  4 received message #54 from UAV # 1
+2016-07-07 20:40:32,385     INFO: Com #  3 received message #54 from UAV # 1
+2016-07-07 20:40:32,385     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,386     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,386     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,386     INFO: Com #  1 received message #54 from UAV # 4
+2016-07-07 20:40:32,387     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,387     INFO: Com #  3 received message #54 from UAV # 4
+2016-07-07 20:40:32,388     INFO: UAV #  1 reached waypoint #9.
+2016-07-07 20:40:32,388     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,389     INFO: Com #  4 received message #54 from UAV # 4
+2016-07-07 20:40:32,398     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,399     INFO: Com #  2 received message #55 from UAV # 2
+2016-07-07 20:40:32,400     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,400     INFO: Com #  2 received message #55 from UAV # 2
+2016-07-07 20:40:32,401     INFO: Com #  4 received message #55 from UAV # 2
+2016-07-07 20:40:32,402     INFO: Com #  1 received message #55 from UAV # 2
+2016-07-07 20:40:32,402     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,403     INFO: Com #  3 received message #55 from UAV # 2
+2016-07-07 20:40:32,404     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,406     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,407     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,407     INFO: Com #  4 received message #55 from UAV # 3
+2016-07-07 20:40:32,408     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,408     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,408     INFO: Com #  1 received message #55 from UAV # 3
+2016-07-07 20:40:32,409     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,409     INFO: Com #  2 received message #55 from UAV # 1
+2016-07-07 20:40:32,410     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,411     INFO: Com #  3 received message #55 from UAV # 1
+2016-07-07 20:40:32,412     INFO: Com #  1 received message #55 from UAV # 1
+2016-07-07 20:40:32,413     INFO: Com #  2 received message #55 from UAV # 1
+2016-07-07 20:40:32,414     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,414     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,414     INFO: Com #  4 received message #55 from UAV # 1
+2016-07-07 20:40:32,415     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,415     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,416     INFO: UAV #  3 reached waypoint #7.
+2016-07-07 20:40:32,416     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,417     INFO: Com #  3 received message #55 from UAV # 4
+2016-07-07 20:40:32,417     INFO: Com #  3 received message #55 from UAV # 4
+2016-07-07 20:40:32,417     INFO: Com #  1 received message #55 from UAV # 4
+2016-07-07 20:40:32,418     INFO: Com #  2 received message #55 from UAV # 4
+2016-07-07 20:40:32,418     INFO: Com #  4 received message #55 from UAV # 4
+2016-07-07 20:40:32,418     INFO: Com #  3 received message #55 from UAV # 4
+2016-07-07 20:40:32,420     INFO: Com #  1 received message #55 from UAV # 4
+2016-07-07 20:40:32,420     INFO: Com #  2 received message #55 from UAV # 4
+2016-07-07 20:40:32,421     INFO: Com #  4 received message #55 from UAV # 4
+2016-07-07 20:40:32,421     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,421     INFO: Com #  3 received message #55 from UAV # 4
+2016-07-07 20:40:32,422     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,427     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,427     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,428     INFO: Com #  1 received message #56 from UAV # 1
+2016-07-07 20:40:32,429     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,429     INFO: Com #  3 received message #56 from UAV # 1
+2016-07-07 20:40:32,430     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,433     INFO: Com #  4 received message #56 from UAV # 1
+2016-07-07 20:40:32,434     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,435     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,435     INFO: Com #  2 received message #56 from UAV # 2
+2016-07-07 20:40:32,436     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,437     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,437     INFO: Com #  3 received message #56 from UAV # 2
+2016-07-07 20:40:32,438     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,439     INFO: Com #  1 received message #56 from UAV # 3
+2016-07-07 20:40:32,439     INFO: Com #  4 received message #56 from UAV # 3
+2016-07-07 20:40:32,439     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,440     INFO: Com #  2 received message #56 from UAV # 3
+2016-07-07 20:40:32,441     INFO: Com #  2 received message #56 from UAV # 3
+2016-07-07 20:40:32,442     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,442     INFO: Com #  3 received message #56 from UAV # 3
+2016-07-07 20:40:32,443     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,443     INFO: Com #  4 received message #56 from UAV # 3
+2016-07-07 20:40:32,444     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,444     INFO: Com #  1 received message #56 from UAV # 4
+2016-07-07 20:40:32,444     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,445     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,445     INFO: Com #  4 received message #56 from UAV # 4
+2016-07-07 20:40:32,466     INFO: Com #  2 received message #56 from UAV # 4
+2016-07-07 20:40:32,467     INFO: Com #  2 received message #56 from UAV # 4
+2016-07-07 20:40:32,468     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,468     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,468     INFO: Com #  1 received message #56 from UAV # 4
+2016-07-07 20:40:32,469     INFO: Com #  4 received message #56 from UAV # 4
+2016-07-07 20:40:32,470     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,470     INFO: Com #  3 received message #57 from UAV # 2
+2016-07-07 20:40:32,471     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,471     INFO: Com #  3 received message #57 from UAV # 2
+2016-07-07 20:40:32,472     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,472     INFO: Com #  1 received message #57 from UAV # 2
+2016-07-07 20:40:32,475     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,476     INFO: Com #  4 received message #57 from UAV # 2
+2016-07-07 20:40:32,478     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,478     INFO: Com #  2 received message #57 from UAV # 3
+2016-07-07 20:40:32,482     INFO: Com #  4 received message #57 from UAV # 3
+2016-07-07 20:40:32,482     INFO: Com #  2 received message #57 from UAV # 3
+2016-07-07 20:40:32,481     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,483     INFO: Com #  3 received message #57 from UAV # 3
+2016-07-07 20:40:32,484     INFO: Com #  1 received message #57 from UAV # 3
+2016-07-07 20:40:32,484     INFO: Com #  4 received message #57 from UAV # 3
+2016-07-07 20:40:32,485     INFO: Com #  2 received message #57 from UAV # 3
+2016-07-07 20:40:32,485     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,486     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,486     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,487     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,488     INFO: Com #  3 received message #57 from UAV # 1
+2016-07-07 20:40:32,489     INFO: Com #  1 received message #57 from UAV # 1
+2016-07-07 20:40:32,489     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,489     INFO: Com #  2 received message #57 from UAV # 1
+2016-07-07 20:40:32,490     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,490     INFO: Com #  4 received message #57 from UAV # 1
+2016-07-07 20:40:32,490     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,491     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,493     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,493     INFO: Com #  3 received message #57 from UAV # 4
+2016-07-07 20:40:32,494     INFO: UAV #  2 reached waypoint #10.
+2016-07-07 20:40:32,494     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,495     INFO: Com #  2 received message #57 from UAV # 4
+2016-07-07 20:40:32,495     INFO: UAV #  2 reached all waypoints.
+2016-07-07 20:40:32,495     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,497     INFO: Com #  4 received message #57 from UAV # 4
+2016-07-07 20:40:32,499     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,502     INFO: Com #  1 received message #58 from UAV # 1
+2016-07-07 20:40:32,502     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,502     INFO: Com #  3 received message #58 from UAV # 1
+2016-07-07 20:40:32,503     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,503     INFO: Com #  1 received message #58 from UAV # 1
+2016-07-07 20:40:32,503     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,504     INFO: Com #  4 received message #58 from UAV # 1
+2016-07-07 20:40:32,505     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,505     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,506     INFO: Com #  1 received message #58 from UAV # 3
+2016-07-07 20:40:32,506     INFO: Com #  3 received message #58 from UAV # 3
+2016-07-07 20:40:32,506     INFO: Com #  4 received message #58 from UAV # 3
+2016-07-07 20:40:32,507     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,507     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,510     INFO: UAV #  2 reached all waypoints.
+2016-07-07 20:40:32,510     INFO: UAV #  2 broadcasting message.
+2016-07-07 20:40:32,511     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,511     INFO: Com #  1 received message #58 from UAV # 3
+2016-07-07 20:40:32,513     INFO: UAV #  2 confirmed UAV Comms received message
+2016-07-07 20:40:32,514     INFO: **********UAV #  2 end of broadcast turn.
+2016-07-07 20:40:32,514     INFO: Com #  3 received message #58 from UAV # 3
+2016-07-07 20:40:32,515     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,515     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,515     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,517     INFO: Com #  4 received message #58 from UAV # 4
+2016-07-07 20:40:32,517     INFO: Com #  1 received message #58 from UAV # 4
+2016-07-07 20:40:32,517     INFO: Com #  3 received message #58 from UAV # 4
+2016-07-07 20:40:32,518     INFO: Com #  4 received message #58 from UAV # 4
+2016-07-07 20:40:32,519     INFO: Com #  1 received message #58 from UAV # 4
+2016-07-07 20:40:32,519     INFO: Com #  3 received message #58 from UAV # 4
+2016-07-07 20:40:32,519     INFO: Com #  4 received message #58 from UAV # 4
+2016-07-07 20:40:32,519     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,520     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,521     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,523     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,523     INFO: Com #  1 received message #59 from UAV # 1
+2016-07-07 20:40:32,523     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,524     INFO: Com #  3 received message #59 from UAV # 1
+2016-07-07 20:40:32,524     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,524     INFO: Com #  4 received message #59 from UAV # 1
+2016-07-07 20:40:32,526     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,527     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,527     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,527     INFO: Com #  1 received message #59 from UAV # 3
+2016-07-07 20:40:32,527     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,528     INFO: Com #  4 received message #59 from UAV # 3
+2016-07-07 20:40:32,529     INFO: Com #  3 received message #59 from UAV # 3
+2016-07-07 20:40:32,529     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,530     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,531     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,531     INFO: Com #  4 received message #59 from UAV # 4
+2016-07-07 20:40:32,533     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,539     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,539     INFO: Com #  1 received message #59 from UAV # 4
+2016-07-07 20:40:32,540     INFO: Com #  3 received message #59 from UAV # 4
+2016-07-07 20:40:32,540     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,540     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,541     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,541     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,542     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,541     INFO: Com #  4 received message #60 from UAV # 1
+2016-07-07 20:40:32,543     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,543     INFO: Com #  1 received message #60 from UAV # 3
+2016-07-07 20:40:32,544     INFO: Com #  3 received message #60 from UAV # 3
+2016-07-07 20:40:32,545     INFO: Com #  4 received message #60 from UAV # 3
+2016-07-07 20:40:32,545     INFO: Com #  1 received message #60 from UAV # 3
+2016-07-07 20:40:32,546     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,546     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,546     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,546     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,547     INFO: Com #  3 received message #60 from UAV # 3
+2016-07-07 20:40:32,547     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,549     INFO: Com #  1 received message #60 from UAV # 4
+2016-07-07 20:40:32,549     INFO: Com #  4 received message #60 from UAV # 4
+2016-07-07 20:40:32,550     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,549     INFO: Com #  3 received message #60 from UAV # 4
+2016-07-07 20:40:32,550     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,550     INFO: Com #  1 received message #60 from UAV # 4
+2016-07-07 20:40:32,555     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,556     INFO: Com #  4 received message #61 from UAV # 3
+2016-07-07 20:40:32,556     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,557     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,557     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,557     INFO: Com #  1 received message #61 from UAV # 1
+2016-07-07 20:40:32,557     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,559     INFO: Com #  3 received message #61 from UAV # 1
+2016-07-07 20:40:32,559     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,560     INFO: Com #  3 received message #61 from UAV # 1
+2016-07-07 20:40:32,560     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,561     INFO: Com #  4 received message #61 from UAV # 1
+2016-07-07 20:40:32,561     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,561     INFO: Com #  1 received message #61 from UAV # 1
+2016-07-07 20:40:32,563     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,563     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,565     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,565     INFO: Com #  4 received message #61 from UAV # 4
+2016-07-07 20:40:32,566     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,567     INFO: Com #  3 received message #61 from UAV # 4
+2016-07-07 20:40:32,568     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,569     INFO: Com #  1 received message #61 from UAV # 4
+2016-07-07 20:40:32,572     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,572     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,573     INFO: Com #  1 received message #62 from UAV # 3
+2016-07-07 20:40:32,574     INFO: Com #  3 received message #62 from UAV # 3
+2016-07-07 20:40:32,575     INFO: Com #  4 received message #62 from UAV # 3
+2016-07-07 20:40:32,575     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,576     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,577     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,577     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,577     INFO: Com #  3 received message #62 from UAV # 1
+2016-07-07 20:40:32,577     INFO: Com #  4 received message #62 from UAV # 1
+2016-07-07 20:40:32,579     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,580     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,581     INFO: Com #  1 received message #62 from UAV # 1
+2016-07-07 20:40:32,582     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,582     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,586     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,587     INFO: Com #  4 received message #62 from UAV # 4
+2016-07-07 20:40:32,589     INFO: UAV #  1 reached waypoint #10.
+2016-07-07 20:40:32,590     INFO: Com #  3 received message #62 from UAV # 4
+2016-07-07 20:40:32,590     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,591     INFO: UAV #  1 reached all waypoints.
+2016-07-07 20:40:32,592     INFO: Com #  1 received message #62 from UAV # 4
+2016-07-07 20:40:32,592     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,596     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,597     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,597     INFO: Com #  4 received message #63 from UAV # 3
+2016-07-07 20:40:32,598     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,598     INFO: Com #  3 received message #63 from UAV # 3
+2016-07-07 20:40:32,598     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,603     INFO: UAV #  1 reached all waypoints.
+2016-07-07 20:40:32,603     INFO: UAV #  1 broadcasting message.
+2016-07-07 20:40:32,604     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,605     INFO: UAV #  1 confirmed UAV Comms received message
+2016-07-07 20:40:32,605     INFO: Com #  3 received message #63 from UAV # 3
+2016-07-07 20:40:32,606     INFO: **********UAV #  1 end of broadcast turn.
+2016-07-07 20:40:32,607     INFO: Com #  4 received message #63 from UAV # 3
+2016-07-07 20:40:32,612     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,612     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,612     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,613     INFO: Com #  4 received message #63 from UAV # 4
+2016-07-07 20:40:32,613     INFO: Com #  3 received message #63 from UAV # 4
+2016-07-07 20:40:32,614     INFO: UAV #  3 reached waypoint #8.
+2016-07-07 20:40:32,614     INFO: Com #  4 received message #63 from UAV # 4
+2016-07-07 20:40:32,614     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,615     INFO: Com #  3 received message #63 from UAV # 4
+2016-07-07 20:40:32,616     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,623     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,623     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,623     INFO: Com #  4 received message #64 from UAV # 3
+2016-07-07 20:40:32,624     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,625     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,625     INFO: Com #  3 received message #64 from UAV # 3
+2016-07-07 20:40:32,625     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,625     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,626     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,626     INFO: Com #  4 received message #64 from UAV # 4
+2016-07-07 20:40:32,627     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,627     INFO: Com #  3 received message #64 from UAV # 4
+2016-07-07 20:40:32,627     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,628     INFO: UAV #  4 reached waypoint #10.
+2016-07-07 20:40:32,629     INFO: UAV #  4 reached all waypoints.
+2016-07-07 20:40:32,629     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,629     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,630     INFO: Com #  3 received message #65 from UAV # 3
+2016-07-07 20:40:32,630     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,631     INFO: Com #  4 received message #65 from UAV # 3
+2016-07-07 20:40:32,634     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,636     INFO: UAV #  4 reached all waypoints.
+2016-07-07 20:40:32,636     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,636     INFO: UAV #  4 broadcasting message.
+2016-07-07 20:40:32,642     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,643     INFO: UAV #  4 confirmed UAV Comms received message
+2016-07-07 20:40:32,643     INFO: **********UAV #  4 end of broadcast turn.
+2016-07-07 20:40:32,643     INFO: Com #  3 received message #65 from UAV # 3
+2016-07-07 20:40:32,644     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,645     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,645     INFO: Com #  3 received message #66 from UAV # 3
+2016-07-07 20:40:32,645     INFO: Com #  3 received message #66 from UAV # 3
+2016-07-07 20:40:32,644     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,645     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,646     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,647     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,647     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,647     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,647     INFO: Com #  3 received message #67 from UAV # 3
+2016-07-07 20:40:32,649     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,654     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,655     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,655     INFO: Com #  3 received message #68 from UAV # 3
+2016-07-07 20:40:32,656     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,656     INFO: Com #  3 received message #68 from UAV # 3
+2016-07-07 20:40:32,656     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,663     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,664     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,664     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,664     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,665     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,666     INFO: Com #  3 received message #69 from UAV # 3
+2016-07-07 20:40:32,667     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,671     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,673     INFO: UAV #  3 reached waypoint #9.
+2016-07-07 20:40:32,674     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,674     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,674     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,674     INFO: Com #  3 received message #70 from UAV # 3
+2016-07-07 20:40:32,676     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,677     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,678     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,678     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,678     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,681     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,681     INFO: Com #  3 received message #71 from UAV # 3
+2016-07-07 20:40:32,682     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,683     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,683     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,683     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,684     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,684     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,684     INFO: Com #  3 received message #72 from UAV # 3
+2016-07-07 20:40:32,689     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,690     INFO: ##########All UAVs wrote a message
+2016-07-07 20:40:32,691     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,692     INFO: Com #  3 received message #73 from UAV # 3
+2016-07-07 20:40:32,692     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,693     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,694     INFO: UAV #  3 reached waypoint #10.
+2016-07-07 20:40:32,694     INFO: UAV #  3 reached all waypoints.
+2016-07-07 20:40:32,694     INFO: UAV #  3 reached all waypoints.
+2016-07-07 20:40:32,695     INFO: UAV #  3 broadcasting message.
+2016-07-07 20:40:32,695     INFO: Waiting for all Comms to receive message.
+2016-07-07 20:40:32,695     INFO: Com #  3 received message #73 from UAV # 3
+2016-07-07 20:40:32,695     INFO: UAV #  3 confirmed UAV Comms received message
+2016-07-07 20:40:32,702     INFO: **********UAV #  3 end of broadcast turn.
+2016-07-07 20:40:32,813     INFO: NO UAVS AIR.
+2016-07-07 20:40:32,853     INFO: Time elapsed: 2.23s
+2016-07-07 20:40:32,871     INFO: Global communicator terminated: <synchronizer(Global Communicator, stopped 4392243200)>
+>>>>>>> origin/master

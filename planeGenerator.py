@@ -61,6 +61,7 @@ class Plane:
     def nextwp(self):
         self.tLoc = self.queue.get_nowait()
 
+<<<<<<< HEAD
     def threatMap(self, msg):
         """This function is to be used by the UAV's decentralized communication thread. The purpose is to populate a map
         of threats which will be returned as a list."""
@@ -79,6 +80,11 @@ class Plane:
                     # logging.info("UAV #%3i map: %s" % (self.id, self.map))
                     return True
         self.map.append(msg)
+=======
+    # Generates a map of threats based on telemetry updates. To be used with decentralized communication.
+    def threatMap(self, coordinates):
+        return self.map
+>>>>>>> origin/master
 
 
 # Automatically generate planeObjects and wayPoints
@@ -87,7 +93,6 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
-    starting_wp = []  # List of starting waypoints
 
     if defaultValues.CENTRALIZED == True:
         communicator.total_uavs = numPlanes
@@ -131,10 +136,6 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         # Calculate the three dimensional and two dimensional distance to target
         plane[i].distance = standardFuncs.findDistance(plane[i].cLoc, plane[i].tLoc)
         plane[i].tdistance = standardFuncs.totalDistance(plane[i].cLoc, plane[i].tLoc)
-
-        if defaultValues.IS_TEST:
-            print "Plane ID is", plane[i].id, "and has", plane[i].numWayPoints, "waypoints"
-            print plane[i].wayPoints
 
         # If decentralized, run a thread for communication from decentralizedComm
         if not defaultValues.CENTRALIZED:

@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 import logging
 import time
+=======
+import time
+import logging
+
+import planeGenerator
+import centralizedComm
+import decentralizedComm
+import defaultValues
+import standardFuncs
+>>>>>>> origin/master
 
 import centralizedComm
 import decentralizedComm
@@ -24,6 +35,13 @@ def main():
     else:
         communicator = centralizedComm.uavComm()
 
+<<<<<<< HEAD
+=======
+    # Wait for communicator to start before next step.
+    while not communicator.is_alive():
+        pass
+
+>>>>>>> origin/master
     list = planeGenerator.generate_planes(
         defaultValues.NUM_PLANES,
         defaultValues.NUM_WAY_POINTS,
@@ -60,7 +78,11 @@ def uav_status(plane):
         if plane[i].dead:
             killed = "UAV #%s" % plane[i].killedBy
         else:
+<<<<<<< HEAD
             killed = "N/A"
+=======
+            killed = ""
+>>>>>>> origin/master
         location = "(%.7f%s, %.7f%s, %.1f m)" % (
             plane[i].cLoc.latitude, standardFuncs.DEGREE,
             plane[i].cLoc.longitude, standardFuncs.DEGREE,

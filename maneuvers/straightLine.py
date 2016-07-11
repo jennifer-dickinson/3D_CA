@@ -38,6 +38,7 @@ def straightline(plane):
     newloc = standardFuncs.loc(new_lat, new_lon, new_alt)
     plane.set_cLoc(newloc)
 
+
     # Calculate new bearing
     plane.cBearing = standardFuncs.find_bearing(plane.pLoc, plane.cLoc)
     plane.cElevation = standardFuncs.elevation_angle(plane.pLoc, plane.cLoc)
