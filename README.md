@@ -8,7 +8,7 @@ The purpose of this program is to provide an easy way to simulate centralized an
 The script was written by Jennifer Salas with contributions by Patrick Perez and William McKnight.
 
 ## Running the script
-This script is meant to be as diverse as possible and therefore has no restrictions on the operating system or external library dependencies, although if needed this may change in the future. The current version uses Python 3.5 and will not work with versions below 3.0 due to the queue module.
+This script is meant to be as diverse as possible and therefore has no restrictions on the operating system or external library dependencies, although if needed this may change in the future. The current version uses Python 2.6.9. Attempts to upgrade to 3.5 results in slowed performance when running in decentralized mode.
 
 To run, simply clone the repository and the run the launch.py file at root of the folder.
 

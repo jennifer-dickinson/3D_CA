@@ -1,4 +1,4 @@
-CENTRALIZED = True  # True or false
+CENTRALIZED = False  # True or false
 COLLISION_AVOIDANCE = False  # Currently has no effect. Set collision avoidance to true or false, will use the following parameter
 ALGORITHM = 'APF'  # Currently has no effect. Will be used to determine collision algorithms.
 COLLISION_DETECTANCE = True  # If set to true, planes that reach a certain distance between other will be considered dead.

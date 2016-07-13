@@ -3,7 +3,7 @@
 import logging
 import json
 import pprint
-import queue
+import Queue
 import random
 import threading
 
@@ -28,7 +28,7 @@ class Plane:
 
         self.numWayPoints = 0  # Total number of waypoints assigned to plane
         self.wayPoints = []  # Waypoint list
-        self.queue = queue.Queue()  # Waypoint queue
+        self.queue = Queue.Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters

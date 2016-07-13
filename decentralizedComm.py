@@ -19,6 +19,7 @@ class synchronizer(threading.Thread):
         self.msg = {"ID": 0, "Location": ""}
 
         self.startTime = time.time()
+
         self.lastUpdate = time.time()
 
         # For reading the message
@@ -55,23 +56,23 @@ class synchronizer(threading.Thread):
 
                 if time.time() - self.lastUpdate > defaultValues.COMM_KILL_TIME:
                     logging.info("Communication timed out.")
-                    print ("Communication timed out.")
+                    print("Communication timed out.")
                     break
 
         except KeyboardInterrupt:
             logging.info("Program interrupted by user.")
         time.sleep(.1)
         if self.uavsInAir == 0:
-            print ("NO UAVS AIR.")
+            print("NO UAVS AIR.")
         else:
-            print ("UAVs in air: %i" % self.uavsInAir)
-            print ('Read counter: %i' % self.readCounter)
-            print ('Read turn event: %s' % self.readTurn.isSet())
-            print ('Broadcast Event: %s' % self.broadcast.isSet())
+            print("UAVs in air: %i" % self.uavsInAir)
+            print('Read counter: %i' % self.readCounter)
+            print('Read turn event: %s' % self.readTurn.isSet())
+            print('Broadcast Event: %s' % self.broadcast.isSet())
 
-            print ('Broadcast counter: %i' % self.broadcastCounter)
-            print ('Broadcast write event: %s' % self.broadcastWrite.isSet())
-            print ('Broadcast turn event: %s' % self.turn.isSet())
+            print('Broadcast counter: %i' % self.broadcastCounter)
+            print('Broadcast write event: %s' % self.broadcastWrite.isSet())
+            print('Broadcast turn event: %s' % self.turn.isSet())
         logging.info("Time elapsed: %.2fs" % (self.lastUpdate - startTime))
 
 
