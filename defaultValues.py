@@ -1,6 +1,7 @@
-CENTRALIZED = False  # True or false
-COLLISION_AVOIDANCE = False  # Set collision avoidance to true or false, will use the following parameter
-ALGORITHM = 'APF'
+CENTRALIZED = True  # True or false
+COLLISION_AVOIDANCE = False  # Currently has no effect. Set collision avoidance to true or false, will use the following parameter
+ALGORITHM = 'APF'  # Currently has no effect. Will be used to determine collision algorithms.
+COLLISION_DETECTANCE = True  # If set to true, planes that reach a certain distance between other will be considered dead.
 
 DEFAULT_UAV_SPEED = 12  # Default UAV speed in meters per second
 MAX_ELEV_ANGLE = 22.5  # Maximum angle of elevation in degrees
@@ -11,7 +12,7 @@ OUR_LOCATION = [32.606184, -85.488228]
 
 DELAY = .2  # Number of seconds between calculations
 
-NUM_PLANES = 20  # Number of planes to generate
+NUM_PLANES = 4  # Number of planes to generate
 NUM_WAY_POINTS = 10  # Number of waypoints to generate
 GRID_SIZE = 20  # Size of grid
 

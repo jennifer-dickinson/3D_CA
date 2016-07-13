@@ -34,7 +34,6 @@ def takeDubinsPath(plane):
 
     if findDistance(circleCenter, plane.tLoc) < minTurnRadius:
         logging.info("UAV #%3i performing a dubins path adjustment." % plane.id)
-        print ("UAV #%3i calculating dubins path to waypoint #%i." % (plane.id, plane.wpAchieved + 1))
         logging.info("Circle center for UAV #%3i set to %s" % (plane.id, circleCenter))
         plane.avoid = True
         plane.avoidanceWaypoint = calculateWaypoint(plane, minTurnRadius, not destOnRight)
@@ -58,11 +57,11 @@ def calculateLoopingCircleCenter(plane, turnRadius, turnRight):
 
     # TODO: Double check if this method will work with existing straightline formula
 
-    lon = plane.cLoc.longitude + xdiff / LONGITUDE_TO_METERS
-    lat = plane.cLoc.latitude + ydiff / LATITUDE_TO_METERS
-    alt = plane.cLoc.altitude + zdiff
+    lon = plane.cLoc["Longitude"] + xdiff / LONGITUDE_TO_METERS
+    lat = plane.cLoc["Latitude"] + ydiff / LATITUDE_TO_METERS
+    alt = plane.cLoc["Altitude"] + zdiff
 
-    circleCenter = loc(lon, lat, alt)
+    circleCenter = {"Longitude": lon, "Latitude": lat, "Altitude": alt}
     return circleCenter
 
 
@@ -82,12 +81,12 @@ def calculateWaypoint(plane, turningRadius, turnRight):
     delta_lat = V * sin(psi) / LATITUDE_TO_METERS
     delta_alt = 0  # Just a place holder
 
-    lon = plane.cLoc.longitude + delta_lon
-    lat = plane.cLoc.latitude + delta_lat
-    alt = plane.cLoc.altitude + delta_alt
+    lon = plane.cLoc["Longitude"] + delta_lon
+    lat = plane.cLoc["Latitude"] + delta_lat
+    alt = plane.cLoc["Altitude"] + delta_alt
 
-    waypoint = loc(lon, lat, alt)
+    waypoint = {"Longitude": lon, "Latitude": lat, "Altitude": alt}
     distance = totalDistance(plane.cLoc, waypoint)
-    logging.info("UAV #%3i avoidance waypoint at %s." % waypoint)
-    logging.info("UAV #%3i %3.1f meters away from avoidance waypoint." % distance)
+    logging.info("UAV #%3i avoidance waypoint at %s." % (plane.id, waypoint))
+    logging.info("UAV #%3i %3.1f meters away from avoidance waypoint." % (plane.id, distance))
     return waypoint

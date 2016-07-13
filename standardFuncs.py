@@ -59,10 +59,10 @@ def manipulate_angle(angle):
 
 # Calculate relative horizontal distance using Haversine's formula
 def findDistance(coor1, coor2):
-    lat1 = coor1.latitude
-    lat2 = coor2.latitude
-    lon1 = coor1.longitude
-    lon2 = coor2.longitude
+    lat1 = coor1["Latitude"]
+    lat2 = coor2["Latitude"]
+    lon1 = coor1["Longitude"]
+    lon2 = coor2["Longitude"]
     R = 6378.137  # Radius of the earth in kilometers
     d_lat = math.radians(lat2 - lat1)
     d_lon = math.radians(lon2 - lon1)
@@ -76,17 +76,17 @@ def findDistance(coor1, coor2):
 # Calculate total distance
 def totalDistance(coor1, coor2):
     d_hor = findDistance(coor1, coor2)
-    d_alt = coor2.altitude - coor1.altitude
+    d_alt = coor2["Altitude"] - coor1["Altitude"]
     distance = math.sqrt(math.pow(d_hor, 2) + math.pow(d_alt, 2))
     return distance
 
 
 # Return bearing using Haversine's formula, in degrees
 def find_bearing(coor1, coor2):
-    lat1 = coor1.latitude
-    lat2 = coor2.latitude
-    lon1 = coor1.longitude
-    lon2 = coor2.longitude
+    lat1 = coor1["Latitude"]
+    lat2 = coor2["Latitude"]
+    lon1 = coor1["Longitude"]
+    lon2 = coor2["Longitude"]
     angle = math.atan2(math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(lon2 - lon1),
                        math.sin(lon2 - lon1) * math.cos(lat2))
     angle = to_cartesian(math.degrees(angle))
@@ -96,7 +96,7 @@ def find_bearing(coor1, coor2):
 # Return angle of elevation in spherical coordinates
 def elevation_angle(coor1, coor2):
     h_dis = findDistance(coor1, coor2)
-    a_dis = coor2.altitude - coor1.altitude
+    a_dis = coor2["Altitude"] - coor1["Altitude"]
     angle = math.degrees(math.atan2(a_dis, h_dis))
     return angle
 
@@ -110,7 +110,7 @@ def find_sign(number):
     return 0
 
 
-loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
+# loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
 
 
 # Generate a latitude, longitude grid according to the size of the airspace.
@@ -127,11 +127,5 @@ def generateGrid(grid_size, location):
 
 
 def logger():
-    # datetime = time.time()
-    # if not os.path.exists("%s" % datetime):
-    #     os.makedirs("%s" % datetime)
-    # logging.basicConfig(filename='logs/%s/debug.log' % datetime, filemode='w',
-    #                     format='%(asctime)s [%(levelname)s]: %(message)s',
-    #                     level=logging.DEBUG)
     logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)

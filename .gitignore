@@ -17,3 +17,5 @@ logs/debug.log
 *.xml
 
 *.xml
+
+.idea/3D_CA.iml
