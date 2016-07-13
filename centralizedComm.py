@@ -7,6 +7,7 @@ import standardFuncs
 
 standardFuncs.logger()
 
+
 class uavComm(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -51,12 +52,12 @@ class uavComm(threading.Thread):
 
             # If timer reaches 2 seconds without an update, end communicator thread.
             elif (time.time() - self.updateTime) > defaultValues.COMM_KILL_TIME:
-                print ("Communication timed out. Please check debug.log")
+                print("Communication timed out. Please check debug.log")
                 logging.error('Communication timed out')
                 logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
-
+        logging.info("Time elapsed: %f" % (time.time() - self.startTime))
         logging.info('Communicator terminated.')
 
     def startUp(self, plane):
@@ -74,6 +75,8 @@ class uavComm(threading.Thread):
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
     def update(self, plane):
+        plane.msgcounter += 1
+        logging.info ("UAV #%3i sending message #%i" %( plane.id, plane.msgcounter))
         self.lock.acquire()
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
@@ -99,7 +102,6 @@ class uavComm(threading.Thread):
 
             # Update waypoints achieved
             if dict["wpts"] < plane.wpAchieved:
-
                 dict["wpts"] = plane.wpAchieved
 
                 # Display message if waypoint achieved

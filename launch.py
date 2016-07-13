@@ -7,17 +7,22 @@ import defaultValues
 import planeGenerator
 import standardFuncs
 
+
 def main():
     standardFuncs.logger()
 
     logging.info('Started')
 
-    print ("Simulating UAV flights.... this may take a while.")
-    if defaultValues.CENTRALIZED:
-        print ("Running simulation in centralized mode.")
+    print("Simulating UAV flights.... this may take a while.")
+    if not defaultValues.CENTRALIZED:
+        print("Running simulation in decentralized mode.")
     else:
-        print ("Running simulation in decentralized mode.")
+        print("Running simulation in centralized mode.")
 
+    if not defaultValues.COLLISION_DETECTANCE:
+        print("No collision detection set.")
+    else:
+        print("Collision detection set.")
     if not defaultValues.CENTRALIZED:
         communicator = decentralizedComm.synchronizer(defaultValues.NUM_PLANES)
 
@@ -35,7 +40,7 @@ def main():
         pass
     logging.info("Global communicator terminated: %s" % communicator)
     time.sleep(.01)
-    print ("Simulation complete.")
+    print("Simulation complete.")
 
     uav_status(list)
 
@@ -50,11 +55,11 @@ def uav_status(plane):
         'Dead?',
         'Killed By?'
     )
-    print (title)
+    print(title)
     line = ""
     for i in title:
         line += "_"
-    print (line)
+    print(line)
 
     for i in range(len(plane)):
         if plane[i].dead:
@@ -62,11 +67,11 @@ def uav_status(plane):
         else:
             killed = "N/A"
         location = "(%.7f%s, %.7f%s, %.1f m)" % (
-            plane[i].cLoc.latitude, standardFuncs.DEGREE,
-            plane[i].cLoc.longitude, standardFuncs.DEGREE,
-            plane[i].cLoc.altitude,
+            plane[i].cLoc["Latitude"], standardFuncs.DEGREE,
+            plane[i].cLoc["Longitude"], standardFuncs.DEGREE,
+            plane[i].cLoc["Altitude"],
         )
-        print ('%3i  %-40s  %6.1f  %4s  %-5s  %-10s' % (
+        print('%3i  %-40s  %6.1f  %4s  %-5s  %-10s' % (
             plane[i].id,
             location,
             plane[i].distanceTraveled,

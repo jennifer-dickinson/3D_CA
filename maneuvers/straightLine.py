@@ -10,16 +10,16 @@ standardFuncs.logger()
 # TODO: Adapt this to waypoints
 def straightline(plane):
 
-    # target = plane.tLoc
-    # wpBearing = plane.tBearing
 
     if plane.avoid:
-
         target = plane.avoidanceWaypoint
-        logging.info("UAV #3i is performing an avoidance maneuver." % plane.id)
-        # wpBearing = standardFuncs.find_bearing(plane.cLoc, target)
+        logging.info("UAV #%3i is performing an avoidance maneuver." % plane.id)
+    else:
+        target = plane.tLoc
 
-    plane.cBearing = plane.tBearing
+    tBearing = standardFuncs.find_bearing(plane.cLoc, target)
+
+    plane.cBearing = tBearing
     plane.cElevation = plane.tElevation
 
     distanceTraveled = plane.speed * defaultValues.DELAY  # Get frequency of updates.
@@ -28,17 +28,19 @@ def straightline(plane):
     # Calculate new position
     position = vMath.vector(distanceTraveled, plane.cBearing, plane.cElevation)
 
-    new_lat = plane.cLoc.latitude + (position.x / standardFuncs.LATITUDE_TO_METERS)
-    new_lon = plane.cLoc.longitude + (position.y / standardFuncs.LONGITUDE_TO_METERS)
-    new_alt = plane.cLoc.altitude + position.z
+    new_lat = plane.cLoc["Latitude"] + (position.x / standardFuncs.LATITUDE_TO_METERS)
+    new_lon = plane.cLoc["Longitude"] + (position.y / standardFuncs.LONGITUDE_TO_METERS)
+    new_alt = plane.cLoc["Altitude"] + position.z
 
-    newLoc = standardFuncs.loc(new_lat, new_lon, new_alt)
+    newLoc = {"Latitude": new_lat, "Longitude": new_lon, "Altitude": new_alt}
 
-    # Update current location, distance, total distance, target bearing,
-    newloc = standardFuncs.loc(new_lat, new_lon, new_alt)
-    plane.set_cLoc(newloc)
+    # newloc = standardFuncs.loc(new_lat, new_lon, new_alt)
+    # plane.set_cLoc(newloc)
+
+    plane.set_cLoc(newLoc)
 
     # Calculate new bearing
+    #print(plane.cLoc)
     plane.cBearing = standardFuncs.find_bearing(plane.pLoc, plane.cLoc)
     plane.cElevation = standardFuncs.elevation_angle(plane.pLoc, plane.cLoc)
 

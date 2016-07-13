@@ -1,8 +1,9 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
 
-
-import queue
 import logging
+import json
+import pprint
+import Queue
 import random
 import threading
 
@@ -27,7 +28,7 @@ class Plane:
 
         self.numWayPoints = 0  # Total number of waypoints assigned to plane
         self.wayPoints = []  # Waypoint list
-        self.queue = queue.Queue()  # Waypoint queue
+        self.queue = Queue.Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters
@@ -51,6 +52,7 @@ class Plane:
         self.killedBy = None  # Records which UAV it crashed with
 
         self.msg = []  # Any telemetry message received
+        self.msgcounter = 0
         self.map = []  # A map of all UAVs
         self.comm = None
 
@@ -84,6 +86,10 @@ class Plane:
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
 
+    pp = pprint.PrettyPrinter(indent=4)
+
+    waypoints = []
+
     if defaultValues.CENTRALIZED:
         communicator.total_uavs = numPlanes
     elif not defaultValues.CENTRALIZED:
@@ -97,11 +103,11 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital location and bearing.
 
             waypoint = randomLocation(gridSize, location)
-
             plane[i].wayPoints.append(waypoint)
-            plane[i].queue.put(plane[i].wayPoints[j])
+            plane[i].queue.put(waypoint)
 
-            # logging.info("UAV #%3i generated waypoint #%i at: %s" % (plane[i].id, (j + 1), waypoint))
+
+        waypoints.append(plane[i].wayPoints)
 
         # get a previous location
         plane[i].set_cLoc(plane[i].queue.get_nowait())
@@ -111,13 +117,15 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane[i].nextwp()  # and removes it from the queue
         d = standardFuncs.DEGREE
         current_location = "(%.7f%s, %.7f%s, %.2f)" % (
-            plane[i].cLoc.latitude, d, plane[i].cLoc.longitude, d, plane[i].cLoc.altitude)
+            plane[i].cLoc["Latitude"], d, plane[i].cLoc["Longitude"], d, plane[i].cLoc["Altitude"])
+
         logging.info("UAV #%3i set to %i waypoints, starting position %s." % (
             plane[i].id, len(plane[i].wayPoints) - 2, current_location))
 
         # Calculate current and target bearing (both set to equal initially)
         plane[i].tBearing = standardFuncs.find_bearing(plane[i].cLoc, plane[i].tLoc)
         plane[i].cBearing = plane[i].tBearing
+        logging.info("Initial bearing set to %.2f" % plane[i].cBearing)
 
         # Calculate current and target elevation angles (also equa)
         plane[i].tElevation = standardFuncs.elevation_angle(plane[i].cLoc, plane[i].tLoc)
@@ -160,5 +168,5 @@ def randomLocation(gridSize, location=defaultValues.OUR_LOCATION):
     lat = random.uniform(grid[0][0], grid[0][1])
     lon = random.uniform(grid[1][0], grid[1][1])
     alt = random.uniform(375, 400)
-    location = standardFuncs.loc(lat, lon, alt)
+    location = {"Latitude": lat, "Longitude": lon, "Altitude": alt}
     return location
