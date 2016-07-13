@@ -14,33 +14,22 @@ def move(plane, globalCommunicator, planeComm):
 
         # If plane distance is less than turning radius, check dubins path. This should be set on or off in settings.
 
-        # Use decentralized communication and collision detectance.
+        # Use decentralized communication and collision detection or default to centralized.
         if not defaultValues.CENTRALIZED:
             uav_positions = plane.map
-            for elem in uav_positions:
-                distance = standardFuncs.totalDistance(plane.cLoc, elem["Location"])
-                if distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["Dead"] == False:
-                    plane.dead = True
-                    plane.killedBy = elem["ID"]
-                    stop = True
-                if elem["KilledBy"] == plane.id:
-                    plane.dead = True
-                    plane.killedBy = elem["ID"]
-                    stop = True
-
-        # Default to centralized communication and collision detectance.
         else:
             uav_positions = globalCommunicator.receive(plane)
-            for elem in uav_positions:
-                distance = standardFuncs.totalDistance(plane.cLoc, elem["cLoc"])
-                if distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["dead"] == False:
-                    plane.dead = True
-                    plane.killedBy = elem["ID"]
-                    stop = True
-                if elem["ID"] == plane.id and elem["dead"] == True:
-                    plane.dead = True
-                    plane.killedBy = elem["killedBy"]
-                    stop = True
+
+        for elem in uav_positions:
+            distance = standardFuncs.totalDistance(plane.cLoc, elem["Location"])
+            if distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["Dead"] == False:
+                plane.dead = True
+                plane.killedBy = elem["ID"]
+                stop = True
+            if elem["killedBy"] == plane.id:  # and elem["dead"] == True:
+                plane.dead = True
+                plane.killedBy = elem["ID"]
+                stop = True
 
         # Check to see if UAV has reached the waypoint or completed mission.
         if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
@@ -53,10 +42,10 @@ def move(plane, globalCommunicator, planeComm):
             logging.info("UAV #%3i reached all waypoints." % plane.id)
 
         if plane.dead:
-            print "UAV #%3i has crashed with UAV #%3i" % (plane.id, plane.killedBy)
-        if plane.wpAchieved == plane.numWayPoints: print "UAV #%3i reached all waypoints." % plane.id
+            print ("UAV #%3i has crashed with UAV #%3i" % (plane.id, plane.killedBy))
+        if plane.wpAchieved == plane.numWayPoints: print ("UAV #%3i reached all waypoints." % plane.id)
 
-        if plane.tdistance <= defaultValues.MIN_TURN_RAD:
+        if plane.tdistance <= (2 * defaultValues.MIN_TURN_RAD):
             # logging.info("UAV #%3i checking for dubins path." % plane.id)
             dubinsPath.takeDubinsPath(plane)
             pass
