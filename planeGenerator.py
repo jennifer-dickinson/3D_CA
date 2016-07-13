@@ -1,7 +1,7 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
 
 
-import Queue
+import queue
 import logging
 import random
 import threading
@@ -27,7 +27,7 @@ class Plane:
 
         self.numWayPoints = 0  # Total number of waypoints assigned to plane
         self.wayPoints = []  # Waypoint list
-        self.queue = Queue.Queue()  # Waypoint queue
+        self.queue = queue.Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters
@@ -84,7 +84,7 @@ class Plane:
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
 
-    if defaultValues.CENTRALIZED == True:
+    if defaultValues.CENTRALIZED:
         communicator.total_uavs = numPlanes
     elif not defaultValues.CENTRALIZED:
         communicator.uavsInAir = numPlanes

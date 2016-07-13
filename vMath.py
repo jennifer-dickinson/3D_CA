@@ -14,7 +14,7 @@ class vector:
         elif -90 <= elevation < 0:
             self.elevation = 90 + math.fabs(elevation)
         else:
-            print 'You made an error'
+            print ('You made an error')
 
         self.x = magnitude * math.sin(math.radians(self.elevation)) * math.cos(math.radians(direction))
         self.y = magnitude * math.sin(math.radians(self.elevation)) * math.sin(math.radians(direction))

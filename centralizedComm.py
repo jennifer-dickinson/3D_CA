@@ -61,10 +61,10 @@ class uavComm(threading.Thread):
 
     def startUp(self, plane):
         dict = {"ID": plane.id,
-                "cLoc": plane.cLoc,
+                "Location": plane.cLoc,
                 "bear": plane.cBearing,
                 "elev": plane.cElevation,
-                "dead": plane.dead,
+                "Dead": plane.dead,
                 "killedBy": None,
                 "wpts": 0,
                 "tdis": 0
@@ -81,12 +81,16 @@ class uavComm(threading.Thread):
         self.updateTime = time.time()
 
         # Access positions list
-        dict = (item for item in self.positions if item["ID"] == plane.id).next()
+        for i in self.positions:
+            if i["ID"] == plane.id:
+                dict = i
+                break
 
         # Only update telemetry if UAV is still alive
-        if not plane.dead and not dict["dead"]:
+        if not plane.dead and not dict["Dead"]:
+
             # Update telemetry
-            dict["cLoc"] = plane.cLoc
+            dict["Location"] = plane.cLoc
             dict["bear"] = plane.cBearing
             dict["elev"] = plane.cElevation
             dict["tdis"] = plane.distanceTraveled
@@ -95,27 +99,35 @@ class uavComm(threading.Thread):
 
             # Update waypoints achieved
             if dict["wpts"] < plane.wpAchieved:
+
                 dict["wpts"] = plane.wpAchieved
+
                 # Display message if waypoint achieved
                 logging.info('UAV #%3i reached waypoint #%3i.' % (dict["ID"], dict["wpts"]))
 
         # If UAV is crashed, update status in telemetry and object
-        elif plane.dead or dict["dead"]:
+        elif plane.dead or dict["Dead"]:
+
             self.turn_kill_counter += 1
             logging.info('UAV #%3i added to deaths by 1 (%i total).' % (plane.id, self.turn_kill_counter))
-            if plane.dead and not dict["dead"]:
-                dict["dead"] = plane.dead
+
+            if plane.dead and not dict["Dead"]:
+                dict["Dead"] = plane.dead
                 dict["killedBy"] = plane.killedBy
 
                 #
                 logging.info('UAV #%3i crashed with #%3i.' % (plane.id, dict["killedBy"]))
-                dict2 = (item for item in self.positions if item["ID"] == dict["killedBy"]).next()
-                dict2["dead"] = True
-                dict2["killedBy"] = plane.id
+
+                for i in self.positions:
+                    if i["ID"] == dict["killedBy"]:
+                        dict2 = i
+                        dict2["Dead"] = True
+                        dict2["killedBy"] = plane.id
+                        break
 
             # If plane is dead in telemetry, update plane status
-            elif not plane.dead and dict["dead"]:
-                plane.dead = dict["dead"]
+            elif not plane.dead and dict["Dead"]:
+                plane.dead = dict["Dead"]
                 plane.killedBy = dict["killedBy"]
                 logging.info('UAV #%3i found out it was crashed.' % plane.id)
 
