@@ -7,7 +7,7 @@ import vMath
 standardFuncs.logger()
 
 
-# TODO: Adapt this to waypoints
+# TODO: Adapt this to avoidance waypoints
 def straightline(plane):
 
 

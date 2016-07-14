@@ -9,12 +9,11 @@ import collections
 import logging
 
 ### Note: these are only accurate near the equator
-## Todo: make a function that vary thise variables depending on location
-
-DEGREE = u'\N{DEGREE SIGN}'
-
+## Todo: make a function that vary these variables depending on location
 LATITUDE_TO_METERS = 110574.61  # Meters per latitude degree
 LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
+
+DEGREE = u'\N{DEGREE SIGN}'
 
 
 # Convert cardinal direction to an angle in the cartesian plane
