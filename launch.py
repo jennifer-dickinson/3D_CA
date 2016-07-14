@@ -9,8 +9,10 @@ import standardFuncs
 
 
 def main():
-    standardFuncs.logger()
+#    standardFuncs.logger() 
 
+    #configuring the logger
+    logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s %(levelname)8s: %(message)s', level=logging.DEBUG)
     logging.info('Started')
 
     print("Simulating UAV flights.... this may take a while.")
@@ -32,20 +34,27 @@ def main():
     list = planeGenerator.generate_planes(
         defaultValues.NUM_PLANES,
         defaultValues.NUM_WAY_POINTS,
-        defaultValues.GRID_SIZE,
+        defaultValues.GRID_SIZE,    
         communicator
     )
 
     while communicator.isAlive():
-        pass
+        pass    
+    #While the communicator is alive the program will simulate the movement of planes 
+    
     logging.info("Global communicator terminated: %s" % communicator)
     time.sleep(.01)
     print("Simulation complete.")
 
     uav_status(list)
 
-
 def uav_status(plane):
+    """
+    input:A list containting # of Planes, # of Waypoints, Grid_size, and the communicator
+    output: Prints the final destination of every plane and if the plane is alive
+    """
+    
+    assert isInstance(plane, tuple)
     # Print status for each UAV.
     title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
         'ID#',
