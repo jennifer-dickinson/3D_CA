@@ -25,7 +25,7 @@ def move(plane, globalCommunicator, planeComm):
                     plane.killedBy = elem["ID"]
                     stop = True
                     break
-                if elem["killedBy"] == plane.id:  # and elem["dead"] == True:
+                if elem["killedBy"] == plane.id:
                     plane.dead = True
                     plane.killedBy = elem["ID"]
                     stop = True
