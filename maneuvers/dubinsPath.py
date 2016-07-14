@@ -1,7 +1,7 @@
 # This is a straight adaptation from David Jones' RIPNA Algorithm in C++ to Python
 from standardFuncs import *
 from defaultValues import *
-from math import fabs, radians, degrees, cos, sin
+from math import fabs, radians, cos, sin
 import logging
 
 logger()

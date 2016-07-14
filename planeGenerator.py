@@ -8,7 +8,7 @@ import threading
 
 import decentralizedComm
 import defaultValues
-import movementSimulator
+import planeSimulator
 import standardFuncs
 
 
@@ -79,8 +79,6 @@ class Plane:
 
 
 # Automatically generate planeObjects and wayPoints
-# Todo: make an option to load planeObjects and wayPoints
-# Todo: make option to manually set wayPoints for each plane
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
@@ -158,7 +156,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
             communicator.startUp(plane[i])
             planeComm = None
         try:
-            plane[i].move = threading.Thread(target=movementSimulator.move, args=(plane[i], communicator, planeComm),
+            plane[i].move = threading.Thread(target=planeSimulator.move, args=(plane[i], communicator, planeComm),
                                              name="UAV #%i" % plane[i].id)
             plane[i].move.setDaemon(True)
             logging.info("UAV #%3i plane thread generated: %s" % (plane[i].id, plane[i].move))
