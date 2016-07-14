@@ -19,7 +19,6 @@ class synchronizer(threading.Thread):
         self.msg = {"ID": 0, "Location": ""}
 
         self.startTime = time.time()
-
         self.lastUpdate = time.time()
 
         # For reading the message
@@ -121,12 +120,14 @@ class communicate(threading.Thread):
         # Send Message
         if self.plane.dead or self.plane.wpAchieved == self.plane.numWayPoints:
             self.synch.uavsInAir -= 1
+            dead = True # Set to true for wp complete so that UAVs don't crash into a non-existing plane
             logging.info("UAV #%3i crashed or reached all waypoints." % self.plane.id)
         else:
             self.synch.broadcastCounter += 1
             self.msgCounter += 1
+            dead = False
 
-        self.synch.msg = {"ID": self.plane.id, "Location": self.plane.cLoc, "#": self.msgCounter, "Dead" : self.plane.dead, "killedBy" : self.plane.killedBy}
+        self.synch.msg = {"ID": self.plane.id, "Location": self.plane.cLoc, "#": self.msgCounter, "Dead" : dead, "killedBy" : self.plane.killedBy}
 
         logging.info("UAV #%3i broadcasting message." % self.plane.id)
 

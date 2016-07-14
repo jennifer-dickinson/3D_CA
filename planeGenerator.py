@@ -1,7 +1,6 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
 
 import logging
-import json
 import pprint
 import Queue
 import random
@@ -85,10 +84,13 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
-
     pp = pprint.PrettyPrinter(indent=4)
-
     waypoints = []
+    set = range(0, numPlanes)
+
+    if defaultValues.USE_SAMPLE_SET:
+        numPlanes = len(defaultValues.SAMPLE_WP_SET)
+        set = defaultValues.SAMPLE_WP_SET
 
     if defaultValues.CENTRALIZED:
         communicator.total_uavs = numPlanes
@@ -96,16 +98,23 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         communicator.uavsInAir = numPlanes
 
     # Creates a set number of planes
-    for i in range(0, numPlanes):
+    i = 0
+    for each in set:
         plane.append(Plane())
-        plane[i].numWayPoints = numWayPoints
+        if defaultValues.USE_SAMPLE_SET:
+            numWayPoints = int(len(defaultValues.SAMPLE_WP_SET[i]) - 2)
+            plane[i].numWayPoints = numWayPoints
+            for elem in each:
+                plane[i].wayPoints.append(elem)
+                plane[i].queue.put(elem)
+        else:
 
-        for j in range(0, plane[i].numWayPoints + 2):  # +2 to git inital location and bearing.
+            plane[i].numWayPoints = numWayPoints
+            for j in range(0, plane[i].numWayPoints + 2):  # +2 to git initial location and bearing.
 
-            waypoint = randomLocation(gridSize, location)
-            plane[i].wayPoints.append(waypoint)
-            plane[i].queue.put(waypoint)
-
+                waypoint = randomLocation(gridSize, location)
+                plane[i].wayPoints.append(waypoint)
+                plane[i].queue.put(waypoint)
 
         waypoints.append(plane[i].wayPoints)
 
@@ -155,9 +164,12 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
             logging.info("UAV #%3i plane thread generated: %s" % (plane[i].id, plane[i].move))
         except:
             logging.fatal("Could not generate UAV #%3i" % plane[i].id)
+        i += 1
 
     for i in range(len(plane)):
         plane[i].move.start()
+
+    # print(json.dumps(waypoints, sort_keys=True))
 
     return plane
 
