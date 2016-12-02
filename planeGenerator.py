@@ -1,8 +1,11 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
 
 import logging
-import pprint
-import Queue
+try:
+    from Queue import Queue
+except:
+    from queue import Queue
+
 import random
 import threading
 
@@ -27,7 +30,7 @@ class Plane:
 
         self.numWayPoints = 0  # Total number of waypoints assigned to plane
         self.wayPoints = []  # Waypoint list
-        self.queue = Queue.Queue()  # Waypoint queue
+        self.queue = Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters
@@ -82,7 +85,6 @@ class Plane:
 
 def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
     plane = []  # Create list of planes
-    pp = pprint.PrettyPrinter(indent=4)
     waypoints = []
     set = range(0, numPlanes)
 
@@ -108,9 +110,9 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         else:
 
             plane[i].numWayPoints = numWayPoints
-            for j in range(0, plane[i].numWayPoints + 2):  # +2 to git initial location and bearing.
+            for j in range(0, plane[i].numWayPoints + 2):  # +2 to get initial location and bearing.
 
-                waypoint = randomLocation(gridSize, location)
+                waypoint = randomLocation(gridSize, 100, location)
                 plane[i].wayPoints.append(waypoint)
                 plane[i].queue.put(waypoint)
 
@@ -134,7 +136,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane[i].cBearing = plane[i].tBearing
         logging.info("Initial bearing set to %.2f" % plane[i].cBearing)
 
-        # Calculate current and target elevation angles (also equa)
+        # Calculate current and target elevation angles (also equal)
         plane[i].tElevation = standardFuncs.elevation_angle(plane[i].cLoc, plane[i].tLoc)
         plane[i].cElevation = plane[i].tElevation
 
@@ -150,6 +152,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
 
             except:
                 logging.fatal("Communicator failed to start for UAV #%3i" % plane[i].id)
+                break
 
         # If centralized, pass plane parameters to centralizedComm
         else:
@@ -164,6 +167,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
             logging.fatal("Could not generate UAV #%3i" % plane[i].id)
         i += 1
 
+    # Note: all UAV threads should be started after UAV objects are created to avoid errors in time difference due to random nature of threads.
     for i in range(len(plane)):
         plane[i].move.start()
 
@@ -173,8 +177,8 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
 
 
 # Calculates random waypoints based on provided grid and adds them to a list and queue
-def randomLocation(gridSize, location=defaultValues.OUR_LOCATION):
-    grid = standardFuncs.generateGrid(gridSize, location)  # Creates a square grid centered about location
+def randomLocation(lon_dist, lat_dist, location):
+    grid = standardFuncs.generateGrid(lon_dist, lat_dist, location)  # Creates a square grid centered about location
     lat = random.uniform(grid[0][0], grid[0][1])
     lon = random.uniform(grid[1][0], grid[1][1])
     alt = random.uniform(375, 400)

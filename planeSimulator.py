@@ -13,6 +13,7 @@ def move(plane, globalCommunicator, planeComm):
 
         if defaultValues.COLLISION_DETECTANCE:
             # Use decentralized communication and collision detection or default to centralized.
+            # Todo: set both comm methods to save plane map to plane object
             if not defaultValues.CENTRALIZED:
                 uav_positions = plane.map
             else:
@@ -50,6 +51,8 @@ def move(plane, globalCommunicator, planeComm):
         #     dubinsPath.takeDubinsPath(plane)
         #     pass
 
+
+        # !!! This section of code moved the time keeper into straightLine.py... MUST FIX ASAP
         straightLine.straightline(plane)
 
         # Broadcast telemetry through decentralized communication

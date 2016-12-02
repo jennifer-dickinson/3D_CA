@@ -10,18 +10,25 @@ standardFuncs.logger()
 
 class uavComm(threading.Thread):
     def __init__(self):
+        # A single thread will be generated for all UAVs to communicate
         threading.Thread.__init__(self)
 
+        # List of positions for all UAVS
         self.positions = list()
         self.stopped = False
 
+        # Keep track of when the last update for the thread is
         self.startTime = time.time()
         self.updateTime = time.time()
 
+        # Number of UAVs that have accessed the communication thread
         self.counter = 0
-        self.total_uavs = defaultValues.NUM_PLANES  # Total number of UAVs in the air
+
+        # Total number of UAVs that are still in the air
+        self.total_uavs = defaultValues.NUM_PLANES
         self.steps_counter = 0
 
+        # How many UAVs have crashed during in a single moment
         self.turn_kill_counter = 0
 
         self.writeState = threading.Event()
@@ -61,6 +68,7 @@ class uavComm(threading.Thread):
         logging.info('Communicator terminated.')
 
     def startUp(self, plane):
+        # Record the status of an existing UAV when the communicator starts
         dict = {"ID": plane.id,
                 "Location": plane.cLoc,
                 "bear": plane.cBearing,
@@ -70,14 +78,23 @@ class uavComm(threading.Thread):
                 "wpts": 0,
                 "tdis": 0
                 }
+
+        # Add the status to the list of positions
         self.positions.append(dict)
-        # self.total_uavs += 1
+
+        # Log the record
         logging.info('Initial position for UAV #%3i updated!' % plane.id)
 
     def update(self, plane):
+        # Update the position of a plane to the communicator
+
+
         plane.msgcounter += 1
+
         logging.info ("UAV #%3i sending message #%i" %( plane.id, plane.msgcounter))
+
         self.lock.acquire()
+
         logging.info('UAV #%3i acquired write lock.' % plane.id)
 
         # Reset timeout timer.
