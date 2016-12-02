@@ -30,7 +30,7 @@ changed as long as it follows the following structure: [[{{"Altitude": float, "L
 The altitude, latitude and longitude should be real. This was generated using the planeGenerator and just copying and
 pasting the json dump.
 """
-USE_SAMPLE_SET = True
+USE_SAMPLE_SET = False
 SAMPLE_WP_SET = [[{"Altitude": 389.09038228137911, "Latitude": 32.606274606379891, "Longitude": -85.488069429063572},
                  {"Altitude": 386.02867398136164, "Latitude": 32.605741841725305, "Longitude": -85.488622016975086},
                  {"Altitude": 391.99817165807889, "Latitude": 32.606499405835351, "Longitude": -85.488344437701343},

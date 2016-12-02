@@ -3,10 +3,8 @@ import time
 
 import centralizedComm
 import decentralizedComm
-import defaultValues
 import planeGenerator
 import standardFuncs
-import sys
 
 import argumentsplitter
 
@@ -16,36 +14,28 @@ def main():
     args = argumentsplitter.argParser()
     argumentsplitter.displayArgs(args)
 
-    print("Number of arguments: ", len(sys.argv))
-    print("Argument list: ", str(sys.argv))
-
     # Start printing information to a log file. This overwrites all previous data!
     standardFuncs.logger()
 
     logging.info('Started')
 
     print("Simulating UAV flights.... this may take a while.")
-    if not defaultValues.CENTRALIZED:
+    if not args.CENTRALIZED:
         print("Running simulation in decentralized mode.")
     else:
         print("Running simulation in centralized mode.")
 
-    if not defaultValues.COLLISION_DETECTANCE:
+    if not args.COLLISION_DETECTANCE:
         print("No collision detection set.")
     else:
         print("Collision detection set.")
-    if not defaultValues.CENTRALIZED:
-        communicator = decentralizedComm.synchronizer(defaultValues.NUM_PLANES)
+    if not args.CENTRALIZED:
+        communicator = decentralizedComm.synchronizer(args.NUM_PLANES)
 
     else:
         communicator = centralizedComm.uavComm()
 
-    list = planeGenerator.generate_planes(
-        defaultValues.NUM_PLANES,
-        defaultValues.NUM_WAY_POINTS,
-        defaultValues.GRID_SIZE,
-        communicator
-    )
+    uavList = planeGenerator.generate_planes(args, communicator)
 
     while communicator.isAlive():
         pass
@@ -53,7 +43,7 @@ def main():
     time.sleep(.01)
     print("Simulation complete.")
 
-    uav_status(list)
+    uav_status(uavList)
 
 
 def uav_status(plane):

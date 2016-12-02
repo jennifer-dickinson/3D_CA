@@ -1,6 +1,4 @@
 import logging
-
-import defaultValues
 import standardFuncs
 
 from maneuvers import straightLine, dubinsPath
@@ -11,17 +9,17 @@ def move(plane, globalCommunicator, planeComm):
 
     while not stop and not plane.dead:
 
-        if defaultValues.COLLISION_DETECTANCE:
+        if plane.args.COLLISION_DETECTANCE:
             # Use decentralized communication and collision detection or default to centralized.
             # Todo: set both comm methods to save plane map to plane object
-            if not defaultValues.CENTRALIZED:
+            if not plane.args.CENTRALIZED:
                 uav_positions = plane.map
             else:
                 uav_positions = globalCommunicator.receive(plane)
 
             for elem in uav_positions:
                 distance = standardFuncs.totalDistance(plane.cLoc, elem["Location"])
-                if distance < defaultValues.CRASH_DISTANCE and elem["ID"] != plane.id and elem["Dead"] == False:
+                if distance < plane.args.CRASH_DISTANCE and elem["ID"] != plane.id and elem["Dead"] == False:
                     plane.dead = True
                     plane.killedBy = elem["ID"]
                     stop = True
@@ -33,7 +31,7 @@ def move(plane, globalCommunicator, planeComm):
                     break
 
         # Check to see if UAV has reached the waypoint or completed mission.
-        if (plane.tdistance < defaultValues.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
+        if (plane.tdistance < plane.args.WAYPOINT_DISTANCE) and (plane.wpAchieved <= plane.numWayPoints):
             plane.wpAchieved += 1
             if plane.wpAchieved < plane.numWayPoints:
                 plane.nextwp()
@@ -46,17 +44,12 @@ def move(plane, globalCommunicator, planeComm):
             print("UAV #%3i has crashed with UAV #%3i" % (plane.id, plane.killedBy))
         if plane.wpAchieved == plane.numWayPoints: print("UAV #%3i reached all waypoints." % plane.id)
 
-        # if plane.tdistance <= (3 * defaultValues.MIN_TURN_RAD):
-        #     # logging.info("UAV #%3i checking for dubins path." % plane.id)
-        #     dubinsPath.takeDubinsPath(plane)
-        #     pass
-
 
         # !!! This section of code moved the time keeper into straightLine.py... MUST FIX ASAP
         straightLine.straightline(plane)
 
         # Broadcast telemetry through decentralized communication
-        if not defaultValues.CENTRALIZED:
+        if not plane.args.CENTRALIZED:
             try:
                 planeComm.update()
             except:

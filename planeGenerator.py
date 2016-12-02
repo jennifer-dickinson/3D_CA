@@ -1,16 +1,18 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
 
 import logging
+
 try:
+    #Python 2.7
     from Queue import Queue
 except:
+    #Python 3.5
     from queue import Queue
 
 import random
 import threading
 
 import decentralizedComm
-import defaultValues
 import planeSimulator
 import standardFuncs
 
@@ -19,13 +21,14 @@ import standardFuncs
 class Plane:
     counter = 0
 
-    def __init__(self):
+    def __init__(self, args):
+        self.args = args
         Plane.counter += 1
         self.id = Plane.counter  # Plane ID =)
 
-        self.speed = defaultValues.DEFAULT_UAV_SPEED  # UAV airspeed in meters per second, 12 meters per second by default
-        self.maxElevationAngle = defaultValues.MAX_ELEV_ANGLE  # Maximum climbing angle in degrees
-        self.minTurningRadius = defaultValues.MIN_TURN_RAD  # Minimum turning radius in meters, should be variable depending on speed
+        self.speed = args.UAV_SPEED  # UAV airspeed in meters per second, 12 meters per second by default
+        self.maxElevationAngle = args.MAX_ELEV_ANGLE  # Maximum climbing angle in degrees
+        self.minTurningRadius = args.MIN_TURN_RAD  # Minimum turning radius in meters, should be variable depending on speed
         self.maxBankAngle = None
 
         self.numWayPoints = 0  # Total number of waypoints assigned to plane
@@ -83,45 +86,45 @@ class Plane:
 
 # Automatically generate planeObjects and wayPoints
 
-def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=defaultValues.OUR_LOCATION, ):
+def generate_planes(args, communicator):
     plane = []  # Create list of planes
     waypoints = []
-    set = range(0, numPlanes)
+    set = range(0, args.NUM_PLANES)
 
-    if defaultValues.USE_SAMPLE_SET:
-        numPlanes = len(defaultValues.SAMPLE_WP_SET)
-        set = defaultValues.SAMPLE_WP_SET
+    if args.USE_SAMPLE_SET:
+        args.NUM_PLANES = len(args.SAMPLE_WP_SET)
+        set = args.SAMPLE_WP_SET
 
-    if defaultValues.CENTRALIZED:
-        communicator.total_uavs = numPlanes
-    elif not defaultValues.CENTRALIZED:
-        communicator.uavsInAir = numPlanes
+    if args.CENTRALIZED:
+        communicator.total_uavs = args.NUM_PLANES
+    else:
+        communicator.uavsInAir = args.NUM_PLANES
 
     # Creates a set number of planes
     i = 0
     for each in set:
-        plane.append(Plane())
-        if defaultValues.USE_SAMPLE_SET:
-            numWayPoints = int(len(defaultValues.SAMPLE_WP_SET[i]) - 2)
-            plane[i].numWayPoints = numWayPoints
+        plane.append(Plane(args))
+        if args.USE_SAMPLE_SET:
+            args.NUM_WAYPOINTS = int(len(args.SAMPLE_WP_SET[i]) - 2)
+            plane[i].numWayPoints = args.NUM_WAYPOINTS
             for elem in each:
                 plane[i].wayPoints.append(elem)
                 plane[i].queue.put(elem)
         else:
 
-            plane[i].numWayPoints = numWayPoints
-            for j in range(0, plane[i].numWayPoints + 2):  # +2 to get initial location and bearing.
+            plane[i].numWayPoints = args.NUM_WAYPOINTS
+            for j in range(0, plane[i].numWayPoints + 2):  # +2 to get initial LOCATION and bearing.
 
-                waypoint = randomLocation(gridSize, 100, location)
+                waypoint = randomLocation(args.GRID_SIZE[0], args.GRID_SIZE[1], args.LOCATION)
                 plane[i].wayPoints.append(waypoint)
                 plane[i].queue.put(waypoint)
 
         waypoints.append(plane[i].wayPoints)
 
-        # get a previous location
+        # get a previous LOCATION
         plane[i].set_cLoc(plane[i].queue.get_nowait())
 
-        # get a current location
+        # get a current LOCATION
         plane[i].sLoc = plane[i].set_cLoc(plane[i].queue.get_nowait())
         plane[i].nextwp()  # and removes it from the queue
         d = standardFuncs.DEGREE
@@ -145,7 +148,7 @@ def generate_planes(numPlanes, numWayPoints, gridSize, communicator, location=de
         plane[i].tdistance = standardFuncs.totalDistance(plane[i].cLoc, plane[i].tLoc)
 
         # If decentralized, run a thread for communication from decentralizedComm
-        if not defaultValues.CENTRALIZED:
+        if not args.CENTRALIZED:
             try:
                 logging.info("Com #%3i generated." % plane[i].id)
                 planeComm = decentralizedComm.communicate(plane[i], communicator)
