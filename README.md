@@ -57,18 +57,6 @@ This file contains the implementation for 3d vector objects to be used in the si
 ### Optional Arguments
 
 ```
-
-usage: launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
-                 [-del] [-g ] [-maxa] [-minr] [-wpd] [-samplewp] [-settings]
-
-3D_CA was developed as part of the undergraduate research experience at Auburn
-University during the Summer 2016 SMART UAV research program. The purpose of
-this program is to provide an easy way to simulatecentralized and
-decentralized collision avoidance in autonomous unmanned aerial vehicles (UAV)
-and to provide an easy to work with modular platform to implement and test
-collision avoidance algorithms.
-
-optional arguments:
   -a , -algorithm       [ ALGORITHM ] choose anti-collision algorithm of
                         'APF', or 'IPN', 'APF' by default
   -c , -centralized     choose to run in centralized mode, True by default
