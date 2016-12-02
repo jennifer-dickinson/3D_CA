@@ -56,7 +56,8 @@ This file contains the implementation for 3d vector objects to be used in the si
 
 ### Optional Arguments
 
-```optional arguments:
+```
+optional arguments:
   -h, --help            show this help message and exit
   -dc , -centralized    choose to run in centralized mode, True by default
   -ca , -collision-avoidance
@@ -95,4 +96,5 @@ This file contains the implementation for 3d vector objects to be used in the si
   -samplewp             use a sample set of 10 planes and 64 waypoints per
                         plane, otherwise random waypoints are generated for
                         assigned number of planes
-  -settings             display current settings```
+  -settings             display current settings
+  ```
