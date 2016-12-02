@@ -2,10 +2,10 @@
 
 The purpose of this program is to provide an easy way to simulate centralized and decentralized collision avoidance in autonomous unmanned aerial vehicles(UAV) and provide an easy to work with modular platform to implement and test collision avoidance algorithms.
 
-## Authors
+## Author
 3D_CA was developed as part of the undergraduate research experience at Auburn University during the Summer 2016 SMART UAV research program.
 
-The script was written by Jennifer Salas with contributions by Patrick Perez and William McKnight.
+The script was written by Jennifer Salas.
 
 ## Running the script
 This script is meant to be as diverse as possible and therefore has no restrictions on the operating system or external library dependencies, although if needed this may change in the future. The current version uses Python 2.6.9. Attempts to upgrade to 3.5 results in slowed performance when running in decentralized mode.
@@ -57,11 +57,7 @@ This file contains the implementation for 3d vector objects to be used in the si
 ### Optional Arguments
 
 ```
-<<<<<<< Updated upstream
-optional arguments:
-  -h, --help            show this help message and exit
-  -dc , -centralized    choose to run in centralized mode, True by default
-=======
+
 usage: launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
                  [-del] [-g ] [-maxa] [-minr] [-wpd] [-samplewp] [-settings]
 
@@ -76,7 +72,7 @@ optional arguments:
   -a , -algorithm       [ ALGORITHM ] choose anti-collision algorithm of
                         'APF', or 'IPN', 'APF' by default
   -c , -centralized     choose to run in centralized mode, True by default
->>>>>>> Stashed changes
+
   -ca , -collision-avoidance
                         [ True | False ] enable collision avoidance
                         algorithms, False by default
@@ -108,13 +104,10 @@ optional arguments:
                         plane, otherwise random waypoints are generated for
                         assigned number of planes
   -settings             display current settings
-<<<<<<< Updated upstream
-  ```
-=======
+
   -w , -waypoints       [ INT ] set number of waypoints, 10 waypoints by
                         default
   -wpd , -waypoint-distance
                         [ INT ] set the number of waypoints assigned to each
                         plane, 2 by default
 ```
->>>>>>> Stashed changes
