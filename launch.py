@@ -8,12 +8,14 @@ import standardFuncs
 
 import argumentsplitter
 
+import sys
+
 
 def main():
 
     args = argumentsplitter.argParser()
 
-    # Start printing information to a log file. This overwrites all previous data!
+    # Print communicator thread logs
     standardFuncs.logger()
 
     logging.info('Started')
@@ -35,6 +37,8 @@ def main():
     print("Simulation complete.")
 
     uav_status(uavList)
+
+    sys.exit(0)
 
 
 def uav_status(plane):

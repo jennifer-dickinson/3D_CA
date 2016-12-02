@@ -1,15 +1,20 @@
-import argparse
-import sys
-import textwrap
-
+from argparse import HelpFormatter, ArgumentParser, SUPPRESS
+from operator import attrgetter
 from defaultValues import *
+import sys
 
 
 def main():
     argParser()
 
 
-class MyParser(argparse.ArgumentParser):
+class SortingHelpFormatter(HelpFormatter):
+    def add_arguments(self, actions):
+        actions = sorted(actions, key=attrgetter('option_strings'))
+        super(SortingHelpFormatter, self).add_arguments(actions)
+
+
+class MyParser(ArgumentParser):
     def error(self, message):
         sys.stderr.write('error: %s\n' % message)
         self.print_help()
@@ -20,20 +25,23 @@ class MyParser(argparse.ArgumentParser):
         args = self.parse_args()
 
         argsList = []
+        maxlist = []
         for arg in vars(args):
-            if arg != 'SAMPLE_WP_SET':
+            if arg != 'SAMPLE_WP_SET' and arg != "DISPLAY":
+                maxlist.append(arg)
                 item = getattr(args, arg)
-                string = arg.replace('_', ' '), str(item)
+                string = arg, str(item)
                 argsList.append(string)
 
+        length = len(max(maxlist)) + 5
         argsList.sort()
 
-        print("SETTINGS")
-        for arg in argsList:
-            print(arg[0].lower().capitalize() + ": " + arg[1])
+        print("SETTINGS".center(length * 2, '='))
 
-    def setSamlple(self):
-        self.SAMPLE_WP_SET = SAMPLE_WP_SET
+        for arg in argsList:
+            print(arg[0].replace('_', ' ').lower().capitalize().ljust(length) + arg[1])
+
+        print()
 
 
 def algorithms():
@@ -55,14 +63,13 @@ algorithms.'''
 
 
 def argParser():
-    parser = MyParser(description=description, formatter_class=argparse.RawDescriptionHelpFormatter, allow_abbrev=False)
+    parser = MyParser(description=description, formatter_class=SortingHelpFormatter, allow_abbrev=False)
 
-    parser.add_argument('-dc', '-centralized', type=bool, default=True, dest='CENTRALIZED', metavar='',
+    parser.add_argument('-c', '-centralized', type=bool, default=CENTRALIZED, dest='CENTRALIZED', metavar='',
                         help='choose to run in centralized mode, %s by default' % CENTRALIZED)
 
     parser.add_argument('-ca', '-collision-avoidance', type=bool, default=COLLISION_AVOIDANCE,
-                        dest='COLLISION_AVOIDANCE',
-                        metavar='',
+                        dest='COLLISION_AVOIDANCE', metavar='',
                         help='[ True | False ] enable collision avoidance algorithms, %s by default' % COLLISION_AVOIDANCE)
 
     parser.add_argument('-a', '-algorithm', default=algorithmChoices[0], dest="ALGORITHM", metavar='',
@@ -122,7 +129,7 @@ def argParser():
                         help='display current settings')
 
     if parser.parse_args().USE_SAMPLE_SET:
-        parser.add_argument('-SAMPLE_WP_SET', default=SAMPLE_WP_SET, help=argparse.SUPPRESS)
+        parser.add_argument('-SAMPLE_WP_SET', default=SAMPLE_WP_SET, help=SUPPRESS)
     if parser.parse_args().DISPLAY:
         parser.displayArgs()
 

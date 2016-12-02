@@ -5,8 +5,8 @@
 # Added constants
 
 import math
-import collections
 import logging
+import time
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary these variables depending on location
@@ -126,5 +126,6 @@ def generateGrid(lon_dist, lat_dist, location):
 
 
 def logger():
-    logging.basicConfig(filename='logs/debug.log', filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
+    name = 'logs/debug %s.log' % time.asctime()
+    logging.basicConfig(filename=name, filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)
