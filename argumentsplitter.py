@@ -1,0 +1,64 @@
+import argparse
+
+from defaultValues import *
+
+
+def main():
+    args = argParser()
+    displayArgs(args)
+
+
+def argParser():
+    parser = argparse.ArgumentParser(description="Simulate unmanned aerial vehicle flights")
+
+    parser.add_argument('-c', '-centralized', type=bool, default=CENTRALIZED, dest='CENTRALIZED', metavar='',
+                        help='[ True | False ] choose to run in decentralized mode, %s by default' % CENTRALIZED)
+
+    parser.add_argument('-ca', '-collision-avoidance', type=bool, default=True, dest='COLLISION_AVOIDANCE', metavar='',
+                        help='[ True | False ] enable collision avoidance algorithms, %s by default' % COLLISION_AVOIDANCE)
+
+    parser.add_argument('-a', '-algorithm', default=algorithmChoices[0], dest="ALGORITHM", metavar='',
+                        choices=algorithmChoices,
+                        help='[ APF ] choose anti-collision algorithm, \'%s\' by default' % algorithmChoices[0])
+
+    parser.add_argument('-cd', '-collision-detectance', type=bool,
+                        default=COLLISION_DETECTANCE, dest='COLLISION_DETECTANCE', metavar='',
+                        help='[ True | False ] UAVs will crash when in close proximity of each other, %s by default' % COLLISION_DETECTANCE)
+
+    parser.add_argument('-s', '-speed', type=float, default=DEFAULT_UAV_SPEED, metavar='', dest="UAV_SPEED",
+                        help='[ FLOAT ] set UAV speed in meters per second, %s m/s by default' % DEFAULT_UAV_SPEED)
+
+    parser.add_argument('-p', '-planes', type=int, default=NUM_PLANES, metavar='', dest="NUM_PLANES",
+                        help='[ INT ] set number of planes, %s planes by default' % NUM_PLANES)
+
+    parser.add_argument('-w', '-waypoints', type=int, default=NUM_WAY_POINTS, metavar='', dest="NUM_WAYPOINTS",
+                        help='[ INT ] set number of waypoints, %s waypoints by default' % NUM_WAY_POINTS)
+
+    parser.add_argument('-l', '-location', type=float, nargs=2, default=OUR_LOCATION, dest='LOCATION',
+                        metavar='',
+                        help='[ LONGITUDE LATITUDE ] select a location to simulate, default is %s, %s'
+                             ' (Auburn University)' % (OUR_LOCATION[0], OUR_LOCATION[1]))
+
+    parser.add_argument('-crd', '-crash-distance', type=float, nargs=1, default=CRASH_DISTANCE, dest="CRASH_DISTANCE", metavar='',
+                        help='[ FLOAT ] set crash distance in meters, %s m by default' % CRASH_DISTANCE)
+
+    args = parser.parse_args()
+
+    parser.add_argument('-conflict-distance', type=float, nargs=1, default=args.UAV_SPEED * 2, dest="CONFLICT_DISTANCE",
+                        metavar='',
+                        help='[ FLOAT ] set conflict distance, default is SPEED * 2')
+
+    parser.add_argument('-delay', type=float, nargs=1, default=0.2, dest="DELAY", metavar='',
+                        help='[ FLOAT ] number of seconds between calculations, default is 0.2 seconds')
+
+    return parser.parse_args()
+
+
+def displayArgs(args):
+    for arg in vars(args):
+        item = getattr(args, arg)
+        print(arg + ":", item)
+
+
+if __name__ == '__main__':
+    main()

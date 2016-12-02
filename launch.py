@@ -6,9 +6,20 @@ import decentralizedComm
 import defaultValues
 import planeGenerator
 import standardFuncs
+import sys
+
+import argumentsplitter
 
 
 def main():
+
+    args = argumentsplitter.argParser()
+    argumentsplitter.displayArgs(args)
+
+    print("Number of arguments: ", len(sys.argv))
+    print("Argument list: ", str(sys.argv))
+
+    # Start printing information to a log file. This overwrites all previous data!
     standardFuncs.logger()
 
     logging.info('Started')
