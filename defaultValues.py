@@ -14,7 +14,7 @@ DELAY = .2  # Number of seconds between calculations
 
 NUM_PLANES = 10  # Number of planes to generate
 NUM_WAY_POINTS = 10  # Number of waypoints to generate
-GRID_SIZE = 20  # Size of grid (meters)
+GRID_SIZE = [100, 100] # Size of grid (meters)
 
 COMM_KILL_TIME = 2  # Time to wait between updates to kill communication (seconds)
 

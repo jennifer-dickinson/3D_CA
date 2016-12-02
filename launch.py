@@ -12,7 +12,6 @@ import argumentsplitter
 def main():
 
     args = argumentsplitter.argParser()
-    argumentsplitter.displayArgs(args)
 
     # Start printing information to a log file. This overwrites all previous data!
     standardFuncs.logger()
@@ -20,15 +19,7 @@ def main():
     logging.info('Started')
 
     print("Simulating UAV flights.... this may take a while.")
-    if not args.CENTRALIZED:
-        print("Running simulation in decentralized mode.")
-    else:
-        print("Running simulation in centralized mode.")
 
-    if not args.COLLISION_DETECTANCE:
-        print("No collision detection set.")
-    else:
-        print("Collision detection set.")
     if not args.CENTRALIZED:
         communicator = decentralizedComm.synchronizer(args.NUM_PLANES)
 
