@@ -151,3 +151,9 @@ class communicate(threading.Thread):
 
         self.synch.msgLock.release()
         self.synch.turn.wait()
+
+    def __del__(self):
+        logging.info("Decentralized communication has stopped.")
+        time.sleep(.01)
+        print("Simulation complete.")
+

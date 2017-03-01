@@ -7,6 +7,8 @@
 import math
 import logging
 import time
+import random
+
 
 ### Note: these are only accurate near the equator
 ## Todo: make a function that vary these variables depending on location
@@ -129,3 +131,12 @@ def logger():
     name = 'logs/debug %s.log' % time.asctime()
     logging.basicConfig(filename=name, filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)
+
+# Calculates random waypoints based on provided grid and adds them to a list and queue
+def randomLocation(lon_dist, lat_dist, location):
+    grid = generateGrid(lon_dist, lat_dist, location)  # Creates a square grid centered about location
+    lat = random.uniform(grid[0][0], grid[0][1])
+    lon = random.uniform(grid[1][0], grid[1][1])
+    alt = random.uniform(375, 400)
+    location = {"Latitude": lat, "Longitude": lon, "Altitude": alt}
+    return location

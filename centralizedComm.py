@@ -208,3 +208,8 @@ class uavComm(threading.Thread):
     # Ends the thread
     def stop(self):
         self.stopped = True
+
+    def __del__(self):
+        logging.info("Centralized communication has stopped.")
+        time.sleep(.01)
+        print("Simulation complete.")
