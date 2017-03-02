@@ -1,3 +1,4 @@
+from math import pi
 CENTRALIZED = True  # True or false
 
 COLLISION_AVOIDANCE = False
@@ -12,7 +13,7 @@ COLLISION_DETECTANCE = True
 DEFAULT_UAV_SPEED = 12  # Default UAV speed in meters per second
 MAX_ELEV_ANGLE = 15  # Maximum angle of elevation in degrees
 MIN_TURN_RAD = 28.64058013  # Minimum turning radius in meters
-ANGULAR_VELOCITY = DEFAULT_UAV_SPEED / (MIN_TURN_RAD * 2 * 3.14)  # Angular Velocity (distance per second)
+ANGULAR_VELOCITY = DEFAULT_UAV_SPEED / (MIN_TURN_RAD * 2 * pi)  # Angular Velocity (distance per second)
 MAX_TURN_ANGLE = ANGULAR_VELOCITY * 360  # Maximum turning angle in degrees per second ( Angular velocity * 1 second)
 
 OUR_LOCATION = [32.606184, -85.488228]  # Default location is coordinates for Auburn University McCartney Terrace

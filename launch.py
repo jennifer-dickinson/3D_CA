@@ -9,6 +9,5 @@ def main():
 
     planeSimulator.PlaneCollection(args)
 
-
 if __name__ == '__main__':
     main()

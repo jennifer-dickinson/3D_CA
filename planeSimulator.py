@@ -14,61 +14,65 @@ class PlaneCollection(list):
     def __init__(self, args):
         super().__init__()
         waypoints = []
-        set = range(args.NUM_PLANES)
+        self.set = args.NUM_PLANES
 
         self.comm = centralizedComm.uavComm(args.NUM_PLANES) if args.CENTRALIZED else decentralizedComm.synchronizer(
             args.NUM_PLANES)
 
-        # if args.USE_SAMPLE_SET:
-        #     args.NUM_PLANES = len(args.SAMPLE_WP_SET)
-        #     set = args.SAMPLE_WP_SET
-
         # Creates a set number of planes
-        for i in range(args.NUM_PLANES):
+        for id in range(args.NUM_PLANES):
 
             self.append(planes.Plane(args))
-            waypoints.append(self[i].wayPoints)
+            waypoints.append(self[id].wayPoints)
 
             # If decentralized, run a thread for communication from decentralizedComm
             if not args.CENTRALIZED:
                 try:
                     # logging.info("Com #%3i generated." % self[i].id)
-                    planeComm = decentralizedComm.communicate(self[i], self.comm)
+                    planeComm = decentralizedComm.communicate(self[id], self.comm)
 
                 except:
-                    logging.fatal("Communicator failed to start for UAV #%3i" % self[i].id)
+                    logging.fatal("Communicator failed to start for UAV #%3i" % id)
                     break
 
             # If centralized, pass plane parameters to centralizedComm
             else:
-                self.comm.startUp(self[i])
+                self.comm.startUp(self[id])
                 planeComm = None
 
             try:
-                self[i].move = threading.Thread(target=self.move, args=(self[i], planeComm),
-                                                name="UAV #%i" % self[i].id)
-                self[i].move.setDaemon(True)
-                logging.info("UAV #%3i plane thread generated: %s" % (self[i].id, self[i].move))
+                self[id].move = threading.Thread(target=self.move, args=(id, planeComm),
+                                                name="UAV #%i" % id)
+                self[id].move.setDaemon(True)
+                logging.info("UAV #%3i plane thread generated: %s" % (id, self[id].move))
             except:
-                logging.fatal("Could not generate UAV #%3i" % self[i].id)
+                logging.fatal("Could not generate UAV #%3i" % id)
 
         # Note: all UAV threads should be started after UAV objects are created to avoid errors in time difference due to random nature of threads.
-        for i in range(len(self)):
-            self[i].move.start()
+        for id in range(len(self)):
+            self[id].move.start()
 
     def __del__(self):
         time.sleep(.01)
         self.uav_status()
 
+        map = []
+
+        for id in range(self.set):
+            map.append(self[id].path)
+
+
+
     def uav_status(self):
         # Print status for each UAV.
-        title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s ' % (
+        title = '\n%-3s  %-40s  %-6s  %-4s  %-5s  %-10s  %-10s' % (
             'ID#',
             'Final Location',
             'Dist.',
             'WPTS',
             'Dead?',
-            'Killed By?'
+            'Killed By?',
+            'Live Time'
         )
         print(title)
         line = ""
@@ -86,63 +90,72 @@ class PlaneCollection(list):
                 self[i].cLoc["Longitude"], standardFuncs.DEGREE,
                 self[i].cLoc["Altitude"],
             )
-            print('%3i  %-40s  %6.1f  %4s  %-5s  %-10s' % (
+
+            time = self[i].distanceTraveled / 12
+
+            minutes = time / 60
+            seconds = time % 60
+
+            actual = "%2i:%02i" % (minutes, seconds)
+
+            print('%3i  %-40s  %6.1f  %4s  %-5s  %-10s  %10s' % (
                 self[i].id,
                 location,
                 self[i].distanceTraveled,
                 self[i].wpAchieved,
                 self[i].dead,
-                killed
+                killed,
+                actual
             ))
 
-    def move(self, plane, planeComm):
+    def move(self, id, planeComm):
         stop = False
 
-        while not stop and not plane.dead:
+        while not stop and not self[id].dead:
 
-            if plane.args.COLLISION_DETECTANCE:
+            if self[id].args.COLLISION_DETECTANCE:
                 # Use decentralized communication and collision detection or default to centralized.
-                # Todo: set both comm methods to save plane map to plane object
-                if not plane.args.CENTRALIZED:
-                    uav_positions = plane.map
+                # Todo: set both comm methods to save map to plane object
+                if not self[id].args.CENTRALIZED:
+                    uav_positions = self[id].map
                 else:
-                    uav_positions = self.comm.receive(plane)
+                    uav_positions = self.comm.receive(self[id])
 
                 for elem in uav_positions:
-                    distance = standardFuncs.totalDistance(plane.cLoc, elem["Location"])
-                    if distance < plane.args.CRASH_DISTANCE and elem["ID"] != plane.id and elem["Dead"] == False:
-                        plane.dead = True
-                        plane.killedBy = elem["ID"]
+                    distance = standardFuncs.totalDistance(self[id].cLoc, elem["Location"])
+                    if distance < self[id].args.CRASH_DISTANCE and elem["ID"] != id and elem["Dead"] == False:
+                        self[id].dead = True
+                        self[id].killedBy = elem["ID"]
                         stop = True
                         break
-                    if elem["killedBy"] == plane.id:
-                        plane.dead = True
-                        plane.killedBy = elem["ID"]
+                    if elem["killedBy"] == id:
+                        self[id].dead = True
+                        self[id].killedBy = elem["ID"]
                         stop = True
                         break
 
             # Check to see if UAV has reached the waypoint or completed mission.
-            if (plane.tdistance < plane.args.WAYPOINT_DISTANCE):
-                plane.wpAchieved += 1
-                if plane.wpAchieved < plane.numWayPoints:
-                    plane.nextwp()
-                logging.info("UAV #%3i reached waypoint #%i." % (plane.id, plane.wpAchieved))
-            if plane.wpAchieved >= plane.numWayPoints:
+            if (self[id].tdistance < self[id].args.WAYPOINT_DISTANCE):
+                self[id].wpAchieved += 1
+                if self[id].wpAchieved < self[id].numWayPoints:
+                    self[id].nextwp()
+                logging.info("UAV #%3i reached waypoint #%i." % (id, self[id].wpAchieved))
+            if self[id].wpAchieved >= self[id].numWayPoints:
                 stop = True
-                logging.info("UAV #%3i reached all waypoints." % plane.id)
-                print("Waypoint achieved")
-
-            straightLine.straightline(plane)
+                logging.info("UAV #%3i reached all waypoints." % id)
+            straightLine.straightline(self[id])
 
             # Broadcast telemetry through decentralized communication
-            if not plane.args.CENTRALIZED:
+            if not self[id].args.CENTRALIZED:
                 try:
                     planeComm.update()
                 except:
-                    logging.fatal("UAV #%3i cannot update to communicator thread: %s" % (plane.id, planeComm))
-                    plane.dead = True
+                    logging.fatal("UAV #%3i cannot update to communicator thread: %s" % (id, planeComm))
+                    self[id].dead = True
 
             # Update telemetry to centralized communication
             else:
-                self.comm.update(plane)
+                self.comm.update(self[id])
+
+            self[id].path.append(self[id].cLoc)
 

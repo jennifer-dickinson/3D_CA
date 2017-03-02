@@ -128,8 +128,8 @@ def argParser():
     parser.add_argument('-samplewp', action='store_true', dest="USE_SAMPLE_SET",
                         help='use a sample set of 10 planes and 64 waypoints per plane, otherwise random waypoints are generated for assigned number of planes')
 
-    parser.add_argument('-settings', action='store_true', dest="DISPLAY",
-                        help='display current settings')
+    parser.add_argument('-settings', type=bool, action='store', dest="DISPLAY", help='display current settings',
+                        default=True)
 
     if parser.parse_args().USE_SAMPLE_SET:
         parser.add_argument('-SAMPLE_WP_SET', default=SAMPLE_WP_SET, help=SUPPRESS)

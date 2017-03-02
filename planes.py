@@ -11,6 +11,7 @@ class Plane:
     startPositions = []
 
     def __init__(self, args):
+
         self.args = args
         self.id = Plane.counter  # Plane ID =)
         Plane.counter += 1
@@ -51,6 +52,7 @@ class Plane:
         self.msgcounter = 0
         self.map = []  # A map of all UAVs
         self.comm = None
+        self.path = []
 
         self.setWaypoints()
         self.setStart()
@@ -129,7 +131,7 @@ class Plane:
         # else:
         #     # Calculate new bearing
 
-        # # print(self.cBearing)
+        # # # print(self.cBearing)
         # self.cBearing = standardFuncs.find_bearing(self.pLoc, self.cLoc)
         # self.cElevation = standardFuncs.elevation_angle(self.pLoc, self.cLoc)
         # print(self.cBearing)
