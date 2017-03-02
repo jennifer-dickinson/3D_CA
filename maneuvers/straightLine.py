@@ -1,32 +1,64 @@
-import logging
-
 import standardFuncs
-import defaultValues
 import vMath
 
 standardFuncs.logger()
 
 
-# TODO: Adapt this to avoidance waypoints
 def straightline(plane):
+    # Simple movement in a straight line with a modified adaptation of dubins path.
+    # Working: UAV bearing and elevation update is working. Dubin's avoidance is working.
 
+    msg = ["WP %2i" % plane.wpAchieved, "MTA: %.2f" % (plane.maxTurnAngle * plane.args.DELAY)]
+    MAX_TURN_ANGLE = plane.maxTurnAngle
 
     if plane.avoid:
-        target = plane.avoidanceWaypoint
-        logging.info("UAV #%3i is performing an avoidance maneuver." % plane.id)
+        if plane.tdistance >= 2 * MAX_TURN_ANGLE:
+            plane.avoid = False
     else:
         target = plane.tLoc
 
-    tBearing = standardFuncs.find_bearing(plane.cLoc, target)
+    deltaBearing = standardFuncs.relativeAngle(plane.cBearing, plane.tBearing)
 
-    plane.cBearing = tBearing
-    plane.cElevation = plane.tElevation
+    msg.append("Current Bearing: %7.2f" % plane.cBearing)
+    msg.append("Target Bearing:  %7.2f" % plane.tBearing)
+    msg.append("Relative Angle to Target: %7.2f" % deltaBearing)
 
-    distanceTraveled = plane.speed * defaultValues.DELAY  # Get frequency of updates.
-    plane.distanceTraveled += distanceTraveled  # The total distance travelled.
+    # if the UAV is
+    if not (((plane.tdistance <= plane.minTurningRadius + plane.args.WAYPOINT_DISTANCE and abs(
+            deltaBearing) >= MAX_TURN_ANGLE)) or plane.avoid):
+
+        if abs(deltaBearing) <= MAX_TURN_ANGLE * plane.args.DELAY:
+            # cBearing = tBearing;
+            plane.cBearing = plane.tBearing
+            msg.append("Turn ok")
+
+        elif 0 < deltaBearing < 180:
+            # print("current bearing - max turning angle = ", cBearing - MAX_TURN_ANGLE)
+            msg.append("Turning right")
+            plane.cBearing = plane.cBearing - (MAX_TURN_ANGLE * plane.args.DELAY)
+
+
+        else:
+            # print("current bearing + max turning angle = ", cBearing + MAX_TURN_ANGLE)
+            msg.append("Turning left")
+            plane.cBearing = plane.cBearing + (MAX_TURN_ANGLE * plane.args.DELAY)
+
+        msg.append("New Bearing: %.2f" % plane.cBearing)
+
+    else:
+        # print("UAV is within it's minimum turning radius and over it's maximum turning angle")
+        plane.avoid = True
+
+    if plane.tElevation > plane.maxElevationAngle:
+        plane.cElevation = plane.maxElevationAngle
+    elif plane.tElevation < -plane.maxElevationAngle:
+        plane.cElevation = -plane.maxElevationAngle
+    else:
+        plane.cElevation = plane.tElevation
 
     # Calculate new position
-    position = vMath.vector(distanceTraveled, plane.cBearing, plane.cElevation)
+    position = vMath.vector(plane.speed * plane.args.DELAY, plane.cBearing, plane.cElevation)
+
 
     new_lat = plane.cLoc["Latitude"] + (position.x / standardFuncs.LATITUDE_TO_METERS)
     new_lon = plane.cLoc["Longitude"] + (position.y / standardFuncs.LONGITUDE_TO_METERS)
@@ -34,22 +66,11 @@ def straightline(plane):
 
     newLoc = {"Latitude": new_lat, "Longitude": new_lon, "Altitude": new_alt}
 
-    # newloc = standardFuncs.loc(new_lat, new_lon, new_alt)
-    # plane.set_cLoc(newloc)
+    # print("Total Distance: ", standardFuncs.totalDistance(newLoc, plane.cLoc))
 
-    plane.set_cLoc(newLoc)
 
-    # Calculate new bearing
-    #print(plane.cLoc)
-    plane.cBearing = standardFuncs.find_bearing(plane.pLoc, plane.cLoc)
-    plane.cElevation = standardFuncs.elevation_angle(plane.pLoc, plane.cLoc)
-
-    # Calculate new elevation
-    plane.tBearing = standardFuncs.find_bearing(newLoc, plane.tLoc)
-    plane.tElevation = standardFuncs.elevation_angle(newLoc, plane.tLoc)
-
-    # haversine's horizontal distance
-    plane.distance = standardFuncs.findDistance(newLoc, plane.tLoc)
-
-    # haversine's horizontal distance w/ vertical distance taken into account
-    plane.tdistance = standardFuncs.totalDistance(newLoc, plane.tLoc)
+    msg.append("Current bearing: %.2f" % plane.cBearing)
+    msg.append("Target bearing: %.2f" % plane.tBearing)
+    msg.append("Target distance: %.2f" % plane.tdistance)
+    plane.updateTelemetry(newLoc)
+    # print(msg)

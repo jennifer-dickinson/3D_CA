@@ -1,29 +1,29 @@
 # This file contains all the information for planes. As of now, it only generates random planes.
-try:
-    # Python 2.7
-    from Queue import Queue
-except:
-    # Python 3.6
-    from queue import Queue
+import queue
+
+import defaultValues
+import standardFuncs
 
 
 # Plane object will eventually have more parameters
 class Plane:
     counter = 0
+    startPositions = []
 
     def __init__(self, args):
         self.args = args
-        Plane.counter += 1
         self.id = Plane.counter  # Plane ID =)
+        Plane.counter += 1
 
         self.speed = args.UAV_SPEED  # UAV airspeed in meters per second, 12 meters per second by default
         self.maxElevationAngle = args.MAX_ELEV_ANGLE  # Maximum climbing angle in degrees
+        self.maxTurnAngle = args.MAX_TURN_ANGLE
         self.minTurningRadius = args.MIN_TURN_RAD  # Minimum turning radius in meters, should be variable depending on speed
         self.maxBankAngle = None
 
-        self.numWayPoints = 0  # Total number of waypoints assigned to plane
+        self.numWayPoints = args.NUM_WAYPOINTS  # Total number of waypoints assigned to plane
         self.wayPoints = []  # Waypoint list
-        self.queue = Queue()  # Waypoint queue
+        self.queue = queue.Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters
@@ -35,7 +35,8 @@ class Plane:
         self.cLoc = None  # Current location
         self.tLoc = None  # Target location. Will be swapped in queue
 
-        self.cBearing = None  # Current bearing (Cartesian)
+        # self.cBearing = None  # Current bearing (Cartesian)
+        self.__cBearing = 0
         self.tBearing = None  # Target bearing  (Cartesian)
         self.cElevation = None  # Current elevation (Cartesian)
         self.tElevation = None  # Target elevation  (Cartesian)
@@ -51,12 +52,103 @@ class Plane:
         self.map = []  # A map of all UAVs
         self.comm = None
 
-    def set_cLoc(self, current_location):  # Set the current location
+        self.setWaypoints()
+        self.setStart()
+
+    @property
+    def cBearing(self):
+        return self.__cBearing
+
+    @cBearing.setter
+    def cBearing(self, value):
+
+        self.__cBearing = value
+        if self.__cBearing > 180:
+            self.__cBearing -= 360
+        elif self.__cBearing < -180:
+            self.__cBearing += 360
+
+    def setWaypoints(self):
+        # Set waypoints to default values or generate waypoints
+        if self.args.USE_SAMPLE_SET:
+            self.wayPoints = defaultValues.SAMPLE_WP_SET[self.id]
+
+        else:
+            self.generateWaypoints()
+
+    def setStart(self):
+        # get a previous LOCATION
+        self.pLoc = self.queue.get()
+
+        # get a current LOCATION
+        self.cLoc = self.queue.get()
+
+        self.nextwp()  # and removes it from the queue
+
+        # Calculate current and target bearing (both set to equal initially)
+        self.tBearing = standardFuncs.find_bearing(self.cLoc, self.tLoc)
+        self.cBearing = self.tBearing
+        # logging.info("Initial bearing set to %.2f" % self.cBearing)
+
+        # Calculate current and target elevation angles (also equal)
+        self.tElevation = standardFuncs.elevation_angle(self.cLoc, self.tLoc)
+        self.cElevation = self.tElevation
+
+        # Calculate the three dimensional and two dimensional distance to target
+        self.tdistance = standardFuncs.findDistance(self.cLoc, self.tLoc)
+
+    def generateWaypoints(self):
+
+        # Make sure the plane starting location is not within crash distance of another plane
+        while (True):
+            location = standardFuncs.randomLocation(self.args.GRID_SIZE[0], self.args.GRID_SIZE[1],
+                                                    self.args.LOCATION)
+            tooclose = [standardFuncs.findDistance(location, startLoc) <= self.args.CONFLICT_DISTANCE for startLoc
+                        in Plane.startPositions]
+
+            if not tooclose:
+                self.wayPoints.append(location)
+                self.queue.put(location)
+                break
+            else:
+                print("generating new starting location", self.args.CONFLICT_DISTANCE)
+
+        for i in range(self.numWayPoints + 1):
+            location = standardFuncs.randomLocation(self.args.GRID_SIZE[0], self.args.GRID_SIZE[1],
+                                                    self.args.LOCATION)
+            self.wayPoints.append(location)
+            self.queue.put(location)
+
+    def updateTelemetry(self, newLoc):
+        # Set the current location
         self.pLoc = self.cLoc  # Move current location to previous location
-        self.cLoc = current_location  # Set new current location
+        self.cLoc = newLoc  # Set new current location
+
+        # if(cBearing):
+        #     self.cBearing = cBearing;
+        # else:
+        #     # Calculate new bearing
+
+        # # print(self.cBearing)
+        # self.cBearing = standardFuncs.find_bearing(self.pLoc, self.cLoc)
+        # self.cElevation = standardFuncs.elevation_angle(self.pLoc, self.cLoc)
+        # print(self.cBearing)
+
+        # Calculate new elevation
+        self.tBearing = standardFuncs.find_bearing(self.pLoc, self.tLoc)
+        self.tElevation = standardFuncs.elevation_angle(self.pLoc, self.tLoc)
+
+        # haversine's horizontal distance
+        self.distance = standardFuncs.findDistance(newLoc, self.tLoc)
+
+        # haversine's horizontal distance w/ vertical distance taken into account
+        self.tdistance = standardFuncs.totalDistance(newLoc, self.tLoc)
+
+        self.distanceTraveled += self.speed * self.args.DELAY
+
 
     def nextwp(self):
-        self.tLoc = self.queue.get_nowait()
+        self.tLoc = self.queue.get()
 
     def threatMap(self, msg):
         """
@@ -80,3 +172,5 @@ class Plane:
     def __del__(self):
         if self.dead:
             print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
+        if self.wpAchieved == self.numWayPoints:
+            print("UAV #", self.id, " achieved all waypoints.")

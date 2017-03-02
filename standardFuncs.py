@@ -47,6 +47,10 @@ def to_cardinal(angle):
         return -999  # should never happen
 
 
+def relativeAngle(baseangle, idealangle):
+    return manipulate_angle(baseangle - idealangle)
+
+
 # Modify the angle so that it remains on the interval [-180,180]
 
 def manipulate_angle(angle):
@@ -81,7 +85,7 @@ def totalDistance(coor1, coor2):
     return distance
 
 
-# Return bearing using Haversine's formula, in degrees
+# Return bearing in cartesian angle using Haversine's formula, in degrees
 def find_bearing(coor1, coor2):
     lat1 = coor1["Latitude"]
     lat2 = coor2["Latitude"]

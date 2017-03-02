@@ -1,7 +1,8 @@
+import sys
 from argparse import HelpFormatter, ArgumentParser, SUPPRESS
 from operator import attrgetter
+
 from defaultValues import *
-import sys
 
 
 def main():
@@ -40,8 +41,6 @@ class MyParser(ArgumentParser):
 
         for arg in argsList:
             print(arg[0].replace('_', ' ').lower().capitalize().ljust(length) + arg[1])
-
-        print()
 
 
 def algorithms():
@@ -116,7 +115,11 @@ def argParser():
 
     parser.add_argument('-minr', '-min-turn-radius', type=float, default=MIN_TURN_RAD, dest="MIN_TURN_RAD",
                         metavar='',
-                        help="[ FLOAT ] set the maximum turning radius in meters, %.2fm by default" % MIN_TURN_RAD)
+                        help="[ FLOAT ] set the minimum turning radius in meters, %.2fm by default" % MIN_TURN_RAD)
+
+    parser.add_argument('-maxr', '-max-turn-radius', type=float, default=MAX_TURN_ANGLE, dest="MAX_TURN_ANGLE",
+                        metavar='',
+                        help="[ FLOAT ] set the maximum turning radius inmeters %.2fm by default" % MAX_TURN_ANGLE)
 
     parser.add_argument('-wpd', '-waypoint-distance', type=int, default=WAYPOINT_DISTANCE, dest='WAYPOINT_DISTANCE',
                         metavar='',

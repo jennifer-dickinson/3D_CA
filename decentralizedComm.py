@@ -7,6 +7,9 @@ import standardFuncs
 
 standardFuncs.logger()
 
+""" Ideally, decentralized communication will leave the avoidance maneuvers to each individual plane.
+This section should be extensively reworked"""
+
 
 # Make a single thread object to listen for telemetry updates.
 class synchronizer(threading.Thread):

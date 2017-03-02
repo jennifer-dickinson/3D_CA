@@ -7,6 +7,9 @@ import standardFuncs
 
 standardFuncs.logger()
 
+""" Ideally, centralizedCommunication.py will be handling all the avoidance maneuvers.
+This will have to be reworked"""
+
 
 class uavComm(threading.Thread):
     def __init__(self, NUM_PLANES):
@@ -98,6 +101,7 @@ class uavComm(threading.Thread):
         # Reset timeout timer.
         self.updateTime = time.time()
 
+        dict = {}
         # Access positions list
         for i in self.positions:
             if i["ID"] == plane.id:
