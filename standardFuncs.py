@@ -4,14 +4,13 @@
 # Dropped new waypoint calculator
 # Added constants
 
-import math
 import logging
-import time
+import math
 import random
+import time
 
-
-### Note: these are only accurate near the equator
-## Todo: make a function that vary these variables depending on location
+# Note: these are only accurate near the equator
+# Todo: make a function that vary these variables depending on location
 LATITUDE_TO_METERS = 110574.61  # Meters per latitude degree
 LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
 
@@ -111,9 +110,6 @@ def find_sign(number):
     return 0
 
 
-# loc = collections.namedtuple('coordinate', 'latitude longitude altitude')
-
-
 # Generate a latitude, longitude grid according to the size of the airspace.
 # Maximum range for xbee telemetry module is 2 miles (Approx. 3218 meters)
 def generateGrid(lon_dist, lat_dist, location):
@@ -131,6 +127,7 @@ def logger():
     name = 'logs/debug %s.log' % time.asctime()
     logging.basicConfig(filename=name, filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)
+
 
 # Calculates random waypoints based on provided grid and adds them to a list and queue
 def randomLocation(lon_dist, lat_dist, location):

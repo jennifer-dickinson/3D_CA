@@ -9,7 +9,7 @@ standardFuncs.logger()
 
 
 class uavComm(threading.Thread):
-    def __init__(self):
+    def __init__(self, NUM_PLANES):
         # A single thread will be generated for all UAVs to communicate
         threading.Thread.__init__(self)
 
@@ -25,7 +25,7 @@ class uavComm(threading.Thread):
         self.counter = 0
 
         # Total number of UAVs that are still in the air
-        self.total_uavs = defaultValues.NUM_PLANES
+        self.total_uavs = NUM_PLANES
         self.steps_counter = 0
 
         # How many UAVs have crashed during in a single moment
@@ -71,12 +71,10 @@ class uavComm(threading.Thread):
         # Record the status of an existing UAV when the communicator starts
         dict = {"ID": plane.id,
                 "Location": plane.cLoc,
-                "bear": plane.cBearing,
-                "elev": plane.cElevation,
                 "Dead": plane.dead,
                 "killedBy": None,
-                "wpts": 0,
-                "tdis": 0
+                # "wpts": 0,
+                # "tdis": 0
                 }
 
         # Add the status to the list of positions
@@ -91,7 +89,7 @@ class uavComm(threading.Thread):
 
         plane.msgcounter += 1
 
-        logging.info ("UAV #%3i sending message #%i" %( plane.id, plane.msgcounter))
+        logging.info("UAV #%3i sending message #%i" % (plane.id, plane.msgcounter))
 
         self.lock.acquire()
 
@@ -117,20 +115,13 @@ class uavComm(threading.Thread):
 
             logging.info('UAV #%3i updated position' % plane.id)
 
-            # Update waypoints achieved
-            if dict["wpts"] < plane.wpAchieved:
-                dict["wpts"] = plane.wpAchieved
-
-                # Display message if waypoint achieved
-                logging.info('UAV #%3i reached waypoint #%3i.' % (dict["ID"], dict["wpts"]))
-
         # If UAV is crashed, update status in telemetry and object
         elif plane.dead or dict["Dead"]:
 
             self.turn_kill_counter += 1
             logging.info('UAV #%3i added to deaths by 1 (%i total).' % (plane.id, self.turn_kill_counter))
 
-            if plane.dead and not dict["Dead"]:
+            if plane.dead:
                 dict["Dead"] = plane.dead
                 dict["killedBy"] = plane.killedBy
 
@@ -145,7 +136,7 @@ class uavComm(threading.Thread):
                         break
 
             # If plane is dead in telemetry, update plane status
-            elif not plane.dead and dict["Dead"]:
+            elif dict["Dead"]:
                 plane.dead = dict["Dead"]
                 plane.killedBy = dict["killedBy"]
                 logging.info('UAV #%3i found out it was crashed.' % plane.id)
