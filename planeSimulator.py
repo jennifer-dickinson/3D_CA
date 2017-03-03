@@ -28,9 +28,9 @@ from maneuvers import straightLine
 # Automatically generate planeObjects and wayPoints
 class PlaneCollection(list):
     def __init__(self, args):
-        self.grid = standardFuncs.generateGrid(args.GRID_SIZE[0], args.GRID_SIZE[1], args.LOCATION)
         super().__init__()
-        waypoints = []
+
+        self.grid = standardFuncs.generateGrid(args.GRID_SIZE[0], args.GRID_SIZE[1], args.LOCATION)
         self.set = args.NUM_PLANES
 
         self.comm = centralizedComm.uavComm(args.NUM_PLANES) if args.CENTRALIZED else decentralizedComm.synchronizer(
@@ -40,8 +40,6 @@ class PlaneCollection(list):
         for id in range(args.NUM_PLANES):
 
             self.append(planes.Plane(args))
-            waypoints.append(self[id].wayPoints)
-
             # If decentralized, run a thread for communication from decentralizedComm
             if not args.CENTRALIZED:
                 try:

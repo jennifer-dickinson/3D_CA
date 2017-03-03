@@ -50,13 +50,15 @@ class MyParser(ArgumentParser):
                 string = arg, str(item)
                 argsList.append(string)
 
-        length = len(max(maxlist)) + 5
+        length = 30
         argsList.sort()
 
         print("SETTINGS".center(length * 2, '='))
 
         for arg in argsList:
-            print(arg[0].replace('_', ' ').lower().capitalize().ljust(length) + arg[1])
+            print(arg[0].replace('_', ' ').lower().title().ljust(length) + arg[1])
+
+        print("")
 
 
 def algorithms():

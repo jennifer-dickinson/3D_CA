@@ -15,6 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import logging
+import sys
 import threading
 import time
 
@@ -67,9 +68,17 @@ class uavComm(threading.Thread):
 
     def run(self):
         logging.info('Communicator initialized: %s' % self)
-        while not self.stopped:
+        i = 0;
+        sys.stdout.flush()
 
+        while not self.stopped:
             time.sleep(defaultValues.DELAY)
+
+            i += 1
+            sys.stdout.write('\r' + '=' * i + ' ' * (60 - i))
+            sys.stdout.flush()
+            if i == 60:
+                i = 0
 
             # If no UAVs in air, end communicator thread.
             if self.total_uavs == 0:
@@ -83,6 +92,7 @@ class uavComm(threading.Thread):
                 logging.error('UAVs still in air: %.f' % self.total_uavs)
                 self.stopped = True
                 break
+        print()
         logging.info("Time elapsed: %f" % (time.time() - self.startTime))
         logging.info('Communicator terminated.')
 

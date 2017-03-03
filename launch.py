@@ -15,9 +15,17 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import random
+import sys
 
 import argumentsplitter
 import planeSimulator
+
+
+def exceptionHandler(exception_type, exception, traceback):
+    print("%s: %s\n" % (exception_type.__name__, exception))
+
+
+sys.excepthook = exceptionHandler
 
 
 def main():
@@ -26,17 +34,15 @@ def main():
     if args.seed:
         seed = args.seed
     else:
-        seed = random.random()
+        seed = int(random.random() * 10 ** 5)
 
     random.seed(seed)
 
-    print("Simulating UAV flights using seed %f.... this may take a while." % seed)
+    print("Simulating UAV flights using seed %i.... this may take a while.\n" % seed)
 
     object = planeSimulator.PlaneCollection(args)
-    # try:
-
     # Not sure why, this is the only way to make sure the deconstructor is called for PlaneCollection class
-    raise AttributeError
+    raise AttributeError("manually raised for PlaneCollection deconstructor")
 
 
 if __name__ == '__main__':
