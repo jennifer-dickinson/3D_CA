@@ -1,6 +1,5 @@
 import logging
 import threading
-import time
 
 import centralizedComm
 import decentralizedComm
@@ -12,6 +11,7 @@ from maneuvers import straightLine
 # Automatically generate planeObjects and wayPoints
 class PlaneCollection(list):
     def __init__(self, args):
+        self.grid = standardFuncs.generateGrid(args.GRID_SIZE[0], args.GRID_SIZE[1], args.LOCATION)
         super().__init__()
         waypoints = []
         self.set = args.NUM_PLANES
@@ -42,7 +42,7 @@ class PlaneCollection(list):
 
             try:
                 self[id].move = threading.Thread(target=self.move, args=(id, planeComm),
-                                                name="UAV #%i" % id)
+                                                 name="UAV #%i" % id)
                 self[id].move.setDaemon(True)
                 logging.info("UAV #%3i plane thread generated: %s" % (id, self[id].move))
             except:
@@ -53,15 +53,14 @@ class PlaneCollection(list):
             self[id].move.start()
 
     def __del__(self):
-        time.sleep(.01)
-        self.uav_status()
+        self.report()
 
+    def report(self):
         map = []
-
         for id in range(self.set):
             map.append(self[id].path)
-
-
+        self.uav_status()
+        print(map)
 
     def uav_status(self):
         # Print status for each UAV.
@@ -135,8 +134,10 @@ class PlaneCollection(list):
                         break
 
             # Check to see if UAV has reached the waypoint or completed mission.
+            wpflag = False
             if (self[id].tdistance < self[id].args.WAYPOINT_DISTANCE):
                 self[id].wpAchieved += 1
+                wpflag = True
                 if self[id].wpAchieved < self[id].numWayPoints:
                     self[id].nextwp()
                 logging.info("UAV #%3i reached waypoint #%i." % (id, self[id].wpAchieved))
@@ -157,5 +158,6 @@ class PlaneCollection(list):
             else:
                 self.comm.update(self[id])
 
-            self[id].path.append(self[id].cLoc)
-
+            upLoc = self[id].cLoc
+            upLoc['wpflag'] = wpflag
+            self[id].path.append(upLoc)

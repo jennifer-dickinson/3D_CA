@@ -43,6 +43,8 @@ class synchronizer(threading.Thread):
 
         self.start()
 
+        return self
+
     # Keep track of how many threads have updated location and notify all threads if all have completed one cycle.
     def run(self):
         logging.info("Global communicator initiated: %s" % self)
