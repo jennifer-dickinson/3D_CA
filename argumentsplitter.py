@@ -131,6 +131,9 @@ def argParser():
     parser.add_argument('-settings', type=bool, action='store', dest="DISPLAY", help='display current settings',
                         default=True)
 
+    parser.add_argument('-seed', type=float, action='store', dest="seed",
+                        help="Provide a seed to test previous results.")
+
     if parser.parse_args().USE_SAMPLE_SET:
         parser.add_argument('-SAMPLE_WP_SET', default=SAMPLE_WP_SET, help=SUPPRESS)
     if parser.parse_args().DISPLAY:

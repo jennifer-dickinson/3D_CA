@@ -172,7 +172,8 @@ class Plane:
         """should move in a straight line to target destination and make necessary adjustments to turning"""
 
     def __del__(self):
-        if self.dead:
-            print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
-        if self.wpAchieved == self.numWayPoints:
-            print("UAV #", self.id, " achieved all waypoints.")
+        # if self.dead:
+        #     print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
+        # if self.wpAchieved == self.numWayPoints:
+        #     print("UAV #", self.id, " achieved all waypoints.")
+        pass

@@ -28,16 +28,23 @@ def write(planes):
     writer = FFMpegWriter(fps=15, metadata=metadata)
 
     fig = plt.figure()
+    ax = plt.axes(xlim=(lLat, uLat), ylim=(lLon, uLon))
+
+    center, = plt.plot([uLat - lLat], [uLon - lLon], '+', mew=10, ms=20)
+
     l, = plt.plot([], [], 'ro')
 
-    plt.xlim(lLat, uLat)
-    plt.ylim(lLon, uLon)
+    # plt.axis('equal')
+    plt.xticks([lLat, uLat], ["West\n0m", "East\n%im" % int((uLat - lLat) * standardFuncs.LATITUDE_TO_METERS)])
+    plt.yticks([lLon, uLon], ["South\n0m", "North\n%im" % int((uLon - lLon) * standardFuncs.LONGITUDE_TO_METERS)],
+               rotation=90)
+    plt.xlabel("Three Dimensional Collision Avoidance")
+    # plt.ylabel()
 
-    plt.xlabel("Latitude")
-    plt.ylabel("Longitude")
+    fig.subplots_adjust(bottom=.15)
 
     x0, y0 = 0, 0
-    with writer.saving(fig, "writer_test.mp4", 50):
+    with writer.saving(fig, "writer_test.mp4", 100):
         for i in range(maxlength):
             x0 = []
             y0 = []

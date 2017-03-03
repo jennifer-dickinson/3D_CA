@@ -5,6 +5,7 @@ import centralizedComm
 import decentralizedComm
 import planes
 import standardFuncs
+from animation import write as video
 from maneuvers import straightLine
 
 
@@ -52,6 +53,11 @@ class PlaneCollection(list):
         for id in range(len(self)):
             self[id].move.start()
 
+        self.PlaneCollection()
+
+    def PlaneCollection(self):
+        return self
+
     def __del__(self):
         self.report()
 
@@ -60,7 +66,7 @@ class PlaneCollection(list):
         for id in range(self.set):
             map.append(self[id].path)
         self.uav_status()
-        print(map)
+        video(map)
 
     def uav_status(self):
         # Print status for each UAV.

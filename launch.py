@@ -1,3 +1,5 @@
+import random
+
 import argumentsplitter
 import planeSimulator
 
@@ -5,9 +7,21 @@ import planeSimulator
 def main():
     args = argumentsplitter.argParser()
 
-    print("Simulating UAV flights.... this may take a while.")
+    if args.seed:
+        seed = args.seed
+    else:
+        seed = random.random()
 
-    planeSimulator.PlaneCollection(args)
+    random.seed(seed)
+
+    print("Simulating UAV flights using seed %f.... this may take a while." % seed)
+
+    object = planeSimulator.PlaneCollection(args)
+    # try:
+
+    # Not sure why, this is the only way to make sure the deconstructor is called for PlaneCollection class
+    raise AttributeError
+
 
 if __name__ == '__main__':
     main()
