@@ -28,16 +28,23 @@ The script was written by Jennifer Salas.
 Email:[jennysalas@me.com](mailto:jennysalas@me.com)
 
 ## Running the script
-This script is meant to be as diverse as possible and therefore has no restrictions on the operating system or external library dependencies, although if needed this may change in the future. The current version uses Python 2.6.9. Attempts to upgrade to 3.5 results in slowed performance when running in decentralized mode.
 
-To run, simply clone the repository and the run the launch.py file at root of the folder.
+To run, simply clone the repository and the run the ``` launch.py ``` file at root of the folder. For more information on commandline paramaters run ``` launch.py -h ``` or view the usage section at the bottom of ```README.md```.
 
+
+### Dependencies
+```
+- Python 3.6.0
+- Matplotlib 2.0.0
+- FFMPEG 3.2.4
+
+```
 ## File Overview
 
 ### Centralized Communication : centralizedComm.py
 This file includes the methods for creating a centralized plane communication synchronizer. In centralized communication a single synchronizer will keep track of the telemetry of all plane objects and perform all collision avoidance tasks.
 
-### decentralizedComm : decentralizedComm.py
+### Decentralized Communication : decentralizedComm.py
 This file includes the methods for creating a decentralized plane communication synchronizer. In decentralized communication every individual plane will maintain their own map of other plane objects and perform all collision avoidance tasks for themselves.
 
 ### Default Values: defaultValues.py
@@ -54,6 +61,9 @@ This file contains the class definition of plane and functions to build plane ob
 
 ### Common functions: standardFuncs.py
 This file holds functions used to setup the plane simulation environment, angle conversion functions, and telemetry retrieval.
+
+### Video Output: animation.py
+This file contains the method to export the simulated mission into video format. It currently represents the data in 2d format.
 
 #### Communication Modules
 
@@ -75,20 +85,13 @@ A simple directory that keeps holds log copies of previous simulations. Named by
 ### Maneuvers
 A directory of non-collision-avoidance algorithms.
 
-## Optional Arguments
-
+## Usage
 ```
-usage: launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
+launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
                  [-del] [-g ] [-maxa] [-minr] [-maxr] [-wpd] [-samplewp]
                  [-settings DISPLAY] [-seed SEED]
-
-3D_CA was developed as part of the undergraduate research experience at Auburn
-University during the Summer 2016 SMART UAV research program. The purpose of
-this program is to provide an easy way to simulatecentralized and
-decentralized collision avoidance in autonomous unmanned aerial vehicles (UAV)
-and to provide an easy to work with modular platform to implement and test
-collision avoidance algorithms.
-
+```
+```
 optional arguments:
   -a , -algorithm       [ ALGORITHM ] choose anti-collision algorithm of
                         'APF', or 'IPN', 'APF' by default
@@ -105,8 +108,8 @@ optional arguments:
                         [ FLOAT ] set crash distance in meters, 2.00m by
                         default
   -del , -delay         [ FLOAT ] number of seconds between calculations,
-                        0.20s by default
-  -g  , -grid           [ INT INT ] size of grid in meters, 500mx500m by
+                        0.10s by default
+  -g  , -grid           [ INT INT ] size of grid in meters, 100mx100m by
                         default
   -h, --help            show this help message and exit
   -l  , -location       [ LONGITUDE LATITUDE ] select a location to simulate,
@@ -126,13 +129,11 @@ optional arguments:
   -samplewp             use a sample set of 10 planes and 64 waypoints per
                         plane, otherwise random waypoints are generated for
                         assigned number of planes
-  -seed SEED            Provide a seed to test previous results.
-  -settings DISPLAY     [ TRUE | FALSE ] display current settings, true by 
-                        default
+  -seed SEED            [INT] Provide a seed to test previous results.
+  -settings DISPLAY     display current settings
   -w , -waypoints       [ INT ] set number of waypoints, 10 waypoints by
                         default
   -wpd , -waypoint-distance 
-                        [ INT ] set the number of waypoints assigned to each
-                        plane, 2 by default
-
+                        [ INT ] the distance required to "reach" a waypoint,
+                         2 meters by default
 ```

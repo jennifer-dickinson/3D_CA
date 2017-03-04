@@ -67,9 +67,10 @@ class uavComm(threading.Thread):
             logging.error('Read state not set.')
 
     def run(self):
+        sys.stdout.flush()
+
         logging.info('Communicator initialized: %s' % self)
         i = 0;
-        sys.stdout.flush()
 
         while not self.stopped:
             time.sleep(defaultValues.DELAY)

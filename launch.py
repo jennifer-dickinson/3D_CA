@@ -21,12 +21,14 @@ import argumentsplitter
 import planeSimulator
 
 
+# import threading
+
+
 def exceptionHandler(exception_type, exception, traceback):
     print("%s: %s\n" % (exception_type.__name__, exception))
 
 
 sys.excepthook = exceptionHandler
-
 
 def main():
     args = argumentsplitter.argParser()
@@ -36,11 +38,16 @@ def main():
     else:
         seed = int(random.random() * 10 ** 5)
 
-    random.seed(seed)
+    # random.seed(seed)
 
     print("Simulating UAV flights using seed %i.... this may take a while.\n" % seed)
 
+    # lock = threading.RLock()
+
     object = planeSimulator.PlaneCollection(args)
+
+    # lock.acquire()
+
     # Not sure why, this is the only way to make sure the deconstructor is called for PlaneCollection class
     raise AttributeError("manually raised for PlaneCollection deconstructor")
 

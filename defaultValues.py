@@ -14,6 +14,10 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
+
+# List of all default values used by the program. They may be changed here or in the commandline arguments.
+# All distance is in meters, angles are in degrees, time is in seconds.
+#
 from math import pi
 CENTRALIZED = True  # True or false
 
@@ -26,25 +30,25 @@ algorithmChoices = ['APF', 'IPN']
 COLLISION_DETECTANCE = True
 # If set to true, planes that reach a certain distance between other will be considered crashed.
 
-DEFAULT_UAV_SPEED = 12  # Default UAV speed in meters per second
-MAX_ELEV_ANGLE = 15  # Maximum angle of elevation in degrees
+DEFAULT_UAV_SPEED = 12.0  # Default UAV speed in meters per second
+MAX_ELEV_ANGLE = 15.0  # Maximum angle of elevation in degrees
 MIN_TURN_RAD = 28.64058013  # Minimum turning radius in meters
-ANGULAR_VELOCITY = DEFAULT_UAV_SPEED / (MIN_TURN_RAD * 2 * pi)  # Angular Velocity (distance per second)
-MAX_TURN_ANGLE = ANGULAR_VELOCITY * 360  # Maximum turning angle in degrees per second ( Angular velocity * 1 second)
+ANGULAR_VELOCITY = DEFAULT_UAV_SPEED / (MIN_TURN_RAD * 2.0 * pi)  # Angular Velocity (distance per second)
+MAX_TURN_ANGLE = ANGULAR_VELOCITY * 360.0  # Maximum turning angle in degrees per second ( Angular velocity * 1 second)
 
-OUR_LOCATION = [32.606184, -85.488228]  # Default location is coordinates for Auburn University McCartney Terrace
+OUR_LOCATION = [32.606184, -85.488228]  # Default location is coordinates  for Auburn University McCartney Terrace
 
-DELAY = .2  # Number of seconds between calculations
+DELAY = .1  # Number of seconds between calculations
 
 NUM_PLANES = 10  # Number of planes to generate
 NUM_WAY_POINTS = 10  # Number of waypoints to generate
 GRID_SIZE = [100, 100]  # Size of grid (meters)
 
-COMM_KILL_TIME = 2  # Time to wait between updates to kill communication (seconds)
+COMM_KILL_TIME = 2.0  # Time to wait between updates to kill communication (seconds)
 
-CRASH_DISTANCE = 2  # Distance to be considered a crash (meters)
-CONFLICT_DISTANCE = DEFAULT_UAV_SPEED * 2  # Distance to be considered a conflict (meters)
-WAYPOINT_DISTANCE = 2  # Maximum distance to consider a waypoint reached (meters)
+CRASH_DISTANCE = 2.0  # Distance to be considered a crash (meters)
+CONFLICT_DISTANCE = DEFAULT_UAV_SPEED * 2.0  # Distance to be considered a conflict (meters)
+WAYPOINT_DISTANCE = 2.0  # Maximum distance to consider a waypoint reached (meters)
 
 """
 The list below contains a total of 10 lists which represent UAVs, with 66 dictionaries each which represent waypoints.

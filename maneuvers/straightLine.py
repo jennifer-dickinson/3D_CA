@@ -27,29 +27,27 @@ def straightline(plane):
     MAX_TURN_ANGLE = plane.maxTurnAngle
 
     if plane.avoid:
-        if plane.tdistance >= 2 * MAX_TURN_ANGLE:
+        if plane.tdistance > plane.minTurningRadius * 2:
             plane.avoid = False
-    else:
-        target = plane.tLoc
 
     deltaBearing = standardFuncs.relativeAngle(plane.cBearing, plane.tBearing)
 
     # if the UAV is
     if not (((plane.tdistance <= plane.minTurningRadius + plane.args.WAYPOINT_DISTANCE and abs(
-            deltaBearing) >= MAX_TURN_ANGLE)) or plane.avoid):
+            deltaBearing) > plane.maxTurnAngle)) or plane.avoid):
 
-        if abs(deltaBearing) <= MAX_TURN_ANGLE * plane.args.DELAY:
+        if abs(deltaBearing) <= plane.maxTurnAngle * plane.args.DELAY:
             # cBearing = tBearing;
             plane.cBearing = plane.tBearing
 
         elif 0 < deltaBearing < 180:
             # print("current bearing - max turning angle = ", cBearing - MAX_TURN_ANGLE)
-            plane.cBearing = plane.cBearing - (MAX_TURN_ANGLE * plane.args.DELAY)
+            plane.cBearing = plane.cBearing - (plane.maxElevationAngle * plane.args.DELAY)
 
 
         else:
             # print("current bearing + max turning angle = ", cBearing + MAX_TURN_ANGLE)
-            plane.cBearing = plane.cBearing + (MAX_TURN_ANGLE * plane.args.DELAY)
+            plane.cBearing = plane.cBearing + (plane.maxTurnAngle * plane.args.DELAY)
 
     else:
         # print("UAV is within it's minimum turning radius and over it's maximum turning angle")

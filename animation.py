@@ -59,12 +59,14 @@ def write(planes):
 
     print("")
     with writer.saving(fig, "writer_test.mp4", 100):
-        for i in range(maxlength):
+        for i in range(maxlength + 1):
             x0 = []
             y0 = []
             for plane in planes:
                 if i >= len(plane):
                     point = plane[-1]
+                    if point['wpflag']:
+                        continue
                 else:
                     point = plane[i]
 
@@ -74,10 +76,9 @@ def write(planes):
             n.set_data(x0, y0)
             writer.grab_frame()
 
-            message = "Generating video... %2.2f%%" % ((i + 1) / maxlength * 100)
+            message = "Generating video... %2.2f%%" % (i / maxlength * 100)
             sys.stdout.write('\r' + str(message) + ' ' * 20)
             sys.stdout.flush()  # important
-
     print("")
 
 

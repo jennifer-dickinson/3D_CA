@@ -139,9 +139,9 @@ def argParser():
                         metavar='',
                         help="[ FLOAT ] set the maximum turning radius inmeters %.2fm by default" % MAX_TURN_ANGLE)
 
-    parser.add_argument('-wpd', '-waypoint-distance', type=int, default=WAYPOINT_DISTANCE, dest='WAYPOINT_DISTANCE',
+    parser.add_argument('-wpd', '-waypoint-distance', type=float, default=WAYPOINT_DISTANCE, dest='WAYPOINT_DISTANCE',
                         metavar='',
-                        help='[ INT ] set the number of waypoints assigned to each plane, %i by default' % WAYPOINT_DISTANCE)
+                        help='[ FLOAT ] set the required distance from a waypoint to consider it reached %.2f by default.' % WAYPOINT_DISTANCE)
 
     parser.add_argument('-samplewp', action='store_true', dest="USE_SAMPLE_SET",
                         help='use a sample set of 10 planes and 64 waypoints per plane, otherwise random waypoints are generated for assigned number of planes')
