@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2017  Jennifer Salas
+    Copyright (C) 2018  Jennifer Salas
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -69,6 +69,8 @@ class Plane:
 
         self.setWaypoints()
         self.setStart()
+
+        self.wpflag = True
 
     @property
     def cBearing(self):
@@ -167,17 +169,6 @@ class Plane:
                 return True
         self.map.append(msg)
 
-    # def simpleMove(self):
-    #
-    #     """should move in a straight line to target destination and make necessary adjustments to turning"""
-    #
-    # def __del__(self):
-    #     if self.dead:
-    #         print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
-    #     if self.wpAchieved == self.numWayPoints:
-    #         print("UAV #", self.id, " achieved all waypoints.")
-    #     pass
-
     def telemetry(self):
         telem = dict()
         telem["Location"] = self.cLoc
@@ -189,3 +180,9 @@ class Plane:
         telem["Dead"] = self.dead
         telem["wpflag"] = False
         return telem
+
+    def updatePath(self):
+        self.path.append(self.cLoc)
+        self.path[-1]["bearing"] = self.cBearing
+        self.path[-1]["dead"] = self.dead
+        self.path[-1]["wpflag"] = self.wpflag

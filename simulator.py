@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2017  Jennifer Salas
+    Copyright (C) 2018  Jennifer Salas
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -21,7 +21,7 @@ from queue import Queue
 
 from planes import Plane
 from standardFuncs import *
-from animation import write as video
+from animation import showPaths as video
 from maneuvers.straightLine import straightline
 
 class PlaneCollection(Queue):
@@ -36,6 +36,7 @@ class PlaneCollection(Queue):
         for id in range(args.NUM_PLANES):
             newplane = Plane(id, args)
             self.map.append(newplane.telemetry())
+            assert(self.map[-1] != None)
             self.put(newplane)
 
         self.run()
@@ -47,35 +48,58 @@ class PlaneCollection(Queue):
         i = 0
 
         while not self.empty():
-            plane = self.get()
 
             i += 1
             sys.stdout.write('\r' + '=' * i + ' ' * (60 - i))
             sys.stdout.flush()
             if i == 60: i = 0
 
-            self.map[plane.id] = plane.telemetry()
+            plane = self.get()
+
+            plane.updatePath()
+
+
 
             # Check if we are simulating collisions
             if self.args.COLLISION_DETECTANCE:
 
-                for uav in self.map:
-                    crashing = totalDistance(plane.cLoc, uav["Location"]) <= self.args.CRASH_DISTANCE
-                    withself = uav["ID"] != plane.id
-                    dead = uav["Dead"] == False
-                    crashed = uav["killedBy"] == plane.id
+                if self.map[plane.id]["Dead"]:
+                    plane.killedBy = self.map[plane.id]["killedBy"]
+                    plane.dead = True
 
-                    # check if it's crashing with another plane or another plane has already crashed with it
+                    plane.updatePath()
+
+                    sys.stdout.write('\r' + 'UAV #%3i crashed with #%3i\n' % (plane.id, plane.killedBy))
+                    self.complete.put(plane)
+                    continue
+
+                for uav in self.map[plane.id + 1:]:
+
+                    crashing = totalDistance(plane.cLoc, uav["Location"]) <= self.args.CRASH_DISTANCE
+                    withself = uav["ID"] == plane.id
+                    dead = uav["Dead"]
+                    crashed = uav["killedBy"] == plane.id
                     if (crashing and not withself and not dead) or crashed:
+
+                        # self.map[uav["ID"]]["Dead"] = True
+                        self.map[uav["ID"]]["killedBy"] = plane.id
+                        self.map[uav["ID"]]["Dead"] = True
+
+                        self.map[plane.id]["killedBy"] = plane.killedBy
+                        self.map[plane.id]["Dead"] = True
+
                         plane.dead = True
                         plane.killedBy = uav["ID"]
-                        self.complete.put(plane)
-                        sys.stdout.write('\r' + 'UAV #%3i crashed\n' % plane.id)
+
+                        plane.updatePath()
+
+                        sys.stdout.write('\r' + 'UAV #%3i crashed with #%3i\n' % (plane.id, uav["ID"]))
                         sys.stdout.flush()
-                        continue
 
                     # Yay, the plane didn't crash
-
+                if plane.dead:
+                    self.complete.put(plane)
+                    continue
             # check if this plane has reached a waypoint
             wpflag = False
             if plane.tdistance < self.args.WAYPOINT_DISTANCE:
@@ -83,6 +107,7 @@ class PlaneCollection(Queue):
                 sys.stdout.flush()
                 plane.wpAchieved += 1
                 wpflag = True
+                plane.wpflag = True
 
                 if plane.waypoints.empty():
                     sys.stdout.write('\r' + ("UAV #%3i reached all waypoints.\n" % plane.id))
@@ -91,13 +116,14 @@ class PlaneCollection(Queue):
                     continue
                 else:
                     plane.nextwp()
+            else:
+                plane.wpflag = False
 
             straightline(plane)
 
             assert(self.map[plane.id] != plane.telemetry())
 
-            plane.path.append(plane.cLoc)
-            plane.path[-1]["wpflag"] = wpflag
+            self.map[plane.id] = plane.telemetry()
             self.put(plane)
 
         print("Completed simulation")

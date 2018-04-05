@@ -3,7 +3,7 @@
 The purpose of this program is to provide an easy way to simulate collision avoidance in autonomous unmanned aerial vehicles(UAV) and provide an easy to work with modular platform to implement and test collision avoidance algorithms.
 
 ```
-    Copyright (C) 2017  Jennifer Salas
+    Copyright (C) 2018  Jennifer Salas
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -36,7 +36,7 @@ To run, simply clone the repository and the run the ``` launch.py ``` file at ro
 ```
 - Python 3.6.0
 - Matplotlib 2.0.0
-- FFMPEG 3.2.4
+- ~~FFMPEG 3.2.4~~ May possibly be added again
 
 ```
 ## File Overview
@@ -83,15 +83,15 @@ launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
 optional arguments:
   -a , -algorithm       [ ALGORITHM ] choose anti-collision algorithm of
                         'APF', or 'IPN', 'APF' by default
-  -ca , -collision-avoidance 
+  -ca , -collision-avoidance
                         [ True | False ] enable collision avoidance
                         algorithms, False by default
-  -cd , -collision-detectance 
+  -cd , -collision-detectance
                         [ True | False ] UAVs will crash when in close
                         proximity of each other, True by default
-  -cfd , -conflict-distance 
+  -cfd , -conflict-distance
                         [ FLOAT ] set conflict distance, default is SPEED * 2
-  -crd , -crash-distance 
+  -crd , -crash-distance
                         [ FLOAT ] set crash distance in meters, 2.00m by
                         default
   -del , -delay         [ FLOAT ] number of seconds between calculations,
@@ -101,13 +101,13 @@ optional arguments:
   -h, --help            show this help message and exit
   -l  , -location       [ LONGITUDE LATITUDE ] select a location to simulate,
                         default is 32.606°, -85.488° (Auburn University)
-  -maxa , -max-elevation-angle 
+  -maxa , -max-elevation-angle
                         [ FLOAT ] set the maximum angle of elevation in
                         degrees, 15° by default
-  -maxr , -max-turn-radius 
+  -maxr , -max-turn-radius
                         [ FLOAT ] set the maximum turning radius inmeters
                         24.01m by default
-  -minr , -min-turn-radius 
+  -minr , -min-turn-radius
                         [ FLOAT ] set the minimum turning radius in meters,
                         28.64m by default
   -p , -planes          [ INT ] set number of planes, 10 planes by default
@@ -120,7 +120,7 @@ optional arguments:
   -settings DISPLAY     display current settings
   -w , -waypoints       [ INT ] set number of waypoints, 10 waypoints by
                         default
-  -wpd , -waypoint-distance 
+  -wpd , -waypoint-distance
                         [ INT ] the distance required to "reach" a waypoint,
                          2 meters by default
 ```

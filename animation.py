@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2017  Jennifer Salas
+    Copyright (C) 2018  Jennifer Salas
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -14,39 +14,32 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-import matplotlib
 
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import matplotlib.animation as manimation
+import matplotlib.animation as animation
+
+import numpy
 
 import standardFuncs
 import defaultValues
-import sys
 
-
-def write(planes):
+def showPaths(planes):
     maxlength = len(max(planes, key=len))
+    minlength = len(min(planes, key=len))
 
     sgrid = defaultValues.GRID_SIZE
     loc = defaultValues.OUR_LOCATION
-    agrid = standardFuncs.generateGrid(sgrid[0] * 3, sgrid[1] * 3, loc)
+    agrid = standardFuncs.generateGrid(sgrid[0] + 300 , sgrid[1] + 300, loc)
 
-    lLat = (agrid[0][0])
-    uLat = (agrid[0][1])
-
-    lLon = (agrid[1][0])
-    uLon = (agrid[1][1])
-
-    FFMpegWriter = manimation.writers['ffmpeg']
-    metadata = dict(title='Movie Test', artist='Matplotlib',
-                    comment='Movie support!')
-    writer = FFMpegWriter(fps=15, metadata=metadata)
+    lLat = agrid[0][0]
+    uLat = agrid[0][1]
+    lLon = agrid[1][0]
+    uLon = agrid[1][1]
 
     fig = plt.figure()
     ax = plt.axes(xlim=(lLat, uLat), ylim=(lLon, uLon))
 
-    n, = plt.plot([], [], 'bo')
+    planePlots = [plt.plot([], [], "bo")[0] for _ in range(len(planes))]
 
     aLat = int((uLat - lLat) * standardFuncs.LATITUDE_TO_METERS) // 2
     aLon = int((uLon - lLon) * standardFuncs.LONGITUDE_TO_METERS) // 2
@@ -57,30 +50,29 @@ def write(planes):
 
     fig.subplots_adjust(bottom=.15)
 
-    print("")
-    with writer.saving(fig, "writer_test.mp4", 100):
-        for i in range(maxlength + 1):
-            x0 = []
-            y0 = []
-            for plane in planes:
-                if i >= len(plane):
-                    point = plane[-1]
-                    if point['wpflag']:
-                        continue
-                else:
-                    point = plane[i]
+    def init():
+        for planeP in planePlots:
+            planeP.set_data([],[])
+        return lines
 
-                x0.append(point['Latitude'])
-                y0.append(point['Longitude'])
+    for plane in planes:
+        while len(plane) < maxlength:
+            plane.append(plane[-1])
 
-            n.set_data(x0, y0)
-            writer.grab_frame()
 
-            message = "Generating video... %2.2f%%" % (i / maxlength * 100)
-            sys.stdout.write('\r' + str(message) + ' ' * 20)
-            sys.stdout.flush()  # important
-    print("")
+    def animate(i):
+        for j,planePlot in enumerate(planePlots):
+            planePlot.set_markerfacecolor('k' if i[j]["dead"] else 'b')
+            planePlot.set_data(i[j]["Latitude"],i[j]["Longitude"])
+            planePlot.set_marker((3,0,i[j]["bearing"]-90))
 
+        return planePlots
+    planeMat = numpy.array(planes).T
+
+    print(planeMat.shape)
+
+    ani = animation.FuncAnimation(fig, animate, planeMat, interval = 25, blit = True)
+    plt.show()
 
 if '__main__' == __name__:
-    write(defaultValues.samplepath)
+    showPaths(defaultValues.samplepath)
