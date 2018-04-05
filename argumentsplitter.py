@@ -82,9 +82,6 @@ algorithms.'''
 def argParser():
     parser = MyParser(description=description, formatter_class=SortingHelpFormatter, allow_abbrev=False)
 
-    parser.add_argument('-c', '-centralized', type=bool, default=CENTRALIZED, dest='CENTRALIZED', metavar='',
-                        help='choose to run in centralized mode, %s by default' % CENTRALIZED)
-
     parser.add_argument('-ca', '-collision-avoidance', type=bool, default=COLLISION_AVOIDANCE,
                         dest='COLLISION_AVOIDANCE', metavar='',
                         help='[ True | False ] enable collision avoidance algorithms, %s by default' % COLLISION_AVOIDANCE)

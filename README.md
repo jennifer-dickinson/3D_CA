@@ -41,19 +41,13 @@ To run, simply clone the repository and the run the ``` launch.py ``` file at ro
 ```
 ## File Overview
 
-### Centralized Communication : centralizedComm.py
-This file includes the methods for creating a centralized plane communication synchronizer. In centralized communication a single synchronizer will keep track of the telemetry of all plane objects and perform all collision avoidance tasks.
-
-### Decentralized Communication : decentralizedComm.py
-This file includes the methods for creating a decentralized plane communication synchronizer. In decentralized communication every individual plane will maintain their own map of other plane objects and perform all collision avoidance tasks for themselves.
-
 ### Default Values: defaultValues.py
 This file includes values for variables used throughout the program including physical constants used to model the planes in flight, simulator constants  such as number of plane and waypoints, and collision parameters.
 
 ### Launch file: launch.py
 This file is used to launch simulation and displays the final status of all planes to the screen when finished
 
-### Movement: planeSimulator.py
+### Movement: simulator.py
 This file contains the functions that every plane will use to model there own physical movement.
 
 ### Plane Generator: planes.py
@@ -64,12 +58,6 @@ This file holds functions used to setup the plane simulation environment, angle 
 
 ### Video Output: animation.py
 This file contains the method to export the simulated mission into video format. It currently represents the data in 2d format.
-
-#### Communication Modules
-
-* centralizedComm.py
-* decentralizedComm.py
-
 
 ### Vector Math: vMath.py
 This file contains the implementation for 3d vector objects to be used in the simulation.
@@ -95,7 +83,6 @@ launch.py [-h] [-c] [-ca] [-a] [-cd] [-s] [-p] [-w] [-l ] [-crd] [-cfd]
 optional arguments:
   -a , -algorithm       [ ALGORITHM ] choose anti-collision algorithm of
                         'APF', or 'IPN', 'APF' by default
-  -c , -centralized     choose to run in centralized mode, True by default
   -ca , -collision-avoidance 
                         [ True | False ] enable collision avoidance
                         algorithms, False by default
