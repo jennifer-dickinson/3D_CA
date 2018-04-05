@@ -77,10 +77,12 @@ class PlaneCollection(Queue):
                     # Yay, the plane didn't crash
 
             # check if this plane has reached a waypoint
+            wpflag = False
             if plane.tdistance < self.args.WAYPOINT_DISTANCE:
                 sys.stdout.write('\r' + "UAV #%3i reached waypoint #%i.\n" % (plane.id, plane.wpAchieved))
                 sys.stdout.flush()
                 plane.wpAchieved += 1
+                wpflag = True
 
                 if plane.waypoints.empty():
                     sys.stdout.write('\r' + ("UAV #%3i reached all waypoints.\n" % plane.id))
@@ -95,7 +97,7 @@ class PlaneCollection(Queue):
             assert(self.map[plane.id] != plane.telemetry())
 
             plane.path.append(plane.cLoc)
-
+            plane.path[-1]["wpflag"] = wpflag
             self.put(plane)
 
         print("Completed simulation")

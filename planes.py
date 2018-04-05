@@ -187,4 +187,5 @@ class Plane:
         telem["ID"] = self.id
         telem["killedBy"] = self.killedBy
         telem["Dead"] = self.dead
+        telem["wpflag"] = False
         return telem

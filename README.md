@@ -1,6 +1,6 @@
 # Three Dimensional Collision Avoidance
 
-The purpose of this program is to provide an easy way to simulate centralized and decentralized collision avoidance in autonomous unmanned aerial vehicles(UAV) and provide an easy to work with modular platform to implement and test collision avoidance algorithms.
+The purpose of this program is to provide an easy way to simulate collision avoidance in autonomous unmanned aerial vehicles(UAV) and provide an easy to work with modular platform to implement and test collision avoidance algorithms.
 
 ```
     Copyright (C) 2017  Jennifer Salas
