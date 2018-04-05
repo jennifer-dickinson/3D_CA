@@ -23,14 +23,12 @@ import standardFuncs
 
 # Plane object will eventually have more parameters
 class Plane:
-    counter = 0
     startPositions = []
 
-    def __init__(self, args):
+    def __init__(self, planid, args):
 
         self.args = args
-        self.id = Plane.counter  # Plane ID =)
-        Plane.counter += 1
+        self.id = planid
 
         self.speed = args.UAV_SPEED  # UAV airspeed in meters per second, 12 meters per second by default
         self.maxElevationAngle = args.MAX_ELEV_ANGLE  # Maximum climbing angle in degrees
@@ -39,8 +37,7 @@ class Plane:
         self.maxBankAngle = None
 
         self.numWayPoints = args.NUM_WAYPOINTS  # Total number of waypoints assigned to plane
-        self.wayPoints = []  # Waypoint list
-        self.queue = queue.Queue()  # Waypoint queue
+        self.waypoints = queue.Queue()  # Waypoint queue
         self.wpAchieved = 0  # Of waypoints achieved
 
         self.distance = 0  # Horizontal distance to waypoint in meters
@@ -89,17 +86,17 @@ class Plane:
     def setWaypoints(self):
         # Set waypoints to default values or generate waypoints
         if self.args.USE_SAMPLE_SET:
-            self.wayPoints = defaultValues.SAMPLE_WP_SET[self.id]
+            self.wayPoints = queue.Queue(defaultValues.SAMPLE_WP_SET[self.id])
 
         else:
             self.generateWaypoints()
 
     def setStart(self):
         # get a previous LOCATION
-        self.pLoc = self.queue.get()
+        self.pLoc = self.waypoints.get()
 
         # get a current LOCATION
-        self.cLoc = self.queue.get()
+        self.cLoc = self.waypoints.get()
 
         self.nextwp()  # and removes it from the queue
 
@@ -125,8 +122,7 @@ class Plane:
                         in Plane.startPositions]
 
             if not tooclose:
-                self.wayPoints.append(location)
-                self.queue.put(location)
+                self.waypoints.put(location)
                 break
             else:
                 print("generating new starting location", self.args.CONFLICT_DISTANCE)
@@ -134,23 +130,12 @@ class Plane:
         for i in range(self.numWayPoints + 1):
             location = standardFuncs.randomLocation(self.args.GRID_SIZE[0], self.args.GRID_SIZE[1],
                                                     self.args.LOCATION)
-            self.wayPoints.append(location)
-            self.queue.put(location)
+            self.waypoints.put(location)
 
     def updateTelemetry(self, newLoc):
         # Set the current location
         self.pLoc = self.cLoc  # Move current location to previous location
         self.cLoc = newLoc  # Set new current location
-
-        # if(cBearing):
-        #     self.cBearing = cBearing;
-        # else:
-        #     # Calculate new bearing
-
-        # # # print(self.cBearing)
-        # self.cBearing = standardFuncs.find_bearing(self.pLoc, self.cLoc)
-        # self.cElevation = standardFuncs.elevation_angle(self.pLoc, self.cLoc)
-        # print(self.cBearing)
 
         # Calculate new elevation
         self.tBearing = standardFuncs.find_bearing(self.pLoc, self.tLoc)
@@ -164,9 +149,8 @@ class Plane:
 
         self.distanceTraveled += self.speed * self.args.DELAY
 
-
     def nextwp(self):
-        self.tLoc = self.queue.get()
+        self.tLoc = self.waypoints.get()
 
     def threatMap(self, msg):
         """
@@ -183,13 +167,24 @@ class Plane:
                 return True
         self.map.append(msg)
 
-    def simpleMove(self):
+    # def simpleMove(self):
+    #
+    #     """should move in a straight line to target destination and make necessary adjustments to turning"""
+    #
+    # def __del__(self):
+    #     if self.dead:
+    #         print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
+    #     if self.wpAchieved == self.numWayPoints:
+    #         print("UAV #", self.id, " achieved all waypoints.")
+    #     pass
 
-        """should move in a straight line to target destination and make necessary adjustments to turning"""
-
-    def __del__(self):
-        # if self.dead:
-        #     print("UAV #", self.id, " has crashed with UAV #", self.killedBy)
-        # if self.wpAchieved == self.numWayPoints:
-        #     print("UAV #", self.id, " achieved all waypoints.")
-        pass
+    def telemetry(self):
+        telem = dict()
+        telem["Location"] = self.cLoc
+        telem["bear"] = self.cBearing
+        telem["elev"] = self.cElevation
+        telem["tdis"] = self.distanceTraveled
+        telem["ID"] = self.id
+        telem["killedBy"] = self.killedBy
+        telem["Dead"] = self.dead
+        return telem

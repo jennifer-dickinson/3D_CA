@@ -30,7 +30,7 @@ import time
 # Note: these are only accurate near the equator
 # Todo: make a function that vary these variables depending on location
 LATITUDE_TO_METERS = 110574.61  # Meters per latitude degree
-LONGITUDE_TO_METERS = 111302.62  # Meters per longitiude degree
+LONGITUDE_TO_METERS = 111302.62  # Meters per longitude degree
 
 DEGREE = u'\N{DEGREE SIGN}'
 
@@ -146,7 +146,8 @@ def generateGrid(lon_dist, lat_dist, location):
 
 
 def logger():
-    name = 'logs/debug %s.log' % time.asctime()
+    # name = 'logs/debug %s.log' % time.asctime()
+    name = 'logs/debug.log'
     logging.basicConfig(filename=name, filemode='w', format='%(asctime)s %(levelname)8s: %(message)s',
                         level=logging.DEBUG)
 

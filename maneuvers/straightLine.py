@@ -20,7 +20,7 @@ import vMath
 standardFuncs.logger()
 
 
-def straightline(plane):
+def straightline(plane, algorithm = None):
     # Simple movement in a straight line with a modified adaptation of dubins path.
     # Working: UAV bearing and elevation update is working. Dubin's avoidance is working.
 

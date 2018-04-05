@@ -40,9 +40,9 @@ OUR_LOCATION = [32.606184, -85.488228]  # Default location is coordinates  for A
 
 DELAY = .1  # Number of seconds between calculations
 
-NUM_PLANES = 10  # Number of planes to generate
-NUM_WAY_POINTS = 10  # Number of waypoints to generate
-GRID_SIZE = [100, 100]  # Size of grid (meters)
+NUM_PLANES = 5  # Number of planes to generate
+NUM_WAY_POINTS = 5  # Number of waypoints to generate
+GRID_SIZE = [50, 50]  # Size of grid (meters)
 
 COMM_KILL_TIME = 2.0  # Time to wait between updates to kill communication (seconds)
 
